@@ -1,0 +1,69 @@
+@function strip-unit($num)
+  @return $num / ($num * 0 + 1)
+
+@mixin rem-fallback($property, $values...)
+  $max: length($values)
+  $pxValues: ''
+  $remValues: ''
+
+  @for $i from 1 through $max
+    $value: strip-unit(nth($values, $i))
+    $pxValues: #{$pxValues + $value*$basefont}px
+
+    @if $i < $max
+      $pxValues: #{$pxValues + " "}
+
+  @for $i from 1 through $max
+    $value: strip-unit(nth($values, $i))
+    $remValues: #{$remValues + $value}rem
+
+    @if $i < $max
+      $remValues: #{$remValues + " "}
+
+  #{$property}: $pxValues
+  #{$property}: $remValues
+
+@mixin rounded
+  border-radius: $radius
+  -moz-border-radius: $radius
+  -webkit-border-radius: $radius
+
+@mixin boxout($bg:$grey4)
+  @include rem-fallback(margin, 0, -1.5, 1.5, -1.5)
+  @include respond-to(handheld)
+    @include rem-fallback(margin, 0, -1, 1.5, -1)
+    @include rem-fallback(padding, 1)
+    border-radius: 0
+  @include transparent($bg, 0.5)
+  @include rem-fallback(padding, 1.5)
+  border: 0
+  @include rounded
+
+@mixin transparent($color, $alpha)
+  $rgba: rgba($color, $alpha)
+  $ie-hex-str: ie-hex-str($rgba)
+  background-color: transparent
+  background-color: $rgba
+  zoom: 1
+
+@mixin respond-to($media)
+  @if $media == handheld
+    @media only screen and (max-width: 480px)
+      @content
+      html
+        background-color: blue
+  @else if $media == tablet
+    @media only screen and (max-width: 768px)
+      @content
+      html
+        background-color: yellow
+  @else if $media == desktop
+    @media only screen and (min-width: 769px) and (max-width: 979px)
+      @content
+      html
+        background-color: red
+  @else if $media == large_desktop
+    @media only screen and (min-width: 1200px)
+      @content
+      html
+        background-color: green

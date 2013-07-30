@@ -1,0 +1,23 @@
+p.lead
+  @include rem-fallback(font-size, (22 / $basefont))
+  @include rem-fallback(line-height, (1.5 * (ceil(22 / $baseline))))
+
+p.call-to-action
+  @include rem-fallback(font-size, (22 / $basefont))
+  @include rem-fallback(line-height, (1.5 * (ceil(22 / $baseline))))
+  @include boxout($green)
+  font-family: $amasis-italic
+  font-style: normal
+
+div.example
+  @include boxout
+  p
+    margin-bottom: 0
+
+h6.meta
+  color: $grey2
+  font-family: $officina
+  position: absolute
+  left: -13em
+  width: 10em
+  text-align: right

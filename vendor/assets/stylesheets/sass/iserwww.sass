@@ -1,0 +1,48 @@
+// sass --watch sass/iserwww.sass:iserwww.css
+
+@import "_variables.sass"
+@import "_mixins.sass"
+
+*, *:before, *:after
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+
+@import "normalize.sass"
+
+html
+  background: $white
+  color: $grey1
+  font-family: $amasis
+  font-weight: normal
+  font-size: #{$basefont / 16}em
+  line-height: 1.5em
+  padding: 0 1em
+  -webkit-font-smoothing: antialiased
+  outline: 1px solid $red
+  overflow-x: hidden
+  &.grid
+    background: url(../ui/drop.png) center -9px repeat-y $white
+
+@import "elements.sass"
+@import "forms.sass"
+@import "buttons.sass"
+@import "lists.sass"
+@import "tables.sass"
+@import "patterns.sass"
+
+main
+  max-width: 30em
+  @include respond-to(handheld)
+    max-width: none
+  @include rem-fallback(margin-top, 3)
+  margin-left: auto
+  margin-right: auto
+  position: relative
+
+a#show-grid
+  position: fixed
+  top: 10px
+  left: 10px
+
+@import "http://fast.fonts.com/cssapi/f2814b24-b4fc-46e7-b3a2-4ee556c5c73f.css"

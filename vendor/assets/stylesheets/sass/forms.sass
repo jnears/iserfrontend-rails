@@ -1,0 +1,71 @@
+form
+  border-top: 1px solid $grey4
+  border-bottom: 1px solid $grey4
+  @include rem-fallback(margin,  (($baseline - 2) / $basefont), 0)
+  @include rem-fallback(padding, 1.5, 0)
+
+  fieldset
+    position: relative
+    border: none
+    padding: 0px
+    &.options
+      ul
+        margin-left: 25%
+        li
+          list-style-type: none
+          @include rem-fallback(min-height, ($baseline * 2) / $basefont)
+          label
+            float: none
+    abbr[title="Required"]
+      border: none
+      color: red
+
+  legend
+    font-family: $officina-bold
+    @include rem-fallback(font-size, (nth($heading_sizes, 3) / $basefont))
+    @include rem-fallback(line-height, (1.5 * (ceil(nth($heading_sizes, 3) / $baseline))))
+    @include rem-fallback(padding-bottom, 1.5)
+    font-weight: normal
+
+  label
+    font-weight: normal
+    @include rem-fallback(line-height, 2.3)
+    float: left
+    width: 25%
+    padding-right: 1em
+    text-align: right
+
+  div.field
+    // float: left
+    // clear: left
+    @include rem-fallback(min-height, ($baseline * 2) / $basefont)
+    @include rem-fallback(margin-bottom, 1.5)
+    &.large
+      @include rem-fallback(min-height, ($baseline * 5) / $basefont)
+    &.control
+      margin-left: 10em
+      a
+        font-family: $amasis_italic
+        font-style: normal
+
+  input[type=text],
+  input[type=number],
+  textarea,
+  select
+    border: 1px solid $grey4
+    font-family: $amasis
+    background: $grey5
+    overflow: visible
+    width: 75%
+    -webkit-appearance: none
+    border-radius: 0
+    @include rem-fallback(padding, 0.5)
+    @include rem-fallback(min-height, 2)
+
+input:focus,
+textarea:focus,
+select:focus
+  outline: 3px solid $yellow
+
+\:invalid
+  outline: 3px solid $red
