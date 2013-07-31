@@ -1,6 +1,6 @@
 # ISER Frontend for Rails apps
 
-This gem provides standard frontend CSS and JavaScript code for ISER Rails applications.
+This gem provides standard frontend CSS and JavaScript code for ISER Rails 4 applications.
 
 ## Installation
 
@@ -28,9 +28,13 @@ In file /app/assets/stylesheets/application.js, add the line
 
 The styleguide will be available to your app at the URL
 
-      //= styleguide
+      /styleguide
 
 This provides documentation and examples of available styles and features.
+
+## Requirements
+
+Rails ~4.0.0
 
 ## Contributing
 
