@@ -1,4 +1,4 @@
-class StyleguideController < ApplicationController
+class StyleguidesController < ApplicationController
 
   layout false
 
