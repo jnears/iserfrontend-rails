@@ -6,15 +6,11 @@ This gem provides standard frontend CSS and JavaScript code for ISER Rails appli
 
 Add this line to your application's Gemfile:
 
-    gem 'iserfrontend-rails'
+    gem 'iserfrontend-rails', github: 'paulgroves/iserfrontend-rails'
 
 And then execute:
 
     $ bundle
-
-Or install it yourself as:
-
-    $ gem install iserfrontend-rails
 
 ## Usage
 
@@ -26,7 +22,7 @@ In file /app/assets/javascripts/application.js, add the line
 
 In file /app/assets/stylesheets/application.js, add the line
 
-      //= require iserwww
+      *= require iserwww
 
 ## Contributing
 
