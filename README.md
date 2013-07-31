@@ -1,6 +1,6 @@
 # Iserfrontend::Rails
 
-TODO: Write a gem description
+This gem provides standard frontend CSS and JavaScript code for ISER Rails applications.
 
 ## Installation
 
@@ -18,7 +18,15 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Simply require the iserwww .js and .css from your application manifests
+
+In file /app/assets/javascripts/application.js, add the line
+
+      //= require iserwww
+
+In file /app/assets/stylesheets/application.js, add the line
+
+      //= require iserwww
 
 ## Contributing
 
