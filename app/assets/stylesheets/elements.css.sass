@@ -1,13 +1,45 @@
 p
   margin-top: 0
   @include rem-fallback(margin-bottom, 1.5)
+  &.heading
+    font-family: $heading_font
+    font-weight: normal
+    font-style: normal
+  &.heading-italic
+    font-family: $heading_font
+    font-weight: normal
+    font-style: italic
+  &.heading-bold
+    font-family: $heading_font
+    font-weight: bold
+    font-style: normal
+  &.heading-bold-italic
+    font-family: $heading_font
+    font-weight: bold
+    font-style: italic
+  &.body
+    font-family: $body_font
+    font-weight: normal
+    font-style: normal
+  &.body-italic
+    font-family: $body_font
+    font-weight: normal
+    font-style: italic
+  &.body-bold
+    font-family: $body_font
+    font-weight: bold
+    font-style: normal
+  &.body-bold-italic
+    font-family: $body_font
+    font-weight: bold
+    font-style: italic
 
 // h1 - h6
 @for $i from 1 through 6
   h#{$i}
-    font-family: $officina_bold
+    font-family: $heading_font
     @include rem-fallback(font-size, (nth($heading_sizes, $i) / $basefont))
-    font-weight: normal
+    font-weight: bold
     @include rem-fallback(line-height, (1.5 * (ceil(nth($heading_sizes, $i) / $baseline))))
     @if $i > 4
       margin-bottom: 0
@@ -22,12 +54,15 @@ p
 h1+h2
   display: block
   color: $grey2
-  font-family: $officina
+  font-family: $heading_font
+  font-weight: normal
+  font-style: normal
   @include rem-fallback(margin-top, -1.5)
 
 // quotes
 blockquote
-  font-family: $amasis-italic
+  font-family: $body_font
+  font-style: italic
   @include rem-fallback(margin, 0, 2)
   text-indent: -0.3em
   @include rem-fallback(font-size, (22 / $basefont))
@@ -58,6 +93,7 @@ hr
   height: 1px
 
 code
+  font-family: $monospace_font
   color: $orange
 
 abbr[title]
@@ -66,5 +102,9 @@ abbr[title]
 
 b,
 strong
-  font-family: $amasis-bold
-  font-weight: normal
+  font-family: $body_font
+  font-weight: bold
+
+i,
+em
+  font-family: $body_font

@@ -6,8 +6,8 @@ p.call-to-action
   @include rem-fallback(font-size, (22 / $basefont))
   @include rem-fallback(line-height, (1.5 * (ceil(22 / $baseline))))
   @include boxout($green)
-  font-family: $amasis-italic
-  font-style: normal
+  font-family: $body_font
+  font-style: italic
 
 div.example
   @include boxout
@@ -16,7 +16,7 @@ div.example
 
 h6.meta
   color: $grey2
-  font-family: $officina
+  font-family: $heading_font
   position: absolute
   left: -13em
   width: 10em

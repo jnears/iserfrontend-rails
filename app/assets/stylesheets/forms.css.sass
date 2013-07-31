@@ -21,11 +21,11 @@ form
       color: red
 
   legend
-    font-family: $officina-bold
+    font-family: $heading_font
+    font-weight: bold
     @include rem-fallback(font-size, (nth($heading_sizes, 3) / $basefont))
     @include rem-fallback(line-height, (1.5 * (ceil(nth($heading_sizes, 3) / $baseline))))
     @include rem-fallback(padding-bottom, 1.5)
-    font-weight: normal
 
   label
     font-weight: normal
@@ -45,15 +45,15 @@ form
     &.control
       margin-left: 10em
       a
-        font-family: $amasis_italic
-        font-style: normal
+        font-family: $body_font
+        font-style: italic
 
   input[type=text],
   input[type=number],
   textarea,
   select
     border: 1px solid $grey4
-    font-family: $amasis
+    font-family: $sans_font
     background: $grey5
     overflow: visible
     width: 75%
