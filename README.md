@@ -1,4 +1,4 @@
-# Iserfrontend::Rails
+# ISER Frontend for Rails apps
 
 This gem provides standard frontend CSS and JavaScript code for ISER Rails applications.
 
