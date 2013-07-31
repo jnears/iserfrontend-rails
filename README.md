@@ -28,7 +28,7 @@ In file /app/assets/stylesheets/application.js, add the line
 
 The styleguide will be available to your app at the URL
 
-      /styleguide
+      //= styleguide
 
 This provides documentation and examples of available styles and features.
 
