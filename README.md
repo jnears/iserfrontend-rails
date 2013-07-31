@@ -24,6 +24,14 @@ In file /app/assets/stylesheets/application.js, add the line
 
       *= require iserwww
 
+## Styleguide
+
+The styleguide will be available to your app at the URL
+
+      /styleguide
+
+This provides documentation and examples of available styles and features.
+
 ## Contributing
 
 1. Fork it
