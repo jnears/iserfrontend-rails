@@ -1,7 +1,3 @@
-$('a#show-grid').on 'click', (e) =>
-  $('html').toggleClass("grid")
-  return false;
-
 prevent_widows = () ->
   $("h1,h2,h3,h4,h5,h6").each (i, element) =>
     wordArray = $(element).find('*').last().text().split(" ")
@@ -9,9 +5,15 @@ prevent_widows = () ->
       wordArray[wordArray.length-2] += "&nbsp;" + wordArray.pop()
       $(element).find('*').last().html(" " + wordArray.join(" "))
 
+toggle_grid = () ->
+  $('a#show-grid').on 'click', (e) =>
+    $('html').toggleClass("grid")
+    return false
+
 init_page = () ->
   $("html").removeClass("no-js")
   prevent_widows()
+  toggle_grid()
 
 $(document).on 'ready page:change', ->
   init_page()

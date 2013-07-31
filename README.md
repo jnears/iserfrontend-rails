@@ -2,6 +2,8 @@
 
 This gem provides standard frontend CSS and JavaScript code for ISER Rails 4 applications.
 
+**This is currently very much work in progress and not ready for production use**
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -14,13 +16,13 @@ And then execute:
 
 ## Usage
 
-Simply require the iserwww .js and .css from your application manifests
+Simply require iserwww from your JavaScript and CSS application manifests.
 
-In file /app/assets/javascripts/application.js, add the line
+In file `/app/assets/javascripts/application.js`, add the line
 
       //= require iserwww
 
-In file /app/assets/stylesheets/application.js, add the line
+In file `/app/assets/stylesheets/application.js`, add the line
 
       *= require iserwww
 
