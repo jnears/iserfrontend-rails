@@ -37,6 +37,7 @@ p
 // h1 - h6
 @for $i from 1 through 6
   h#{$i}
+    clear: both
     font-family: $heading_font
     @include rem-fallback(font-size, (nth($heading_sizes, $i) / $basefont))
     font-weight: bold
@@ -108,7 +109,7 @@ hr
 
 code
   font-family: $monospace_font
-  color: $orange
+  color: $code
 
 abbr[title]
   border-bottom: 1px dotted $rouge
