@@ -67,10 +67,22 @@ blockquote
   text-indent: -0.3em
   @include rem-fallback(font-size, (22 / $basefont))
   @include rem-fallback(line-height, (1.5 * (ceil(22 / $baseline))))
+  &.pull-quote
+    @include rem-fallback(font-size, (20 / $basefont))
+    float: right
+    width: 50%
+    @include boxout
+    @include rem-fallback(margin, 0, 0, 1, 1)
+
 
 blockquote b
   display: block
   text-indent: 0
+
+
+q
+  font-family: $body_font
+  font-style: italic
 
 // links
 a:link, a:visited

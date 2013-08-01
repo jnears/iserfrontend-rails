@@ -38,6 +38,8 @@
   @include rem-fallback(padding, 1.5)
   border: 0
   @include rounded
+  & *:last-child
+    @include rem-fallback(margin-bottom, 0)
 
 @mixin transparent($color, $alpha)
   $rgba: rgba($color, $alpha)
