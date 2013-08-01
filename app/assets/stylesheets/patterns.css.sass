@@ -69,6 +69,8 @@ ol.pagination
     background: $brown
   &.blue
     background: $blue
+  &.red
+    background: $red
   & code
     color: $white
     font-weight: bold
@@ -76,8 +78,10 @@ ol.pagination
     display: block
 
 .row6
-  height: #{$baseline * 13}px
+  clear: both
   & .block:nth-child(3n-3)
     margin-right: 0%
   & .block:nth-child(3n+1)
     margin-left: 0%
+  &.row2
+    height: #{$baseline * 13}px
