@@ -97,12 +97,14 @@ a:hover
   text-decoration: underline
 
 hr
+  clear: both
   display: block
   padding: 0
   border: 0
   border-bottom: 1px solid $grey4
-  @include rem-fallback(margin, (($baseline - 2) / $basefont), 0)
-  height: 1px
+  @include rem-fallback(margin, (($baseline - 1) / $basefont), 0)
+  @include rem-fallback(line-height, 1.5)
+
 
 code
   font-family: $monospace_font

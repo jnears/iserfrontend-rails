@@ -46,3 +46,38 @@ ol.pagination
       cursor: default
       &:hover
         background: $red
+
+.block
+  @include rounded
+  // @include rem-fallback(padding, 0.5)
+  float: left
+  width: 32%
+  background: $grey3
+  padding: #{$baseline}px
+  height: #{$baseline * 6}px
+  margin: 1%
+  color: $white
+  &.green
+    background: $green
+  &.lilac
+    background: $lilac
+  &.pink
+    background: $pink
+  &.rouge
+    background: $rouge
+  &.brown
+    background: $brown
+  &.blue
+    background: $blue
+  & code
+    color: $white
+    font-weight: bold
+    margin-top: 1em
+    display: block
+
+.row6
+  height: #{$baseline * 13}px
+  & .block:nth-child(3n-3)
+    margin-right: 0%
+  & .block:nth-child(3n+1)
+    margin-left: 0%
