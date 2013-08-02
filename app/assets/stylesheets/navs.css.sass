@@ -1,2 +1,45 @@
+header[role=banner]
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  z-index: 2
+  background: $green
+  color: $white
+  nav
+    width: 50em
+    @include rem-fallback(margin-left, 15)
+    overflow: auto
+    ol
+      list-style-type: none
+      li
+        a:link, a:visited
+          font-family: $heading_font
+          font-size: 16px
+          text-transform: uppercase
+          -webkit-font-smoothing: antialiased
+          font-weight: bold
+          float: left
+          padding: 0 1em
+          line-height: 2.2rem
+          height: 2.2rem
+          color: $white
+          text-decoration: none
+        a:hover
+          @include transparent($grey1, 0.2)
+
 nav.guide
   position: fixed
+  ol
+    li
+      @include rem-fallback(font-size, (16 / $basefont))
+      font-weight: bold
+      a:link, a:visited
+        display: block
+        text-decoration: none
+        border-bottom: 1px solid $grey4
+        @include rem-fallback(line-height, (($baseline - 1) * 2 / $basefont))
+      a:hover
+        background: $grey5
+
+

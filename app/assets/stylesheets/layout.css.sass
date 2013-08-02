@@ -1,0 +1,30 @@
+main
+  float: left
+  @include rem-fallback(max-width, 30)
+  @include respond-to(handheld)
+    max-width: none
+    @include rem-fallback(margin-left, 0)
+  @include rem-fallback(margin-top, 5)
+  @include rem-fallback(margin-left, 15)
+  position: relative
+
+aside
+  float: left
+  @include rem-fallback(margin-top, 5)
+  @include rem-fallback(margin-left, 5)
+  @include rem-fallback(width, 20)
+
+a#show-grid
+  position: fixed
+  bottom: 10px
+  right: 10px
+
+a.home-logo
+  text-indent: -3000em
+  overflow: hidden
+  background: url(iser-logo.gif)
+  width: 105px
+  height: 90px
+  position: absolute
+  top: 5em
+  left: 5em
