@@ -30,15 +30,31 @@ html
 @import "tables.css.sass"
 @import "patterns.css.sass"
 @import "fonts.css.scss"
+@import "navs.css.sass"
 
-main
-  max-width: 30em
-  @include respond-to(handheld)
-    max-width: none
-  @include rem-fallback(margin-top, 3)
+.wrapper
+  width: 55em
   margin-left: auto
   margin-right: auto
   position: relative
+  outline: 1px solid $red
+  overflow: auto
+
+main
+  float: left
+  @include rem-fallback(width, 30)
+  @include respond-to(handheld)
+    max-width: none
+  @include rem-fallback(margin-top, 3)
+  position: relative
+
+aside
+  float: left
+  overflow: auto
+  @include rem-fallback(margin-top, 3)
+  @include rem-fallback(margin-left, 5)
+  @include rem-fallback(width, 20)
+  outline: 1px solid $red
 
 a#show-grid
   position: fixed

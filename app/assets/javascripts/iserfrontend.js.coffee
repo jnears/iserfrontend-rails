@@ -18,7 +18,6 @@ build_in_page_menu = () ->
       $(element).attr('id',$(element).text().replace(/[^A-Za-z0-9]+\s+/g, '-').toLowerCase())
       guide_nav.append('<li><a href="#' + $(element).attr('id') + '">' + $(element).html() + '</a></li>')
     guide_nav.find("li").wrapAll("<ul />")
-    guide_nav.append("<a id=\"going-up\" href=\"#top\">Top</a>")
     $('aside[role=aside]').prepend(guide_nav)
 
 prevent_widows = () ->
