@@ -4,8 +4,8 @@ header[role=banner]
   left: 0
   right: 0
   z-index: 2
-  background: $green
-  color: $white
+  background: $grey6
+  color: $grey1
   nav
     width: 50em
     @include rem-fallback(margin-left, 15)
@@ -16,30 +16,29 @@ header[role=banner]
         a:link, a:visited
           font-family: $heading_font
           font-size: 16px
-          text-transform: uppercase
-          -webkit-font-smoothing: antialiased
+          // text-transform: uppercase
+          -webkit-font-smoothing: sub-pixel-antialiased
           font-weight: bold
           float: left
           padding: 0 1em
           line-height: 2.2rem
           height: 2.2rem
-          color: $white
+          color: $grey1
           text-decoration: none
         a:hover
-          @include transparent($grey1, 0.2)
+          @include transparent($grey1, 0.1)
 
 nav.guide
   position: fixed
+  width: inherit
   ol
     li
-      @include rem-fallback(font-size, (16 / $basefont))
       font-weight: bold
       a:link, a:visited
         display: block
         text-decoration: none
         border-bottom: 1px solid $grey4
-        @include rem-fallback(line-height, (($baseline - 1) * 2 / $basefont))
+        @include rem-fallback(padding, 0, 0.5)
+        @include rem-fallback(line-height, ((36 - 1) / $basefont))
       a:hover
-        background: $grey5
-
-
+        background: $grey7

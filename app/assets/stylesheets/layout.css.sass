@@ -9,10 +9,12 @@ main
   position: relative
 
 aside
+  overflow: auto
   float: left
-  @include rem-fallback(margin-top, 5)
+  @include rem-fallback(margin-top, 6)
   @include rem-fallback(margin-left, 5)
   @include rem-fallback(width, 20)
+  @include rem-fallback(font-size, (14 / $basefont))
 
 a#show-grid
   position: fixed
