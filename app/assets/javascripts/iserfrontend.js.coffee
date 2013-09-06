@@ -31,10 +31,16 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
 
 prevent_widows = () ->
   $("h1,h2,h3,h4,h5,h6").each (i, e) =>
-    wordArray = $(e).find('*').last().text().split(" ")
+    if $(e).find('*').size() >= 1
+      wordArray = $(e).find('*').last().text().split(" ")
+    else
+      wordArray = $(e).text().split(" ")
     if wordArray.length > 2
       wordArray[wordArray.length-2] += "&nbsp;" + wordArray.pop()
+    if $(e).find('*').size() >= 1
       $(e).find('*').last().html(" " + wordArray.join(" "))
+    else
+      $(e).html(" " + wordArray.join(" "))
 
 toggle_grid = () ->
   $('a#show-grid').on 'click', (e) =>
