@@ -76,7 +76,17 @@ input[type="button"]
     width: 100%
 
 
+// Button Sizes
+// --------------------------------------------------
 
+
+.btn-small
+  padding: 5px
+  @include rem-fallback(font-size, 0.75)
+  @include rem-fallback(line-height, 0.5)
+
+.btn-danger
+  background: $red
 
 
 
