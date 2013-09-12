@@ -19,6 +19,19 @@ form
     abbr[title="Required"]
       border: none
       color: red
+    &.property
+      background: $grey5
+      @include rem-fallback(padding, 1.5, 1.5, 0, 1.5)
+      @include rem-fallback(margin, 1.5, 0)
+      border: 1px solid $grey4
+
+  fieldset.property
+    input[type=text],
+    input[type=number],
+    textarea,
+    select
+      background: $white
+
 
   legend
     font-family: $heading_font
@@ -47,6 +60,11 @@ form
       a
         font-family: $body_font
         font-style: italic
+    p.help
+      font-style: italic
+      margin-left: 25%
+      color: $grey2
+      @include rem-fallback(font-size, (16 / $basefont))
 
   input[type=text],
   input[type=number],
