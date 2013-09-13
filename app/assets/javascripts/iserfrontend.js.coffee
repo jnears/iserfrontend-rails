@@ -7,10 +7,10 @@ init_page = () ->
 
 $(document).on 'ready page:change', ->
   init_page()
-  $('#loading').hide()
+  $('#loading').fadeOut()
 
 $(document).on 'page:fetch', (e) ->
-  $('#loading').show()
+  $('#loading').fadeIn()
 
 build_in_page_menu = () ->
   if $('nav.guide').length == 0
