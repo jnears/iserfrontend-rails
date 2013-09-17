@@ -14,9 +14,9 @@ header[role=banner]
     ol
       list-style-type: none
       li
+        @include rem-fallback(font-size, (16 / $basefont))
         a:link, a:visited
           font-family: $heading_font
-          font-size: 16px
           // text-transform: uppercase
           -webkit-font-smoothing: sub-pixel-antialiased
           font-weight: bold
@@ -26,8 +26,21 @@ header[role=banner]
           height: 2.2rem
           color: $grey1
           text-decoration: none
+          &.active
+            @include transparent($grey1, 0.1)
         a:hover
           @include transparent($grey1, 0.1)
+        &.user
+          text-align: right
+          float: right
+          width: 300px
+          line-height: 2.2rem
+          height: 2.2rem
+          font-family: $heading_font
+          font-weight: normal
+          font-style: italic
+          a
+            float: right
 
 body.app
   header[role=banner]

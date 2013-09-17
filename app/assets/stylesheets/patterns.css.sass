@@ -129,6 +129,18 @@ p.info
   font-style: italic
   color: $grey2
 
+p.alert
+  @include boxout($rouge)
+  font-style: italic
+  font-weight: bold
+  color: $white
+
+p.notice
+  @include boxout($green)
+  font-style: italic
+  font-weight: bold
+  color: $white
+
 #loading
   position: absolute
   top: 80px
