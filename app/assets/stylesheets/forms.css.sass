@@ -69,6 +69,7 @@ form
   input[type=text],
   input[type=number],
   input[type=password],
+  input[type=search],
   textarea,
   select
     border: 1px solid $grey4
@@ -93,3 +94,22 @@ select:invalid
 
 div.actions
   text-align: center
+
+form[role=search]
+  border: none
+  background: $grey3
+  margin: 2.2rem 0rem -4rem 0rem
+  label
+    display: none
+  fieldset
+    position: relative
+    margin: 0 auto
+    width: 75%
+  input[type=search]
+    padding: 0 0.5em
+    width: 85%
+  input[type=submit]
+    width: 10%
+    vertical-align: top
+    @include rem-fallback(padding, 0.3, 0.5)
+    @include rem-fallback(min-height, 2)

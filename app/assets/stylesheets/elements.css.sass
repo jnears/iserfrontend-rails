@@ -58,13 +58,18 @@ p
     a:hover
       color: $hover
 
-h1 span
-  display: block
-  color: $grey2
-  font-family: $heading_font
-  font-weight: normal
-  font-style: normal
-  @include rem-fallback(margin-top, 0)
+h1
+  span
+    display: block
+    color: $grey2
+    font-family: $heading_font
+    font-weight: normal
+    font-style: normal
+    @include rem-fallback(margin-top, 0)
+
+h1.inline
+  span
+    display: inline
 
 // quotes
 blockquote

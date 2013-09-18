@@ -142,11 +142,25 @@ p.notice
   color: $white
 
 #loading
-  position: absolute
+  position: fixed
   top: 80px
   right: 30px
   width: 50px
   height: 50px
   background: $white url(loading.gif) no-repeat 0 0
   display: none
+  z-index: 99999
 
+article.result
+  a:link, a:visited, a:active
+    display: block
+    text-decoration: none
+    padding: 0.5rem
+    border-bottom: 1px solid $grey4
+    h6
+      text-decoration: underline
+    p
+      color: $grey2
+      margin-bottom: 0rem
+  a:hover
+    background: $grey5

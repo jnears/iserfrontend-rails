@@ -27,9 +27,11 @@ header[role=banner]
           color: $grey1
           text-decoration: none
           &.active
-            @include transparent($grey1, 0.1)
+            // @include transparent($grey1, 0.1)
+            background: $grey3
         a:hover
-          @include transparent($grey1, 0.1)
+          // @include transparent($grey1, 0.1)
+          background: $grey3
         &.user
           text-align: right
           float: right
