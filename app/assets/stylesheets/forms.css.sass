@@ -82,18 +82,21 @@ form
     @include rem-fallback(padding, 0.5)
     @include rem-fallback(min-height, 2)
 
-input:focus,
-textarea:focus,
-select:focus
-  outline: 3px solid $focus
+  input[type=checkbox]
+    vertical-align: text-bottom
 
-input:invalid,
-textarea:invalid,
-select:invalid
-  outline: 3px solid $red
+  input:focus,
+  textarea:focus,
+  select:focus
+    outline: 3px solid $focus
 
-div.actions
-  text-align: center
+  input:invalid,
+  textarea:invalid,
+  select:invalid
+    outline: 3px solid $red
+
+  div.actions
+    text-align: center
 
 form[role=search]
   border: none

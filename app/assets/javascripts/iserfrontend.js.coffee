@@ -4,10 +4,12 @@ init_page = () ->
   toggle_grid()
   build_in_page_menu()
   scroll_to_anchor()
+  dimissable()
 
 $(document).on 'ready page:change', ->
   init_page()
   $('#loading').fadeOut()
+
 
 $(document).on 'page:fetch', (e) ->
   $('#loading').fadeIn()
@@ -51,3 +53,8 @@ scroll_to_anchor = () ->
   $('a[href^=#]').on 'click', (e) =>
     console.log($(e.target).attr('href'))
     $("html, body").animate({ scrollTop: $($(e.target).attr('href')).offset().top }, 200)
+
+dimissable = () ->
+  $('a.hide-this').on 'click', (e) =>
+    $(e.target).parent.hide()
+    return false
