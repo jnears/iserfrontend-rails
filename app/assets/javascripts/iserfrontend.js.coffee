@@ -50,11 +50,12 @@ toggle_grid = () ->
     return false
 
 scroll_to_anchor = () ->
-  $('a[href^=#]').on 'click', (e) =>
+  $('.scrollable a[href^=#]').on 'click', (e) =>
     console.log($(e.target).attr('href'))
     $("html, body").animate({ scrollTop: $($(e.target).attr('href')).offset().top }, 200)
 
 dimissable = () ->
-  $('a.hide-this').on 'click', (e) =>
-    $(e.target).parent.hide()
+  $('*[data-dismiss]').on 'click', (e) =>
+    $(e.target).parent().hide()
+    # $(this).parent.hide()
     return false
