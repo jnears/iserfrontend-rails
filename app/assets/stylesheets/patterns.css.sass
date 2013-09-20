@@ -129,6 +129,12 @@ p.info
   font-style: italic
   color: $grey2
 
+span.info
+  display: block
+  color: $grey2
+  @include rem-fallback(font-size, (16 / $basefont))
+  font-style: italic
+
 p.alert
   @include boxout($rouge)
   font-style: italic
@@ -167,3 +173,6 @@ article.result
 
 div.heading
   position: relative
+
+.no-margin
+  margin: 0rem !important

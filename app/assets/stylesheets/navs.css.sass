@@ -43,6 +43,8 @@ header[role=banner]
           font-style: italic
           a
             float: right
+        span
+          @include rem-fallback(margin-right, 0.5)
 
 body.app
   header[role=banner]
