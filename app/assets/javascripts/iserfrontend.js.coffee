@@ -5,6 +5,7 @@ init_page = () ->
   build_in_page_menu()
   scroll_to_anchor()
   dimissable()
+  focus_first()
 
 $(document).on 'ready page:change', ->
   init_page()
@@ -57,5 +58,8 @@ scroll_to_anchor = () ->
 dimissable = () ->
   $('*[data-dismiss]').on 'click', (e) =>
     $(e.target).parent().hide()
-    # $(this).parent.hide()
     return false
+
+focus_first = () ->
+  if $('form.focus-first').length > 0
+    $("form.focus-first input:not([type=hidden]):first").focus()
