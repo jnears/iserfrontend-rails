@@ -116,3 +116,21 @@ form[role=search]
     vertical-align: top
     @include rem-fallback(padding, 0.3, 0.5)
     @include rem-fallback(min-height, 2)
+
+
+ol.multi
+  width: 75%
+  margin-left: 25%
+  display: block
+  overflow: auto
+  li
+    list-style-type: none
+    position: relative
+    label
+      float: none
+      margin-left: 1.25rem
+      input[type=checkbox]
+        position: absolute
+        left: 0
+        top: 25%
+        margin-right: 0.5rem
