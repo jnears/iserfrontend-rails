@@ -34,7 +34,7 @@ span.add-on
   border: none;
 }
 
-.datetimepicker input[type=text]
+.datetimepicker input[type=text], .datepicker input[type=text], .timepicker input[type=text]
 {
   width: 30% !important;
 }

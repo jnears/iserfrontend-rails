@@ -50,6 +50,48 @@ ol.pagination
       &:hover
         background: $red
 
+div.pagination
+  @include rem-fallback(margin-top, 1.5)
+
+.pagination
+  background: white
+  cursor: default
+  a, span, em
+    padding: 0.2em 0.5em
+    display: block
+    float: left
+    @include rem-fallback(margin-right, 0.25)
+  .disabled
+    @include btn
+    background: $white
+    color: $grey3
+    font-weight: bold
+    &:hover
+      background: none
+      color: $grey3
+      outline: none
+  .current
+    font-style: normal
+    font-weight: bold
+    @include btn
+    background: $red
+    color: white
+  a
+    text-decoration: none
+    @include btn
+  .page_info
+    background: $red
+    color: white
+    padding: 0.4em 0.6em
+    width: 22em
+    margin-bottom: 0.3em
+    text-align: center
+    b
+      color: #000033
+      background: $red + 60
+      padding: 0.1em 0.25em
+
+
 .block
   @include rounded
   // @include rem-fallback(padding, 0.5)
