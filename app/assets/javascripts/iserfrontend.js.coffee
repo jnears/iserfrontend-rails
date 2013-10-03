@@ -62,4 +62,4 @@ dimissable = () ->
 
 focus_first = () ->
   if $('form.focus-first').length > 0
-    $("form.focus-first input:not([type=hidden]):first").focus()
+    $("form.focus-first input:not([type=hidden]), form.focus-first textarea").first().focus()
