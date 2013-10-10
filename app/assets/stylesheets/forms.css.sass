@@ -96,7 +96,12 @@ form
 form[role=search]
   border: none
   background: $grey3
-  margin: 2.2rem 0rem -4rem 0rem
+  position: absolute
+  top: 100%
+  left: 0
+  right: 0
+  margin: 0rem
+  @include rem-fallback(padding, 0.75, 0)
   label
     display: none
   fieldset
@@ -104,10 +109,12 @@ form[role=search]
     margin: 0 auto
     width: 75%
   input[type=search]
+    position: relative
     padding: 0 0.5em
-    width: 85%
+    width: 80%
   input[type=submit]
-    width: 10%
+    position: relative
+    min-width: 120px
     vertical-align: top
     @include rem-fallback(padding, 0.3, 0.5)
     @include rem-fallback(min-height, 2)

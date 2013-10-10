@@ -6,6 +6,7 @@ init_page = () ->
   scroll_to_anchor()
   dimissable()
   focus_first()
+  toggle_dropdown()
 
 $(document).on 'ready page:change', ->
   init_page()
@@ -49,6 +50,16 @@ toggle_grid = () ->
   $('a#show-grid').on 'click', (e) =>
     $('html').toggleClass("grid")
     return false
+
+toggle_dropdown = () ->
+  $(document).on 'click', 'li.dropdown > a', (event) ->
+    $('li.dropdown ol').hide()
+    $(this).next().show()
+    return false
+  $(document).on 'click', 'body', (event) ->
+    $('li.dropdown ol').hide()
+
+
 
 scroll_to_anchor = () ->
   $('.scrollable a[href^=#]').on 'click', (e) =>
