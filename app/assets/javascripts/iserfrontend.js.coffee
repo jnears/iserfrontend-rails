@@ -12,7 +12,6 @@ $(document).on 'ready page:change', ->
   init_page()
   $('#loading').fadeOut()
 
-
 $(document).on 'page:fetch', (e) ->
   $('#loading').fadeIn()
 
@@ -58,8 +57,6 @@ toggle_dropdown = () ->
     return false
   $(document).on 'click', 'body', (event) ->
     $('li.dropdown ol').hide()
-
-
 
 scroll_to_anchor = () ->
   $('.scrollable a[href^=#]').on 'click', (e) =>

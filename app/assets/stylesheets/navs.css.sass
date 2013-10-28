@@ -10,20 +10,21 @@ header[role=banner]
   nav
     width: 50em
     @include rem-fallback(margin-left, 15)
-    overflow: auto
+    position: relative
+    margin-top: -1.5rem
     ol
       list-style-type: none
       li
         @include rem-fallback(font-size, (16 / $basefont))
+        float: left
+        line-height: 2.2rem
         a:link, a:visited
           font-family: $heading_font
           // text-transform: uppercase
           -webkit-font-smoothing: subpixel-antialiased
           font-weight: bold
-          float: left
           padding: 0 1em
-          line-height: 2.2rem
-          height: 2.2rem
+          display: block
           color: $grey1
           text-decoration: none
           &.active
@@ -45,6 +46,22 @@ header[role=banner]
             float: right
         span
           @include rem-fallback(margin-right, 0.5)
+        &.dropdown
+          position: relative
+          overflow: visible
+          ol
+            display: none
+            position: absolute
+            background: $grey6
+            top: 100%
+            left: 0
+            min-width: 160px
+            z-index: 1000
+            margin-left: 0rem
+            li
+              float: none
+              display: block
+
 
 body.app
   header[role=banner]

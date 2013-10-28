@@ -96,7 +96,12 @@ form
 form[role=search]
   border: none
   background: $grey3
-  margin: 2.2rem 0rem -4rem 0rem
+  position: absolute
+  top: 100%
+  left: 0
+  right: 0
+  margin: 0rem
+  @include rem-fallback(padding, 0.75, 0)
   label
     display: none
   fieldset
@@ -106,10 +111,10 @@ form[role=search]
   input[type=search]
     position: relative
     padding: 0 0.5em
-    width: 70%
+    width: 80%
   input[type=submit]
     position: relative
-    width: 10%
+    min-width: 120px
     vertical-align: top
     @include rem-fallback(padding, 0.3, 0.5)
     @include rem-fallback(min-height, 2)
@@ -119,16 +124,25 @@ ol.multi
   width: 75%
   margin-left: 25%
   display: block
+  border: 1px solid $grey4
+  @include rem-fallback(padding, 0.5)
+  max-height: 350px
   overflow: auto
+  position: relative
   li
     list-style-type: none
     position: relative
     label
+      width: 100%
+      text-align: left
+      display: block
       float: none
-      margin-left: 1.25rem
+      padding-left: 1.75rem
+      &:hover
+        background: $grey7
       input[type=checkbox]
         position: absolute
-        left: 0
+        left: 0.5rem
         top: 25%
         margin-right: 0.5rem
 
