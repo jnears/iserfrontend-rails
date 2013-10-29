@@ -71,3 +71,8 @@ dimissable = () ->
 focus_first = () ->
   if $('form.focus-first').length > 0
     $("form.focus-first input:not([type=hidden]), form.focus-first textarea").first().focus()
+
+$(document).keyup (e) ->
+  if e.keyCode is 27
+    $(".close").click() if $('.close').length == 1
+    window.location = $(".cancel").attr('href') if $('.cancel').length > 0
