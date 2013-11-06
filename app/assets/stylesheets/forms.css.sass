@@ -149,5 +149,10 @@ ol.multi
         margin-right: 0.5rem
 
 div.field_with_errors
+  display: inline
   input, select, textarea
+    outline: 3px solid $red
+
+input, select, textarea
+  &.field_with_errors
     outline: 3px solid $red
