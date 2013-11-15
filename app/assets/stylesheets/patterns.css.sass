@@ -32,23 +32,23 @@ ol.pagination
   list-style-type: none
   display: block
   overflow: auto
-  @include rem-fallback(line-height, 3)
+  // @include rem-fallback(line-height, 3)
   li
     float: left
-    @include rem-fallback(padding, 0, 0.25)
-    &:first-of-type
-      @include rem-fallback(padding, 0, 0.25, 0, 0)
-    a[rel=prev], a[rel=next]
-      @include rem-fallback(line-height, 2)
-    a:not([rel=prev]):not([rel=next])
-      @include btn
-      text-decoration: none
-    span.active
-      @include btn
-      background: $red
-      cursor: default
-      &:hover
-        background: $red
+    // @include rem-fallback(padding, 0, 0.25)
+    // &:first-of-type
+    //   @include rem-fallback(padding, 0, 0.25, 0, 0)
+    // a[rel=prev], a[rel=next]
+    //   @include rem-fallback(line-height, 2)
+    // a:not([rel=prev]):not([rel=next])
+    //   @include btn
+    //   text-decoration: none
+    // span.active
+    //   @include btn
+    //   background: $red
+    //   cursor: default
+    //   &:hover
+    //     background: $red
 
 .pagination
   @include rem-fallback(margin-top, 1.5)
