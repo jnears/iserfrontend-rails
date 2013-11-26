@@ -1,0 +1,34 @@
+section.post-list
+  article
+    @include rem-fallback(padding, 1.5, 0)
+    position: relative
+    p.meta
+      color: $grey2
+      font-family: $body_font
+      font-weight: normal
+      font-style: italic
+      @include rem-fallback(font-size, (16 / $basefont))
+      @include rem-fallback(margin-bottom, 0)
+      a
+        &:link, &:visited, &:active
+          color: $grey2
+        &:hover
+          color: $hover
+      time:before
+        content: " - "
+    h1
+      @include rem-fallback(font-size, (20 / $basefont))
+      @include rem-fallback(line-height, 1)
+      // @include rem-fallback(line-height, (1.5 * (20 / $baseline)))
+      // @include rem-fallback(line-height, (20 / $basefont))
+      @include rem-fallback(margin-bottom, 0.5)
+    p
+      margin: none
+      color: #000000
+    figure
+      position: absolute
+      left: -150px
+      @include rem-fallback(top, 1.75)
+      img
+        vertical-align: middle
+        border-radius: 10px
