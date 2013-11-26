@@ -1,0 +1,25 @@
+html.sc
+  header[role=banner]
+    border-bottom: 1px solid
+    border-bottom: 1px solid $grey4
+    text-align: center
+    margin-bottom: 20px
+    background: $grey6
+    h1
+      text-transform: uppercase
+      @include rem-fallback(font-size, (34 / $basefont))
+      @include rem-fallback(margin, 1.5, 0, 0, 0)
+      a:link, a:visited
+        padding: 5px 20px
+        color: $white
+        background: $grey1
+        text-decoration: none
+      a:hover
+        text-decoration: none
+        background: $rouge
+    h2
+      font-family: $heading_font
+      font-weight: normal
+      color:
+      @include rem-fallback(font-size, (24 / $basefont))
+      margin: 5px 0 20px 0
