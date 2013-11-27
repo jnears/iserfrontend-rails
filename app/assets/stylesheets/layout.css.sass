@@ -5,7 +5,8 @@ main
     max-width: none
     @include rem-fallback(margin-left, 0)
   @include rem-fallback(margin-top, 5)
-  @include rem-fallback(margin-left, 15)
+  // @include rem-fallback(margin-left, 15)
+  margin-left: 150px
   position: relative
 
 body.app
@@ -18,8 +19,12 @@ body.app
     margin-right: auto
 
 aside
-  overflow: auto
-  float: left
+  // overflow: auto
+  position: absolute
+  right: 0px
+  top: 0
+  width: 300px
+
   @include rem-fallback(margin-top, 6)
   @include rem-fallback(margin-left, 5)
   @include rem-fallback(width, 20)
@@ -40,4 +45,10 @@ a.home-logo
   top: 5em
   left: 5em
 
-
+div.container
+  position: relative
+  width: 75%
+  margin: 0 auto
+  padding-right: 375px
+  // outline: 1px solid red
+  // overflow: auto

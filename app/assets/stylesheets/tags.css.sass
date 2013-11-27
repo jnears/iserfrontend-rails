@@ -1,0 +1,21 @@
+nav.tags
+  overflow: auto
+  font-family: $heading_font
+  font-weight: bold
+  @include rem-fallback(font-size, (18 / $basefont))
+  menu
+    @include rem-fallback(padding-left, 0)
+    li
+      @include rem-fallback(margin-bottom, 1.25)
+      list-style-type: none
+      float: left
+      @include rem-fallback(margin-right, 0.5)
+      a
+        &:active, &:link, &:visited
+          @include rem-fallback(padding, 0.5)
+          background: $grey3
+          text-decoration: none
+          color: $grey1
+        &:hover
+          background: $hover
+          color: $white

@@ -17,7 +17,7 @@ $(document).on 'page:fetch', (e) ->
 
 build_in_page_menu = () ->
   if $('nav.guide').length == 0
-    guide_nav = $("<nav />").attr("class","nav guide")
+    guide_nav = $("<nav />").attr("class","nav guide scrollable")
     guide_nav.append("<h5 class=\"info\">On this page</h5>")
     guide_nav.append("<li><a href=\"#top\">Top ^</a>")
     $('.section-heading').each (i, e) =>

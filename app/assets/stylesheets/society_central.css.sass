@@ -1,14 +1,18 @@
 html.sc
   header[role=banner]
-    border-bottom: 1px solid
     border-bottom: 1px solid $grey4
     text-align: center
-    margin-bottom: 20px
+    @include rem-fallback(margin-bottom, 1.5)
     background: $grey6
+    position: relative
+    .container
+      height: #{(($baseline * 5) - 5)}px
+      padding-right: 0
     h1
       text-transform: uppercase
       @include rem-fallback(font-size, (34 / $basefont))
-      @include rem-fallback(margin, 1.5, 0, 0, 0)
+      @include rem-fallback(margin, 0)
+      @include rem-fallback(padding-top, 1.5)
       a:link, a:visited
         padding: 5px 20px
         color: $white
@@ -16,10 +20,34 @@ html.sc
         text-decoration: none
       a:hover
         text-decoration: none
-        background: $rouge
+        background: $hover
     h2
       font-family: $heading_font
       font-weight: normal
-      color:
+      color: $grey2
       @include rem-fallback(font-size, (24 / $basefont))
+      @include rem-fallback(line-height, 1)
       margin: 5px 0 20px 0
+    div.social-links
+      position: absolute
+      left: 0
+      bottom: 0px
+      a:link, a:active, a:visited
+        color: $grey2
+        @include rem-fallback(padding, 0.5)
+      a:hover
+        color: $hover
+    div.util-links
+      position: absolute
+      right: 0
+      bottom: 0px
+      a
+        &:link, &:active, &:visited
+          @include rem-fallback(padding, 0.5)
+          color: $grey2
+        &:hover
+          color: $hover
+  main
+    @include rem-fallback(margin-top, 2)
+  aside[role=aside]
+    @include rem-fallback(margin-top, 3)

@@ -39,26 +39,31 @@ section.post-list
 
         box-shadow: 0px -1px 2px 1px rgba(0, 0, 0, 0.25)
 
-        &.analysis
-          background: $lilac
-          color: $white
-          &:hover
-            background: lighten($lilac, 10%)
-        &.news
-          background: $lilac
-          color: $white
-          &:hover
-            background: lighten($lilac, 10%)
-        &.feature
-          background: $lilac
-          color: $white
-          &:hover
-            background: lighten($lilac, 10%)
-        &.comment
-          background: $lilac
-          color: $white
-          &:hover
-            background: lighten($lilac, 10%)
+        background: $grey2
+        color: $white
+        &:hover
+          background: $hover
+
+        // &.analysis
+        //   background: $grey2
+        //   color: $white
+        //   &:hover
+        //     background: lighten($grey2, 10%)
+        // &.news
+        //   background: $grey2
+        //   color: $white
+        //   &:hover
+        //     background: lighten($grey2, 10%)
+        // &.feature
+        //   background: $grey2
+        //   color: $white
+        //   &:hover
+        //     background: lighten($grey2, 10%)
+        // &.comment
+        //   background: $grey2
+        //   color: $white
+        //   &:hover
+        //     background: lighten($grey2, 10%)
         // i
         //   position: absolute
         //   right: 5px
@@ -68,8 +73,8 @@ section.post-list
       time:before
         content: " - "
     h1
-      @include rem-fallback(font-size, (20 / $basefont))
-      @include rem-fallback(line-height, 1)
+      @include rem-fallback(font-size, (24 / $basefont))
+      @include rem-fallback(line-height, 2)
       // @include rem-fallback(line-height, (1.5 * (20 / $baseline)))
       // @include rem-fallback(line-height, (20 / $basefont))
       @include rem-fallback(margin-bottom, 0.5)
