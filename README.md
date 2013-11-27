@@ -22,7 +22,7 @@ In file `/app/assets/javascripts/application.js`, add the line:
 
       //= require iserwww
 
-In file `/app/assets/stylesheets/application.js`, add the line:
+In file `/app/assets/stylesheets/application.css`, add the line:
 
       *= require iserwww
 
