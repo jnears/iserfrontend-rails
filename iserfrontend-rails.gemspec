@@ -22,4 +22,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake"
   spec.add_dependency "railties", "~> 4.0"
   spec.add_runtime_dependency "font-awesome-rails"
+  spec.add_runtime_dependency "foundation-rails", "~> 5.0.3.1"
 end
