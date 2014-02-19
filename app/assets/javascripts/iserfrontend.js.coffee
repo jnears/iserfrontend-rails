@@ -48,13 +48,13 @@ prevent_widows = () ->
 toggle_grid = () ->
   $('a#show-grid').on 'click', (e) =>
     $('html').toggleClass("grid")
-    return false
+    event.preventDefault()
 
 toggle_dropdown = () ->
   $(document).on 'click', 'li.dropdown > a', (event) ->
     $('li.dropdown ol').hide()
     $(this).next().show()
-    return false
+    event.preventDefault()
   $(document).on 'click', 'body', (event) ->
     $('li.dropdown ol').hide()
 
@@ -66,7 +66,7 @@ scroll_to_anchor = () ->
 dimissable = () ->
   $('*[data-dismiss]').on 'click', (e) =>
     $(e.target).parent().hide()
-    return false
+    event.preventDefault()
 
 focus_first = () ->
   if $('form.focus-first').length > 0

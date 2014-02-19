@@ -49,5 +49,126 @@ html.sc
           color: $hover
   main
     @include rem-fallback(margin-top, 0.5)
-  aside[role=aside]
-    @include rem-fallback(margin-top, 2)
+  aside
+    @include rem-fallback(margin-top, 0)
+    @include rem-fallback(margin-left, 0)
+    position: relative
+
+  nav#site-navigation
+    display: none
+
+  div#content
+    // outline: 1px solid red
+    width: 90%
+    margin: 0 auto
+
+  div#primary
+    // outline: 1px solid blue
+    float: left
+    width: 70%
+
+  div#secondary
+    // outline: 1px solid yellow
+    float: left
+    width: 30%
+    form[role=search]
+      position: relative
+      label
+        display: inline-block
+        width: auto
+
+
+  main.site-main
+    article
+      @include rem-fallback(padding, 1.5, 0)
+      position: relative
+      .entry-meta
+        color: $grey2
+        font-family: $body_font
+        font-weight: normal
+        font-style: italic
+        @include rem-fallback(font-size, (16 / $basefont))
+        @include rem-fallback(margin-bottom, 0)
+        a
+          &:link, &:visited, &:active
+            color: $grey2
+          &:hover
+            color: $hover
+
+        a.tag
+          position: absolute
+          left: -128px
+          z-index: 1
+          top: 145px
+          // font-family: $body_font
+          font-weight: bold
+          border-radius: 5px
+          min-width: 84px
+          text-align: center
+
+          @include rem-fallback(font-size, (12 / $basefont))
+          // @include rem-fallback(padding, 0.65, 0.35, 0.45, 0.35)
+          @include rem-fallback(padding, 0.25, 0.25, 0.25, 0.35)
+          // text-transform: uppercase
+          @include rem-fallback(line-height, 0)
+          font-style: normal
+          // i
+          //   margin-right: 5px
+
+          text-decoration: none
+
+          box-shadow: 0px -1px 2px 1px rgba(0, 0, 0, 0.25)
+
+          background: $grey2
+          color: $white
+          &:hover
+            background: $hover
+
+          // &.analysis
+          //   background: $grey2
+          //   color: $white
+          //   &:hover
+          //     background: lighten($grey2, 10%)
+          // &.news
+          //   background: $grey2
+          //   color: $white
+          //   &:hover
+          //     background: lighten($grey2, 10%)
+          // &.feature
+          //   background: $grey2
+          //   color: $white
+          //   &:hover
+          //     background: lighten($grey2, 10%)
+          // &.comment
+          //   background: $grey2
+          //   color: $white
+          //   &:hover
+          //     background: lighten($grey2, 10%)
+          // i
+          //   position: absolute
+          //   right: 5px
+          //   top: 4px
+
+
+        time:before
+          content: " - "
+      h1
+        @include rem-fallback(font-size, (24 / $basefont))
+        @include rem-fallback(line-height, 2)
+        // @include rem-fallback(line-height, (1.5 * (20 / $baseline)))
+        // @include rem-fallback(line-height, (20 / $basefont))
+        @include rem-fallback(margin-bottom, 0.5)
+      p
+        margin: none
+        color: #000000
+      figure
+        position: absolute
+        left: -150px
+        @include rem-fallback(top, 1.75)
+        img
+          vertical-align: middle
+          border-radius: 10px
+
+
+
+
