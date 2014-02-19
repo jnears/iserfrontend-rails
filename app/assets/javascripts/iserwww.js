@@ -2,8 +2,7 @@
 //= require_directory ./vendor/bootstrap
 //= require vendor/bootstrap-datetimepicker.min
 //= require vendor/jquery-ui-1.10.3.custom.min
-//= require foundation
 //= require iserfrontend
 
 
-$(document).foundation();
+
