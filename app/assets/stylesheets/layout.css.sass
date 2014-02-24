@@ -1,13 +1,14 @@
 main
-  float: left
-  @include rem-fallback(max-width, 30)
-  @include respond-to(handheld)
-    max-width: none
-    @include rem-fallback(margin-left, 0)
-  @include rem-fallback(margin-top, 5)
-  // @include rem-fallback(margin-left, 15)
-  margin-left: 150px
+  // float: left
   position: relative
+  @include rem-fallback(max-width, 30)
+  @include rem-fallback(margin-left, 15)
+  @include rem-fallback(margin-top, 5)
+  @include respond-to(tablet)
+    float: none
+    width: auto
+    @include rem-fallback(margin-left, 0.5)
+    @include rem-fallback(margin-right, 0.5)
 
 body.app
   main
@@ -19,6 +20,7 @@ body.app
     margin-right: auto
 
 aside
+  outline: 1px solid red
   // overflow: auto
   position: absolute
   right: 0px
@@ -44,11 +46,3 @@ a.home-logo
   position: absolute
   top: 5em
   left: 5em
-
-div.container
-  position: relative
-  width: 90%
-  margin: 0 auto
-  padding-right: 375px
-  // outline: 1px solid red
-  // overflow: auto

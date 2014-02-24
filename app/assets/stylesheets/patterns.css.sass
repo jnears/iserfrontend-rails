@@ -9,8 +9,6 @@ p.call-to-action
   font-family: $body_font
   font-style: italic
 
-div.example
-  @include boxout
 
 h2.section-heading
   @include rem-fallback(padding-top, 3)
@@ -157,15 +155,7 @@ ol.pagination
     margin-top: 1em
     display: block
 
-.row6
-  clear: both
-  height: #{$baseline * 7}px
-  & .block:nth-child(3n-3)
-    margin-right: 0%
-  & .block:nth-child(3n+1)
-    margin-left: 0%
-  &.row2
-    height: #{$baseline * 13}px
+
 
 p.info
   font-style: italic
@@ -188,14 +178,6 @@ p.notice
   font-style: italic
   font-weight: bold
   color: $white
-
-div.changed
-  position: fixed
-  left: 50%
-  right: 50%
-  width: 33%
-  top: 60px
-  display: none
 
 #loading
   position: fixed
@@ -220,12 +202,6 @@ article.result
       margin-bottom: 0rem
   a:hover
     background: $grey5
-
-div.heading
-  position: relative
-
-.no-margin
-  margin: 0rem !important
 
 fieldset.property
   background: $grey5
