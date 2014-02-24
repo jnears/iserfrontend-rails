@@ -38,27 +38,24 @@ $column_widths: 100, 48, 31.3333333333, 23, 18, 14.6666666667
     width: #{(nth($column_widths, 2))}#{'%'}
     &:nth-child(2n+1)
       clear: left
-      &:nth-child(n+3)
-        margin-top: #{$gutter}#{'%'}
+    &:nth-child(n+3)
+      margin-top: #{$gutter}#{'%'}
   @if $number_of_columns == 6
     width: #{(nth($column_widths, 2))}#{'%'}
     &:nth-child(n)
       clear: none
-      &:nth-child(n+3)
-        margin-top: #{$gutter}#{'%'}
+    &:nth-child(n+3)
+      margin-top: #{$gutter}#{'%'}
 
 [class*="span"]
   float: left
   min-height: 1px
   margin-left: #{$gutter}#{'%'}
   outline: 1px solid $grey4
-  & *:first-of-type
-
-    margin: 0
-
-  & *:last-of-type
-
-    margin-bottom: 0
+  // & *:first-of-type
+  //   margin: 0
+  // & *:last-of-type
+  //   margin-bottom: 0
 
 
 .container
