@@ -1,6 +1,9 @@
-$gutter: 2
+$gutter: 3
 $max_columns: 6
-$column_widths: 100, 48, 31.3333333333, 23, 18, 14.6666666667
+$column_widths: 100
+
+@for $i from 2 through $max_columns
+  $column_widths: append($column_widths, ((100 - ($gutter * ($i))) / $i), comma)
 
 @mixin row
   margin-top: #{$gutter}#{'%'}
