@@ -1,3 +1,19 @@
+h1.logo
+  @include rem-fallback(margin-top, -4)
+  @include rem-fallback(padding-top, 4)
+  @include rem-fallback(padding-bottom, 1)
+  @include rem-fallback(line-height, 2.5)
+  background: url(asset-path("iser-logo.gif", image)) no-repeat 50% 0
+  @include image-2x(asset-path("iser-logo@2x.gif", image), 80px, 68px)
+  @include rem-fallback(font-size, (36 / $basefont))
+  text-align: center
+  span
+    @include rem-fallback(font-size, (24 / $basefont))
+    @include rem-fallback(line-height, 1)
+  border-bottom: 1px solid $grey4
+
+
+
 p.lead
   @include rem-fallback(font-size, (22 / $basefont))
   @include rem-fallback(line-height, (1.5 * (ceil(22 / $baseline))))
@@ -11,7 +27,7 @@ p.call-to-action
 
 
 h2.section-heading
-  @include rem-fallback(padding-top, 3)
+  // @include rem-fallback(padding-top, 3)
 
 h6.meta
   color: $grey2
