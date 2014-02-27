@@ -1,7 +1,7 @@
 main
   // float: left
   position: relative
-  @include rem-fallback(margin-top, 5)
+  // @include rem-fallback(margin-top, 5)
   @include respond-to(tablet)
     float: none
     width: auto
@@ -44,13 +44,3 @@ a#show-grid
   position: fixed
   bottom: 10px
   right: 10px
-
-a.home-logo
-  text-indent: -3000em
-  overflow: hidden
-  background: url(asset_path("iser-logo.gif", image))
-  width: 105px
-  height: 90px
-  position: absolute
-  top: 5em
-  left: 5em

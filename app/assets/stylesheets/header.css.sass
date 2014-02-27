@@ -1,9 +1,21 @@
 header[role=banner]
-  position: fixed
+  // position: fixed
+  @include rem-fallback(margin-bottom, 1.5)
   top: 0
   left: 0
   right: 0
   z-index: 2
-  background: $grey6
+  // background: $grey6
   color: $grey1
   border-top: 4px solid $grey1
+  border-bottom: 1px solid $grey4
+  @include rem-fallback(padding, 0.5,0,0.5,0)
+
+  a.home-logo
+    // width: 46px
+    @include rem-fallback(height, 4)
+    background: url(asset-path("iser-logo.gif", image)) no-repeat 0 50%
+    @include image-2x(asset-path("iser-logo@2x.gif", image), 80px, 68px)
+    text-indent: -3000em
+    overflow: hidden
+    display: block
