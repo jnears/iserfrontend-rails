@@ -60,7 +60,15 @@ p
     //   color: $grey1
     // a:hover
     //   color: $hover
-
+    @if $i < 4
+      span
+        display: block
+        color: $grey2
+        font-family: $heading_font
+        font-weight: normal
+        font-style: normal
+        @include rem-fallback(font-size, ((nth($heading_sizes, $i) * 0.75) / $basefont))
+        @include rem-fallback(line-height, (1.5 * (ceil((nth($heading_sizes, $i) * 0.75) / $baseline))))
 h1
   span
     display: block
@@ -117,7 +125,7 @@ hr
   padding: 0
   border: 0
   border-bottom: 1px solid $grey4
-  @include rem-fallback(margin, (($baseline - 1) / $basefont), 0)
+  @include rem-fallback(margin, (($baseline - 1) / $basefont), 0, 1.5, 0)
   @include rem-fallback(line-height, 1.5)
 
 

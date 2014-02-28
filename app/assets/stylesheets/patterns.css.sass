@@ -13,8 +13,6 @@ h1.logo
     @include rem-fallback(line-height, 1)
   border-bottom: 1px solid $grey4
 
-
-
 p.lead
   @include rem-fallback(font-size, (22 / $basefont))
   @include rem-fallback(line-height, (1.5 * (ceil(22 / $baseline))))
@@ -43,34 +41,13 @@ h6.meta
     display: block
     color: $green
 
-ol.pagination
-  list-style-type: none
-  display: block
-  overflow: auto
-  // @include rem-fallback(line-height, 3)
-  li
-    float: left
-    // @include rem-fallback(padding, 0, 0.25)
-    // &:first-of-type
-    //   @include rem-fallback(padding, 0, 0.25, 0, 0)
-    // a[rel=prev], a[rel=next]
-    //   @include rem-fallback(line-height, 2)
-    // a:not([rel=prev]):not([rel=next])
-    //   @include btn
-    //   text-decoration: none
-    // span.active
-    //   @include btn
-    //   background: $red
-    //   cursor: default
-    //   &:hover
-    //     background: $red
-
 .pagination
   @include rem-fallback(margin-top, 1.5)
   @include rem-fallback(margin-bottom, 1.5)
-  overflow: auto
+  @include rem-fallback(padding, 0.5, 0)
   background: white
   cursor: default
+  overflow: auto
   a, span, em
     padding: 0.2em 0.5em
     display: block

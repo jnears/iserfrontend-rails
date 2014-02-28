@@ -1,6 +1,6 @@
 header[role=banner]
   // position: fixed
-  @include rem-fallback(margin-bottom, 1.5)
+  @include rem-fallback(margin-bottom, 2)
   top: 0
   left: 0
   right: 0
@@ -9,7 +9,8 @@ header[role=banner]
   color: $grey1
   border-top: 4px solid $grey1
   border-bottom: 1px solid $grey4
-  @include rem-fallback(padding, 0.5,0,0.5,0)
+  @include rem-fallback(padding, 0.75,0,0.5,0)
+  @include rem-fallback(height, 6  )
 
   a.home-logo
     // width: 46px

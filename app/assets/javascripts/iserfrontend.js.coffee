@@ -7,7 +7,7 @@ init_page = () ->
   dimissable()
   focus_first()
   toggle_dropdown()
-  $('img').baseline(18)
+  $('img').baseline(27)
 
 $(document).on 'ready page:change', ->
   init_page()
