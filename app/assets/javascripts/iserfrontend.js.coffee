@@ -7,7 +7,6 @@ init_page = () ->
   dimissable()
   focus_first()
   toggle_dropdown()
-  $('img').baseline(27)
 
 $(document).on 'ready page:change', ->
   init_page()
@@ -15,6 +14,9 @@ $(document).on 'ready page:change', ->
 
 $(document).on 'page:fetch', (e) ->
   $('#loading').fadeIn()
+
+$(window).on 'load', ->
+  $('img').baseline(27)
 
 build_in_page_menu = () ->
   if $('nav.guide').length == 0
