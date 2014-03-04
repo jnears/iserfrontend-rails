@@ -16,7 +16,14 @@ $(document).on 'page:fetch', (e) ->
   $('#loading').fadeIn()
 
 $(window).on 'load', ->
-  $('img').baseline(27)
+  if $('img').length > 0
+    $('img').baseline(27)
+
+$(document).on 'click', '.search-toggle', (event) ->
+  $(this).toggleClass('active')
+  $('form[role=search]').toggle()
+  $('form[role=search] input[type=search]:first').focus()
+  return false
 
 build_in_page_menu = () ->
   if $('nav.guide').length == 0

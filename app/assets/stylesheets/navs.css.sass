@@ -1,8 +1,5 @@
 header[role=banner]
   nav
-    // display: none
-    // width: 50em
-    // @include rem-fallback(margin-left, 15)
     float: right
     @include rem-fallback(margin-top, 1)
     @include respond-to(tablet)
@@ -15,7 +12,6 @@ header[role=banner]
         line-height: 2.2rem
         a:link, a:visited
           font-family: $heading_font
-          // text-transform: uppercase
           -webkit-font-smoothing: subpixel-antialiased
           font-weight: bold
           padding: 0 1em
@@ -23,10 +19,8 @@ header[role=banner]
           color: $grey1
           text-decoration: none
           &.active
-            // @include transparent($grey1, 0.1)
             background: $grey3
         a:hover
-          // @include transparent($grey1, 0.1)
           background: $grey3
         &.user
           text-align: right
