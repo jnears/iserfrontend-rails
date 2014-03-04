@@ -1,17 +1,17 @@
-h1.logo
-  // @include rem-fallback(margin-top, -4)
-  @include rem-fallback(margin-top, 1)
-  @include rem-fallback(padding-top, 4)
-  @include rem-fallback(padding-bottom, 1)
-  @include rem-fallback(line-height, 2.5)
-  background: url(asset-path("iser-logo.gif", image)) no-repeat 50% 0
-  @include image-2x(asset-path("iser-logo@2x.gif", image), 80px, 68px)
-  @include rem-fallback(font-size, (28 / $basefont))
-  text-align: center
-  span
-    @include rem-fallback(font-size, (20 / $basefont))
-    @include rem-fallback(line-height, 1)
-  border-bottom: 1px solid $grey4
+// h1.logo
+//   // @include rem-fallback(margin-top, -4)
+//   @include rem-fallback(margin-top, 1)
+//   @include rem-fallback(padding-top, 4)
+//   @include rem-fallback(padding-bottom, 1)
+//   @include rem-fallback(line-height, 2.5)
+//   background: url(asset-path("iser-logo.gif", image)) no-repeat 50% 0
+//   @include image-2x(asset-path("iser-logo@2x.gif", image), 80px, 68px)
+//   @include rem-fallback(font-size, (28 / $basefont))
+//   text-align: center
+//   span
+//     @include rem-fallback(font-size, (20 / $basefont))
+//     @include rem-fallback(line-height, 1)
+//   border-bottom: 1px solid $grey4
 
 p.lead
   @include rem-fallback(font-size, (22 / $basefont))
@@ -29,6 +29,7 @@ h2.section-heading
   // @include rem-fallback(padding-top, 3)
 
 h6.meta
+  display: none
   color: $grey2
   font-family: $body_font
   font-weight: normal

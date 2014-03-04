@@ -13,10 +13,13 @@ header[role=banner]
   @include rem-fallback(height, 6)
 
   a.home-logo
-    // width: 46px
+    width: 80px
     @include rem-fallback(height, 4)
     background: url(asset-path("iser-logo.gif", image)) no-repeat 0 50%
     @include image-2x(asset-path("iser-logo@2x.gif", image), 80px, 68px)
     text-indent: -3000em
     overflow: hidden
     display: block
+    @include respond-to(tablet)
+      margin-left: auto
+      margin-right: auto

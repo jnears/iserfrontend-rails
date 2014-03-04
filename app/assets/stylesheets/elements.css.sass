@@ -48,6 +48,8 @@ p
     @else
       @include rem-fallback(margin-bottom, 1.5)
     margin-top: 0
+    @include respond-to(handheld)
+      @include rem-fallback(font-size, ((nth($heading_sizes, $i) * 0.6) / $basefont))
     &.info
       color: $grey2
       font-weight: normal
@@ -69,6 +71,10 @@ p
         font-style: normal
         @include rem-fallback(font-size, ((nth($heading_sizes, $i) * 0.75) / $basefont))
         @include rem-fallback(line-height, (1.5 * (ceil((nth($heading_sizes, $i) * 0.75) / $baseline))))
+        @include respond-to(tablet)
+          @include rem-fallback(font-size, ((nth($heading_sizes, $i) * 0.5) / $basefont))
+        @include respond-to(handheld)
+          @include rem-fallback(font-size, ((nth($heading_sizes, $i) * 0.5) / $basefont))
 h1
   span
     display: block
@@ -118,6 +124,9 @@ a:link, a:visited
 a:hover
   color: $hover
   text-decoration: underline
+
+a:focus
+  outline: 3px solid $focus
 
 hr
   clear: both

@@ -5,6 +5,8 @@ header[role=banner]
     // @include rem-fallback(margin-left, 15)
     float: right
     @include rem-fallback(margin-top, 1)
+    @include respond-to(tablet)
+      display: none
     ol
       list-style-type: none
       li

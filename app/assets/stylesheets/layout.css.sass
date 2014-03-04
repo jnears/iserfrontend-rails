@@ -11,7 +11,8 @@ main
 section.main
   position: relative
   @include rem-fallback(max-width, 30)
-  @include rem-fallback(margin-left, 15)
+  // @include rem-fallback(margin-left, 15)
+  margin: 0 auto 0 10%
   @include respond-to(tablet)
     float: none
     width: auto
@@ -28,11 +29,11 @@ body.app
     margin-right: auto
 
 aside
-  outline: 1px solid red
+  display: none
   // overflow: auto
   position: absolute
-  right: 0px
-  top: 0
+  right: 5%
+  top: 0px
   width: 300px
   @include rem-fallback(margin-top, 6)
   @include rem-fallback(margin-left, 5)
