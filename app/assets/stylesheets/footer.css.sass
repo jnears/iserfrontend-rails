@@ -3,7 +3,39 @@ footer[role=contentinfo]
   display: block
   background: $grey1
   color: $grey7
+  overflow: auto
   @include rem-fallback(margin-top, 3)
   @include rem-fallback(padding, 3, 0)
   -webkit-font-smoothing: antialiased
+  @include rem-fallback(font-size, (16 / $basefont))
 
+  a:link, a:visited, a:active
+    color: $grey7
+    text-decoration: none
+
+  ul
+    li
+      list-style-type: none
+      display: inline
+      @include rem-fallback(margin-right, 1)
+
+  a.esrc
+    float: left
+    @include rem-fallback(margin-right, 2)
+    display: block
+    width: 97px
+    height: 81px
+    overflow: hidden
+    text-indent: -3000em
+    background: url(asset-path("esrc-logo.gif", image)) no-repeat 50% 50%
+    @include image-2x(asset-path("esrc-logo@2x.gif", image), 97px, 81px)
+
+  a.uoe
+    float: left
+    display: block
+    width: 222px
+    height: 81px
+    overflow: hidden
+    text-indent: -3000em
+    background: url(asset-path("uoe-logo.gif", image)) no-repeat 50% 50%
+    @include image-2x(asset-path("uoe-logo@2x.gif", image), 222px, 81px)
