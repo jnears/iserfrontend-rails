@@ -1,8 +1,8 @@
 footer[role=contentinfo]
   clear: both
   display: block
-  background: $grey1
-  color: $grey7
+  background: $grey3
+  // color: $grey3
   overflow: auto
   @include rem-fallback(margin-top, 3)
   @include rem-fallback(padding, 3, 0)
@@ -10,14 +10,17 @@ footer[role=contentinfo]
   @include rem-fallback(font-size, (16 / $basefont))
 
   a:link, a:visited, a:active
-    color: $grey7
-    text-decoration: none
+    // color: $grey3
+  a:hover
+    // color: $white
 
-  ul
-    li
-      list-style-type: none
-      display: inline
-      @include rem-fallback(margin-right, 1)
+  nav.utilities
+    float: right
+    ul
+      li
+        list-style-type: none
+        display: inline
+        @include rem-fallback(margin-right, 1)
 
   a.esrc
     float: left
