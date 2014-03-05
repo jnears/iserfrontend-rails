@@ -7,6 +7,7 @@ init_page = () ->
   dimissable()
   focus_first()
   toggle_dropdown()
+  activate_datetime_pickers()
 
 $(document).on 'ready page:change', ->
   init_page()
@@ -24,6 +25,14 @@ $(document).on 'click', '.search-toggle', (event) ->
   $('form[role=search]').toggle()
   $('form[role=search] input[type=search]:first').focus()
   return false
+
+activate_datetime_pickers = () ->
+  if $('.datepicker').length > 0
+    $('.datepicker').datetimepicker pickTime: false, language: 'EN'
+  if $('.timepicker').length > 0
+    $('.timepicker').datetimepicker pickDate: false, language: 'EN', pickSeconds: false
+  if $('.datetimepicker').length > 0
+    $('.datetimepicker').datetimepicker language: 'EN', pickSeconds: false
 
 build_in_page_menu = () ->
   if $('nav.guide').length == 0
@@ -66,7 +75,6 @@ toggle_dropdown = () ->
 
 scroll_to_anchor = () ->
   $('.scrollable a[href^=#]').on 'click', (e) =>
-    console.log($(e.target).attr('href'))
     $("html, body").animate({ scrollTop: $($(e.target).attr('href')).offset().top }, 200)
 
 dimissable = () ->
