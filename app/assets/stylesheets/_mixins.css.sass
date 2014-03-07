@@ -28,13 +28,14 @@
   -moz-border-radius: $radius
   -webkit-border-radius: $radius
 
-@mixin boxout($bg:$grey4)
+@mixin boxout($bg:$grey6)
   @include rem-fallback(margin, 0, -1.5, 1.5, -1.5)
   @include respond-to(handheld)
     @include rem-fallback(margin, 0, -1, 1.5, -1)
     @include rem-fallback(padding, 1)
     border-radius: 0
-  @include transparent($bg, 0.5)
+  // @include transparent($bg, 0.5)
+  background: $bg
   @include rem-fallback(padding, 1.5)
   border: 0
   @include rounded
