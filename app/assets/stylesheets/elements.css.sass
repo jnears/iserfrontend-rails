@@ -41,6 +41,7 @@ p
 // h1 - h6
 @for $i from 1 through 6
   h#{$i}
+    position: relative
     clear: both
     font-family: $heading_font
     @include rem-fallback(font-size, (nth($heading_sizes, $i) / $basefont))

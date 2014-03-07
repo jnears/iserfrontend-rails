@@ -9,7 +9,7 @@ init_page = () ->
   toggle_dropdown()
   activate_datetime_pickers()
 
-$(document).on 'ready page:change', ->
+$(document).on 'page:change', ->
   init_page()
   $('#loading').fadeOut()
 
