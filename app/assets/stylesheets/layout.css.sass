@@ -9,7 +9,7 @@ main
     @include rem-fallback(margin-right, 0.5)
 
 section.main
-  position: relative
+  float: left
   @include rem-fallback(max-width, 30)
   // @include rem-fallback(margin-left, 15)
   margin: 0 auto 0 10%
@@ -29,13 +29,11 @@ body.app
     margin-right: auto
 
 aside
-  display: none
   // overflow: auto
-  position: absolute
+  float: left
   right: 5%
   top: 0px
   width: 300px
-  @include rem-fallback(margin-top, 6)
   @include rem-fallback(margin-left, 5)
   @include rem-fallback(width, 20)
   @include rem-fallback(font-size, (14 / $basefont))

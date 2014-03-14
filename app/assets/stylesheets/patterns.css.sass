@@ -21,9 +21,13 @@ p.call-to-action
   @include rem-fallback(font-size, (22 / $basefont))
   @include rem-fallback(line-height, (1.5 * (ceil(22 / $baseline))))
   @include boxout($green)
+  color: rgba($white, 0.8)
   font-family: $body_font
   font-style: italic
-
+  a:link, a:visited, a:active
+    color: rgba($white, 0.8)
+  a:hover
+    color: $white
 
 h2.section-heading
   // @include rem-fallback(padding-top, 3)
@@ -128,6 +132,16 @@ h6.meta
     color: $grey1
     & code
       color: $grey1
+  &.grey6
+    background: $grey6
+    color: $grey1
+    & code
+      color: $grey1
+  &.grey7
+    background: $grey7
+    color: $grey1
+    & code
+      color: $grey1
   &.link
     background: $link
   &.hover
@@ -164,9 +178,14 @@ span.info
 
 p.alert, div.changed
   @include boxout($rouge)
+  @include rem-fallback(font-size, (22 / $basefont))
+  @include rem-fallback(line-height, (1.5 * (ceil(22 / $baseline))))
   font-style: italic
-  font-weight: bold
-  color: $white
+  color: rgba($white, 0.8)
+  a:link, a:visited, a:active
+    color: rgba($white, 0.8)
+  a:hover
+    color: $white
 
 p.notice
   @include boxout($green)
