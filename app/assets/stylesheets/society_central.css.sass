@@ -52,7 +52,21 @@ html.sc
   aside
     @include rem-fallback(margin-top, 0)
     @include rem-fallback(margin-left, 0)
+    @include rem-fallback(font-size, (16 / $basefont))
     position: relative
+
+    p:last-of-type
+      margin-bottom: 0
+
+    article:not(:last-of-type)
+      border-bottom: 1px solid black
+    
+    h1
+      @include rem-fallback(font-size, (20 / $basefont))
+      @include rem-fallback(line-height, 2)
+      @include rem-fallback(margin-bottom, 0.5)
+      clear: both
+      color: $grey2
 
   nav#site-navigation
     display: none
@@ -73,9 +87,23 @@ html.sc
     width: 30%
     form[role=search]
       position: relative
+      display: initial
       label
         display: inline-block
-        width: auto
+        width: 100%
+        padding: 37px 0
+      input[type=search]
+        -webkit-appearance: textfield
+        @include rem-fallback(padding, 0.5, 0.25, 0.25, 1.5)
+        position: relative
+        width: 100%
+        border: 1px solid $grey5
+        font-family: $body_font
+        box-sizing: border-box
+        background: #fff url('ui/search-ico.png') no-repeat 8px center
+
+      input[type=submit]
+        display: none
 
 
   main.site-main
@@ -161,6 +189,7 @@ html.sc
       p
         margin: none
         color: #000000
+        cursor: pointer
       figure
         position: absolute
         left: -150px
@@ -169,6 +198,13 @@ html.sc
           vertical-align: middle
           border-radius: 10px
 
-
-
+  .screen-reader-text
+    border: 0
+    clip: rect(0 0 0 0)
+    height: 1px
+    margin: -1px
+    overflow: hidden
+    padding: 0
+    position: absolute
+    width: 1px
 
