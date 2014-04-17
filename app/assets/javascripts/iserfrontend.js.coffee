@@ -11,10 +11,10 @@ init_page = () ->
 
 $(document).on 'page:change', ->
   init_page()
-  $('#loading').fadeOut()
+  $('#loading').fadeOut("fast")
 
 $(document).on 'page:fetch', (e) ->
-  $('#loading').fadeIn()
+  $('#loading').fadeIn("fast")
 
 $(window).on 'load', ->
   if $('img').length > 0
@@ -71,7 +71,10 @@ toggle_dropdown = () ->
     $(this).next().show()
     event.preventDefault()
   $(document).on 'click', 'body', (event) ->
-    $('li.dropdown ol').hide()
+    console.dir($(event.target).parents())
+    unless $(event.target).parents().not(':has(.dropdown)')
+      console.log("closing")
+      $('li.dropdown ol').hide()
 
 scroll_to_anchor = () ->
   $('.scrollable a[href^=#]').on 'click', (e) =>
