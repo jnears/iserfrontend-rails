@@ -1,4 +1,9 @@
 html.sc
+  a:link, a:visited
+    color: black
+    text-decoration: none
+  a:hover
+    text-decoration: underline
   header[role=banner]
     border-bottom: 1px solid $grey4
     text-align: center
@@ -54,6 +59,7 @@ html.sc
     @include rem-fallback(margin-left, 0)
     @include rem-fallback(font-size, (16 / $basefont))
     position: relative
+    right: 0
 
     p:last-of-type
       margin-bottom: 0
@@ -79,12 +85,13 @@ html.sc
   div#primary
     // outline: 1px solid blue
     float: left
-    width: 70%
+    width: 66.66667%
 
   div#secondary
     // outline: 1px solid yellow
     float: left
-    width: 30%
+    width: 31%
+    padding-left: 2.333333%
     form[role=search]
       position: relative
       display: initial
@@ -108,18 +115,20 @@ html.sc
 
   main.site-main
     article
-      @include rem-fallback(padding, 1.5, 0)
       position: relative
+      @include rem-fallback(padding, 1.5, 0)
+      padding-left: 150px
+
       .entry-meta
         color: $grey2
         font-family: $body_font
         font-weight: normal
-        font-style: italic
         @include rem-fallback(font-size, (16 / $basefont))
         @include rem-fallback(margin-bottom, 0)
         a
           &:link, &:visited, &:active
             color: $grey2
+            text-decoration: none
           &:hover
             color: $hover
 
@@ -189,14 +198,16 @@ html.sc
       p
         margin: none
         color: #000000
-        cursor: pointer
       figure
         position: absolute
-        left: -150px
         @include rem-fallback(top, 1.75)
+        left: 0
+        margin: 0
+
         img
           vertical-align: middle
-          border-radius: 10px
+          @include rounded
+          width: inherit
 
   .screen-reader-text
     border: 0
@@ -207,4 +218,10 @@ html.sc
     padding: 0
     position: absolute
     width: 1px
+
+
+// remove at end
+html.sc.grid
+  z-index: 10
+  background: url('ui/grid.png') center 0px repeat
 
