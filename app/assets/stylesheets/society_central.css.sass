@@ -1,13 +1,16 @@
 html.sc
   a:link, a:visited
-    color: black
+    color: $link-sc
     text-decoration: none
   a:hover
     text-decoration: underline
   header[role=banner]
+    border-top: 0px
     border-bottom: 1px solid $grey4
+    padding-top: 0
+    @include rem-fallback(min-height, (120 / $basefont))
     text-align: center
-    @include rem-fallback(margin-bottom, 1.5)
+    @include rem-fallback(margin-bottom, (24 / $basefont))
     background: $grey6
     position: relative
     .container
@@ -18,6 +21,7 @@ html.sc
       @include rem-fallback(font-size, (34 / $basefont))
       @include rem-fallback(margin, 0)
       @include rem-fallback(padding-top, 1.5)
+      font-family: "OfficinaSerifITCW01-Bol 734534", Georgia, "Times New Roman", Times, serif
       a:link, a:visited
         padding: 5px 20px
         color: $white
@@ -25,14 +29,14 @@ html.sc
         text-decoration: none
       a:hover
         text-decoration: none
-        background: $hover
+        background: $hover-sc
     h2
       font-family: $heading_font
       font-weight: normal
       color: $grey2
       @include rem-fallback(font-size, (24 / $basefont))
       @include rem-fallback(line-height, 1)
-      margin: 5px 0 20px 0
+      margin: 5px 0 0 0
     div.social-links
       position: absolute
       left: 0
@@ -60,6 +64,26 @@ html.sc
     @include rem-fallback(font-size, (16 / $basefont))
     position: relative
     right: 0
+    width: 100%
+
+    ul 
+      padding: 0
+      margin: -5px 0 0 -5px
+
+      li 
+        list-style-type: none
+        float: left
+        @include rem-fallback(margin, (8 / $basefont), (5 / $basefont))
+
+        a:link
+          @include rem-fallback(font-size, (18 / $basefont))
+          @include rem-fallback(padding, (5 / $basefont), (10 / $basefont))
+          background: $grey5
+
+        a:hover
+          text-decoration: none
+          background: $hover-sc
+          color: $white
 
     p:last-of-type
       margin-bottom: 0
@@ -219,6 +243,13 @@ html.sc
     position: absolute
     width: 1px
 
+
+  footer[role=contentinfo]
+    
+    .site-info
+      width: 90%
+      margin: 0 auto
+      
 
 // remove at end
 html.sc.grid
