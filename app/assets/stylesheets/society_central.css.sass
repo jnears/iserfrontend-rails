@@ -8,9 +8,9 @@ html.sc
     border-top: 0px
     border-bottom: 1px solid $grey4
     padding-top: 0
-    @include rem-fallback(min-height, (120 / $basefont))
+    @include rem-fallback(min-height, 7)
     text-align: center
-    @include rem-fallback(margin-bottom, (24 / $basefont))
+    @include rem-fallback(margin-bottom, 2)
     background: $grey6
     position: relative
     .container
@@ -57,16 +57,17 @@ html.sc
         &:hover
           color: $hover
   main
-    @include rem-fallback(margin-top, 0.5)
-  aside
     @include rem-fallback(margin-top, 0)
+  aside nav
+    @include rem-fallback(margin-top, 0)
+    @include rem-fallback(margin-bottom, 1.5)
     @include rem-fallback(margin-left, 0)
     @include rem-fallback(font-size, (16 / $basefont))
     position: relative
     right: 0
     width: 100%
 
-    ul 
+    ol 
       padding: 0
       margin: -5px 0 0 -5px
 
@@ -80,10 +81,11 @@ html.sc
           @include rem-fallback(padding, (5 / $basefont), (10 / $basefont))
           background: $grey5
 
-        a:hover
+        a:hover, a.active 
           text-decoration: none
           background: $hover-sc
           color: $white
+
 
     p:last-of-type
       margin-bottom: 0
@@ -98,6 +100,11 @@ html.sc
       clear: both
       color: $grey2
 
+    h2
+      @include rem-fallback(font-size, (18 / $basefont))
+      @include rem-fallback(line-height, 2)
+      @include rem-fallback(margin-bottom, 0.5)
+
   nav#site-navigation
     display: none
 
@@ -105,24 +112,39 @@ html.sc
     // outline: 1px solid red
     width: 90%
     margin: 0 auto
+    // ensure div is expands correctly
+    overflow: hidden 
 
   div#primary
     // outline: 1px solid blue
     float: left
     width: 66.66667%
+    @include respond-to(handheld)
+      float: none
+      width: 100%
 
   div#secondary
     // outline: 1px solid yellow
     float: left
     width: 31%
     padding-left: 2.333333%
+    @include respond-to(handheld)
+      float: none
+      width: 100%
+    aside
+      width: 100%
+      margin-left: 0
+    h1
+      @include rem-fallback(font-size, (22 / $basefont))
+      font-weight: normal
+      color: $grey2
     form[role=search]
       position: relative
       display: initial
       label
         display: inline-block
         width: 100%
-        padding: 37px 0
+        @include rem-fallback(padding, 1.5, 0)
       input[type=search]
         -webkit-appearance: textfield
         @include rem-fallback(padding, 0.5, 0.25, 0.25, 1.5)
@@ -141,7 +163,6 @@ html.sc
     article
       position: relative
       @include rem-fallback(padding, 1.5, 0)
-      padding-left: 150px
 
       .entry-meta
         color: $grey2
@@ -150,11 +171,21 @@ html.sc
         @include rem-fallback(font-size, (16 / $basefont))
         @include rem-fallback(margin-bottom, 0)
         a
-          &:link, &:visited, &:active
+          &:link, 
+          &:visited, 
+          &:active
             color: $grey2
             text-decoration: none
           &:hover
-            color: $hover
+            color: $grey1
+            text-decoration: underline
+
+        .avatar
+          width: auto
+          -webkit-border-radius: 100%
+          -moz-border-radius: 100%
+          border-radius: 100%
+          margin-right: 10px
 
         a.tag
           position: absolute
@@ -215,10 +246,11 @@ html.sc
           content: " - "
       h1
         @include rem-fallback(font-size, (24 / $basefont))
-        @include rem-fallback(line-height, 2)
+        @include rem-fallback(line-height, 1.5)
         // @include rem-fallback(line-height, (1.5 * (20 / $baseline)))
         // @include rem-fallback(line-height, (20 / $basefont))
-        @include rem-fallback(margin-bottom, 0.5)
+        @include rem-fallback(margin-top, 0.5)
+        @include rem-fallback(margin-bottom, 1)
       p
         margin: none
         color: #000000
@@ -232,7 +264,11 @@ html.sc
           vertical-align: middle
           @include rounded
           width: inherit
-
+          @include respond-to(handheld)
+            width: 80px
+            height: 80px
+    article.image
+      padding-left: 150px
   .screen-reader-text
     border: 0
     clip: rect(0 0 0 0)
@@ -246,6 +282,10 @@ html.sc
 
   footer[role=contentinfo]
     color: $white
+
+    a:link, a:visited
+      color: white
+      text-deocration: none
     
     .site-info
       width: 90%
@@ -257,11 +297,6 @@ html.sc
         li
           list-style-type: none
 
-      a:link
-      a:visited
-        color: white
-        text-deocration: none
-
       .third
         float: left
         width: 33.33333%
@@ -269,7 +304,58 @@ html.sc
         &:last-of-type
           width: 31%
           padding-left: 2.33333%
-      
+  
+  //form
+  #commentform p.form-allowed-tags
+    display: none 
+    
+  #primary 
+    form[role=search]
+      display: block
+      background: $grey6
+      @include rem-fallback(padding, (10 / $basefont))
+      width: 100%
+      overflow: auto
+      display: inline-block
+      margin: 0
+      label
+        display: block
+        width: 40%
+        line-height: normal
+        vertical-align: middle
+      input[type=search]
+        display: inline-block
+        vertical-align: middle
+        width: 100%
+      input[type=submit]
+        @include rem-fallback(padding, (8 / $basefont))
+    .comment-form
+      width: auto
+      line-height: normal
+      @include rem-fallback(padding-right, 1)
+      label
+        text-align: left
+      textarea
+        width: 100%
+      input[type="submit"]
+        @include rem-fallback(margin, 0)
+
+
+  .pullquote
+    @include rem-fallback(font-size, (18 / $basefont))
+    font-style: italic
+    border-left: 10px solid #f2f2f2
+    float: right
+    width: 50%
+    @include boxout
+    @include rem-fallback(margin, 0, 0, 1, 1)
+    @include respond-to(handheld)
+      width: 100%
+      @include rem-fallback(margin, 0)
+
+
+  body.home span.comments-link, body.home span.edit-link
+    display: none
 
 // remove at end
 html.sc.grid
