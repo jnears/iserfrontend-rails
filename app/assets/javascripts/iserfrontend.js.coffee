@@ -81,7 +81,7 @@ scroll_to_anchor = () ->
     $("html, body").animate({ scrollTop: $($(e.target).attr('href')).offset().top }, 200)
 
 dimissable = () ->
-  $('*[data-dismiss]').on 'click', (event) =>
+  $('*[data-dismiss]').on 'click', (e) =>
     $(e.target).parent().hide()
     event.preventDefault()
 
