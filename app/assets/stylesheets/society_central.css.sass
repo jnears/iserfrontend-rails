@@ -1,4 +1,19 @@
 html.sc
+  img, object
+    border: 0
+    width: 100%
+    -ms-interpolation-mode: bicubic
+    vertical-align: middle
+    height: auto !important
+    @include rounded
+
+  .lt-ie9 img, .lt-ie9 object
+    height: 100% !important
+
+  .lt-ie8 img, .lt-ie8 object 
+  height: auto !important
+
+
   a:link, a:visited
     color: $link-sc
     text-decoration: none
@@ -254,7 +269,9 @@ html.sc
       p
         margin: none
         color: #000000
-      figure
+
+
+      figure.thumb
         position: absolute
         @include rem-fallback(top, 1.75)
         left: 0
@@ -262,13 +279,13 @@ html.sc
 
         img
           vertical-align: middle
-          @include rounded
-          width: inherit
           @include respond-to(handheld)
             width: 80px
             height: 80px
+      
     article.image
       padding-left: 150px
+
   .screen-reader-text
     border: 0
     clip: rect(0 0 0 0)
@@ -304,6 +321,26 @@ html.sc
         &:last-of-type
           width: 31%
           padding-left: 2.33333%
+
+    
+    
+    p.logo
+      .iser-logo, .essex-logo
+        text-indent: -3000em 
+        display: block
+        overflow: hidden
+      .iser-logo
+        background: url('ui/iser-logo.png') no-repeat
+        @include image-2x('ui/iser-logo2x.png', 120px, 60px)
+        height: 60px
+        width: 120px
+      .essex-logo
+        background: url('ui/essex-logo.png') no-repeat
+        @include image-2x('ui/essex-logo2x.png', 138px, 48px)
+        height: 48px
+        width: 138px
+
+
   
   //form
   #commentform p.form-allowed-tags
