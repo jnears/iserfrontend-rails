@@ -17,7 +17,27 @@ dl
     @include rem-fallback(margin, 0, 0, 1.5, 0)
 
 ol.tag-list
+  margin-left: 0
+  padding-left: 0
+  overflow: auto
   li
     list-style-type: none
     float: left
-    @include rem-fallback(margin, 0.2)
+    &:not(:last-of-type):after
+      content: ",\00a0"
+    &:nth-last-of-type(2):before
+      content: none
+    &:nth-last-of-type(2):after
+      content: "\00a0 and\00a0"
+
+ol#publications
+  padding-left: 0
+  &>li
+    list-style-type: none
+    @include rem-fallback(padding, 1, 0)
+    h6
+      float: left
+      display: inline-block
+      clear: left
+    p, h6
+      margin-bottom: 0rem
