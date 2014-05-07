@@ -19,13 +19,15 @@ html.sc
     text-decoration: none
   a:hover
     text-decoration: underline
+
+
   header[role=banner]
     border-top: 0px
     border-bottom: 1px solid $grey4
     padding-top: 0
     @include rem-fallback(min-height, 7)
     text-align: center
-    @include rem-fallback(margin-bottom, 2)
+    @include rem-fallback(margin-bottom, 2.5)
     background: $grey6
     position: relative
     .container
@@ -73,6 +75,9 @@ html.sc
           color: $hover
   main
     @include rem-fallback(margin-top, 0)
+  
+
+
   aside nav
     @include rem-fallback(margin-top, 0)
     @include rem-fallback(margin-bottom, 1.5)
@@ -84,16 +89,16 @@ html.sc
 
     ol 
       padding: 0
-      margin: -5px 0 0 -5px
+      @include rem-fallback(margin, 0, 0 , 0, (-5 / $basefont))
 
       li 
         list-style-type: none
         float: left
-        @include rem-fallback(margin, (8 / $basefont), (5 / $basefont))
+        @include rem-fallback(margin, 0, (18 / $basefont), (27 / $basefont), 0)
 
         a:link
           @include rem-fallback(font-size, (18 / $basefont))
-          @include rem-fallback(padding, (5 / $basefont), (10 / $basefont))
+          @include rem-fallback(padding, (8 / $basefont), (10 / $basefont))
           background: $grey5
 
         a:hover, a.active 
@@ -113,7 +118,7 @@ html.sc
       @include rem-fallback(line-height, 2)
       @include rem-fallback(margin-bottom, 0.5)
       clear: both
-      color: $grey2
+      color: $grey2 
 
     h2
       @include rem-fallback(font-size, (18 / $basefont))
@@ -149,10 +154,13 @@ html.sc
     aside
       width: 100%
       margin-left: 0
-    h1
+      @include rem-fallback(font-size, (18 / $basefont))
+    h3
       @include rem-fallback(font-size, (22 / $basefont))
       font-weight: normal
       color: $grey2
+      @include rem-fallback(line-height-size, 1.5)
+
     form[role=search]
       position: relative
       display: initial
@@ -175,6 +183,13 @@ html.sc
 
 
   main.site-main
+
+    h1.page-title
+      @include rem-fallback(font-size, (36 / $basefont))
+      @include rem-fallback(line-height, 3)
+      @include rem-fallback(margin-bottom, 1.5)
+      clear: both
+
     article
       position: relative
       @include rem-fallback(padding, 1.5, 0)
@@ -201,6 +216,15 @@ html.sc
           -moz-border-radius: 100%
           border-radius: 100%
           margin-right: 10px
+
+        i.tag
+          position: absolute
+          right: 0
+          @include rem-fallback(margin-top, 0)
+          @include respond-to(handheld)
+            position: relative
+            display: block
+            left: 0
 
         a.tag
           position: absolute
@@ -285,6 +309,15 @@ html.sc
       
     article.image
       padding-left: 150px
+      @include respond-to(handheld)
+        padding-left: 100px
+
+  .entry-content
+    figure
+      figcaption
+        font-style: italic
+        @include rem-fallback(line-height, 2)
+
 
   .screen-reader-text
     border: 0
@@ -295,6 +328,9 @@ html.sc
     padding: 0
     position: absolute
     width: 1px
+
+  #comments
+    @include rem-fallback(margin-top, 1.5)
 
 
   footer[role=contentinfo]
@@ -317,10 +353,16 @@ html.sc
       .third
         float: left
         width: 33.33333%
+        @include respond-to(handheld)
+          width: 100%
 
         &:last-of-type
           width: 31%
           padding-left: 2.33333%
+          @include respond-to(handheld)
+          width: 100%
+
+
 
     
     
@@ -347,10 +389,34 @@ html.sc
     display: none 
     
   #primary 
+    input[type=submit]
+      @include rem-fallback(padding, (8 / $basefont))
+      display: inline-block
+      position: relative
+      @include rem-fallback(font-size, 1)
+      font-family: "Officina", Georgia, "Times New Roman", Times, serif
+      font-weight: normal
+      text-align: center
+      color: $link
+      white-space: nowrap
+      vertical-align: middle
+      cursor: pointer
+      border: none
+      outline: 0
+      background-color: #fcfcfc
+      @include rem-fallback(padding, 0.75, 1) //12px
+      @include rem-fallback(line-height, 1)
+      @include rem-fallback(margin, 0.25, 0) //4px
+      border-radius: $radius
+      -webkit-box-shadow: 0 0 0 1px rgba(0,0,0,.08) inset
+      box-shadow: 0 0 0 1px rgba(0,0,0,.08) inset
+      border-color: $grey1
+
+
     form[role=search]
       display: block
       background: $grey6
-      @include rem-fallback(padding, (10 / $basefont))
+      @include rem-fallback(padding, ( 13.5 / $basefont))
       width: 100%
       overflow: auto
       display: inline-block
@@ -366,14 +432,13 @@ html.sc
         width: 100%
       input[type=submit]
         @include rem-fallback(padding, (8 / $basefont))
+
     .comment-form
       width: auto
       line-height: normal
       @include rem-fallback(padding-right, 1)
       label
         text-align: left
-      textarea
-        width: 100%
       input[type="submit"]
         @include rem-fallback(margin, 0)
 
