@@ -126,7 +126,12 @@ html.sc
       @include rem-fallback(margin-bottom, 0.5)
 
   nav#site-navigation
-    display: none
+    display: block
+    float: none
+    ul
+      li
+        .active
+          background: blue
 
   div#content
     // outline: 1px solid red
@@ -345,18 +350,6 @@ html.sc
         color: $grey2
 
 
-
-
-  .screen-reader-text
-    border: 0
-    clip: rect(0 0 0 0)
-    height: 1px
-    margin: -1px
-    overflow: hidden
-    padding: 0
-    position: absolute
-    width: 1px
-
   #comments
     @include rem-fallback(margin-top, 1.5)
 
@@ -413,6 +406,14 @@ html.sc
 
   
   //form
+  form[role=search]
+    fieldset
+      width: 90%
+      text-align: left
+    input[type=search]
+      width: 85%
+
+
   #commentform p.form-allowed-tags
     display: none 
     
