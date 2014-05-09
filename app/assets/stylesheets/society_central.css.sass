@@ -73,6 +73,35 @@ html.sc
           color: $grey2
         &:hover
           color: $hover
+    nav.categories
+      float: none
+    nav.categories ol
+      display: none
+      margin-bottom: 0
+      li
+        list-style-type: none
+        float: none
+        border-bottom: 1px solid white
+        line-height: 3rem
+        text-align: left
+        a:link, a:visited
+          padding-left: 1rem
+          padding-right: 1rem
+          font-weight: normal
+        a:hover
+          background: #74a290
+          color: white
+    form[role=search]
+      margin-top: 0
+      #clear-search
+        text-indent: -3000rem
+        display: none
+        background: white url("ui/clear-ico.png") no-repeat center
+        width: 40px
+        height: 40px
+        position: relative
+        left: -50px
+
   main
     @include rem-fallback(margin-top, 0)
   
