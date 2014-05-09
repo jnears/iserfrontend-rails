@@ -388,10 +388,13 @@ html.sc
 
     #author-profile
       padding-left: 210px
+      @include respond-to(handheld)
+        padding-left: 100px
       figure
         position: absolute
         left: 0
         margin: 0
+        
 
   .entry-content
     figure
@@ -560,6 +563,8 @@ html.sc
     width: auto
     border-radius: $radius
     margin-right: 10px
+    @include respond-to(handheld)
+      width: 80px
 
 
   body.home span.comments-link, body.home span.edit-link
