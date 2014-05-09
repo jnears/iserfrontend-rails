@@ -30,6 +30,8 @@ html.sc
     @include rem-fallback(margin-bottom, 2.5)
     background: $grey6
     position: relative
+    @include respond-to(handheld)
+      @include rem-fallback(margin-bottom, 1)
     .container
       height: #{(($baseline * 5) - 5)}px
       padding-right: 0
@@ -38,7 +40,7 @@ html.sc
       @include rem-fallback(font-size, (34 / $basefont))
       @include rem-fallback(margin, 0)
       @include rem-fallback(padding-top, 1.5)
-      font-family: "OfficinaSerifITCW01-Bol 734534", Georgia, "Times New Roman", Times, serif
+      font-family: $heading_font
       a:link, a:visited
         padding: 5px 20px
         color: $white
@@ -168,6 +170,8 @@ html.sc
     margin: 0 auto
     // ensure div is expands correctly
     overflow: hidden 
+    @include respond-to(handheld)
+      width: 100%
 
   div#primary
     // outline: 1px solid blue
@@ -185,12 +189,28 @@ html.sc
     @include respond-to(handheld)
       float: none
       width: 100%
+    
     aside
       width: 100%
       margin-left: 0
       @include rem-fallback(font-size, (18 / $basefont))
+    
     aside.widget_search
       @include rem-fallback(min-height, (81 / $basefont))
+    
+    aside#headlines
+      @include respond-to(handheld)
+        display: none
+    aside#events
+      ul
+        padding-left: 0
+        li
+          margin-bottom: 1.5rem
+          list-style-type: none
+          span
+            color: $grey2
+            @include rem-fallback(font-size, (16 / $basefont))
+
 
     h3
       @include rem-fallback(font-size, (22 / $basefont))
@@ -226,6 +246,8 @@ html.sc
       @include rem-fallback(line-height, 3)
       @include rem-fallback(margin-bottom, 1.5)
       clear: both
+      @include respond-to(handheld)
+        @include rem-fallback(font-size, (27 / $basefont))
 
     article.single-post
       @include rem-fallback(margin, 0)
@@ -241,8 +263,8 @@ html.sc
         @include rem-fallback(margin-bottom, (27 / $basefont))
 
     article.essexuni_news
-      padding: 0.75rem
-      background: $grey6
+      @include rem-fallback(padding, 0, (13.5 / $basefont))
+      border-left: 4px solid $grey4
 
     article
       position: relative
@@ -267,6 +289,7 @@ html.sc
         i.tag
           position: absolute
           right: 0
+          top: 0
           @include rem-fallback(margin-top, 0)
           @include respond-to(handheld)
             position: relative
@@ -385,6 +408,8 @@ html.sc
 
   footer[role=contentinfo]
     color: $white
+    @include rem-fallback(margin-top, 0)
+    @include rem-fallback(padding-bottom, 0)
 
     a:link, a:visited
       color: white
@@ -403,6 +428,7 @@ html.sc
       .third
         float: left
         width: 33.33333%
+        @include rem-fallback(padding-bottom, (27 / $basefont))
         @include respond-to(handheld)
           width: 100%
 
@@ -411,6 +437,23 @@ html.sc
           padding-left: 2.33333%
           @include respond-to(handheld)
             width: 100%
+
+      .closing
+        display: block
+        clear: both
+        border-top: 1px solid rgba(0, 0, 0, 0.26)
+        ul
+          float: right
+          @include rem-fallback(padding, (13.5 / $basefont), 0 )
+          margin-bottom: 0
+          @include respond-to(handheld)
+            float: left
+          li
+            display: inline
+            @include rem-fallback(padding, 0, 0, 0, (20 / $basefont))
+            @include respond-to(handheld)
+              @include rem-fallback(padding, 0, (20 / $basefont), 0, 0)
+
 
 
 
