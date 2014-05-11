@@ -1,4 +1,6 @@
 html.sc
+  @include respond-to(handheld)
+    @include rem-fallback(font-size, 1em)
   img, object
     border: 0
     width: 100%
@@ -6,6 +8,7 @@ html.sc
     vertical-align: middle
     height: auto !important
     @include rounded
+
 
   .lt-ie9 img, .lt-ie9 object
     height: 100% !important
@@ -15,7 +18,7 @@ html.sc
 
 
   a:link, a:visited
-    color: $link-sc
+    color: $link
     text-decoration: none
   a:hover
     text-decoration: underline
@@ -40,6 +43,8 @@ html.sc
       @include rem-fallback(font-size, (34 / $basefont))
       @include rem-fallback(margin, 0)
       @include rem-fallback(padding-top, 1.5)
+      @include respond-to(handheld)
+        @include rem-fallback(font-size, (26 / $basefont))
       font-family: $heading_font
       a:link, a:visited
         padding: 5px 20px
@@ -56,6 +61,9 @@ html.sc
       @include rem-fallback(font-size, (24 / $basefont))
       @include rem-fallback(line-height, 1)
       margin: 5px 0 0 0
+      @include respond-to(handheld)
+        @include rem-fallback(font-size, (18 / $basefont))
+        margin: 0
     div.social-links
       position: absolute
       left: 0
@@ -109,7 +117,7 @@ html.sc
   
 
 
-  aside nav
+  aside#headlines nav
     @include rem-fallback(margin-top, 0)
     @include rem-fallback(margin-bottom, 1.5)
     @include rem-fallback(margin-left, 0)
@@ -131,6 +139,10 @@ html.sc
           @include rem-fallback(font-size, (18 / $basefont))
           @include rem-fallback(padding, (8 / $basefont), (10 / $basefont))
           background: $grey5
+
+        a:link, a:visited
+          text-decoration: none
+          color: $black
 
         a:hover, a.active 
           text-decoration: none
@@ -170,6 +182,7 @@ html.sc
     margin: 0 auto
     // ensure div is expands correctly
     overflow: hidden 
+    max-width: 1185px
     @include respond-to(handheld)
       width: 100%
 
@@ -177,7 +190,7 @@ html.sc
     // outline: 1px solid blue
     float: left
     width: 66.66667%
-    @include respond-to(handheld)
+    @include respond-to(tablet)
       float: none
       width: 100%
 
@@ -186,7 +199,7 @@ html.sc
     float: left
     width: 31%
     padding-left: 2.333333%
-    @include respond-to(handheld)
+    @include respond-to(tablet)
       float: none
       width: 100%
     
@@ -199,9 +212,13 @@ html.sc
       @include rem-fallback(min-height, (81 / $basefont))
     
     aside#headlines
-      @include respond-to(handheld)
+      @include respond-to(tablet)
         display: none
+    
     aside#events
+      @include respond-to(tablet)
+        border-top: 2px solid #cccccc
+        @include rem-fallback(padding-top, 1.5)
       ul
         padding-left: 0
         li
@@ -241,13 +258,20 @@ html.sc
 
   main.site-main
 
+    h1
+      a:link, a:visited
+        color: $black
+        text-decoration:none
+
+      a:hover
+        color: $black
+        text-decoration: underline
+
     h1.page-title
       @include rem-fallback(font-size, (36 / $basefont))
       @include rem-fallback(line-height, 3)
       @include rem-fallback(margin-bottom, 1.5)
       clear: both
-      @include respond-to(handheld)
-        @include rem-fallback(font-size, (27 / $basefont))
 
     article.single-post
       @include rem-fallback(margin, 0)
@@ -255,6 +279,9 @@ html.sc
       h1
         @include rem-fallback(font-size, (36 / $basefont))
         @include rem-fallback(line-height, (54 / $basefont))
+        @include respond-to(handheld)
+          @include rem-fallback(font-size, (24 / $basefont))
+          @include rem-fallback(line-height, (27 / $basefont))
 
       figure
         @include rem-fallback(margin-bottom, (27 / $basefont))
@@ -264,7 +291,7 @@ html.sc
 
     article.essexuni_news
       @include rem-fallback(padding, 0, (13.5 / $basefont))
-      border-left: 4px solid $grey4
+      border-left: 2px dotted $grey4
 
     article
       position: relative
@@ -274,6 +301,7 @@ html.sc
         color: $grey2
         font-family: $body_font
         font-weight: normal
+        @include rem-fallback(line-height, (27 / $basefont))
         @include rem-fallback(font-size, (16 / $basefont))
         @include rem-fallback(margin-bottom, 0)
         a
@@ -287,14 +315,10 @@ html.sc
             text-decoration: underline
 
         i.tag
-          position: absolute
-          right: 0
-          top: 0
+          position: relative
+          //right: 0
+          //top: 0
           @include rem-fallback(margin-top, 0)
-          @include respond-to(handheld)
-            position: relative
-            display: block
-            left: 0
 
         a.tag
           position: absolute
@@ -416,11 +440,19 @@ html.sc
 
     a:link, a:visited
       color: white
-      text-deocration: none
+      text-decoration: none
+
+    @include respond-to(handheld)
+      @include rem-fallback(padding, 1.5, 0)
     
     .site-info
       width: 90%
       margin: 0 auto
+      max-width: 1185px
+      @include respond-to(handheld)
+        width: 100%
+        @include rem-fallback(margin-left, 0.5)
+        @include rem-fallback(margin-right, 0.5)
 
       ol
         padding-left: 0px
@@ -485,6 +517,7 @@ html.sc
     fieldset
       width: 90%
       text-align: left
+      max-width: 1185px
     input[type=search]
       width: 85%
 
