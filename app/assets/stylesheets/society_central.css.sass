@@ -23,6 +23,66 @@ html.sc
   a:hover
     text-decoration: underline
 
+  #outer-wrap
+    position: relative
+    overflow: hidden
+    width: 100%
+    background: $black
+
+
+  #inner-wrap
+    position: relative
+    width: 100%
+    #page
+      background: $white
+      #nav-search-btn
+        z-index: 99999
+        position: absolute
+        top: 0
+        right: 10px
+        @include rem-fallback(padding-top, 1.5)
+        @include rem-fallback(line-height, 3)
+      #nav-menu-btn
+        display: none
+        z-index: 99999
+        position: absolute
+        top: 0
+        left: 10px
+        @include rem-fallback(padding-top, 1.5)
+        @include rem-fallback(line-height, 3)
+        @include respond-to(handheld)
+          display: inline
+        @include respond-to(tablet)
+          display: inline
+
+
+
+    #page > nav.categories
+      left: -70%
+      position: absolute
+      width: 70%
+      top: 0
+      padding-top: 50px
+      background: $black
+      ol
+        margin-bottom: 0
+        padding-left: 0
+        li
+          list-style-type: none
+          float: none
+          border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+          line-height: 3rem
+          text-align: left
+          a:link, a:visited
+            @include rem-fallback(padding, 1)
+            @include rem-fallback(line-height, 1.5)
+            font-weight: normal
+            color: $white
+            display: block
+          a:hover, a.active
+            background: $grey2
+            color: white
+            text-decoration: none
 
   header[role=banner]
     border-top: 0px
@@ -450,7 +510,7 @@ html.sc
       margin: 0 auto
       max-width: 1185px
       @include respond-to(handheld)
-        width: 100%
+        width: auto
         @include rem-fallback(margin-left, 0.5)
         @include rem-fallback(margin-right, 0.5)
 
