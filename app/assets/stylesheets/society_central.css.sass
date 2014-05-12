@@ -1,4 +1,18 @@
 html.sc
+
+  .clearable
+    background: $grey7 url('ui/close-ico.png') no-repeat right -10px center
+    border: 1px solid #999999
+    padding: 3px 18px 3px 4px /* USE the same right padding in jQ! */
+    border-radius: 3px
+    transition: background 0.4s /*REMOVE THIS LINE IF YOU ENCOUNTER ISSUES IN Chrome (Bug 02.2014)*/
+  
+  .clearable.x
+    background-position: right 10px center
+
+  .clearable.onX
+    cursor: pointer
+
   @include respond-to(handheld)
     @include rem-fallback(font-size, 1em)
   img, object
@@ -163,14 +177,6 @@ html.sc
           color: white
     form[role=search]
       margin-top: 0
-      #clear-search
-        text-indent: -3000rem
-        display: none
-        background: white url("ui/clear-ico.png") no-repeat center
-        width: 40px
-        height: 40px
-        position: relative
-        left: -50px
 
   main
     @include rem-fallback(margin-top, 0)
@@ -579,8 +585,13 @@ html.sc
       text-align: left
       max-width: 1185px
     input[type=search]
-      width: 85%
-
+      width: 84%
+      margin-right: 1%
+      padding: 0 1%
+    input[type=submit]
+      width: 12%
+      float: right
+      margin: 0
 
   #commentform p.form-allowed-tags
     display: none 
