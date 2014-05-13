@@ -1,4 +1,13 @@
 html.sc
+  
+  h1
+    @include rem-fallback(font-size, (36 / $basefont))
+    span
+      @include rem-fallback(font-size, (25 / $basefont))
+      @include rem-fallback(line-height, 1.5)
+  h2
+    @include rem-fallback(font-size, (30 / $basefont))
+
 
   .clearable
     background: $grey7 url('ui/close-ico.png') no-repeat right -10px center
@@ -175,8 +184,6 @@ html.sc
         a:hover
           background: #74a290
           color: white
-    form[role=search]
-      margin-top: 0
 
   main
     @include rem-fallback(margin-top, 0)
@@ -268,11 +275,14 @@ html.sc
     @include respond-to(tablet)
       float: none
       width: 100%
+      padding-left: 0
     
     aside
       width: 100%
       margin-left: 0
       @include rem-fallback(font-size, (18 / $basefont))
+      @include respond-to(handheld)
+        @include rem-fallback(margin-left, 0.5)
     
     aside.widget_search
       @include rem-fallback(min-height, (81 / $basefont))
@@ -357,7 +367,7 @@ html.sc
 
     article.essexuni_news
       @include rem-fallback(padding, 0, (13.5 / $basefont))
-      border-left: 2px dotted $grey4
+      border-left: 2px solid $grey4
 
     article
       position: relative
@@ -476,6 +486,12 @@ html.sc
       p
         @include rem-fallback(margin-bottom, 0)
 
+    ol.comment-list
+      @include rem-fallback(margin-left, 0.1)    
+
+      ol.children
+        @include rem-fallback(margin-left, 1.5)
+
     #author-profile
       padding-left: 210px
       @include respond-to(handheld)
@@ -530,6 +546,8 @@ html.sc
         float: left
         width: 33.33333%
         @include rem-fallback(padding-bottom, (27 / $basefont))
+        @include respond-to(tablet)
+          width: 100%
         @include respond-to(handheld)
           width: 100%
 
@@ -555,10 +573,6 @@ html.sc
             @include respond-to(handheld)
               @include rem-fallback(padding, 0, (20 / $basefont), 0, 0)
 
-
-
-
-    
     
     p.logo
       .iser-logo, .essex-logo
@@ -567,19 +581,30 @@ html.sc
         overflow: hidden
       .iser-logo
         background: url('ui/iser-logo.png') no-repeat
-        @include image-2x('ui/iser-logo2x.png', 120px, 60px)
+        @include image-2x('ui/iser-logo2x.png', 144px, 120px)
         height: 60px
-        width: 120px
+        width: 72px
       .essex-logo
         background: url('ui/essex-logo.png') no-repeat
-        @include image-2x('ui/essex-logo2x.png', 138px, 48px)
+        @include image-2x('ui/essex-logo2x.png', 166px, 96px)
         height: 48px
-        width: 138px
+        width: 133px
 
 
   
   //form
+  form input:focus, form textarea:focus, form select:focus
+    outline: 0
+    outline: thin dotted \9
+    -moz-box-shadow: 0px 0px 6px 0px #cccccc
+    -webkit-box-shadow: 0px 0px 6px 0px #cccccc
+    box-shadow: 0px 0px 6px 0px #cccccc
+
+
+
+
   form[role=search]
+    background: none
     fieldset
       width: 90%
       text-align: left
@@ -589,16 +614,19 @@ html.sc
         @include rem-fallback(padding, 0, (9 / $basefont))
 
     input[type=search]
-      width: 84%
+      border: 1px solid $grey4
+      width: 80%
       margin-right: 1%
       padding: 0 1%
+      padding-right: 5%
       @include respond-to(handheld)
-        width: 76%
+        width: 73%
         margin-right: 0
       @include respond-to(tablet)
-        width: 80%
+        width: 73%
         margin-right: 1%
     input[type=submit]
+      background: $grey2
       width: 12%
       float: right
       margin: 0
@@ -606,7 +634,10 @@ html.sc
         width: 18%
         margin-right: 0
       @include respond-to(tablet)
-        width: 15%
+        width: 18%
+      &:hover, &:focus
+        background: #74a290
+        outline: 0
 
   #commentform p.form-allowed-tags
     display: none 
@@ -620,20 +651,16 @@ html.sc
       font-family: "Officina", Georgia, "Times New Roman", Times, serif
       font-weight: normal
       text-align: center
-      color: $link
+      color: $white
       white-space: nowrap
       vertical-align: middle
       cursor: pointer
       border: none
       outline: 0
-      background-color: #fcfcfc
+      background-color: $grey2
       @include rem-fallback(padding, 0.75, 1) //12px
       @include rem-fallback(line-height, 1)
       @include rem-fallback(margin, 0.25, 0) //4px
-      border-radius: $radius
-      -webkit-box-shadow: 0 0 0 1px rgba(0,0,0,.08) inset
-      box-shadow: 0 0 0 1px rgba(0,0,0,.08) inset
-      border-color: $grey1
 
 
     form[role=search]
