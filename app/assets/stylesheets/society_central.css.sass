@@ -205,13 +205,17 @@ html.sc
 
       li 
         list-style-type: none
-        float: left
-        @include rem-fallback(margin, 0, (18 / $basefont), (27 / $basefont), 0)
+        @include rem-fallback(margin, 0)
+        border-top: 1px solid $grey4
+
+        &:last-of-type
+          border-bottom: 1px solid $grey4
 
         a:link
           @include rem-fallback(font-size, (18 / $basefont))
-          @include rem-fallback(padding, (8 / $basefont), (10 / $basefont))
-          background: $grey5
+          @include rem-fallback(padding, (9 / $basefont))
+          background: $grey6
+          display: block
 
         a:link, a:visited
           text-decoration: none
@@ -219,8 +223,8 @@ html.sc
 
         a:hover, a.active 
           text-decoration: none
-          background: $hover-sc
-          color: $white
+          background: #dfdfdf
+          color: $black
 
 
     p:last-of-type
@@ -522,7 +526,6 @@ html.sc
 
     a:link, a:visited
       color: white
-      text-decoration: none
 
     @include respond-to(handheld)
       @include rem-fallback(padding, 1.5, 0)
@@ -667,10 +670,14 @@ html.sc
       display: block
       background: $grey6
       @include rem-fallback(padding, ( 13.5 / $basefont))
+      width: 90%
+      @include respond-to(handheld)
       width: 100%
       overflow: auto
       display: inline-block
       margin: 0
+      fieldset
+        margin: 0
       label
         display: block
         width: 40%
@@ -680,8 +687,12 @@ html.sc
         display: inline-block
         vertical-align: middle
         width: 100%
+        @include respond-to(handheld)
+        width: 90%
       input[type=submit]
         @include rem-fallback(padding, (8 / $basefont))
+        float: left
+        width: autof
 
     .comment-form
       width: auto
