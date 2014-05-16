@@ -28,16 +28,25 @@ ol.tag-list
     &:nth-last-of-type(2):before
       content: none
     &:nth-last-of-type(2):after
-      content: "\00a0 and\00a0"
+      content: " and\00a0"
 
 ol#publications
   padding-left: 0
+  p
+    margin: 0
   &>li
     list-style-type: none
-    @include rem-fallback(padding, 1, 0)
-    h6
-      float: left
-      display: inline-block
-      clear: left
-    p, h6
-      margin-bottom: 0rem
+    @include rem-fallback(padding, 0.25, 0)
+  dt, dd
+    margin: 0
+  dd.publication-date
+    color: $grey2
+    @include rem-fallback(font-size, 0.8)
+    font-style: italic
+  i
+    color: $grey4
+  cite
+    a:link, a:visited
+      color: $grey2
+      @include rem-fallback(font-size, 0.8)
+

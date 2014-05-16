@@ -123,11 +123,10 @@ form[role=search]
 
 
 ol.multi
-  width: 75%
-  margin-left: 25%
   @include rem-fallback(margin-bottom, 0)
   display: block
   border: 1px solid $grey4
+  width: auto
   @include rem-fallback(padding, 0.5)
   max-height: 350px
   overflow: auto
@@ -148,6 +147,9 @@ ol.multi
         left: 0.5rem
         top: 25%
         margin-right: 0.5rem
+    a:visited, a:link
+      &.active
+        background: $grey6
 
 div.field_with_errors
   display: inline
