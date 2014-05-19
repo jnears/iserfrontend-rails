@@ -81,4 +81,43 @@ nav.guide
   right: 0
   top: 0
 
+nav.section
+  overflow: auto
+  background: $grey1
+  font-family: $heading_font
+  // border-bottom: 1px solid $grey5
+  // border-bottom: 3px solid $grey1
+  @include rem-fallback(margin-bottom, 2.5)
+  ol
+    @include rem-fallback(padding-left, 0)
+    li
+      float: left
+      @include rem-fallback(font-size, (16 / $basefont))
+      @include rem-fallback(line-height, 2)
+      // line-height: 2.2rem
+      &:not(:first-of-type)
+        border-left: 1px solid lighten($grey1, 15%)
 
+      a:link, a:visited
+        color: $white
+        display: block
+        @include rem-fallback(padding, 0, 1)
+        font-weight: bold
+        &.active
+          background: lighten($grey1, 10%)
+      a:hover
+        text-decoration: none
+        background: lighten($grey1, 10%)
+
+nav.breadcrumb
+  overflow: auto
+  ol
+    @include rem-fallback(padding-left, 0)
+    li
+      float: left
+      color: $grey2
+      @include rem-fallback(font-size, (14 / $basefont))
+      @include rem-fallback(line-height, (1.5 * (14 / $baseline)))
+      &:not(:last-of-type)
+        &:after
+          content: "\E602\003E\E602"
