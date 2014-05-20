@@ -49,10 +49,14 @@ tempor incididunt ut labore et dolore magna aliqua.")
 
 prevent_widows = () ->
   $("h1,h2,h3,h4,h5,h6").each (i, e) =>
+    console.log('preventing widows since 2014')
     if $(e).find('*').size() >= 1
-      wordArray = $(e).find('*').last().text().split(" ")
+      wordArray = $(e).find('*').last().text().split(/\s+/)
     else
-      wordArray = $(e).text().split(" ")
+      wordArray = $(e).text().split(/\s+/)
+    wordArray = $.grep(wordArray, (n) ->
+      n
+    )
     if wordArray.length > 2
       wordArray[wordArray.length-2] += "&nbsp;" + wordArray.pop()
     if $(e).find('*').size() >= 1
