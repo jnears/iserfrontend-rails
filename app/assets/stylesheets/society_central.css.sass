@@ -136,7 +136,7 @@ html.sc
         text-decoration: none
       a:hover
         text-decoration: none
-        background: $hover-sc
+        background: $grey2
     h2
       font-family: $heading_font
       font-weight: normal
@@ -192,7 +192,7 @@ html.sc
 
   aside#headlines nav
     @include rem-fallback(margin-top, 0)
-    @include rem-fallback(margin-bottom, 1.5)
+    @include rem-fallback(margin-bottom, (26 / $basefont))
     @include rem-fallback(margin-left, 0)
     @include rem-fallback(font-size, (16 / $basefont))
     position: relative
@@ -213,7 +213,7 @@ html.sc
 
         a:link
           @include rem-fallback(font-size, (18 / $basefont))
-          @include rem-fallback(padding, (9 / $basefont))
+          @include rem-fallback(padding, (13 / $basefont))
           background: $grey6
           display: block
 
@@ -266,7 +266,7 @@ html.sc
   div#primary
     // outline: 1px solid blue
     float: left
-    width: 66.66667%
+    width: 70%
     @include respond-to(tablet)
       float: none
       width: 100%
@@ -274,7 +274,7 @@ html.sc
   div#secondary
     // outline: 1px solid yellow
     float: left
-    width: 31%
+    width: 30%
     padding-left: 2.333333%
     @include respond-to(tablet)
       float: none
@@ -375,15 +375,15 @@ html.sc
 
     article
       position: relative
-      @include rem-fallback(margin, 0, 0, 3, 0)
+      @include rem-fallback(margin-bottom, 3)
       
       .entry-meta
         color: $grey2
         font-family: $body_font
         font-weight: normal
         @include rem-fallback(line-height, (27 / $basefont))
-        @include rem-fallback(font-size, (16 / $basefont))
-        @include rem-fallback(margin-bottom, 0)
+        @include rem-fallback(font-size, (19 / $basefont))
+        @include rem-fallback(margin-bottom, 0.75)
         a
           &:link, 
           &:visited, 
@@ -462,8 +462,7 @@ html.sc
         @include rem-fallback(line-height, 1.5)
         // @include rem-fallback(line-height, (1.5 * (20 / $baseline)))
         // @include rem-fallback(line-height, (20 / $basefont))
-        @include rem-fallback(margin-top, 0.5)
-        @include rem-fallback(margin-bottom, 1)
+        @include rem-fallback(margin-bottom, 0.75)
       
       p
         color: #000000
@@ -509,9 +508,8 @@ html.sc
   .entry-content
     figure
       figcaption
-        @include rem-fallback(font-size, (16 / $basefont))
-        font-style: italic
-        @include rem-fallback(line-height, 2)
+        @include rem-fallback(font-size, (18 / $basefont))
+        @include rem-fallback(line-height, 3)
         color: $grey2
 
 
@@ -548,7 +546,7 @@ html.sc
       .third
         float: left
         width: 33.33333%
-        @include rem-fallback(padding-bottom, (27 / $basefont))
+        @include rem-fallback(padding-bottom, 1.5)
         @include respond-to(tablet)
           width: 100%
         @include respond-to(handheld)
@@ -564,6 +562,8 @@ html.sc
         display: block
         clear: both
         border-top: 1px solid rgba(0, 0, 0, 0.26)
+        @include rem-fallback(padding-top, 0.5)
+        
         ul
           float: right
           @include rem-fallback(padding, (13.5 / $basefont), 0 )
@@ -578,10 +578,14 @@ html.sc
 
     
     p.logo
+      display: inline-block
+      @include rem-fallback(margin-right, 1.5)
+      @include rem-fallback(margin-bottom, 0)
       .iser-logo, .essex-logo
         text-indent: -3000em 
         display: block
         overflow: hidden
+        float: left
       .iser-logo
         background: url('ui/iser-logo.png') no-repeat
         @include image-2x('ui/iser-logo2x.png', 144px, 120px)
