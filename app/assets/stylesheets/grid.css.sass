@@ -24,6 +24,8 @@ $column_widths: 100
 @mixin column-width($number_of_columns, $gutters)
   width: #{(nth($column_widths, $number_of_columns) * $gutters) + ($gutter * ($gutters - 1))#{'%'}}
 
+@mixin large-desktop-width($number_of_columns)
+
 @mixin desktop-width($number_of_columns)
   @if $number_of_columns == 6
     width: #{(nth($column_widths, 3))}#{'%'}
@@ -108,6 +110,8 @@ $column_widths: 100
     @for $j from 1 through $i
       & > .span#{$j}
         @include column-width($i, $j)
+        @include respond-to(large_desktop)
+          @include large-desktop-width($i)
         @include respond-to(desktop)
           @include desktop-width($i)
         @include respond-to(tablet)

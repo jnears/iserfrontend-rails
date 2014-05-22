@@ -242,3 +242,34 @@ img.preview
   text-align: center
   background-color: $grey3
   border-radius: 5px
+
+.circ-border
+  margin-top: -10px
+  width: 30px
+  height: 30px
+  border: 1px solid $grey3
+  border-radius: 100%
+  text-align: center
+  line-height: 30px
+  display: inline-block
+
+.hero
+  header
+    position: absolute
+    color: $white
+    width: 100%
+    text-align: center
+    z-index: 1
+    @include rem-fallback(bottom, 1)
+    a:link, a:visited
+      position: relative
+      z-index: 1
+      color: $white
+    a:hover
+      color: $hover
+    h1
+      margin: 0 auto 2rem auto
+      @include rem-fallback(font-size, (36 / $basefont))
+      @include rem-fallback(padding, 1, 4)
+      width: 100%
+      background-color: rgba(0, 0, 0, 0.6)

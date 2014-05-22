@@ -10,6 +10,7 @@ header[role=banner]
       li
         @include rem-fallback(font-size, (16 / $basefont))
         float: left
+        @include rem-fallback(margin-left, 1)
         line-height: 2.2rem
         a:link, a:visited
           font-family: $heading_font
@@ -18,6 +19,7 @@ header[role=banner]
           padding: 0 1em
           display: block
           color: $grey1
+          background: $white
           text-decoration: none
           &.active
             background: $grey5
@@ -121,3 +123,5 @@ nav.breadcrumb
       &:not(:last-of-type)
         &:after
           content: "\E602\003E\E602"
+      a:link, a:visited
+        font-weight: bold

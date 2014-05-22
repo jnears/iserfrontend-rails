@@ -8,6 +8,7 @@ init_page = () ->
   focus_first()
   toggle_dropdown()
   activate_datetime_pickers()
+  shrink_to_fit()
 
 $(document).on 'page:change', ->
   init_page()
@@ -25,6 +26,13 @@ $(document).on 'click', '.search-toggle', (event) ->
   $('form[role=search]').toggle()
   $('form[role=search] input[type=search]:first').focus()
   return false
+
+$(window).resize ->
+  shrink_to_fit()
+
+shrink_to_fit = () ->
+  if $('.hero').length > 0
+    $('.hero').css('height', $(window).height())
 
 activate_datetime_pickers = () ->
   if $('.datepicker').length > 0
@@ -49,7 +57,6 @@ tempor incididunt ut labore et dolore magna aliqua.")
 
 prevent_widows = () ->
   $("h1,h2,h3,h4,h5,h6").each (i, e) =>
-    console.log('preventing widows since 2014')
     if $(e).find('*').size() >= 1
       wordArray = $(e).find('*').last().text().split(/\s+/)
     else
@@ -82,7 +89,9 @@ toggle_dropdown = () ->
 
 scroll_to_anchor = () ->
   $('.scrollable a[href^=#]').on 'click', (e) =>
-    $("html, body").animate({ scrollTop: $($(e.target).attr('href')).offset().top }, 200)
+    console.log($(e.target).attr('href'))
+    event.preventDefault()
+    $("html, body").animate({ scrollTop: $($(e.target).closest("a").attr('href')).offset().top - 27}, 400)
 
 dimissable = () ->
   $('*[data-dismiss]').on 'click', (e) =>
@@ -93,7 +102,12 @@ focus_first = () ->
   if $('form.focus-first').length > 0
     $("form.focus-first input:not([type=hidden]), form.focus-first textarea").first().focus()
 
-$(document).keyup (e) ->
-  if e.keyCode is 27
+$(document).keydown (e) ->
+  if e.which is 27
     $(".close").click() if $('.close').length == 1
     window.location = $(".cancel").attr('href') if $('.cancel').length > 0
+  if $(window).scrollTop() < $(window).height()
+    if e.which is 32
+      if $('a[data-scrolldown]').length > 0
+        event.preventDefault()
+        $('html, body').animate({scrollTop: $('#content').offset().top - 27}, 400)

@@ -19,9 +19,11 @@ footer[role=contentinfo]
     float: right
     ul
       li
+        @include rem-fallback(font-size, (14 / $basefont))
         list-style-type: none
-        display: inline
-        @include rem-fallback(margin-right, 1)
+        float: left
+        @include rem-fallback(margin-left, 0.5)
+        vertical-align: middle
 
   a.esrc
     float: left

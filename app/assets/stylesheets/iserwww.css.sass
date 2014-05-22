@@ -17,6 +17,10 @@ html
   padding: 0
   -webkit-font-smoothing: antialiased
   overflow-x: hidden
+  @include respond-to(handheld)
+  @include respond-to(tablet)
+  @include respond-to(desktop)
+  @include respond-to(large_desktop)
   &.grid
     z-index: 10
     background: url(asset-path("drop.png", image)) center 0px repeat-y $white
