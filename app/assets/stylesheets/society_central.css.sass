@@ -8,6 +8,21 @@ html.sc
   h2
     @include rem-fallback(font-size, (30 / $basefont))
 
+  h1, h2, h3, h4
+    a:link, a:visited
+      color: $black
+      text-decoration:none
+
+    a:hover
+      color: $black
+      text-decoration: underline
+
+  a:link, a:visited
+    color: $link
+    text-decoration: none
+
+  a:hover
+    text-decoration: underline
 
   .clearable
     background: $grey7 url('ui/close-ico.png') no-repeat right -10px center
@@ -40,11 +55,6 @@ html.sc
   height: auto !important
 
 
-  a:link, a:visited
-    color: $link
-    text-decoration: none
-  a:hover
-    text-decoration: underline
 
   #outer-wrap
     position: relative
@@ -85,7 +95,7 @@ html.sc
       position: absolute
       width: 70%
       top: 0
-      padding-top: 50px
+      @include rem-fallback(padding-top, 4)
       background: $black
       ol
         margin-bottom: 0
@@ -97,7 +107,7 @@ html.sc
           line-height: 3rem
           text-align: left
           a:link, a:visited
-            @include rem-fallback(padding, 1)
+            @include rem-fallback(padding, (13 / $basefont))
             @include rem-fallback(line-height, 1.5)
             font-weight: normal
             color: $white
@@ -185,6 +195,125 @@ html.sc
           background: #74a290
           color: white
 
+  
+  .entry-meta
+    color: $grey2
+    font-family: $body_font
+    font-weight: normal
+    @include rem-fallback(line-height, (27 / $basefont))
+    @include rem-fallback(margin-bottom, 0.75)
+    a
+      &:link, 
+      &:visited, 
+      &:active
+        color: $grey2
+        text-decoration: none
+      &:hover
+        color: $grey1
+        text-decoration: underline
+
+    i.tag
+      position: relative
+      //right: 0
+      //top: 0
+      @include rem-fallback(margin-top, 0)
+
+    a.tag
+      position: absolute
+      left: -128px
+      z-index: 1
+      top: 145px
+      // font-family: $body_font
+      font-weight: bold
+      border-radius: 5px
+      min-width: 84px
+      text-align: center
+
+      @include rem-fallback(font-size, (12 / $basefont))
+      // @include rem-fallback(padding, 0.65, 0.35, 0.45, 0.35)
+      @include rem-fallback(padding, 0.25, 0.25, 0.25, 0.35)
+      @include rem-fallback(line-height, 0)
+      font-style: normal
+
+      text-decoration: none
+
+      box-shadow: 0px -1px 2px 1px rgba(0, 0, 0, 0.25)
+
+      background: $grey2
+      color: $white
+      &:hover
+        background: $hover
+
+    time:before
+      content: " - "
+
+
+  #tribe-events 
+    & .tribe-events-content p,
+    & .tribe-events-before-html p,
+    & .tribe-events-after-html p
+      margin: 0 0 1.5rem 0
+      line-height: 1.5rem
+  
+
+  .events-list .tribe-events-loop
+    max-width: 100%
+    margin: 0
+
+
+  .tribe-events-list-separator-month
+    display: none
+
+  .tribe-events-list .excerpt p
+    margin-bottom: 0
+
+
+  .single-tribe_events
+    & .tribe-events-event-meta
+      padding: 0.75rem
+      text-align: left
+      margin: 0
+      display: inline-block
+      width: 100%
+      font-size: 100%
+      & dl
+        margin-top: 1.5rem
+        @include rem-fallback(font-size, (16 / $basefont))
+      margin-top: 1.5rem
+      abbr[title]
+        border-bottom: 0
+      & .tribe-events-meta-group
+        width: 100%
+        padding: 0
+        margin: 0
+    & .tribe-events-venue-map
+      width: 100%
+      margin: 0
+      
+
+
+    .tribe-events-single-section-title
+      margin: 0
+
+
+  .event-meta-group
+    zoom: 1
+    vertical-align: top
+  
+  .tribe-events-sub-nav li a
+    background: none
+
+  .tribe-events-list-separator-month+.vevent.hentry.tribe-events-first
+    padding-top: 0
+
+
+  blockquote.pull-quote
+    @include respond-to(handheld)
+      @include rem-fallback(margin, 0, 0 ,1.5, 0)
+      width: 100%
+      float: none
+
+
   main
     @include rem-fallback(margin-top, 0)
   
@@ -261,7 +390,7 @@ html.sc
     overflow: hidden 
     max-width: 1185px
     @include respond-to(handheld)
-      width: 100%
+      width: 96%
 
   div#primary
     // outline: 1px solid blue
@@ -285,8 +414,9 @@ html.sc
       width: 100%
       margin-left: 0
       @include rem-fallback(font-size, (18 / $basefont))
-      @include respond-to(handheld)
-        @include rem-fallback(margin-left, 0.5)
+      p.lead
+        color: $grey2
+        font-style: italic
     
     aside.widget_search
       @include rem-fallback(min-height, (81 / $basefont))
@@ -295,25 +425,39 @@ html.sc
       @include respond-to(tablet)
         display: none
     
-    aside#events
+    aside#events-list
       @include respond-to(tablet)
         border-top: 2px solid #cccccc
-        @include rem-fallback(padding-top, 1.5)
-      ul
+        
+      ol
         padding-left: 0
         li
-          margin-bottom: 1.5rem
+          @include rem-fallback(padding, 0.75, 0)
           list-style-type: none
+          position: relative
+          padding-left: 80px
+          & .entry-meta
+            @include rem-fallback(margin-bottom, 0)
+            position: absolute
+            width: 70px
+            left: 0
+            top: 0.75rem
+            border-right: 1px solid #cccccc
+            padding: 3px
           span
             color: $grey2
             @include rem-fallback(font-size, (16 / $basefont))
 
 
+
     h3
       @include rem-fallback(font-size, (22 / $basefont))
       font-weight: normal
-      color: $grey2
-      @include rem-fallback(line-height-size, 1.5)
+      color: $black
+      @include rem-fallback(margin-bottom, 0)
+
+    h4
+      @include rem-fallback(font-size, (20 / $basefont))
 
     form[role=search]
       position: relative
@@ -337,15 +481,6 @@ html.sc
 
 
   main.site-main
-
-    h1
-      a:link, a:visited
-        color: $black
-        text-decoration:none
-
-      a:hover
-        color: $black
-        text-decoration: underline
 
     h1.page-title
       @include rem-fallback(font-size, (36 / $basefont))
@@ -376,87 +511,22 @@ html.sc
     article
       position: relative
       @include rem-fallback(margin-bottom, 3)
+      @include respond-to(handheld)
+        @include rem-fallback(margin-bottom, 1.5)
+
+      &.featured
+        background-color: #f2f2f2
+        @include rem-fallback(min-height, 21)
+        img
+          -moz-border-radius: 0px
+          -webkit-border-radius: 5px 5px 0px 0px
+          border-radius: 5px 5px 0px 0px
+        h1
+          @include rem-fallback(font-size, (22 / $basefont))
+        figcaption
+          @include rem-fallback(padding, 0.5, 0.75, 1)
       
-      .entry-meta
-        color: $grey2
-        font-family: $body_font
-        font-weight: normal
-        @include rem-fallback(line-height, (27 / $basefont))
-        @include rem-fallback(font-size, (19 / $basefont))
-        @include rem-fallback(margin-bottom, 0.75)
-        a
-          &:link, 
-          &:visited, 
-          &:active
-            color: $grey2
-            text-decoration: none
-          &:hover
-            color: $grey1
-            text-decoration: underline
-
-        i.tag
-          position: relative
-          //right: 0
-          //top: 0
-          @include rem-fallback(margin-top, 0)
-
-        a.tag
-          position: absolute
-          left: -128px
-          z-index: 1
-          top: 145px
-          // font-family: $body_font
-          font-weight: bold
-          border-radius: 5px
-          min-width: 84px
-          text-align: center
-
-          @include rem-fallback(font-size, (12 / $basefont))
-          // @include rem-fallback(padding, 0.65, 0.35, 0.45, 0.35)
-          @include rem-fallback(padding, 0.25, 0.25, 0.25, 0.35)
-          // text-transform: uppercase
-          @include rem-fallback(line-height, 0)
-          font-style: normal
-          // i
-          //   margin-right: 5px
-
-          text-decoration: none
-
-          box-shadow: 0px -1px 2px 1px rgba(0, 0, 0, 0.25)
-
-          background: $grey2
-          color: $white
-          &:hover
-            background: $hover
-
-          // &.analysis
-          //   background: $grey2
-          //   color: $white
-          //   &:hover
-          //     background: lighten($grey2, 10%)
-          // &.news
-          //   background: $grey2
-          //   color: $white
-          //   &:hover
-          //     background: lighten($grey2, 10%)
-          // &.feature
-          //   background: $grey2
-          //   color: $white
-          //   &:hover
-          //     background: lighten($grey2, 10%)
-          // &.comment
-          //   background: $grey2
-          //   color: $white
-          //   &:hover
-          //     background: lighten($grey2, 10%)
-          // i
-          //   position: absolute
-          //   right: 5px
-          //   top: 4px
-
-
-        time:before
-          content: " - "
+      
       h1
         @include rem-fallback(font-size, (24 / $basefont))
         @include rem-fallback(line-height, 1.5)
@@ -509,7 +579,7 @@ html.sc
     figure
       figcaption
         @include rem-fallback(font-size, (18 / $basefont))
-        @include rem-fallback(line-height, 3)
+        @include rem-fallback(line-height, 1.5)
         color: $grey2
 
 
@@ -561,7 +631,6 @@ html.sc
       .closing
         display: block
         clear: both
-        border-top: 1px solid rgba(0, 0, 0, 0.26)
         @include rem-fallback(padding-top, 0.5)
         
         ul
@@ -707,25 +776,6 @@ html.sc
       input[type="submit"]
         @include rem-fallback(margin, 0)
 
-
-  .pullquote
-    @include rem-fallback(font-size, (18 / $basefont))
-    font-style: italic
-    border-left: 10px solid #f2f2f2
-    float: right
-    width: 50%
-    @include boxout
-    @include rem-fallback(margin, 0, 0, 1, 1)
-    @include respond-to(handheld)
-      width: 100%
-      @include rem-fallback(margin, 0)
-
-  .avatar
-    width: auto
-    border-radius: $radius
-    margin-right: 10px
-    @include respond-to(handheld)
-      width: 80px
 
 
   body.home span.comments-link, body.home span.edit-link
