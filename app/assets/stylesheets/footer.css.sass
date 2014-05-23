@@ -45,3 +45,9 @@ footer[role=contentinfo]
     text-indent: -3000em
     background: url(asset-path("university_of_essex.svg", image)) no-repeat 50% 50%
     // @include image-2x(asset-path("uoe-logo@2x.gif", image), 222px, 81px)
+
+.font20
+  @include rem-fallback(font-size, (20 / $basefont))
+
+.font18
+  @include rem-fallback(font-size, (18 / $basefont))

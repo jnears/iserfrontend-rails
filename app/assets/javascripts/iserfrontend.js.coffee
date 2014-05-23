@@ -32,6 +32,7 @@ $(window).resize ->
 
 shrink_to_fit = () ->
   if $('.hero').length > 0
+    $('header[role=banner]').css('border-bottom', 'none')
     $('.hero').css('height', $(window).height())
 
 activate_datetime_pickers = () ->
