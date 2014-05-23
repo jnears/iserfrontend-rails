@@ -62,15 +62,17 @@ $column_widths: 100
   min-height: 1px
   margin-left: #{$gutter}#{'%'}
   // outline: 1px solid $grey4
-  & *:first-of-type
+  & span:first-of-type
     margin-top: 0
-  & *:last-of-type
+  & span:last-of-type
     margin-bottom: 0
 
 .container
   margin: #{$gutter}#{'%'} auto
   margin: 0 auto
   width: 90%
+  position: relative
+  overflow: auto
   // max-width: 100em
   @include respond-to(handheld)
     width: 92%

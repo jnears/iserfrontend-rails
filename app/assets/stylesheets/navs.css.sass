@@ -125,3 +125,19 @@ nav.breadcrumb
           content: "\E602\003E\E602"
       a:link, a:visited
         font-weight: bold
+
+nav.related
+  ol
+    @include rem-fallback(padding-left, 0)
+    li
+      font-weight: bold
+      list-style-type: none
+      border-bottom: 1px solid $grey6
+      @include rem-fallback(font-size, (16 / $basefont))
+
+      a:link, a:visited
+        display: block
+        padding: 0.5em 0
+      a:hover
+        // background: $grey5
+
