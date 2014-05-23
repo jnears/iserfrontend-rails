@@ -8,6 +8,22 @@ html.sc
   h2
     @include rem-fallback(font-size, (30 / $basefont))
 
+  h1, h2, h3, h4
+    a:link, a:visited
+      color: $black
+      text-decoration:none
+
+    a:hover
+      color: $black
+      text-decoration: underline
+
+  a:link, a:visited
+    color: $link
+    text-decoration: none
+
+  a:hover
+    text-decoration: underline
+
   .clearable
     background: $grey7 url('ui/close-ico.png') no-repeat right -10px center
     border: 1px solid #999999
@@ -39,11 +55,6 @@ html.sc
   height: auto !important
 
 
-  a:link, a:visited
-    color: $link
-    text-decoration: none
-  a:hover
-    text-decoration: underline
 
   #outer-wrap
     position: relative
@@ -190,7 +201,6 @@ html.sc
     font-family: $body_font
     font-weight: normal
     @include rem-fallback(line-height, (27 / $basefont))
-    @include rem-fallback(font-size, (19 / $basefont))
     @include rem-fallback(margin-bottom, 0.75)
     a
       &:link, 
@@ -236,6 +246,66 @@ html.sc
 
     time:before
       content: " - "
+
+
+  #tribe-events 
+    & .tribe-events-content p,
+    & .tribe-events-before-html p,
+    & .tribe-events-after-html p
+      margin: 0 0 1.5rem 0
+      line-height: 1.5rem
+  
+
+  .events-list .tribe-events-loop
+    max-width: 100%
+    margin: 0
+
+
+  .tribe-events-list-separator-month
+    display: none
+
+  .tribe-events-list .excerpt p
+    margin-bottom: 0
+
+
+  .single-tribe_events
+    & .tribe-events-event-meta
+      padding: 0.75rem
+      text-align: left
+      margin: 0
+      display: inline-block
+      width: 100%
+      font-size: 100%
+      & dl
+        margin-top: 1.5rem
+        @include rem-fallback(font-size, (16 / $basefont))
+      margin-top: 1.5rem
+      abbr[title]
+        border-bottom: 0
+      & .tribe-events-meta-group
+        width: 100%
+        padding: 0
+        margin: 0
+    & .tribe-events-venue-map
+      width: 100%
+      margin: 0
+      
+
+
+    .tribe-events-single-section-title
+      margin: 0
+
+
+  .event-meta-group
+    zoom: 1
+    vertical-align: top
+  
+  .tribe-events-sub-nav li a
+    background: none
+
+  .tribe-events-list-separator-month+.vevent.hentry.tribe-events-first
+    padding-top: 0
+
 
   blockquote.pull-quote
     @include respond-to(handheld)
@@ -320,7 +390,7 @@ html.sc
     overflow: hidden 
     max-width: 1185px
     @include respond-to(handheld)
-      width: 100%
+      width: 96%
 
   div#primary
     // outline: 1px solid blue
@@ -344,8 +414,6 @@ html.sc
       width: 100%
       margin-left: 0
       @include rem-fallback(font-size, (18 / $basefont))
-      @include respond-to(handheld)
-        @include rem-fallback(margin-left, 0.5)
       p.lead
         color: $grey2
         font-style: italic
@@ -357,25 +425,39 @@ html.sc
       @include respond-to(tablet)
         display: none
     
-    aside#events
+    aside#events-list
       @include respond-to(tablet)
         border-top: 2px solid #cccccc
-        @include rem-fallback(padding-top, 1.5)
-      ul
+        
+      ol
         padding-left: 0
         li
-          margin-bottom: 1.5rem
+          @include rem-fallback(padding, 0.75, 0)
           list-style-type: none
+          position: relative
+          padding-left: 80px
+          & .entry-meta
+            @include rem-fallback(margin-bottom, 0)
+            position: absolute
+            width: 70px
+            left: 0
+            top: 0.75rem
+            border-right: 1px solid #cccccc
+            padding: 3px
           span
             color: $grey2
             @include rem-fallback(font-size, (16 / $basefont))
 
 
+
     h3
       @include rem-fallback(font-size, (22 / $basefont))
       font-weight: normal
-      color: $grey2
-      @include rem-fallback(line-height-size, 1.5)
+      color: $black
+      @include rem-fallback(margin-bottom, 0)
+
+    h4
+      @include rem-fallback(font-size, (20 / $basefont))
 
     form[role=search]
       position: relative
@@ -399,15 +481,6 @@ html.sc
 
 
   main.site-main
-
-    h1
-      a:link, a:visited
-        color: $black
-        text-decoration:none
-
-      a:hover
-        color: $black
-        text-decoration: underline
 
     h1.page-title
       @include rem-fallback(font-size, (36 / $basefont))
@@ -438,6 +511,9 @@ html.sc
     article
       position: relative
       @include rem-fallback(margin-bottom, 3)
+      @include respond-to(handheld)
+        @include rem-fallback(margin-bottom, 1.5)
+
       &.featured
         background-color: #f2f2f2
         @include rem-fallback(min-height, 21)
