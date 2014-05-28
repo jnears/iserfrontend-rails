@@ -52,9 +52,7 @@ html.sc
     height: 100% !important
 
   .lt-ie8 img, .lt-ie8 object 
-  height: auto !important
-
-
+    height: auto !important
 
   #outer-wrap
     position: relative
@@ -62,34 +60,13 @@ html.sc
     width: 100%
     background: $black
 
-
   #inner-wrap
     position: relative
     width: 100%
+    
     #page
       background: $white
-      #nav-search-btn
-        z-index: 99999
-        position: absolute
-        top: 0
-        right: 10px
-        @include rem-fallback(padding-top, 1.5)
-        @include rem-fallback(line-height, 3)
-      #nav-menu-btn
-        display: none
-        z-index: 99999
-        position: absolute
-        top: 0
-        left: 10px
-        @include rem-fallback(padding-top, 1.5)
-        @include rem-fallback(line-height, 3)
-        @include respond-to(handheld)
-          display: inline
-        @include respond-to(tablet)
-          display: inline
-
-
-
+    
     #page > nav.categories
       left: -70%
       position: absolute
@@ -128,9 +105,31 @@ html.sc
     position: relative
     @include respond-to(handheld)
       @include rem-fallback(margin-bottom, 1)
+    .site-branding
+      margin: 0 auto
+      width: 90%
+      position: relative
+      overflow: hidden
+      max-width: 1185px
+      @include respond-to(handheld)
+        width: 96%
+      #nav-menu-btn
+        display: none
+        position: absolute
+        @include rem-fallback(top, (50 / $basefont))
+        left: 0
+        @include respond-to(tablet)
+          display: inline
+          z-index: 99999
+      #nav-search-btn
+        position: absolute
+        @include rem-fallback(top, (50 / $basefont))
+        right: 0
+      
     .container
       height: #{(($baseline * 5) - 5)}px
       padding-right: 0
+    
     h1
       text-transform: uppercase
       @include rem-fallback(font-size, (34 / $basefont))
@@ -140,23 +139,25 @@ html.sc
         @include rem-fallback(font-size, (26 / $basefont))
       font-family: $heading_font
       a:link, a:visited
-        padding: 5px 20px
+        @include rem-fallback(padding, (5 / $basefont), (20 / $basefont))
         color: $white
         background: $grey1
         text-decoration: none
       a:hover
         text-decoration: none
         background: $grey2
+    
     h2
       font-family: $heading_font
       font-weight: normal
       color: $grey2
-      @include rem-fallback(font-size, (24 / $basefont))
-      @include rem-fallback(line-height, 1)
-      margin: 5px 0 0 0
+      @include rem-fallback(font-size, (22 / $basefont))
+      @include rem-fallback(line-height, 1.5)
+      margin: 0
       @include respond-to(handheld)
         @include rem-fallback(font-size, (18 / $basefont))
         margin: 0
+
     div.social-links
       position: absolute
       left: 0
@@ -166,6 +167,7 @@ html.sc
         @include rem-fallback(padding, 0.5)
       a:hover
         color: $hover
+    
     div.util-links
       position: absolute
       right: 0
@@ -176,25 +178,25 @@ html.sc
           color: $grey2
         &:hover
           color: $hover
+    
     nav.categories
       float: none
-    nav.categories ol
-      display: none
-      margin-bottom: 0
-      li
-        list-style-type: none
-        float: none
-        border-bottom: 1px solid white
-        line-height: 3rem
-        text-align: left
-        a:link, a:visited
-          padding-left: 1rem
-          padding-right: 1rem
-          font-weight: normal
-        a:hover
-          background: #74a290
-          color: white
-
+      ol
+        display: none
+        margin-bottom: 0
+        li
+          list-style-type: none
+          float: none
+          border-bottom: 1px solid white
+          @include rem-fallback(line-height, 3)
+          text-align: left
+          a:link, a:visited
+            @include rem-fallback(padding-left, 1)
+            @include rem-fallback(padding-right, 1)
+            font-weight: normal
+          a:hover
+            background: #74a290
+            color: white
   
   .entry-meta
     color: $grey2
@@ -214,31 +216,23 @@ html.sc
 
     i.tag
       position: relative
-      //right: 0
-      //top: 0
       @include rem-fallback(margin-top, 0)
 
     a.tag
       position: absolute
       left: -128px
       z-index: 1
-      top: 145px
-      // font-family: $body_font
+      @include rem-fallback(top, (145 / $basefont))
       font-weight: bold
-      border-radius: 5px
+      @include rounded
       min-width: 84px
       text-align: center
-
       @include rem-fallback(font-size, (12 / $basefont))
-      // @include rem-fallback(padding, 0.65, 0.35, 0.45, 0.35)
       @include rem-fallback(padding, 0.25, 0.25, 0.25, 0.35)
       @include rem-fallback(line-height, 0)
       font-style: normal
-
       text-decoration: none
-
       box-shadow: 0px -1px 2px 1px rgba(0, 0, 0, 0.25)
-
       background: $grey2
       color: $white
       &:hover
@@ -247,19 +241,56 @@ html.sc
     time:before
       content: " - "
 
+  .meta-container
+    position: absolute
+    @include rem-fallback(top, 0.75)
+    right: -40%
+    width: 30%
+    @include respond-to(tablet)
+      position: relative
+      width: 100%
+      margin-right: 0
+      right: 0
+      top: 0
 
+  .social-wrapper
+    overflow: hidden
+    margin-left: -4px
+    @include rem-fallback(height, 3)
+    ul
+      list-style: none
+      list-style-image: none
+      padding: 0
+      li
+        float: left
+        width: 36px
+        padding: 0 4px
+        & .circ-border
+          margin-top: 0
+          border: 1px solid $grey4
+
+  #embed-modal 
+    display: none
+    background: $grey6
+    overflow: hidden
+    border: 1px solid $grey4
+    @include rounded
+    z-index: 1001
+    @include rem-fallback(padding, 0.5)
+    max-width: 250px
+
+  
+ 
   #tribe-events 
     & .tribe-events-content p,
     & .tribe-events-before-html p,
     & .tribe-events-after-html p
-      margin: 0 0 1.5rem 0
-      line-height: 1.5rem
+      @include rem-fallback(margin, 0, 0, 1.5, 0)
+      @include rem-fallback(line-height, 1.5)
   
-
   .events-list .tribe-events-loop
     max-width: 100%
     margin: 0
-
 
   .tribe-events-list-separator-month
     display: none
@@ -267,10 +298,9 @@ html.sc
   .tribe-events-list .excerpt p
     margin-bottom: 0
 
-
   .single-tribe_events
     & .tribe-events-event-meta
-      padding: 0.75rem
+      @include rem-fallback(padding, (13.5 / $basefont))
       text-align: left
       margin: 0
       display: inline-block
@@ -290,11 +320,8 @@ html.sc
       width: 100%
       margin: 0
       
-
-
     .tribe-events-single-section-title
       margin: 0
-
 
   .event-meta-group
     zoom: 1
@@ -306,7 +333,6 @@ html.sc
   .tribe-events-list-separator-month+.vevent.hentry.tribe-events-first
     padding-top: 0
 
-
   blockquote.pull-quote
     @include respond-to(handheld)
       @include rem-fallback(margin, 0, 0 ,1.5, 0)
@@ -315,9 +341,8 @@ html.sc
 
 
   main
-    @include rem-fallback(margin-top, 0)
-  
-
+    @include rem-fallback(margin, 0)
+    max-width: 100%
 
   aside#headlines nav
     @include rem-fallback(margin-top, 0)
@@ -383,17 +408,14 @@ html.sc
           background: blue
 
   div#content
-    // outline: 1px solid red
     width: 90%
     margin: 0 auto
-    // ensure div is expands correctly
     overflow: hidden 
     max-width: 1185px
     @include respond-to(handheld)
       width: 96%
 
   div#primary
-    // outline: 1px solid blue
     float: left
     width: 70%
     @include respond-to(tablet)
@@ -401,7 +423,6 @@ html.sc
       width: 100%
 
   div#secondary
-    // outline: 1px solid yellow
     float: left
     width: 30%
     padding-left: 2.333333%
@@ -424,21 +445,6 @@ html.sc
     aside#headlines
       @include respond-to(tablet)
         display: none
-
-    aside#meta
-      #embed-modal 
-        display: none
-        border: 1px solid #cccccc
-        background: #f2f2f2
-        display: none
-        overflow: hidden
-        border: 2px solid #d4d4d4
-        -moz-border-radius: 5px
-        -webkit-border-radius: 5px
-        border-radius: 5px
-        z-index: 1001
-        padding: 1em
-
 
     
     aside#events-list
@@ -463,8 +469,6 @@ html.sc
           span
             color: $grey2
             @include rem-fallback(font-size, (16 / $basefont))
-
-
 
     h3
       @include rem-fallback(font-size, (22 / $basefont))
@@ -510,6 +514,7 @@ html.sc
       h1
         @include rem-fallback(font-size, (36 / $basefont))
         @include rem-fallback(line-height, (54 / $basefont))
+        @include rem-fallback(margin-bottom, 1.5)
         @include respond-to(handheld)
           @include rem-fallback(font-size, (24 / $basefont))
           @include rem-fallback(line-height, (27 / $basefont))
@@ -717,24 +722,22 @@ html.sc
         width: 73%
         margin-right: 1%
     input[type=submit]
-      background: $grey2
+      border: 1px solid $grey4
+      background: $grey7
       width: 12%
       float: right
       margin: 0
+      color: $black
       @include respond-to(handheld)
         width: 18%
         margin-right: 0
       @include respond-to(tablet)
         width: 18%
       &:hover, &:focus
-        background: #74a290
+        background: $grey2
         outline: 0
-  
-  textarea[name=embed-link]
-    border: none
-    resize: none
-    @include rem-fallback(font-size, ( 16 / $basefont))
-    background: none
+        color: $white
+
 
   #commentform p.form-allowed-tags
     display: none 
