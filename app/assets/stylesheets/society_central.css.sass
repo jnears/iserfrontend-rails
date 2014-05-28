@@ -278,6 +278,14 @@ html.sc
     z-index: 1001
     @include rem-fallback(padding, 0.5)
     max-width: 250px
+    textarea[name=embed-link]
+      border: none
+      resize: none
+      @include rem-fallback(font-size, ( 14 / $basefont))
+      background: none
+      width: 100%
+      &:focus
+        outline: 0
 
   
  
