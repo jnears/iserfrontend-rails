@@ -9,6 +9,8 @@ init_page = () ->
   toggle_dropdown()
   activate_datetime_pickers()
   shrink_to_fit()
+  dynamic_add()
+  dynamic_remove()
 
 $(document).on 'page:change', ->
   init_page()
@@ -29,6 +31,26 @@ $(document).on 'click', '.search-toggle', (event) ->
 
 $(window).resize ->
   shrink_to_fit()
+
+
+dynamic_add = () ->
+  $('form').on 'click', '.add_fields', (event) ->
+    time = new Date().getTime()
+    regexp = new RegExp($(this).data('id'), 'g')
+    $(this).before($(this).data('fields').replace(regexp, time))
+    $(this).prev().find($('div.collapse')).removeClass('collapse').addClass('in')
+    $(this).prev().find($('*[data-collapse]')).text('hide')
+    $(".changed").fadeIn()
+    event.preventDefault()
+
+dynamic_remove = () ->
+  $('form').on 'click', '.remove_fields', (event) ->
+    if $(this).closest("fieldset.property").hasClass("newrecord")
+      $(this).closest("fieldset.property").remove();
+    else
+      $(this).prev("input[type=hidden]").val("1");
+      $(this).closest("fieldset.property").hide();
+    event.preventDefault()
 
 shrink_to_fit = () ->
   if $('.hero').length > 0

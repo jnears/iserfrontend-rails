@@ -72,17 +72,16 @@ $column_widths: 100
   margin: 0 auto
   width: 90%
   position: relative
-  overflow: auto
   // max-width: 100em
   @include respond-to(handheld)
     width: 92%
 
 .pad
-  padding: 1em
+  padding: 1rem
   &>:first-child
-    margin-top: 0em
+    margin-top: 0rem
   &>:last-child
-    margin-bottom: 0em
+    margin-bottom: 0rem
 
 .half
   float: left
@@ -124,3 +123,4 @@ $column_widths: 100
           &:nth-child(n)
             // margin-top: #{$gutter}#{'%'}
             @include rem-fallback(margin-top, 1.5)
+

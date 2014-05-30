@@ -53,11 +53,12 @@ p
     @else
       @include rem-fallback(margin-bottom, 1.5)
     margin-top: 0
-    @include respond-to(handheld)
-      @include rem-fallback(font-size, ((nth($heading_sizes, $i) * 0.6) / $basefont))
+
     &.info
       color: $grey2
       font-weight: normal
+      @include rem-fallback(font-size, ((nth($heading_sizes, $i) * 0.8) / $basefont))
+      margin-bottom: 0
     &.c
       text-align: center
     &.inline
