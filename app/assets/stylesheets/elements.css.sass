@@ -47,7 +47,7 @@ p
     @include rem-fallback(font-size, (nth($heading_sizes, $i) / $basefont))
     font-weight: bold
     @include rem-fallback(line-height, (1.5 * (ceil(nth($heading_sizes, $i) / $baseline))))
-    // @if $i > 4
+    @if $i > 4
     @if nth($heading_sizes, $i) < $baseline
       margin-bottom: 0
     @else
