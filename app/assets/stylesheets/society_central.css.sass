@@ -11,7 +11,7 @@ html.sc
   h1, h2, h3, h4
     a:link, a:visited
       color: $black
-      text-decoration:none
+      text-decoration: none
 
     a:hover
       color: $black
@@ -105,6 +105,7 @@ html.sc
     position: relative
     @include respond-to(handheld)
       @include rem-fallback(margin-bottom, 1)
+
     .site-branding
       margin: 0 auto
       width: 90%
@@ -113,18 +114,27 @@ html.sc
       max-width: 1185px
       @include respond-to(handheld)
         width: 96%
+
       #nav-menu-btn
         display: none
         position: absolute
-        @include rem-fallback(top, (50 / $basefont))
+        @include rem-fallback(top, (34 / $basefont))
+        @include rem-fallback(padding, (10 / $basefont))
         left: 0
+        color: $grey2
         @include respond-to(tablet)
           display: inline
           z-index: 99999
+
       #nav-search-btn
         position: absolute
-        @include rem-fallback(top, (50 / $basefont))
+        @include rem-fallback(top, (34 / $basefont))
+        @include rem-fallback(padding, (10 / $basefont))
         right: 0
+        color: $grey2
+
+      .fa
+        @include rem-fallback(font-size, (22 / $basefont))
       
     .container
       height: #{(($baseline * 5) - 5)}px
@@ -198,12 +208,18 @@ html.sc
             background: #74a290
             color: white
   
+  .paging-navigation
+    @include rem-fallback(margin-bottom, 1.5) 
+    .nav-previous
+      float: left
+    .nav-next
+      float: right
+
   .entry-meta
     color: $grey2
     font-family: $body_font
     font-weight: normal
     @include rem-fallback(line-height, (27 / $basefont))
-    @include rem-fallback(margin-bottom, 0.75)
     a
       &:link, 
       &:visited, 
@@ -256,7 +272,9 @@ html.sc
   .social-wrapper
     overflow: hidden
     margin-left: -4px
-    @include rem-fallback(height, 3)
+    @include rem-fallback(height, 2)
+    @include rem-fallback(margin-bottom, 0.5)
+    @include rem-fallback(margin-top, 0.5)
     ul
       list-style: none
       list-style-image: none
@@ -265,9 +283,6 @@ html.sc
         float: left
         width: 36px
         padding: 0 4px
-        & .circ-border
-          margin-top: 0
-          border: 1px solid $grey4
 
   #embed-modal 
     display: none
@@ -277,7 +292,9 @@ html.sc
     @include rounded
     z-index: 1001
     @include rem-fallback(padding, 0.5)
-    max-width: 250px
+    max-width: 300px
+    @include rem-fallback(margin-top, -0.5)
+    position: absolute
     textarea[name=embed-link]
       border: none
       resize: none
@@ -356,7 +373,6 @@ html.sc
     @include rem-fallback(margin-top, 0)
     @include rem-fallback(margin-bottom, (26 / $basefont))
     @include rem-fallback(margin-left, 0)
-    @include rem-fallback(font-size, (16 / $basefont))
     position: relative
     right: 0
     width: 100%
@@ -373,15 +389,16 @@ html.sc
         &:last-of-type
           border-bottom: 1px solid $grey4
 
-        a:link
+        a:link, a:visited
           @include rem-fallback(font-size, (18 / $basefont))
           @include rem-fallback(padding, (13 / $basefont))
           background: $grey6
           display: block
-
-        a:link, a:visited
           text-decoration: none
           color: $black
+
+        a:visited
+          @include rem-fallback(padding, (13 / $basefont))
 
         a:hover, a.active 
           text-decoration: none
@@ -420,6 +437,7 @@ html.sc
     margin: 0 auto
     overflow: hidden 
     max-width: 1185px
+    @include rem-fallback(margin-bottom, 1.5)
     @include respond-to(handheld)
       width: 96%
 
@@ -438,45 +456,49 @@ html.sc
       float: none
       width: 100%
       padding-left: 0
+      clear: both
     
     aside
       width: 100%
       margin-left: 0
       @include rem-fallback(font-size, (18 / $basefont))
-      p.lead
-        color: $grey2
-        font-style: italic
+      &#site-overview
+        @include respond-to(handheld)
+          display: none
+        p.lead
+          color: $grey2
+          font-style: italic
+      
+      &.widget_search
+        @include rem-fallback(min-height, (81 / $basefont))
     
-    aside.widget_search
-      @include rem-fallback(min-height, (81 / $basefont))
-    
-    aside#headlines
-      @include respond-to(tablet)
-        display: none
+      &#headlines
+        @include respond-to(tablet)
+          display: none
 
     
-    aside#events-list
-      @include respond-to(tablet)
-        border-top: 2px solid #cccccc
+      &#events-list
+        @include respond-to(tablet)
+          border-top: 2px solid #cccccc
         
-      ol
-        padding-left: 0
-        li
-          @include rem-fallback(padding, 0.75, 0)
-          list-style-type: none
-          position: relative
-          padding-left: 80px
-          & .entry-meta
-            @include rem-fallback(margin-bottom, 0)
-            position: absolute
-            width: 70px
-            left: 0
-            top: 0.75rem
-            border-right: 1px solid #cccccc
-            padding: 3px
-          span
-            color: $grey2
-            @include rem-fallback(font-size, (16 / $basefont))
+        ol
+          padding-left: 0
+          li
+            @include rem-fallback(padding, 0.75, 0)
+            list-style-type: none
+            position: relative
+            padding-left: 80px
+            & .entry-meta
+              @include rem-fallback(margin-bottom, 0)
+              position: absolute
+              width: 70px
+              left: 0
+              top: 0.75rem
+              border-right: 1px solid #cccccc
+              padding: 3px
+            span
+              color: $grey2
+              @include rem-fallback(font-size, (16 / $basefont))
 
     h3
       @include rem-fallback(font-size, (22 / $basefont))
@@ -575,6 +597,7 @@ html.sc
 
         img
           vertical-align: middle
+          width: 125px
           @include respond-to(handheld)
             width: 80px
             height: 80px
@@ -611,6 +634,12 @@ html.sc
         @include rem-fallback(line-height, 1.5)
         color: $grey2
 
+  .circ-border
+    margin-top: 0
+    border: 1px solid $grey4
+    background: $grey7
+    .fa
+      color: $grey2
 
   #comments
     @include rem-fallback(margin-top, 1.5)
@@ -710,7 +739,6 @@ html.sc
   form[role=search]
     background: none
     fieldset
-      width: 90%
       text-align: left
       max-width: 1185px
       @include respond-to(handheld)
@@ -733,7 +761,6 @@ html.sc
       border: 1px solid $grey4
       background: $grey7
       width: 12%
-      float: right
       margin: 0
       color: $black
       @include respond-to(handheld)
@@ -817,4 +844,28 @@ html.sc
 html.sc.grid
   z-index: 10
   background: url('ui/grid.png') center 0px repeat
+
+//ie specific
+
+html.sc.lt-ie9 header[role=banner] .site-branding
+  width: 972px
+
+html.sc.lt-ie9 #content
+  width: 972px
+
+html.sc.lt-ie8 #secondary
+  width: 28%
+  padding-left: 2%
+
+html.sc.lt-ie8 .colgroup-3
+  margin-top: 0px
+
+html.sc.lt-ie8 .fa
+  line-height: 27px
+
+html.sc.lt-ie8 .fa-envelope-o
+  background: url('ui/email-ico.gif') center 0px repeat
+
+html.sc.lt-ie8 .fa-code
+  background: url('ui/embed-ico.gif') center 0px repeat
 
