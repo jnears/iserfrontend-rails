@@ -296,7 +296,7 @@ main.post
     @include rem-fallback(margin-bottom, 1.5)
 
 aside.home
-  background: darken($grey7, 0.9)
+  background: $grey6
   @include rem-fallback(padding, 1)
   // @include rem-fallback(margin-bottom, 1.5)
   // a:link, a:visited
@@ -304,4 +304,14 @@ aside.home
   // p
   //   color: $grey4
   //   @include rem-fallback(font-size, 0.8888888889)
+
+
+.home-banner
+  @include rem-fallback(margin-top, -2)
+  background: $grey1 url(asset-path("home_banner.jpg", image)) no-repeat 50% 0
+  background-size: cover
+  color: $white
+  @include rem-fallback(padding, 6, 0)
+  span
+    color: transparentize($white, 0.25)
 

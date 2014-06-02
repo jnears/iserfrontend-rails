@@ -19,9 +19,9 @@ $(document).on 'page:change', ->
 $(document).on 'page:fetch', (e) ->
   $('#loading').fadeIn("fast")
 
-$(window).on 'load', ->
-  if $('img').length > 0
-    $('img').baseline(27)
+# $(window).on 'load', ->
+#   if $('img').length > 0
+#     $('img').baseline(27)
 
 $(document).on 'click', '.search-toggle', (event) ->
   $(this).toggleClass('active')
