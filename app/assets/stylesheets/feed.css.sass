@@ -4,6 +4,8 @@ main.feed
     border-bottom: 1px solid $grey5
     @include rem-fallback(margin, (($baseline - 1) / $basefont), 0, 1.5, 0)
     @include rem-fallback(padding, 0, 0, 0, 6)
+    &.tweet
+      @include rem-fallback(padding, 0, 0, 1, 0)
   time
     position: absolute
     top: 0
