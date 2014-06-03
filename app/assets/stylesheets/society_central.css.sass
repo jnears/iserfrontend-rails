@@ -220,6 +220,7 @@ html.sc
     font-family: $body_font
     font-weight: normal
     @include rem-fallback(line-height, (27 / $basefont))
+    @include rem-fallback(margin-bottom, 0.75)
     a
       &:link, 
       &:visited, 
@@ -357,6 +358,19 @@ html.sc
 
   .tribe-events-list-separator-month+.vevent.hentry.tribe-events-first
     padding-top: 0
+
+  .events-list.tribe-bar-is-disabled #tribe-events-content-wrapper
+    max-width: 100%
+    margin: 0
+
+  #tribe-events-content a:hover, .tribe-events-event-meta a:hover
+    text-decoration: underline
+
+  .tribe-events-list .tribe-events-event-cost
+    display: none
+
+  .tribe-events-widget-link
+    text-align: right
 
   blockquote.pull-quote
     @include respond-to(handheld)
@@ -568,6 +582,7 @@ html.sc
       &.featured
         background-color: #f2f2f2
         @include rem-fallback(min-height, 21)
+        @include rem-fallback(margin-bottom, 1.5)
         img
           -moz-border-radius: 0px
           -webkit-border-radius: 5px 5px 0px 0px
@@ -637,7 +652,6 @@ html.sc
   .circ-border
     margin-top: 0
     border: 1px solid $grey4
-    background: $grey7
     .fa
       color: $grey2
 
@@ -864,8 +878,10 @@ html.sc.lt-ie8 .fa
   line-height: 27px
 
 html.sc.lt-ie8 .fa-envelope-o
-  background: url('ui/email-ico.gif') center 0px repeat
 
-html.sc.lt-ie8 .fa-code
-  background: url('ui/embed-ico.gif') center 0px repeat
+html.sc.lt-ie8 .social-wrapper .email
+  background: url('ui/email-ico.gif') 5px 5px no-repeat
+
+html.sc.lt-ie8 .social-wrapper .embed
+  background: url('ui/embed-ico.gif') 5px 5px no-repeat
 
