@@ -5,8 +5,17 @@ main.feed
     @include rem-fallback(margin, (($baseline - 1) / $basefont), 0, 1.5, 0)
     @include rem-fallback(padding, 0, 0, 0, 6)
     &.tweet
+      @include rem-fallback(padding, 0, 0, 1, 6)
+      @include respond-to(tablet)
+        @include rem-fallback(padding, 0, 0, 1, 0)
+    @include respond-to(tablet)
       @include rem-fallback(padding, 0, 0, 1, 0)
   time
     position: absolute
-    top: 0
+    top: 1px
     left: 0
+    @include respond-to(tablet)
+      position: relative
+      @include rem-fallback(margin, 0)
+  figure
+    @include rem-fallback(margin, 1, 0)
