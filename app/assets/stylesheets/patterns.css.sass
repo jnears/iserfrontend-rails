@@ -50,10 +50,14 @@ h6.meta
   @include rem-fallback(margin-top, 1.5)
   @include rem-fallback(margin-bottom, 1.5)
   @include rem-fallback(padding, 0.5, 0)
+  z-index: 100
+  position: relative
   background: white
   cursor: default
   overflow: auto
-  a, span, em
+  span
+    display: block
+  a, em
     padding: 0.2em 0.5em
     display: block
     float: left
@@ -68,9 +72,12 @@ h6.meta
       color: $grey3
       outline: none
   .current
-    font-style: normal
-    font-weight: bold
     @include btn
+    padding: 0.2em 0.5em
+    display: block
+    float: left
+    font-weight: bold
+    @include rem-fallback(margin-right, 0.25)
     background: $red
     color: white
   a
