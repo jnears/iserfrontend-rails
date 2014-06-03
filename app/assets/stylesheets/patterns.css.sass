@@ -57,6 +57,8 @@ h6.meta
   overflow: auto
   span
     display: block
+    a
+      padding: 0.2em 0.5em
   a, em
     padding: 0.2em 0.5em
     display: block
@@ -80,6 +82,10 @@ h6.meta
     @include rem-fallback(margin-right, 0.25)
     background: $red
     color: white
+  .gap
+    float: left
+    margin-right: 0.25rem
+
   a
     text-decoration: none
     @include btn
