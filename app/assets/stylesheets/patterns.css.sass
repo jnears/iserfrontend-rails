@@ -58,6 +58,8 @@ h6.meta
   margin-left: -3px
   span
     display: block
+    &:first-child
+      margin-left: 3px
     a
       padding: 0.2em 0.5em
   a, em
@@ -74,8 +76,6 @@ h6.meta
       background: none
       color: $grey3
       outline: none
-  .first
-    margin-left: 3px
   .current
     @include btn
     padding: 0.2em 0.5em

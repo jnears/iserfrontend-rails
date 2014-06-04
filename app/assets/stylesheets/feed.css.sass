@@ -18,6 +18,18 @@ main.feed
       position: relative
       top: 0
       @include rem-fallback(margin, 0)
+      @include rem-fallback(padding, 0, 0, 1, 0)
+    .pull-left
+      position: absolute
+      top: 1px
+      left: 0
+      @include respond-to(tablet)
+        position: relative
+        @include rem-fallback(margin, 0)
+    img
+      width: 80px
+      @include respond-to(tablet)
+        width: 50px
   figure
     @include rem-fallback(margin, 1, 0)
 
