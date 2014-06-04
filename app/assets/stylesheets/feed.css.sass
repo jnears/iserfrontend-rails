@@ -11,21 +11,9 @@ main.feed
       p
         margin-bottom: 0
   time
-    position: absolute
     @include rem-fallback(top, 1.5)
-    left: 0
     @include respond-to(tablet)
-      position: relative
-      top: 0
-      @include rem-fallback(margin, 0)
-      @include rem-fallback(padding, 0, 0, 1, 0)
-    .pull-left
-      position: absolute
-      top: 1px
-      left: 0
-      @include respond-to(tablet)
-        position: relative
-        @include rem-fallback(margin, 0)
+      top: auto
     img
       width: 80px
       @include respond-to(tablet)
@@ -35,3 +23,11 @@ main.feed
 
 .twitter-tweet
   visibility: hidden
+
+.left-margin
+  position: absolute
+  top: 1px
+  left: 0
+  @include respond-to(tablet)
+    position: relative
+    top: 0
