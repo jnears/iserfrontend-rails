@@ -37,7 +37,6 @@ $(document).on 'click', '.search-toggle', (event) ->
 $(window).resize ->
   shrink_to_fit()
 
-
 dynamic_add = () ->
   $('form').on 'click', '.add_fields', (event) ->
     time = new Date().getTime()
