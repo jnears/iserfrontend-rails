@@ -11,6 +11,11 @@ init_page = () ->
   shrink_to_fit()
   dynamic_add()
   dynamic_remove()
+  load_twitter()
+
+
+load_twitter = () ->
+  $.getScript('https://platform.twitter.com/widgets.js')
 
 $(document).on 'page:change', ->
   init_page()

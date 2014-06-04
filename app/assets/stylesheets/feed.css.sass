@@ -2,20 +2,24 @@ main.feed
   article
     position: relative
     border-bottom: 1px solid $grey5
-    @include rem-fallback(margin, (($baseline - 1) / $basefont), 0, 1.5, 0)
-    @include rem-fallback(padding, 0, 0, 0, 6)
-    &.tweet
-      @include rem-fallback(padding, 0, 0, 1, 6)
-      @include respond-to(tablet)
-        @include rem-fallback(padding, 0, 0, 1, 0)
+    @include rem-fallback(padding, (($baseline - 1) / $basefont), 0, 1.5, 6)
     @include respond-to(tablet)
-      @include rem-fallback(padding, 0, 0, 1, 0)
+      @include rem-fallback(padding, (($baseline - 1) / $basefont), 0, 1.5, 0)
+    *:last-of-type
+      margin-bottom: 0
+    &.publication
+      p
+        margin-bottom: 0
   time
     position: absolute
-    top: 1px
+    @include rem-fallback(top, 1.5)
     left: 0
     @include respond-to(tablet)
       position: relative
+      top: 0
       @include rem-fallback(margin, 0)
   figure
     @include rem-fallback(margin, 1, 0)
+
+.twitter-tweet
+  visibility: hidden

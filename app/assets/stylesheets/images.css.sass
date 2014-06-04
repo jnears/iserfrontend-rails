@@ -3,3 +3,12 @@ img
 
 .hero
   @include rem-fallback(margin-top, -2)
+
+figure
+  @include rem-fallback(margin-bottom, 1.5)
+
+figcaption
+  font-style: italic
+  @include rem-fallback(font-size, (16 / $basefont))
+  @include rem-fallback(line-height, (1.5 * (ceil(16 / $baseline))))
+  color: $grey2
