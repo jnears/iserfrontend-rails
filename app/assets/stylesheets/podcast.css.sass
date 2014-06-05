@@ -1,0 +1,95 @@
+main.podcast
+  .audio-player
+    width: 100%
+    margin-bottom: 0
+  .intro
+    padding-right: 120px
+    position: relative
+    overflow: visible
+    min-height: 100px
+    margin-top: 1.5rem
+    margin-bottom: 1.5rem
+      
+    figure
+      position: absolute
+      top: 0
+      right: 0
+
+  .avatar
+    border-radius: 100%
+    width: 100px
+    float: right
+
+
+  p.meta
+    color: $grey2
+    font-family: $body_font
+    font-weight: normal
+    font-style: italic
+    @include rem-fallback(font-size, (16 / $basefont))
+    @include rem-fallback(margin-bottom, 1.5)
+    a
+      &:link, &:visited, &:active
+        color: $grey2
+      &:hover
+        color: $hover
+
+  ul.subscribe
+    padding-bottom: 1.5rem
+    padding-left: 0
+    li
+      margin: 0em
+      float: left
+      list-style-type: none
+      padding-left: 0
+      margin-left: 30px
+
+
+  a.itunes
+    float: left
+    /* margin-right: 8px */
+    padding-top: 2px
+    margin-top: -2px
+    width: 57px
+    height: 22px
+    background: transparent url(/assets/ui/ico/itunes-930c5b5a4b0e774329b8a3c4fa7b3295.png) no-repeat top right
+
+  
+  .latest_podcast_wrapper
+    background: $grey6
+    .span1
+      padding: 10px
+      .latest_podcast
+        position: relative
+
+        .playbutton
+          position: absolute
+          font-size: 5em
+          z-index: 2
+          top: 130px
+          left: 50%
+          .fa-play-circle
+            position: relative
+            font-size: 50px
+            z-index: 3
+            left: -50%
+            color: #fff
+            opacity: 0.8
+            & :hover
+              opacity: 1
+          .podcast_name
+            position: absolute
+            z-index: 4
+            color: #fff
+            background: #000
+            background: rgba(0,0,0,0.6)
+            font-weight: bold
+            width: 130px
+            top: 160px
+            left: 6px
+            font-size: 12px
+            -moz-border-radius: 5px
+            -webkit-border-radius: 5px
+            border-radius: 5px
+            line-height: 14px
+            padding: 3px 0
