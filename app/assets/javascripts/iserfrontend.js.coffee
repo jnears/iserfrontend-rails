@@ -1,3 +1,12 @@
+#filter results based on query
+filter = (selector, query) ->
+  query = $.trim(query) #trim white space
+  query = query.replace(RegExp(" ", "g"), "|") #add OR for regex
+  $(selector).each ->
+    (if ($(this).text().search(new RegExp(query, "i")) < 0) then $(this).hide().removeClass("visible") else $(this).show().addClass("visible"))
+    return
+  return
+
 init_page = () ->
   $("html").removeClass("no-js")
   prevent_widows()
@@ -11,11 +20,7 @@ init_page = () ->
   shrink_to_fit()
   dynamic_add()
   dynamic_remove()
-  load_twitter()
-
-
-load_twitter = () ->
-  $.getScript('https://platform.twitter.com/widgets.js')
+  prevent_inline_form_submission()
 
 $(document).on 'page:change', ->
   init_page()
@@ -36,6 +41,10 @@ $(document).on 'click', '.search-toggle', (event) ->
 
 $(window).resize ->
   shrink_to_fit()
+
+prevent_inline_form_submission = () ->
+  $("form.inline-search").submit ->
+    event.preventDefault()
 
 dynamic_add = () ->
   $('form').on 'click', '.add_fields', (event) ->

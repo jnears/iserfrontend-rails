@@ -16,3 +16,11 @@ figcaption
   @include rem-fallback(font-size, (16 / $basefont))
   @include rem-fallback(line-height, (1.5 * (ceil(16 / $baseline))))
   color: $grey2
+
+.avatar
+  text-align: center
+  figure
+    @include rem-fallback(padding, 0, 1.5)
+    margin: 0
+    img
+      border-radius: 100%
