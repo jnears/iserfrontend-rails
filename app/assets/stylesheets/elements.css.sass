@@ -59,16 +59,13 @@ audio
 
     &.info
       font-weight: normal
-      // @include rem-fallback(font-size, ((nth($heading_sizes, $i) * 0.8) / $basefont))
+      a:link, a:visited
+        color: $grey1
     &.c
       text-align: center
     &.inline
       display: inline
-    // a:link, a:visited
-    //   text-decoration: none
-    //   color: $grey1
-    // a:hover
-    //   color: $hover
+
     @if $i < 4
       span
         display: block

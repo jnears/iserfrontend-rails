@@ -22,7 +22,7 @@ footer[role=contentinfo]
         @include rem-fallback(font-size, (14 / $basefont))
         list-style-type: none
         float: left
-        @include rem-fallback(margin-left, 0.5)
+        @include rem-fallback(margin-left, 0.75)
         vertical-align: middle
 
   a.esrc
@@ -34,7 +34,6 @@ footer[role=contentinfo]
     overflow: hidden
     text-indent: -3000em
     background: url(asset-path("esrc.svg", image)) no-repeat 50% 50%
-    // @include image-2x(asset-path("esrc-logo@2x.gif", image), 97px, 81px)
 
   a.uoe
     float: left
@@ -44,7 +43,6 @@ footer[role=contentinfo]
     overflow: hidden
     text-indent: -3000em
     background: url(asset-path("university_of_essex.svg", image)) no-repeat 50% 50%
-    // @include image-2x(asset-path("uoe-logo@2x.gif", image), 222px, 81px)
 
 .font20
   @include rem-fallback(font-size, (20 / $basefont))
