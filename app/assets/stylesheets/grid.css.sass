@@ -6,7 +6,6 @@ $column_widths: 100
   $column_widths: append($column_widths, ((100 - ($gutter * ($i))) / $i), comma)
 
 @mixin row
-  // margin-top: #{$gutter}#{'%'}
   @include rem-fallback(margin-bottom, 1.5)
   margin-left: #{$gutter * -1}#{'%'}
   *zoom: 1
@@ -20,6 +19,8 @@ $column_widths: 100
     line-height: 0
   &:after
     clear: both
+  @include respond-to(handheld)
+    margin-bottom: 0
 
 @mixin column-width($number_of_columns, $gutters)
   width: #{(nth($column_widths, $number_of_columns) * $gutters) + ($gutter * ($gutters - 1))#{'%'}}
