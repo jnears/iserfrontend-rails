@@ -61,6 +61,8 @@ audio
       font-weight: normal
       a:link, a:visited
         color: $grey1
+      @include respond-to(handheld)
+        display: none
     &.c
       text-align: center
     &.inline
