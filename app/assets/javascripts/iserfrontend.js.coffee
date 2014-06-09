@@ -8,6 +8,7 @@ filter = (selector, query) ->
   return
 
 init_page = () ->
+  Turbolinks.enableTransitionCache()
   $("html").removeClass("no-js")
   prevent_widows()
   toggle_grid()
@@ -21,6 +22,10 @@ init_page = () ->
   dynamic_add()
   dynamic_remove()
   prevent_inline_form_submission()
+  load_the_twitters()
+
+$(document).on 'page:restore', ->
+  console.log("page restore event")
 
 $(document).on 'page:change', ->
   init_page()
@@ -29,9 +34,9 @@ $(document).on 'page:change', ->
 $(document).on 'page:fetch', (e) ->
   $('#loading').fadeIn("fast")
 
-# $(window).on 'load', ->
-#   if $('img').length > 0
-#     $('img').baseline(27)
+$(window).on 'load', ->
+  if $('img').length > 0
+    $('img').baseline(27)
 
 $(document).on 'click', '.search-toggle', (event) ->
   $(this).toggleClass('active')
@@ -41,6 +46,17 @@ $(document).on 'click', '.search-toggle', (event) ->
 
 $(window).resize ->
   shrink_to_fit()
+
+load_the_twitters = () ->
+  console.log("load_the_twitters called")
+  if $('*[class^="twitter-"]').length > 0
+    if (typeof (twttr) == 'undefined')
+      console.log("loading script")
+      $.getScript('https://platform.twitter.com/widgets.js')
+    else
+      if (typeof (twttr.widgets) != 'undefined')
+        console.log("loading widgets")
+        twttr.widgets.load()
 
 prevent_inline_form_submission = () ->
   $("form.inline-search").submit ->
@@ -118,14 +134,11 @@ toggle_dropdown = () ->
     $(this).next().show()
     event.preventDefault()
   $(document).on 'click', 'body', (event) ->
-    console.dir($(event.target).parents())
     unless $(event.target).parents().not(':has(.dropdown)')
-      console.log("closing")
       $('li.dropdown ol').hide()
 
 scroll_to_anchor = () ->
   $('.scrollable a[href^=#]').on 'click', (e) =>
-    console.log($(e.target).attr('href'))
     event.preventDefault()
     $("html, body").animate({ scrollTop: $($(e.target).closest("a").attr('href')).offset().top - 27}, 400)
 
