@@ -86,7 +86,7 @@ $column_widths: 100
 
 .half
   float: left
-  width: 48%
+  width: 50%
   &:nth-child(odd)
     clear: left
   &:nth-child(even)
@@ -124,4 +124,17 @@ $column_widths: 100
           &:nth-child(n)
             // margin-top: #{$gutter}#{'%'}
             @include rem-fallback(margin-top, 1.5)
+
+// homepage cludge :/
+.colgroup-3
+  & > .span2
+    & > .colgroup-2
+      & > .span1
+        width: 46%
+        margin-left: 3%
+        &:nth-child(even)
+          margin-left: 5%
+
+
+
 

@@ -1,15 +1,27 @@
 main
   @include rem-fallback(max-width, 35)
   margin: 0 auto
-  // @include respond-to(tablet)
-  //   margin: 0
   &.two-column
     margin: 0
     max-width: 100%
-
-div.meta
-  @include rem-fallback(font-size, (14 / $basefont))
-  color: $grey2 !important
+    @include respond-to(tablet)
+      img
+        float: left
+        width: 50%
+      aside
+        background: $white
+        padding-top: 0
+        float: left
+        width: 50%
+    @include respond-to(handheld)
+      img
+        float: none
+        width: 100%
+      aside
+        background: $grey6
+        float: none
+        @include rem-fallback(padding, 1)
+        width: 100%
 
 body.app
   main
