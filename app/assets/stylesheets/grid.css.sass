@@ -134,6 +134,9 @@ $column_widths: 100
         margin-left: 3%
         &:nth-child(even)
           margin-left: 5%
+        @include respond-to(handheld)
+          width: auto
+          float: none
 
 
 

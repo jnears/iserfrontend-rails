@@ -1,3 +1,12 @@
+ul.compact, ol.compact
+  li
+    margin-bottom: 0
+
+ul.plain, ol.plain
+  padding: 0
+  li
+    list-style-type: none
+
 ul, ol
   @include rem-fallback(padding, 0, 0, 0, 1)
   @include rem-fallback(margin, 0, 0, 1.5, 0)
