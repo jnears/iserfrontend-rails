@@ -21,6 +21,7 @@ $column_widths: 100
     clear: both
   @include respond-to(handheld)
     margin-bottom: 0
+    margin-left: 0
 
 @mixin column-width($number_of_columns, $gutters)
   width: #{(nth($column_widths, $number_of_columns) * $gutters) + ($gutter * ($gutters - 1))#{'%'}}
@@ -67,6 +68,8 @@ $column_widths: 100
     margin-top: 0
   & span:last-of-type
     margin-bottom: 0
+  @include respond-to(handheld)
+    margin-left: 0
 
 .container
   margin: #{$gutter}#{'%'} auto
@@ -75,7 +78,7 @@ $column_widths: 100
   position: relative
   max-width: 100em
   @include respond-to(handheld)
-    width: 92%
+    width: 96%
 
 .pad
   padding: 1rem
@@ -137,6 +140,9 @@ $column_widths: 100
         @include respond-to(handheld)
           width: auto
           float: none
+          margin-left: 0%
+          &:nth-child(even)
+            margin-left: 0%
 
 
 

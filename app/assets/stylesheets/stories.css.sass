@@ -6,11 +6,11 @@
   @for $j from 1 through $max_columns
     .span#{$j}
       background: $grey6
-      min-height: 15rem
+      min-height: 13rem
       padding: 1rem
       &>:first-child
         margin-top: 0rem
       &>:last-child
         margin-bottom: 0rem
       p
-        @include rem-fallback(font-size, 0.8888888889)
+        @include rem-fallback(font-size, (16 / $basefont))

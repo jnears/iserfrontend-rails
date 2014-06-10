@@ -4,6 +4,10 @@ table
   border-collapse: collapse
   border-spacing: 0
   @include rem-fallback(margin-bottom, 1.5)
+  &.all-left
+    td
+      &:last-of-type
+        text-align: left
 
   caption
     text-align: left

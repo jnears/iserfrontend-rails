@@ -57,6 +57,10 @@ audio
     @else
       @include rem-fallback(margin-bottom, 1.5)
     margin-top: 0
+    @include respond-to(handheld)
+      @if nth($heading_sizes, $i) > $baseline
+        @include rem-fallback(font-size, ((nth($heading_sizes, $i) * 0.75) / $basefont))
+        @include rem-fallback(line-height, ((1.5 * (ceil(nth($heading_sizes, $i) * 0.75) / $baseline))))
 
     &.info
       font-weight: normal
@@ -109,6 +113,10 @@ blockquote
     width: 50%
     @include boxout
     @include rem-fallback(margin, 0, 0, 1, 1)
+  @include respond-to(handheld)
+    @include rem-fallback(font-size, (18 / $basefont))
+    @include rem-fallback(line-height, (1.5 * (ceil(18 / $baseline))))
+    @include rem-fallback(margin, 0, 1)
 
 
 blockquote b
@@ -144,6 +152,9 @@ hr
   border-bottom: 1px solid $grey5
   @include rem-fallback(margin, (($baseline - 1) / $basefont), 0, 1.5, 0)
   @include rem-fallback(line-height, 1.5)
+  &.hidden
+    border-bottom: 1px solid transparent
+
 
 
 code
