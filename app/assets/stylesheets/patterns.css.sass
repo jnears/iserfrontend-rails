@@ -253,15 +253,16 @@ img.preview
 .badge
   display: inline-block
   min-width: 10px
-  padding: 3px 7px
-  @include rem-fallback(font-size, (18 / $basefont))
+  min-height: 10px
+  padding: 5px  3px 3px 3px
+  @include rem-fallback(font-size, (14 / $basefont))
   font-weight: bold
-  color: $white
-  vertical-align: baseline
+  // color: $white
+  vertical-align: middle
   white-space: nowrap
   text-align: center
   background-color: $grey3
-  border-radius: 5px
+  border-radius: 30%
 
 .circ-border
   margin-top: -10px
