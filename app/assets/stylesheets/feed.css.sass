@@ -1,4 +1,4 @@
-main.feed
+.feed
   article
     position: relative
     border-bottom: 1px solid $grey5
@@ -10,14 +10,21 @@ main.feed
     &.publication
       p
         margin-bottom: 0
+
   time
     @include rem-fallback(top, 1.5)
+    display: block
+    color: $grey2
+    font-family: $body_font
+    font-weight: normal
+    font-style: italic
+    @include rem-fallback(font-size, (16 / $basefont))
+    @include rem-fallback(line-height, $baseline / 18)
+    @include rem-fallback(margin-top, 0)
+    @include rem-fallback(margin-bottom, 1.5)
     @include respond-to(tablet)
       top: auto
-    img
-      width: 80px
-      @include respond-to(tablet)
-        width: 50px
+
   figure
     @include rem-fallback(margin, 1, 0)
 

@@ -49,16 +49,20 @@ ol#publications
   &>li
     list-style-type: none
     @include rem-fallback(padding, 0.25, 0)
-  dt, dd
-    margin: 0
-  dd.publication-date
+  time
     color: $grey2
-    @include rem-fallback(font-size, 0.8)
+    @include rem-fallback(font-size, (16 / $basefont))
     font-style: italic
   i
     color: $grey4
   cite
     a:link, a:visited
       color: $grey2
-      @include rem-fallback(font-size, 0.8)
+      @include rem-fallback(font-size, (16 / $basefont))
 
+.small-publication
+  h4
+    font-family: $body_font
+    font-weight: bold
+    font-style: normal
+    @include rem-fallback(font-size, (18 / $basefont))
