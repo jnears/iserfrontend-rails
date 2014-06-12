@@ -295,6 +295,27 @@ img.preview
       width: 100%
       background-color: rgba(0, 0, 0, 0.6)
 
+.half-hero
+  header
+    position: absolute
+    color: $white
+    width: 100%
+    text-align: center
+    z-index: 1
+    @include rem-fallback(bottom, 1)
+    a:link, a:visited
+      position: relative
+      z-index: 1
+      color: $white
+    a:hover
+      color: $hover
+    h1
+      margin: 0 auto 3rem auto
+      @include rem-fallback(font-size, (36 / $basefont))
+      @include rem-fallback(padding, 1, 4)
+      width: 100%
+      background-color: rgba(0, 0, 0, 0.6)
+
 .component
   background: $grey6
 

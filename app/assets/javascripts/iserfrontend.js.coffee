@@ -85,6 +85,10 @@ shrink_to_fit = () ->
   if $('.hero').length > 0
     $('header[role=banner]').css('border-bottom', 'none')
     $('.hero').css('height', $(window).height())
+  if $('.half-hero').length > 0
+    $('header[role=banner]').css('border-bottom', 'none')
+    $('.half-hero').css('height', $(window).height() / 2 )
+ 
 
 activate_datetime_pickers = () ->
   if $('.datepicker').length > 0
