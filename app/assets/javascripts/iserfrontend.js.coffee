@@ -34,6 +34,7 @@ $(document).on 'page:change', ->
 $(document).on 'page:fetch', (e) ->
   $('#loading').fadeIn("fast")
 
+
 # $(window).on 'load', ->
 #   if $('img').length > 0
 #     $('img').baseline(27)
@@ -42,20 +43,17 @@ $(document).on 'click', '.search-toggle', (event) ->
   $(this).toggleClass('active')
   $('form[role=search]').toggle()
   $('form[role=search] input[type=search]:first').focus()
-  return false
+  event.preventDefault()
 
 $(window).resize ->
   shrink_to_fit()
 
 load_the_twitters = () ->
-  console.log("load_the_twitters called")
   if $('*[class^="twitter-"]').length > 0
     if (typeof (twttr) == 'undefined')
-      console.log("loading script")
       $.getScript('https://platform.twitter.com/widgets.js')
     else
       if (typeof (twttr.widgets) != 'undefined')
-        console.log("loading widgets")
         twttr.widgets.load()
 
 prevent_inline_form_submission = () ->
@@ -161,3 +159,8 @@ $(document).keydown (e) ->
 
 jQuery.fn.justtext = ->
   $(this).clone().children().remove().end().text()
+
+getResponsive = () ->
+  tag = window.getComputedStyle(document.body, ":after").getPropertyValue("content")
+  tag = tag.replace(/"/g, "") # Firefox bugfix
+  tag

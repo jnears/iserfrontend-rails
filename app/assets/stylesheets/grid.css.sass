@@ -34,7 +34,6 @@ $column_widths: 100
     &:nth-child(3n+1)
       clear: left
     &:nth-child(n+4)
-      // margin-top: #{$gutter}#{'%'}
       @include rem-fallback(margin-top, 1.5)
 
 @mixin tablet-width($number_of_columns)
@@ -42,28 +41,24 @@ $column_widths: 100
     width: auto
     float: none
     &:nth-child(n)
-      // margin-top: #{$gutter}#{'%'}
       @include rem-fallback(margin-top, 1.5)
   @if $number_of_columns == 4 or $number_of_columns == 5
     width: #{(nth($column_widths, 2))}#{'%'}
     &:nth-child(2n+1)
       clear: left
     &:nth-child(n+3)
-      // margin-top: #{$gutter}#{'%'}
       @include rem-fallback(margin-top, 1.5)
   @if $number_of_columns == 6
     width: #{(nth($column_widths, 2))}#{'%'}
     &:nth-child(n)
       clear: none
     &:nth-child(n+3)
-      // margin-top: #{$gutter}#{'%'}
       @include rem-fallback(margin-top, 1.5)
 
 [class*="span"]
   float: left
   min-height: 1px
   margin-left: #{$gutter}#{'%'}
-  // outline: 1px solid $grey4
   & span:first-of-type
     margin-top: 0
   & span:last-of-type
@@ -93,18 +88,15 @@ $column_widths: 100
   &:nth-child(odd)
     clear: left
   &:nth-child(even)
-    // margin-left: #{$gutter} * 2#{'%'}
     @include rem-fallback(margin-top, 1.5)
     @include respond-to(tablet)
       margin-left: 0
   &:nth-child(n+3)
-    // margin-top: #{$gutter} * 2#{'%'}
     @include rem-fallback(margin-top, 1.5)
   @include respond-to(tablet)
     width: auto
     float: none
     &:nth-child(n+2)
-      // margin-top: #{$gutter} * 2#{'%'}
       @include rem-fallback(margin-top, 1.5)
 
 @for $i from 2 through $max_columns
@@ -122,11 +114,14 @@ $column_widths: 100
         @include respond-to(tablet)
           @include tablet-width($i)
         @include respond-to(handheld)
-          width: auto
-          float: none
-          &:nth-child(n)
-            // margin-top: #{$gutter}#{'%'}
-            @include rem-fallback(margin-top, 1.5)
+          &:not(.no-single)
+            width: auto
+            float: none
+            &:nth-child(n)
+              @include rem-fallback(margin-top, 1.5)
+
+
+
 
 // homepage cludge :/
 .colgroup-3
@@ -144,6 +139,12 @@ $column_widths: 100
           &:nth-child(even)
             margin-left: 0%
 
-
-
-
+body:after
+  content: 'desktop'
+  display: none
+  @include respond-to(large_desktop)
+    content: 'large_desktop'
+  @include respond-to(tablet)
+    content: 'tablet'
+  @include respond-to(handheld)
+    content: 'handheld'
