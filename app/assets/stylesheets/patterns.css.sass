@@ -333,3 +333,40 @@ aside.home
   i.fa
     @include rem-fallback(margin-left, 0.35)
 
+.brochure
+  .row 
+    width: 100%
+    display: block 
+    overflow: auto 
+    border-bottom: 1px solid $grey5
+    @include rem-fallback(padding, (($baseline - 1) / $basefont), 0, 1.5, 0)
+    &:last-child
+      border-bottom: 0
+      @include rem-fallback(margin-bottom, 1.5)
+    .container 
+      width: 100%
+      margin: 0 auto
+    figure 
+      float: left 
+      width: 40% 
+      margin: 0
+      vertical-align: top
+      @include rem-fallback(margin-top, 0.75)
+      img
+        width: 100%
+    &:nth-child(odd) figure
+      margin-right: 3%
+    &:nth-child(even) figure
+      margin-left: 3%
+    .content 
+      float: left
+      width: 57%
+      vertical-align: top
+  &.zebra
+    .row
+      &:nth-child(odd)
+        background: $grey7
+
+
+
+
