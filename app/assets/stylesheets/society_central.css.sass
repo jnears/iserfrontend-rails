@@ -24,6 +24,10 @@ html.sc
   a:hover
     text-decoration: underline
 
+  .btn
+    a:link, a:visited, a:hover
+      color: $white
+
   .clearable
     background: $grey7 url('ui/close-ico.png') no-repeat right -10px center
     border: 1px solid #999999
@@ -792,26 +796,7 @@ html.sc
     display: none 
     
   #primary 
-    input[type=submit]
-      @include rem-fallback(padding, (8 / $basefont))
-      display: inline-block
-      position: relative
-      @include rem-fallback(font-size, 1)
-      font-family: "Officina", Georgia, "Times New Roman", Times, serif
-      font-weight: normal
-      text-align: center
-      color: $white
-      white-space: nowrap
-      vertical-align: middle
-      cursor: pointer
-      border: none
-      outline: 0
-      background-color: $grey2
-      @include rem-fallback(padding, 0.75, 1) //12px
-      @include rem-fallback(line-height, 1)
-      @include rem-fallback(margin, 0.25, 0) //4px
-
-
+    
     form[role=search]
       display: block
       background: $grey6
@@ -846,8 +831,6 @@ html.sc
       @include rem-fallback(padding-right, 1)
       label
         text-align: left
-      input[type="submit"]
-        @include rem-fallback(margin, 0)
 
 
 
