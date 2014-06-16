@@ -143,3 +143,36 @@ nav.related
       a:hover
         // background: $grey5
 
+nav.facets
+  background: $grey6
+  ol
+    padding-left: 0
+    li
+      @include rem-fallback(font-size, (16 / $basefont))
+      margin: 0
+      position: relative
+      a:link, a:visited
+        display: block
+        @include rem-fallback(padding, ((($baseline - 1) / $basefont) / 4), 1, 0.25, 1)
+        border-bottom: 1px solid $grey5
+        &:hover
+          background: $grey5
+        &.active
+          background: $grey5
+          &+.close
+            display: block
+            &+.badge
+              background: $grey4
+        &.close
+          display: none
+          padding: 0
+          border: 0
+          position: absolute
+          @include rem-fallback(right, 3)
+          top: 17%
+
+      small.badge
+        position: absolute
+        @include rem-fallback(right, 1)
+        top: 20%
+
