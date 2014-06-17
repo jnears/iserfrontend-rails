@@ -34,7 +34,6 @@ $(document).on 'page:change', ->
 $(document).on 'page:fetch', (e) ->
   $('#loading').fadeIn("fast")
 
-
 # $(window).on 'load', ->
 #   if $('img').length > 0
 #     $('img').baseline(27)
@@ -51,10 +50,19 @@ $(window).resize ->
 load_the_twitters = () ->
   if $('*[class^="twitter-"]').length > 0
     if (typeof (twttr) == 'undefined')
-      $.getScript('https://platform.twitter.com/widgets.js')
+      $.getScript 'https://platform.twitter.com/widgets.js', (data, textStatus, jqxhr) ->
+        twttr.events.bind "loaded", (event) ->
+          $('i.fa-spin').fadeOut()
+          return
+        return
     else
       if (typeof (twttr.widgets) != 'undefined')
         twttr.widgets.load()
+        twttr.events.bind "loaded", (event) ->
+          $('i.fa-spin').fadeOut()
+          return
+        return
+
 
 prevent_inline_form_submission = () ->
   $("form.inline-search").submit ->

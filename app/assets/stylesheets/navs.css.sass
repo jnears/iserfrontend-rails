@@ -1,3 +1,7 @@
+nav
+  ol
+    @include rem-fallback(padding-left, 0)
+
 header[role=banner]
   nav
     float: right
@@ -93,7 +97,6 @@ nav.section
   // border-bottom: 3px solid $grey1
   @include rem-fallback(margin-bottom, 2.5)
   ol
-    @include rem-fallback(padding-left, 0)
     li
       float: left
       @include rem-fallback(font-size, (16 / $basefont))
