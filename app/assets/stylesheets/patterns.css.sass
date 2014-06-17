@@ -195,7 +195,7 @@ span.info
   @include rem-fallback(font-size, (16 / $basefont))
   font-style: italic
 
-p.alert, div.changed
+.alert, div.changed
   @include boxout($rouge)
   @include rem-fallback(font-size, (22 / $basefont))
   @include rem-fallback(line-height, (1.5 * (ceil(22 / $baseline))))
@@ -334,10 +334,10 @@ aside.home
     @include rem-fallback(margin-left, 0.35)
 
 .brochure
-  .row 
+  .row
     width: 100%
-    display: block 
-    overflow: auto 
+    display: block
+    overflow: auto
     border-bottom: 1px solid $grey5
     @include rem-fallback(padding, (($baseline - 1) / $basefont), 0, 1.5, 0)
     &:first-child
@@ -345,12 +345,12 @@ aside.home
     &:last-child
       border-bottom: 0
       @include rem-fallback(margin-bottom, 1.5)
-    .container 
+    .container
       width: 100%
       margin: 0 auto
-    figure 
-      float: left 
-      width: 40% 
+    figure
+      float: left
+      width: 40%
       margin: 0
       vertical-align: top
       @include rem-fallback(margin-top, 0.75)
@@ -360,7 +360,7 @@ aside.home
       margin-right: 3%
     &:nth-child(even) figure
       margin-left: 3%
-    .content 
+    .content
       float: left
       width: 57%
       vertical-align: top
