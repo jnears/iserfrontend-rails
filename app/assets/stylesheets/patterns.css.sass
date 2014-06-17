@@ -396,3 +396,52 @@ aside.home
         @include rem-fallback(padding-top, 0)
       &:nth-child(odd)
         background: $grey7
+
+
+.pager
+  @include rem-fallback(margin-top, 1.5)
+  @include rem-fallback(margin-bottom, 1.5)
+  @include rem-fallback(padding, 0.5, 0)
+  z-index: 100
+  position: relative
+  background: white
+  cursor: default
+  overflow: auto
+  ul
+    @include rem-fallback(padding, 0)
+    li
+      font-family: "nta",Arial,sans-serif
+      font-size: 16px
+      line-height: 1.25
+      font-weight: 300
+      text-transform: none
+      float: left
+      list-style: none
+      text-align: right
+      margin: 0
+      padding: 0
+      width: 49%
+      &.previous
+        float: left
+        margin-left: 3px
+        a
+          float: left
+      &.next
+        float: right
+        margin-right: 3px
+        a
+          float: right
+    a, em
+      padding: 0.2em 0.5em
+      display: block
+      @include rem-fallback(margin-right, 0.25)
+    a
+      text-decoration: none
+      @include btn
+
+.page-navigation
+  border-bottom: 1px solid $grey5
+  @include rem-fallback(margin-bottom, 1.5)
+  ol
+    list-style: decimal
+    @include rem-fallback(margin-bottom, 0)
