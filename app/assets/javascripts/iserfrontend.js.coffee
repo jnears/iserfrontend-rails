@@ -86,7 +86,7 @@ shrink_to_fit = () ->
   if $('.half-hero').length > 0
     $('header[role=banner]').css('border-bottom', 'none')
     $('.half-hero').css('height', $(window).height() / 2 )
- 
+
 
 activate_datetime_pickers = () ->
   if $('.datepicker').length > 0
@@ -110,7 +110,7 @@ tempor incididunt ut labore et dolore magna aliqua.")
     $('aside[role=aside]').append(guide_nav)
 
 prevent_widows = () ->
-  $("h1,h2,h3,h4,h5,h6").each (i, e) =>
+  $("h1").each (i, e) =>
     t = $.trim($(e).justtext()).replace(/\s([^\s]*)$/,'\xa0'+'$1')
     cache = $(e).children()
     $(e).text(t).append cache
