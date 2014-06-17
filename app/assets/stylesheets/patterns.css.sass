@@ -32,6 +32,13 @@ p.call-to-action
   a:hover
     color: $white
 
+div.call-to-action
+  @include rem-fallback(line-height, (1.5 * (ceil(22 / $baseline))))
+  @include boxout($grey6)
+  font-family: $body_font
+
+
+
 h2.section-heading
   // @include rem-fallback(padding-top, 3)
 
@@ -195,7 +202,7 @@ span.info
   @include rem-fallback(font-size, (16 / $basefont))
   font-style: italic
 
-.alert, div.changed
+p.alert, div.changed
   @include boxout($rouge)
   @include rem-fallback(font-size, (22 / $basefont))
   @include rem-fallback(line-height, (1.5 * (ceil(22 / $baseline))))
@@ -310,8 +317,9 @@ img.preview
     a:hover
       color: $hover
     h1
-      margin: 0 auto 3rem auto
-      @include rem-fallback(font-size, (36 / $basefont))
+      margin: 0 auto 0rem auto
+      @include rem-fallback(font-size, (27 / $basefont))
+      @include rem-fallback(line-height, 2)
       @include rem-fallback(padding, 1, 4)
       width: 100%
       background-color: rgba(0, 0, 0, 0.6)
@@ -338,37 +346,47 @@ aside.home
     width: 100%
     display: block
     overflow: auto
-    border-bottom: 1px solid $grey5
-    @include rem-fallback(padding, (($baseline - 1) / $basefont), 0, 1.5, 0)
+    @include rem-fallback(padding, 1.5, 0)
+    @include respond-to(handheld)
+      @include rem-fallback(padding, 0)
     &:first-child
       @include rem-fallback(padding-top, 0)
     &:last-child
       border-bottom: 0
       @include rem-fallback(margin-bottom, 1.5)
     .container
-      width: 100%
+      width: 85%
       margin: 0 auto
+      @include respond-to(handheld)
+        width: 96%
     figure
       float: left
-      width: 40%
+      width: 50%
       margin: 0
       vertical-align: top
-      @include rem-fallback(margin-top, 0.75)
+
+      @include respond-to(handheld)
+        width: 100%
       img
         width: 100%
-    &:nth-child(odd) figure
-      margin-right: 3%
     &:nth-child(even) figure
-      margin-left: 3%
+      float: right
+
     .content
       float: left
-      width: 57%
+      width: 50%
       vertical-align: top
+      @include rem-fallback(padding, 0, 0, 0, 1.5)
+      @include respond-to(handheld)
+        width: 100%
+        @include rem-fallback(padding, 0)
+    &:nth-child(even) .content
+      @include rem-fallback(padding, 0, 1.5, 0, 0)
   &.zebra
     .row
+      &:first-child
+      @include rem-fallback(padding-top, 1.5)
+      @include respond-to(handheld)
+        @include rem-fallback(padding-top, 0)
       &:nth-child(odd)
         background: $grey7
-
-
-
-
