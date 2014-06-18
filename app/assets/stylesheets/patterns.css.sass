@@ -20,7 +20,7 @@ p.lead
     @include rem-fallback(font-size, (18 / $basefont))
     @include rem-fallback(line-height, (1.5 * (ceil(18 / $baseline))))
 
-p.call-to-action
+p.call-to-action, div.call-to-action
   @include rem-fallback(font-size, (22 / $basefont))
   @include rem-fallback(line-height, (1.5 * (ceil(22 / $baseline))))
   @include boxout($green)
@@ -31,11 +31,6 @@ p.call-to-action
     color: rgba($white, 0.8)
   a:hover
     color: $white
-
-div.call-to-action
-  @include rem-fallback(line-height, (1.5 * (ceil(22 / $baseline))))
-  @include boxout($grey6)
-  font-family: $body_font
 
 
 
