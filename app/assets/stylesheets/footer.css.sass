@@ -11,9 +11,11 @@ footer[role=contentinfo]
   @include rem-fallback(font-size, (16 / $basefont))
 
   a:link, a:visited, a:active
-    color: $grey3
+    &.t
+      color: $grey3
   a:hover
-    color: $white
+    &.t
+      color: $white
 
   nav.utilities
     float: right
