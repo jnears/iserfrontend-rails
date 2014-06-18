@@ -24,8 +24,9 @@ init_page = () ->
   prevent_inline_form_submission()
   load_the_twitters()
 
+
 $(document).on 'page:restore', ->
-  console.log("page restore event")
+  updateTwitterValues()
 
 $(document).on 'page:change', ->
   init_page()
@@ -46,6 +47,16 @@ $(document).on 'click', '.search-toggle', (event) ->
 
 $(window).resize ->
   shrink_to_fit()
+
+updateTwitterValues = () ->
+  if $('article.tweet').length > 0
+    $('article.tweet').each (i, e) =>
+      $.get "/tweet/" + $(e).attr('data-tweet-id') + ".json", (data) ->
+        console.log(data.tweet)
+        $(e).html(data.tweet)
+        load_the_twitters()
+        return
+    return
 
 load_the_twitters = () ->
   if $('*[class^="twitter-"]').length > 0
