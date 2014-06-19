@@ -23,6 +23,7 @@ init_page = () ->
   dynamic_remove()
   prevent_inline_form_submission()
   load_the_twitters()
+  local_nav_toggler()
 
 
 $(document).on 'page:restore', ->
@@ -47,6 +48,25 @@ $(document).on 'click', '.search-toggle', (event) ->
 
 $(window).resize ->
   shrink_to_fit()
+
+$(document).on 'click', '.toggler', (event) ->
+  $(event.target).closest('li').children('ul').toggleClass('open')
+  $(event.target).toggleClass('fa fa-plus-circle')
+  $(event.target).toggleClass('fa fa-minus-circle')
+  event.preventDefault()
+
+local_nav_toggler = () ->
+  $('nav.local .active').closest('ul').removeClass('open').addClass('open')
+  $('nav.local .active').parents().children('ul').removeClass('open').addClass('open')
+  $('nav.local ul.open').prev().removeClass('fa-minus fa-plus-circle')
+  $('nav.local ul.open').prev().addClass('fa-minus-circle')
+
+
+  # $('.open-taxon-ul').click ->
+  #   $(this).parent().next('ul').toggleClass('open-taxon-list')
+  #   $(this).toggleClass('fa fa-plus')
+  #   $(this).toggleClass('fa fa-minus')
+  #   event.preventDefault()
 
 updateTwitterValues = () ->
   if $('article.tweet').length > 0
@@ -104,7 +124,7 @@ shrink_to_fit = () ->
     $('.hero').css('height', $(window).height())
   if $('.half-hero').length > 0
     $('header[role=banner]').css('border-bottom', 'none')
-    $('.half-hero').css('height', $(window).height() / 2 )
+    $('.half-hero').css('height', $(window).height() / 1.5 )
 
 
 activate_datetime_pickers = () ->

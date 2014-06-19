@@ -179,3 +179,18 @@ nav.facets
         @include rem-fallback(right, 1)
         top: 20%
 
+nav.local
+  ul
+    margin-bottom: 0
+  ul ul
+    display: none
+    &.open
+      display: block
+  i.fa
+    @include rem-fallback(font-size, (14 / $basefont))
+    @include rem-fallback(line-height, (1.5 * (24 / $baseline)))
+    color: $link
+    float: left
+    @include rem-fallback(padding-right, 0.5)
+    cursor: pointer
+
