@@ -227,15 +227,6 @@ html.sc
     font-weight: normal
     @include rem-fallback(line-height, (27 / $basefont))
     @include rem-fallback(margin-bottom, 0.75)
-    a
-      &:link, 
-      &:visited, 
-      &:active
-        color: $grey2
-        text-decoration: none
-      &:hover
-        color: $grey1
-        text-decoration: underline
 
     i.tag
       position: relative
@@ -261,14 +252,20 @@ html.sc
       &:hover
         background: $hover
 
-    time:before
-      content: " - "
+    time
+      display: block
+      @include rem-fallback(margin, 0.75, 0)
+      @include respond-to(tablet)
+        @include rem-fallback(margin, 0)
+        &:before
+          content: ""
+
 
   .meta-container
     position: absolute
     @include rem-fallback(top, 0.75)
-    right: -40%
-    width: 30%
+    right: 0
+    width: 28%
     @include respond-to(tablet)
       position: relative
       width: 100%
@@ -289,7 +286,11 @@ html.sc
       li
         float: left
         width: 36px
-        padding: 0 4px
+        margin-right: 3px
+        a
+          color: $grey3
+        a:hover
+          color: $grey2
 
   #embed-modal 
     display: none
@@ -388,6 +389,8 @@ html.sc
   main
     @include rem-fallback(margin, 0)
     max-width: 100%
+    &.single-post
+      max-width: 35rem
 
   aside#headlines nav
     @include rem-fallback(margin-top, 0)
@@ -459,6 +462,7 @@ html.sc
     margin: 0 auto
     overflow: hidden 
     max-width: 1185px
+    position: relative
     @include rem-fallback(margin-bottom, 1.5)
     @include respond-to(handheld)
       width: 96%
@@ -564,6 +568,9 @@ html.sc
 
     article.single-post
       @include rem-fallback(margin, 0)
+      position: initial
+      @include respond-to(tablet)
+        max-width: 100%
 
       h1
         @include rem-fallback(font-size, (54 / $basefont))
@@ -588,25 +595,7 @@ html.sc
       @include rem-fallback(margin-bottom, 3)
       @include respond-to(handheld)
         @include rem-fallback(margin-bottom, 1.5)
-
-      &.featured
-        background-color: #f2f2f2
-        @include rem-fallback(min-height, 21)
-        @include rem-fallback(margin-bottom, 1.5)
-        figure
-          @include rem-fallback(margin-bottom, 0)
-        img
-          -moz-border-radius: 0px
-          -webkit-border-radius: 5px 5px 0px 0px
-          border-radius: 5px 5px 0px 0px
-        h1
-          @include rem-fallback(font-size, (22 / $basefont))
-        figcaption
-          @include rem-fallback(padding, 0.75, 0.75, 1)
-          font-style: normal
-          @include rem-fallback(font-size, (18 / $basefont))
-      
-      
+ 
       h1
         @include rem-fallback(font-size, (24 / $basefont))
         @include rem-fallback(line-height, 1.5)
@@ -628,11 +617,33 @@ html.sc
           @include respond-to(handheld)
             width: 80px
             height: 80px
+
+      &.homepage-feature
+
+
+        figure.thumb
+          &.thumb img
+            vertical-align: middle
+            width: 160px
+        h1
+          @include rem-fallback(font-size, (27 / $basefont))
+        figcaption
+          @include rem-fallback(padding, 0.75, 0.75, 1)
+          font-style: normal
+          @include rem-fallback(font-size, (18 / $basefont))
       
     article.image
       padding-left: 150px
       @include respond-to(handheld)
         padding-left: 100px
+    
+    article.homepage-feature
+      @include rem-fallback(min-height, (189 / $basefont))
+      padding-left: 185px
+      font-size: 110%
+      .entry-meta
+        font-weight: bold
+
 
     article.excerpt
       p
@@ -717,18 +728,20 @@ html.sc
       .closing
         display: block
         clear: both
-        @include rem-fallback(padding, 0.5, 0, 1, 0)
+        @include rem-fallback(padding, 0)
+        text-align: center
         
         ul
-          float: right
-          @include rem-fallback(padding, 1, 0.75, 0 )
+          @include rem-fallback(padding, 0 )
           margin-bottom: 0
           @include respond-to(tablet)
             float: left
             @include rem-fallback(padding, 1, 0, 0.75 )
           li
             display: inline
-            @include rem-fallback(padding, 0, 0, 0, (20 / $basefont))
+            @include rem-fallback(padding, 0, 1.5, 0, 0)
+            &:last-of-type
+              @include rem-fallback(padding, 0, 0, 0, 0)     
             @include respond-to(tablet)
               @include rem-fallback(padding, 0, (20 / $basefont), 0, 0)
 
