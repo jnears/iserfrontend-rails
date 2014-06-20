@@ -7,15 +7,14 @@ p.lead
 
 p.call-to-action, div.call-to-action
   @include rem-fallback(font-size, (22 / $basefont))
+  @include rem-fallback(padding, 1.5, 1)
   @include rem-fallback(line-height, (1.5 * (ceil(22 / $baseline))))
-  @include boxout($green)
-  color: rgba($white, 0.8)
   font-family: $body_font
   font-style: italic
-  a:link, a:visited, a:active
-    color: rgba($white, 0.8)
-  a:hover
-    color: $white
+  border-left: 10px solid $green
+  *:last-child
+    margin: 0
+
 
 h2.section-heading
   // @include rem-fallback(padding-top, 3)

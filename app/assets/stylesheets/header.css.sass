@@ -29,3 +29,10 @@ header[role=banner]
     @include respond-to(tablet)
       margin-left: auto
       margin-right: auto
+
+header.plain
+  display: block
+  position: relative
+  background: $grey6
+  @include rem-fallback(margin-bottom, 1.5)
+  @include rem-fallback(margin-top, -2)

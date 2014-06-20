@@ -5,13 +5,25 @@
 .components
   @for $j from 1 through $max_columns
     .span#{$j}
+      position: relative
       // border-top: 5px solid $grey2
       background: $grey6
-      min-height: 24rem
-      padding: 1rem
+      @include rem-fallback(padding, 1)
+      // @include rem-fallback(margin-bottom, 1)
       &>:first-child
         margin-top: 0rem
       &>:last-child
         margin-bottom: 0rem
-      @include respond-to(desktop)
-        min-height: 14rem
+      &:before, &:after
+        content: ' '
+        height: 0
+        position: absolute
+        width: 0
+        border: 30px solid transparent
+      &:before
+        border-left-color: $grey6
+        position: absolute
+        top: 34%
+        right: -45px
+        z-index: 2
+
