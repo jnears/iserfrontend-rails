@@ -1,18 +1,3 @@
-// h1.logo
-//   // @include rem-fallback(margin-top, -4)
-//   @include rem-fallback(margin-top, 1)
-//   @include rem-fallback(padding-top, 4)
-//   @include rem-fallback(padding-bottom, 1)
-//   @include rem-fallback(line-height, 2.5)
-//   background: url(asset-path("iser-logo.gif", image)) no-repeat 50% 0
-//   @include image-2x(asset-path("iser-logo@2x.gif", image), 80px, 68px)
-//   @include rem-fallback(font-size, (28 / $basefont))
-//   text-align: center
-//   span
-//     @include rem-fallback(font-size, (20 / $basefont))
-//     @include rem-fallback(line-height, 1)
-//   border-bottom: 1px solid $grey4
-
 p.lead
   @include rem-fallback(font-size, (22 / $basefont))
   @include rem-fallback(line-height, (1.5 * (ceil(22 / $baseline))))
@@ -31,8 +16,6 @@ p.call-to-action, div.call-to-action
     color: rgba($white, 0.8)
   a:hover
     color: $white
-
-
 
 h2.section-heading
   // @include rem-fallback(padding-top, 3)
@@ -184,8 +167,6 @@ h6.meta
     font-weight: bold
     margin-top: 1em
     display: block
-
-
 
 p.info
   font-style: italic
@@ -366,7 +347,9 @@ aside.home
       float: left
       width: 50%
       margin: 0
-      vertical-align: top
+      line-height: 0
+      a
+        line-height: 0
 
       @include respond-to(handheld)
         width: 100%
@@ -378,7 +361,6 @@ aside.home
     .content
       float: left
       width: 50%
-      vertical-align: top
       @include rem-fallback(padding, 0, 0, 0, 1.5)
       @include respond-to(handheld)
         width: 100%
@@ -392,7 +374,7 @@ aside.home
       @include respond-to(handheld)
         @include rem-fallback(padding-top, 0)
       &:nth-child(odd)
-        background: $grey7
+        background: $grey6
 
 .ico-link
   a:hover
@@ -445,3 +427,7 @@ aside.home
   ol
     list-style: decimal
     @include rem-fallback(margin-bottom, 0)
+
+.box
+  background: $grey6
+  @include rem-fallback(padding, 1)
