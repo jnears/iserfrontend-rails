@@ -87,6 +87,7 @@ html.sc
           border-bottom: 1px solid rgba(255, 255, 255, 0.2)
           line-height: 3rem
           text-align: left
+          margin-bottom: 0
           a:link, a:visited
             @include rem-fallback(padding, (13 / $basefont))
             @include rem-fallback(line-height, 1.5)
@@ -114,7 +115,6 @@ html.sc
       margin: 0 auto
       width: 90%
       position: relative
-      overflow: hidden
       max-width: 1185px
       @include respond-to(handheld)
         width: 96%
@@ -216,8 +216,10 @@ html.sc
     @include rem-fallback(margin-bottom, 1.5) 
     .nav-previous
       float: left
+      @include rem-fallback(margin-left, (3 / $basefont))
     .nav-next
       float: right
+     
 
   .entry-meta
     color: $grey2
@@ -394,6 +396,8 @@ html.sc
     position: relative
     right: 0
     width: 100%
+    font-family: $heading_font
+    font-weight: bold
 
     ol 
       padding: 0
@@ -480,6 +484,8 @@ html.sc
       width: 100%
       margin-left: 0
       @include rem-fallback(font-size, (18 / $basefont))
+      padding: 0
+      background: none
       &#site-overview
         @include respond-to(handheld)
           display: none
@@ -551,7 +557,7 @@ html.sc
   main.site-main
 
     h1.page-title
-      @include rem-fallback(font-size, (36 / $basefont))
+      @include rem-fallback(font-size, (54 / $basefont))
       @include rem-fallback(line-height, 3)
       @include rem-fallback(margin-bottom, 1.5)
       clear: both
@@ -560,7 +566,7 @@ html.sc
       @include rem-fallback(margin, 0)
 
       h1
-        @include rem-fallback(font-size, (36 / $basefont))
+        @include rem-fallback(font-size, (54 / $basefont))
         @include rem-fallback(line-height, (54 / $basefont))
         @include rem-fallback(margin-bottom, 1.5)
         @include respond-to(handheld)
@@ -587,6 +593,8 @@ html.sc
         background-color: #f2f2f2
         @include rem-fallback(min-height, 21)
         @include rem-fallback(margin-bottom, 1.5)
+        figure
+          @include rem-fallback(margin-bottom, 0)
         img
           -moz-border-radius: 0px
           -webkit-border-radius: 5px 5px 0px 0px
@@ -594,14 +602,14 @@ html.sc
         h1
           @include rem-fallback(font-size, (22 / $basefont))
         figcaption
-          @include rem-fallback(padding, 0.5, 0.75, 1)
+          @include rem-fallback(padding, 0.75, 0.75, 1)
+          font-style: normal
+          @include rem-fallback(font-size, (18 / $basefont))
       
       
       h1
         @include rem-fallback(font-size, (24 / $basefont))
         @include rem-fallback(line-height, 1.5)
-        // @include rem-fallback(line-height, (1.5 * (20 / $baseline)))
-        // @include rem-fallback(line-height, (20 / $basefont))
         @include rem-fallback(margin-bottom, 0.75)
       
       p
@@ -651,6 +659,7 @@ html.sc
       figcaption
         @include rem-fallback(font-size, (18 / $basefont))
         @include rem-fallback(line-height, 1.5)
+        @include rem-fallback(margin-top, 0.5)
         color: $grey2
 
   .circ-border
@@ -688,6 +697,7 @@ html.sc
 
         li
           list-style-type: none
+          @include rem-fallback(margin-bottom, 0)
 
       .third
         float: left
@@ -707,18 +717,19 @@ html.sc
       .closing
         display: block
         clear: both
-        @include rem-fallback(padding-top, 0.5)
+        @include rem-fallback(padding, 0.5, 0, 1, 0)
         
         ul
           float: right
-          @include rem-fallback(padding, (13.5 / $basefont), 0 )
+          @include rem-fallback(padding, 1, 0.75, 0 )
           margin-bottom: 0
-          @include respond-to(handheld)
+          @include respond-to(tablet)
             float: left
+            @include rem-fallback(padding, 1, 0, 0.75 )
           li
             display: inline
             @include rem-fallback(padding, 0, 0, 0, (20 / $basefont))
-            @include respond-to(handheld)
+            @include respond-to(tablet)
               @include rem-fallback(padding, 0, (20 / $basefont), 0, 0)
 
     
@@ -743,13 +754,7 @@ html.sc
         width: 133px
 
 
-  //form
-  form input:focus, form textarea:focus, form select:focus
-    outline: 0
-    outline: thin dotted \9
-    -moz-box-shadow: 0px 0px 6px 0px #cccccc
-    -webkit-box-shadow: 0px 0px 6px 0px #cccccc
-    box-shadow: 0px 0px 6px 0px #cccccc
+
 
 
 
@@ -764,7 +769,6 @@ html.sc
         @include rem-fallback(padding, 0, (9 / $basefont))
 
     input[type=search]
-      border: 1px solid $grey4
       width: 80%
       margin-right: 1%
       padding: 0 1%
@@ -776,20 +780,13 @@ html.sc
         width: 73%
         margin-right: 1%
     input[type=submit]
-      border: 1px solid $grey4
-      background: $grey7
       width: 12%
       margin: 0
-      color: $black
       @include respond-to(handheld)
         width: 18%
         margin-right: 0
       @include respond-to(tablet)
         width: 18%
-      &:hover, &:focus
-        background: $grey2
-        outline: 0
-        color: $white
 
 
   #commentform p.form-allowed-tags
@@ -819,11 +816,7 @@ html.sc
         vertical-align: middle
         width: 100%
         @include respond-to(handheld)
-        width: 90%
-      input[type=submit]
-        @include rem-fallback(padding, (8 / $basefont))
-        float: left
-        width: autof
+        width: 80%
 
     .comment-form
       width: auto
