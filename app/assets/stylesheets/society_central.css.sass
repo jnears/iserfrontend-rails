@@ -460,7 +460,6 @@ html.sc
   div#content
     width: 90%
     margin: 0 auto
-    overflow: hidden 
     max-width: 1185px
     position: relative
     @include rem-fallback(margin-bottom, 1.5)
@@ -619,8 +618,7 @@ html.sc
             height: 80px
 
       &.homepage-feature
-
-
+        margin-left: -35px
         figure.thumb
           &.thumb img
             vertical-align: middle
@@ -640,14 +638,26 @@ html.sc
     article.homepage-feature
       @include rem-fallback(min-height, (189 / $basefont))
       padding-left: 185px
-      font-size: 110%
-      .entry-meta
-        font-weight: bold
+      font-size: 115%
 
 
     article.excerpt
       p
         @include rem-fallback(margin-bottom, 0)
+        &.featured
+          position: absolute
+          bottom: 0
+          right: 0
+          color: $white
+          background: $link
+          @include rem-fallback(padding, 0, (5 / $basefont))
+          @include rem-fallback(font-size, (16 / $basefont))
+          border-top-left-radius: $radius
+          -moz-border-top-left-radius: $radius
+          -webkit-border-top-left-radius: $radius
+          border-bottom-right-radius: $radius
+          -moz-border-bottom-right-radius: $radius
+          -webkit-border-bottom-right-radius: $radius
 
     ol.comment-list
       @include rem-fallback(margin-left, 0.1)    
