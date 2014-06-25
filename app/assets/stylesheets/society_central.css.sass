@@ -226,7 +226,7 @@ html.sc
     font-family: $body_font
     font-weight: normal
     @include rem-fallback(line-height, (27 / $basefont))
-    @include rem-fallback(margin-bottom, 0.75)
+    @include rem-fallback(margin-bottom, 1)
 
     i.tag
       position: relative
@@ -288,7 +288,7 @@ html.sc
         width: 36px
         margin-right: 3px
         a
-          color: $grey3
+          color: #b6b6b6
         a:hover
           color: $grey2
 
@@ -391,6 +391,7 @@ html.sc
     max-width: 100%
     &.single-post
       max-width: 35rem
+      margin: 0 auto
 
   aside#headlines nav
     @include rem-fallback(margin-top, 0)
@@ -460,6 +461,7 @@ html.sc
   div#content
     width: 90%
     margin: 0 auto
+    overflow: hidden 
     max-width: 1185px
     position: relative
     @include rem-fallback(margin-bottom, 1.5)
@@ -594,11 +596,31 @@ html.sc
       @include rem-fallback(margin-bottom, 3)
       @include respond-to(handheld)
         @include rem-fallback(margin-bottom, 1.5)
- 
+
+      &.featured
+        background-color: #f2f2f2
+        @include rem-fallback(min-height, 21)
+        @include rem-fallback(margin-bottom, 1.5)
+        figure
+          @include rem-fallback(margin-bottom, 0)
+        img
+          -moz-border-radius: 0px
+          -webkit-border-radius: 5px 5px 0px 0px
+          border-radius: 5px 5px 0px 0px
+        h1
+          @include rem-fallback(font-size, (22 / $basefont))
+        figcaption
+          @include rem-fallback(padding, 0.75, 0.75, 1)
+          font-style: normal
+          @include rem-fallback(font-size, (18 / $basefont))
+          .author a
+            font-weight: bold
+      
+      
       h1
         @include rem-fallback(font-size, (24 / $basefont))
         @include rem-fallback(line-height, 1.5)
-        @include rem-fallback(margin-bottom, 0.75)
+        @include rem-fallback(margin-bottom, 0.5)
       
       p
         color: #000000
@@ -616,48 +638,15 @@ html.sc
           @include respond-to(handheld)
             width: 80px
             height: 80px
-
-      &.homepage-feature
-        margin-left: -35px
-        figure.thumb
-          &.thumb img
-            vertical-align: middle
-            width: 160px
-        h1
-          @include rem-fallback(font-size, (27 / $basefont))
-        figcaption
-          @include rem-fallback(padding, 0.75, 0.75, 1)
-          font-style: normal
-          @include rem-fallback(font-size, (18 / $basefont))
       
     article.image
       padding-left: 150px
       @include respond-to(handheld)
         padding-left: 100px
-    
-    article.homepage-feature
-      @include rem-fallback(min-height, (189 / $basefont))
-      padding-left: 185px
-      font-size: 115%
-
 
     article.excerpt
       p
         @include rem-fallback(margin-bottom, 0)
-        &.featured
-          position: absolute
-          bottom: 0
-          right: 0
-          color: $white
-          background: $link
-          @include rem-fallback(padding, 0, (5 / $basefont))
-          @include rem-fallback(font-size, (16 / $basefont))
-          border-top-left-radius: $radius
-          -moz-border-top-left-radius: $radius
-          -webkit-border-top-left-radius: $radius
-          border-bottom-right-radius: $radius
-          -moz-border-bottom-right-radius: $radius
-          -webkit-border-bottom-right-radius: $radius
 
     ol.comment-list
       @include rem-fallback(margin-left, 0.1)    
@@ -694,9 +683,6 @@ html.sc
 
 
   footer[role=contentinfo]
-    color: $white
-    @include rem-fallback(margin-top, 0)
-    @include rem-fallback(padding-bottom, 0)
 
     a:link, a:visited
       color: white
@@ -708,6 +694,7 @@ html.sc
       width: 90%
       margin: 0 auto
       max-width: 1185px
+      overflow: auto
       @include respond-to(handheld)
         width: auto
         @include rem-fallback(margin-left, 0.5)
@@ -754,30 +741,31 @@ html.sc
               @include rem-fallback(padding, 0, 0, 0, 0)     
             @include respond-to(tablet)
               @include rem-fallback(padding, 0, (20 / $basefont), 0, 0)
+        
+        .logos
 
-    
-    p.logo
-      display: inline-block
-      @include rem-fallback(margin-right, 1.5)
-      @include rem-fallback(margin-bottom, 0)
-      .iser-logo, .essex-logo
-        text-indent: -3000em 
-        display: block
-        overflow: hidden
-        float: left
-      .iser-logo
-        background: url('ui/iser-logo.png') no-repeat
-        @include image-2x('ui/iser-logo2x.png', 144px, 120px)
-        height: 60px
-        width: 72px
-      .essex-logo
-        background: url('ui/essex-logo.png') no-repeat
-        @include image-2x('ui/essex-logo2x.png', 166px, 96px)
-        height: 48px
-        width: 133px
+          margin: 0 auto
+          display: inline-block
+          width: 500px
+          @include rem-fallback(margin-top, 2.5 )
+          opacity: 0.5
+          overflow: auto
 
-
-
+          a.iser 
+            display: inline-block
+            width: 222px
+            height: 81px
+            overflow: hidden
+            text-indent: -3000em
+            background: url("ui/university-of-essex-logo.svg") no-repeat 50% 50%
+          a.uoe 
+            display: inline-block
+            width: 222px
+            height: 81px
+            overflow: hidden
+            text-indent: -3000em
+            @include rem-fallback( margin-left, 1.5 )
+            background: url("ui/university-of-essex-logo.svg") no-repeat 50% 50%
 
 
 
