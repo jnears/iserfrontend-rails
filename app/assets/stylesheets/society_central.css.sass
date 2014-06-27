@@ -60,9 +60,7 @@ html.sc
 
   #outer-wrap
     position: relative
-    overflow: hidden
     width: 100%
-    background: $black
 
   #inner-wrap
     position: relative
@@ -78,6 +76,7 @@ html.sc
       top: 0
       @include rem-fallback(padding-top, 4)
       background: $black
+      height: 100%
       ol
         margin-bottom: 0
         padding-left: 0
@@ -226,7 +225,7 @@ html.sc
     font-family: $body_font
     font-weight: normal
     @include rem-fallback(line-height, (27 / $basefont))
-    @include rem-fallback(margin-bottom, 1)
+    @include rem-fallback(margin-bottom, 0.75)
 
     i.tag
       position: relative
@@ -459,11 +458,11 @@ html.sc
           background: blue
 
   div#content
-    width: 90%
+    width: 92%
     margin: 0 auto
-    overflow: hidden 
     max-width: 1185px
     position: relative
+    @include rem-fallback(padding, 0, (3 / $basefont))
     @include rem-fallback(margin-bottom, 1.5)
     @include respond-to(handheld)
       width: 96%
@@ -597,6 +596,36 @@ html.sc
       @include respond-to(handheld)
         @include rem-fallback(margin-bottom, 1.5)
 
+      &.image
+        padding-left: 150px
+        @include respond-to(handheld)
+          padding-left: 100px
+
+      &.homepage-feature
+        @include rem-fallback(font-size, (20 / $basefont))
+        &.image
+          @include rem-fallback(padding, 1.5, 1.5, 1.5, (302 / $basefont))
+          margin-left: -27px
+          @include rounded
+          background-color: #f2f2f2
+          figure.thumb
+            @include rem-fallback(left, 1.5)
+            @include rem-fallback(top, 1.5)
+
+        h1
+          @include rem-fallback(font-size, (27 / $basefont))
+          
+        figure.thumb
+          img
+            vertical-align: middle
+            width: 250px
+            @include respond-to(handheld)
+              width: 80px
+              height: 80px
+
+
+
+        
       &.featured
         background-color: #f2f2f2
         @include rem-fallback(min-height, 21)
@@ -620,7 +649,7 @@ html.sc
       h1
         @include rem-fallback(font-size, (24 / $basefont))
         @include rem-fallback(line-height, 1.5)
-        @include rem-fallback(margin-bottom, 0.5)
+        @include rem-fallback(margin-bottom, 0.75)
       
       p
         color: #000000
@@ -639,10 +668,7 @@ html.sc
             width: 80px
             height: 80px
       
-    article.image
-      padding-left: 150px
-      @include respond-to(handheld)
-        padding-left: 100px
+    
 
     article.excerpt
       p
@@ -731,9 +757,6 @@ html.sc
         ul
           @include rem-fallback(padding, 0 )
           margin-bottom: 0
-          @include respond-to(tablet)
-            float: left
-            @include rem-fallback(padding, 1, 0, 0.75 )
           li
             display: inline
             @include rem-fallback(padding, 0, 1.5, 0, 0)
@@ -746,10 +769,12 @@ html.sc
 
           margin: 0 auto
           display: inline-block
-          width: 500px
-          @include rem-fallback(margin-top, 2.5 )
-          opacity: 0.5
+          width: 475px
+          @include rem-fallback(margin-top, 2 )
           overflow: auto
+          @include respond-to(handheld)
+            width: 100%
+
 
           a.iser 
             display: inline-block
@@ -758,14 +783,33 @@ html.sc
             overflow: hidden
             text-indent: -3000em
             background: url("ui/university-of-essex-logo.svg") no-repeat 50% 50%
+            @include rem-fallback( margin-left, 1.5 )
+            opacity: 0.5
+            filter: alpha(opacity=50)
+            &:hover
+              opacity: 1.0
+              filter: alpha(opacity=100)
+            @include respond-to(handheld)
+              width: 150px
+              height: 55px
+              @include rem-fallback( margin-left, 0.5 )
+
+
           a.uoe 
             display: inline-block
             width: 222px
             height: 81px
             overflow: hidden
             text-indent: -3000em
-            @include rem-fallback( margin-left, 1.5 )
             background: url("ui/university-of-essex-logo.svg") no-repeat 50% 50%
+            opacity: 0.5
+            filter: alpha(opacity=50)
+            &:hover
+              opacity: 1.0
+              filter: alpha(opacity=100)
+            @include respond-to(handheld)
+              width: 150px
+              height: 55px
 
 
 
