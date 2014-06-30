@@ -8,11 +8,6 @@ html.sc
   h2
     @include rem-fallback(font-size, (30 / $basefont))
 
-  h1, h2, h3, h4
-    a:link, a:visited
-      color: $black
-      text-decoration: none
-
     a:hover
       color: $black
       text-decoration: underline
@@ -291,7 +286,7 @@ html.sc
         a:hover
           color: $grey2
 
-  #embed-modal 
+  #embed-modal-primary, #embed-modal-sidebar
     display: none
     background: $grey6
     overflow: hidden
@@ -302,7 +297,7 @@ html.sc
     max-width: 300px
     @include rem-fallback(margin-top, -0.5)
     position: absolute
-    textarea[name=embed-link]
+    textarea[name=embed-link-sidebar], textarea[name=embed-link-primary]
       border: none
       resize: none
       @include rem-fallback(font-size, ( 14 / $basefont))
@@ -477,7 +472,7 @@ html.sc
   div#secondary
     float: left
     width: 30%
-    padding-left: 2.333333%
+    @include rem-fallback(padding-left, 3)
     @include respond-to(tablet)
       float: none
       width: 100%
@@ -604,24 +599,44 @@ html.sc
       &.homepage-feature
         @include rem-fallback(font-size, (20 / $basefont))
         &.image
-          @include rem-fallback(padding, 1.5, 1.5, 1.5, (302 / $basefont))
-          margin-left: -27px
+          @include rem-fallback(padding, 0.75, 0.75, 0.75, (290 / $basefont))
+          @include rem-fallback(margin-left, -0.75)
           @include rounded
-          background-color: #f2f2f2
+          border: 1px solid $grey4
+          background: $grey7
+          @include respond-to(tablet)
+            padding: 0
+            margin-left: 0
+          .content
+            @include respond-to(tablet)
+              @include rem-fallback(padding, 0.75)
+
           figure.thumb
-            @include rem-fallback(left, 1.5)
-            @include rem-fallback(top, 1.5)
+            @include rem-fallback(left, 1)
+            @include rem-fallback(top, 1)
+            @include respond-to(tablet)
+              position: relative
+              @include rem-fallback(left, 0)
+              @include rem-fallback(top, 0)
 
         h1
-          @include rem-fallback(font-size, (27 / $basefont))
+          @include rem-fallback(font-size, (30 / $basefont))
+          @include rem-fallback(line-height, 2)
           
         figure.thumb
           img
             vertical-align: middle
             width: 250px
-            @include respond-to(handheld)
-              width: 80px
-              height: 80px
+            @include respond-to(tablet)
+              width: 100%
+              border-bottom-left-radius: 0
+              -moz-border-bottom-left-radius: 0
+              -webkit-border-bottom-left-radius-: 0              
+              border-bottom-right-radius: 0
+              -moz-border-bottom-right-radius: 0
+              -webkit-border-bottom-right-radius-: 0
+        .fa
+          color: $link
 
 
 
