@@ -25,6 +25,7 @@ init_page = () ->
   load_the_twitters()
   local_nav_toggler()
   match_component_heights()
+  embed()
 
 $(document).on 'page:restore', ->
   updateTwitterValues()
@@ -200,3 +201,10 @@ getResponsive = () ->
   tag = window.getComputedStyle(document.body, ":after").getPropertyValue("content")
   tag = tag.replace(/"/g, "") # Firefox bugfix
   tag
+
+embed = () ->
+  $("#embed-top").on 'click', (event) ->
+    $( this ).toggleClass('active')
+    $( "#embed-modal-top" ).toggle()
+    $("#embed-text-top").select()
+    event.preventDefault()
