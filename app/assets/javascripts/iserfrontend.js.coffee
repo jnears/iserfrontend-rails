@@ -26,7 +26,8 @@ init_page = () ->
   local_nav_toggler()
   match_component_heights()
   embed()
-  set_social_toolbar_ids()
+  handheld_nav()
+  reset_handheld_nav()
 
 $(document).on 'page:restore', ->
   updateTwitterValues()
@@ -209,3 +210,25 @@ embed = () ->
     $(this).closest('.social-toolbar').find('.embed-modal').toggle()
     $(this).closest('.social-toolbar').find('.embed-modal-text').select()
     event.preventDefault()
+
+handheld_nav = () ->
+  $("#handheld-btn").click ->
+    $(this).toggleClass "active"
+    if $("#handheld-btn").hasClass("closed")
+      $(this).removeClass "closed"
+      $(this).addClass "open"
+      $("#page-wrap").animate({left:'70%'}, 200)
+    else if $("#handheld-btn").hasClass("open")
+      $(this).removeClass "open"
+      $(this).addClass "closed"
+      $("#page-wrap").animate({left:'0'}, 200)
+    event.preventDefault()
+    return
+
+reset_handheld_nav = () ->
+  $(window).on "resize", ->
+    if $("#handheld-btn").hasClass("open") and $(window).width() > 768
+      $("#handheld-btn").removeClass "open"
+      $("#handheld-btn").addClass "closed"
+      $("#page-wrap").animate({left:'0'}, 500)
+    return
