@@ -26,6 +26,7 @@ init_page = () ->
   local_nav_toggler()
   match_component_heights()
   embed()
+  set_social_toolbar_ids()
 
 $(document).on 'page:restore', ->
   updateTwitterValues()
@@ -203,8 +204,8 @@ getResponsive = () ->
   tag
 
 embed = () ->
-  $("#embed-top").on 'click', (event) ->
+  $(".embed").on 'click', (event) ->
     $( this ).toggleClass('active')
-    $( "#embed-modal-top" ).toggle()
-    $("#embed-text-top").select()
+    $(this).closest('.social-toolbar').find('.embed-modal').toggle()
+    $(this).closest('.social-toolbar').find('.embed-modal-text').select()
     event.preventDefault()

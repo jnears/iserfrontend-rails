@@ -1,18 +1,30 @@
-ul.social
-  list-style-type: none
-  padding: 0em
-  li
-    font-size: 16px
-    float: left
-    margin: 0px 18px 0px 0px
-    line-height: 2.2rem
+.social-toolbar
+  position: relative
 
+  ul
+    list-style-type: none
+    padding: 0em
+    li
+      float: left
+      @include rem-fallback(margin, 0, 0.5, 0, 0)
+      @include rem-fallback(font-size, (16 / $basefont))
+      line-height: 2.2rem
 
-#embed-modal-top, #embed-modal-bottom
-  display: none
-  background: $grey6
-  overflow: hidden
-  border: 1px solid $grey4
-  @include rounded
-  z-index: 1001
+  .embed-modal
+    display: none
+    top: 40px
+    position: absolute
+    z-index: 1000
+    background: $grey6
+    overflow: hidden
+    border: 1px solid $grey4
+    @include rounded
+    @include rem-fallback(padding, 0.5)
+    max-width: 300px
 
+textarea[name=embed-link] 
+  border: none
+  resize: none
+  @include rem-fallback(font-size, (16 / $basefont))
+  background: none
+  width: 100%
