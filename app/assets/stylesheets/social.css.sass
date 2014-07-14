@@ -1,14 +1,17 @@
 .social-toolbar
   position: relative
-
   ul
     list-style-type: none
     padding: 0em
     li
       float: left
-      @include rem-fallback(margin, 0, 0.5, 0, 0)
+      @include rem-fallback(margin, 0, 0.5, 1.5, 0)
       @include rem-fallback(font-size, (16 / $basefont))
-      line-height: 2.2rem
+
+      a:link, a:visited, a:active
+        color: $grey4
+      a:hover
+        color: $hover
 
   .embed-modal
     display: none
@@ -22,7 +25,7 @@
     @include rem-fallback(padding, 0.5)
     max-width: 300px
 
-textarea[name=embed-link] 
+textarea[name=embed-link]
   border: none
   resize: none
   @include rem-fallback(font-size, (16 / $basefont))

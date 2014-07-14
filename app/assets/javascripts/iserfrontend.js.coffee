@@ -149,7 +149,7 @@ tempor incididunt ut labore et dolore magna aliqua.")
     $('aside[role=aside]').append(guide_nav)
 
 prevent_widows = () ->
-  $("h1").each (i, e) =>
+  $("h1, h2.home-banner").each (i, e) =>
     t = $.trim($(e).justtext()).replace(/\s([^\s]*)$/,'\xa0'+'$1')
     cache = $(e).children()
     $(e).text(t).append cache
