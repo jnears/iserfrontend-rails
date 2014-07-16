@@ -25,7 +25,7 @@ html.sc
   a:hover
     text-decoration: underline
 
-  p.standfirst
+  p.standfirst, div.standfirst
     font-weight: bold
     @include rem-fallback(font-size, (20 / $basefont))
     @include rem-fallback(line-height, 1.5)
@@ -634,15 +634,10 @@ html.sc
           .author a
             font-weight: bold
       
-      
       h1
         @include rem-fallback(font-size, (24 / $basefont))
         @include rem-fallback(line-height, 1.5)
         @include rem-fallback(margin-bottom, 0.75)
-      
-      p
-        color: #000000
-
 
       figure.thumb
         position: absolute
