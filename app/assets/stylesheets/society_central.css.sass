@@ -1,5 +1,5 @@
 html.sc
-  
+
   h1
     @include rem-fallback(font-size, (36 / $basefont))
     span
@@ -8,7 +8,7 @@ html.sc
   h2
     @include rem-fallback(font-size, (30 / $basefont))
 
-   
+
   h1, h2, h3, h4
     a:link, a:visited
       color: $black
@@ -41,7 +41,7 @@ html.sc
     padding: 3px 18px 3px 4px /* USE the same right padding in jQ! */
     border-radius: 3px
     transition: background 0.4s /*REMOVE THIS LINE IF YOU ENCOUNTER ISSUES IN Chrome (Bug 02.2014)*/
-  
+
   .clearable.x
     background-position: right 10px center
 
@@ -67,7 +67,7 @@ html.sc
   .lt-ie9 img, .lt-ie9 object
     height: 100% !important
 
-  .lt-ie8 img, .lt-ie8 object 
+  .lt-ie8 img, .lt-ie8 object
     height: auto !important
 
   #outer-wrap
@@ -77,10 +77,10 @@ html.sc
   #inner-wrap
     position: relative
     width: 100%
-    
+
     #page
       background: $white
-    
+
     #page > nav.categories
       left: -70%
       position: absolute
@@ -150,11 +150,11 @@ html.sc
 
       .fa
         @include rem-fallback(font-size, (22 / $basefont))
-      
+
     .container
       height: #{(($baseline * 5) - 5)}px
       padding-right: 0
-    
+
     h1
       text-transform: uppercase
       @include rem-fallback(font-size, (34 / $basefont))
@@ -171,7 +171,7 @@ html.sc
       a:hover
         text-decoration: none
         background: $grey2
-    
+
     h2
       font-family: $heading_font
       font-weight: normal
@@ -192,7 +192,7 @@ html.sc
         @include rem-fallback(padding, 0.5)
       a:hover
         color: $hover
-    
+
     div.util-links
       position: absolute
       right: 0
@@ -203,7 +203,7 @@ html.sc
           color: $grey2
         &:hover
           color: $hover
-    
+
     nav.categories
       float: none
       ol
@@ -222,15 +222,15 @@ html.sc
           a:hover
             background: #74a290
             color: white
-  
+
   .paging-navigation
-    @include rem-fallback(margin-bottom, 1.5) 
+    @include rem-fallback(margin-bottom, 1.5)
     .nav-previous
       float: left
       @include rem-fallback(margin-left, (3 / $basefont))
     .nav-next
       float: right
-     
+
 
   .entry-meta
     color: $grey2
@@ -323,15 +323,15 @@ html.sc
       &:focus
         outline: 0
 
-  
- 
-  #tribe-events 
+
+
+  #tribe-events
     & .tribe-events-content p,
     & .tribe-events-before-html p,
     & .tribe-events-after-html p
       @include rem-fallback(margin, 0, 0, 1.5, 0)
       @include rem-fallback(line-height, 1.5)
-  
+
   .events-list .tribe-events-loop
     max-width: 100%
     margin: 0
@@ -363,14 +363,14 @@ html.sc
     & .tribe-events-venue-map
       width: 100%
       margin: 0
-      
+
     .tribe-events-single-section-title
       margin: 0
 
   .event-meta-group
     zoom: 1
     vertical-align: top
-  
+
   .tribe-events-sub-nav li a
     background: none
 
@@ -414,11 +414,11 @@ html.sc
     font-family: $heading_font
     font-weight: bold
 
-    ol 
+    ol
       padding: 0
       @include rem-fallback(margin, 0)
 
-      li 
+      li
         list-style-type: none
         @include rem-fallback(margin, 0)
         border-top: 1px solid $grey4
@@ -437,7 +437,7 @@ html.sc
         a:visited
           @include rem-fallback(padding, (13 / $basefont))
 
-        a:hover, a.active 
+        a:hover, a.active
           text-decoration: none
           background: #dfdfdf
           color: $black
@@ -448,13 +448,13 @@ html.sc
 
     article:not(:last-of-type)
       border-bottom: 1px solid black
-    
+
     h1
       @include rem-fallback(font-size, (20 / $basefont))
       @include rem-fallback(line-height, 2)
       @include rem-fallback(margin-bottom, 0.5)
       clear: both
-      color: $grey2 
+      color: $grey2
 
     h2
       @include rem-fallback(font-size, (18 / $basefont))
@@ -497,7 +497,7 @@ html.sc
       width: 100%
       padding-left: 0
       clear: both
-    
+
     aside
       width: 100%
       margin-left: 0
@@ -510,17 +510,17 @@ html.sc
         p.lead
           color: $grey2
           font-style: italic
-      
+
       &.widget_search
         @include rem-fallback(min-height, (81 / $basefont))
-    
+
       &#headlines
         @include respond-to(tablet)
           display: none
 
-    
+
       &#events-list
-        
+
         ol
           padding-left: 0
           li
@@ -613,8 +613,8 @@ html.sc
         @include respond-to(handheld)
           padding-left: 100px
 
-      
-        
+
+
       &.featured
         background-color: #f2f2f2
         @include rem-fallback(min-height, 21)
@@ -633,7 +633,7 @@ html.sc
           @include rem-fallback(font-size, (18 / $basefont))
           .author a
             font-weight: bold
-      
+
       h1
         @include rem-fallback(font-size, (24 / $basefont))
         @include rem-fallback(line-height, 1.5)
@@ -651,15 +651,15 @@ html.sc
           @include respond-to(handheld)
             width: 80px
             height: 80px
-      
-    
+
+
 
     article.excerpt
       p
         @include rem-fallback(margin-bottom, 0)
 
     ol.comment-list
-      @include rem-fallback(margin-left, 0.1)    
+      @include rem-fallback(margin-left, 0.1)
 
       ol.children
         @include rem-fallback(margin-left, 1.5)
@@ -672,7 +672,7 @@ html.sc
         position: absolute
         left: 0
         margin: 0
-        
+
 
   .entry-content
     figure
@@ -699,7 +699,7 @@ html.sc
 
     @include respond-to(handheld)
       @include rem-fallback(padding, 1.5, 0)
-    
+
     .site-info
       width: 90%
       margin: 0 auto
@@ -737,7 +737,7 @@ html.sc
         clear: both
         @include rem-fallback(padding, 0)
         text-align: center
-        
+
         ul
           @include rem-fallback(padding, 0 )
           margin-bottom: 0
@@ -745,10 +745,10 @@ html.sc
             display: inline
             @include rem-fallback(padding, 0, 1.5, 0, 0)
             &:last-of-type
-              @include rem-fallback(padding, 0, 0, 0, 0)     
+              @include rem-fallback(padding, 0, 0, 0, 0)
             @include respond-to(tablet)
               @include rem-fallback(padding, 0, (20 / $basefont), 0, 0)
-        
+
         .logos
 
           margin: 0 auto
@@ -760,7 +760,7 @@ html.sc
             width: 100%
 
 
-          a.iser 
+          a.iser
             display: inline-block
             width: 140px
             height: 120px
@@ -775,7 +775,7 @@ html.sc
               filter: alpha(opacity=100)
 
 
-          a.uoe 
+          a.uoe
             display: inline-block
             width: 222px
             height: 130px
@@ -827,10 +827,10 @@ html.sc
 
 
   #commentform p.form-allowed-tags
-    display: none 
-    
-  #primary 
-    
+    display: none
+
+  #primary
+
     form[role=search]
       display: block
       background: $grey6
@@ -890,7 +890,7 @@ html.sc.lt-ie8 .colgroup-3
 html.sc.lt-ie8 .fa
   line-height: 27px
 
-html.sc.lt-ie8 .fa-envelope-o
+// html.sc.lt-ie8 .fa-envelope-o
 
 html.sc.lt-ie8 .social-wrapper .email
   background: url('ui/email-ico.gif') 5px 5px no-repeat
