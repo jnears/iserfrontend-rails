@@ -194,12 +194,20 @@ nav.local
     @include rem-fallback(padding-right, 0.5)
     cursor: pointer
 
-#handheld-btn
+a#handheld-btn
+  margin-left: 0
   display: none
-  position: absolute
-  top: 20px
+  color: #2c2c2c
+  line-height: 2.6rem
+  padding: 0 1em
+  float: left
+  margin-top: 18px
+  height: 39px
   @include respond-to(tablet)
     display: inline
+  &:hover, &.active
+    background: $grey5
+
 
 nav.handheld-menu
   left: -70%
