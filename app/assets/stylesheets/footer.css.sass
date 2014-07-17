@@ -17,15 +17,37 @@ footer[role=contentinfo]
     &.t
       color: $white
 
+  p.address
+    width: 50%
+    @include respond-to(tablet)
+      width: 100%
+
   nav.utilities
-    float: right
+    position: absolute
+    top: 0
+    right: 0
+    width: 50%
+    @include respond-to(tablet)
+      position: relative
+      width: 100%
+      @include rem-fallback(margin-bottom, 1.5)
+    
     ul
+      @include rem-fallback(padding-left, 0)
+      float: right
+      @include respond-to(tablet)
+        float: left
+        width: 100%
       li
         @include rem-fallback(font-size, (14 / $basefont))
         list-style-type: none
         float: left
         @include rem-fallback(margin-left, 0.75)
         vertical-align: middle
+        @include respond-to(tablet)
+          float: left
+          @include rem-fallback(margin-right, 0.75)
+          @include rem-fallback(margin-left, 0)
 
   a.esrc
     float: left
