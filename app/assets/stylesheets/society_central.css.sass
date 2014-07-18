@@ -8,7 +8,6 @@ html.sc
   h2
     @include rem-fallback(font-size, (30 / $basefont))
 
-
   h1, h2, h3, h4
     a:link, a:visited
       color: $black
@@ -29,7 +28,6 @@ html.sc
     font-weight: bold
     @include rem-fallback(font-size, (20 / $basefont))
     @include rem-fallback(line-height, 1.5)
-
 
   .btn
     a:link, a:visited, a:hover
@@ -62,7 +60,6 @@ html.sc
     border-radius: 0px
     -moz-border-radius: 0px
     -webkit-border-radius: 0px
-
 
   .lt-ie9 img, .lt-ie9 object
     height: 100% !important
@@ -231,7 +228,6 @@ html.sc
     .nav-next
       float: right
 
-
   .entry-meta
     color: $grey2
     font-family: $body_font
@@ -270,7 +266,6 @@ html.sc
         @include rem-fallback(margin, 0)
         &:before
           content: ""
-
 
   .meta-container
     position: absolute
@@ -322,8 +317,6 @@ html.sc
       width: 100%
       &:focus
         outline: 0
-
-
 
   #tribe-events
     & .tribe-events-content p,
@@ -396,7 +389,6 @@ html.sc
       width: 100%
       float: none
 
-
   main
     @include rem-fallback(margin, 0)
     max-width: 100%
@@ -441,7 +433,6 @@ html.sc
           text-decoration: none
           background: #dfdfdf
           color: $black
-
 
     p:last-of-type
       margin-bottom: 0
@@ -518,7 +509,6 @@ html.sc
         @include respond-to(tablet)
           display: none
 
-
       &#events-list
 
         ol
@@ -569,7 +559,6 @@ html.sc
       input[type=submit]
         display: none
 
-
   main.site-main
 
     h1.page-title
@@ -613,8 +602,6 @@ html.sc
         @include respond-to(handheld)
           padding-left: 100px
 
-
-
       &.featured
         background-color: #f2f2f2
         @include rem-fallback(min-height, 21)
@@ -652,8 +639,6 @@ html.sc
             width: 80px
             height: 80px
 
-
-
     article.excerpt
       p
         @include rem-fallback(margin-bottom, 0)
@@ -672,7 +657,6 @@ html.sc
         position: absolute
         left: 0
         margin: 0
-
 
   .entry-content
     figure figcaption, .wp-caption-text
@@ -791,11 +775,6 @@ html.sc
             @include respond-to(handheld)
               @include rem-fallback( margin-left, 0 )
 
-
-
-
-
-
   form[role=search]
     background: none
     fieldset
@@ -824,7 +803,6 @@ html.sc
         margin-right: 0
       @include respond-to(tablet)
         width: 18%
-
 
   #commentform p.form-allowed-tags
     display: none
@@ -862,8 +840,6 @@ html.sc
       label
         text-align: left
 
-
-
   body.home span.comments-link, body.home span.edit-link
     display: none
 
@@ -890,11 +866,8 @@ html.sc.lt-ie8 .colgroup-3
 html.sc.lt-ie8 .fa
   line-height: 27px
 
-// html.sc.lt-ie8 .fa-envelope-o
-
 html.sc.lt-ie8 .social-wrapper .email
   background: url('ui/email-ico.gif') 5px 5px no-repeat
 
 html.sc.lt-ie8 .social-wrapper .embed
   background: url('ui/embed-ico.gif') 5px 5px no-repeat
-
