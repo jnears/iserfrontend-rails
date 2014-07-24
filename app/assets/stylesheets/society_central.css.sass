@@ -364,9 +364,6 @@ html.sc
     zoom: 1
     vertical-align: top
 
-  .tribe-events-sub-nav li a
-    background: none
-
   .tribe-events-list-separator-month+.vevent.hentry.tribe-events-first
     padding-top: 0
 
@@ -382,6 +379,18 @@ html.sc
 
   .tribe-events-widget-link
     text-align: right
+
+  #tribe-events-content.tribe-events-list
+    margin-bottom: 0px
+
+  #tribe-events-footer .tribe-events-sub-nav
+    padding: 3px
+
+  .tribe-events-sub-nav li a
+    background: none
+    padding-left: 0
+    padding-right: 0
+
 
   blockquote.pull-quote
     @include respond-to(handheld)
@@ -468,7 +477,6 @@ html.sc
     @include rem-fallback(padding, 0, (3 / $basefont))
     @include rem-fallback(margin-bottom, 1.5)
     padding-bottom: 0.5rem
-    overflow: auto
     @include respond-to(handheld)
       width: 96%
 
@@ -513,12 +521,13 @@ html.sc
 
         ol
           padding-left: 0
+          margin-bottom: 0
           li
             @include rem-fallback(padding, 0.75, 0)
             list-style-type: none
             position: relative
             padding-left: 80px
-            & .entry-meta
+            & .duration
               @include rem-fallback(margin-bottom, 0)
               position: absolute
               width: 70px
@@ -526,8 +535,8 @@ html.sc
               top: 0.75rem
               border-right: 1px solid #cccccc
               padding: 3px
-            span
               color: $grey2
+            span
               @include rem-fallback(font-size, (16 / $basefont))
 
     h3
