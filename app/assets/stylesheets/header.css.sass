@@ -12,11 +12,25 @@ header[role=banner]
   @include rem-fallback(padding, 0.75,0,0,0)
   @include rem-fallback(min-height, 6)
   &.regular
-    // overflow: auto
-    background: $grey6
+    border-bottom: none
+    border-top: none
+    position: fixed
+    padding: 0
+    background: $grey5
     min-height: 0
+    margin-top: 0
     nav
-      float: none
+      float: left
+      margin: 0
+      li
+        margin: 0
+        a:link, a:visited
+          background: $grey5
+          &.active
+            background: $grey4
+        a:hover
+          background: $grey4
+
 
   a.home-logo
     width: 80px

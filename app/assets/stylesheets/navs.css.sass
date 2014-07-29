@@ -1,6 +1,8 @@
 nav
   ol
     @include rem-fallback(padding-left, 0)
+    li:first-of-type
+      margin-left: 0
 
 header[role=banner]
   nav
@@ -56,16 +58,9 @@ header[role=banner]
               float: none
               display: block
 
+
 .active
   font-weight: bold
-
-body.app
-  header[role=banner]
-    nav
-      width: 75%
-      min-width: 820px
-      margin-left: auto
-      margin-right: auto
 
 nav.guide
   position: fixed

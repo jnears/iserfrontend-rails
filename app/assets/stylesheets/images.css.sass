@@ -13,6 +13,11 @@ img.logo
   width: 40%
   margin: 0 auto
   @include rem-fallback(padding, 2, 0)
+  @include respond-to(tablet)
+    width: 80%
+
+figure.drop
+  background-color: rgba(255, 255, 255, 0.6)
 
 figure
   @include rem-fallback(margin-bottom, 1.5)
