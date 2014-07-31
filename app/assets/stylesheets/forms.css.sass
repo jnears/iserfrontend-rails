@@ -74,10 +74,14 @@ form
     background: $grey7
     overflow: visible
     width: 75%
-    // -webkit-appearance: none
+    -webkit-appearance: none
     border-radius: 0
     @include rem-fallback(padding, 0.5)
     @include rem-fallback(min-height, 2)
+
+  input[type=submit]
+    -webkit-appearance: none
+    border-radius: 0
 
   input[type=checkbox]
     vertical-align: text-bottom
@@ -116,6 +120,7 @@ form[role=search]
     width: 70%
     border: 1px solid $grey5
   input[type=submit]
+    -webkit-appearance: none
     position: relative
     vertical-align: top
     @include rem-fallback(padding, 0.3, 0.5)

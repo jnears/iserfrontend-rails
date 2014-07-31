@@ -269,7 +269,7 @@ img.preview
     width: 100%
     text-align: center
     z-index: 1
-    @include rem-fallback(bottom, 1)
+    @include rem-fallback(bottom, 2)
     a:link, a:visited
       position: relative
       z-index: 1
@@ -428,3 +428,11 @@ aside.home
 .box
   background: $grey6
   @include rem-fallback(padding, 1)
+
+
+a[data-scrolldown]:link, a[data-scrolldown]:visited
+  @include rem-fallback(padding, 1.6,1,1,1)
+  background: $link
+  &:hover
+    color: $white
+    background: $hover

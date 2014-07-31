@@ -6,6 +6,14 @@ audio
   width: 100%
   @include rem-fallback(margin, 1, 0, 1, 0)
 
+::selection
+  background: $rouge
+  color: $white
+
+::-moz-selection
+  background: $rouge
+  color: $white
+
 .heading
   font-family: $heading_font
   font-weight: normal
