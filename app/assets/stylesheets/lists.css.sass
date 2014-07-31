@@ -67,3 +67,23 @@ ol#publications
     font-weight: bold
     font-style: normal
     @include rem-fallback(font-size, (18 / $basefont))
+
+ol.tags
+  padding-left: 0
+  li
+    @include rem-fallback(font-size, (16 / $basefont))
+    display: inline
+    font-style: italic
+    position: relative
+    @include rem-fallback(padding, 0, 0.15)
+    &:first-of-type:before
+      content: "\f02c"
+      font-family: FontAwesome
+      font-style: normal
+      font-weight: normal
+      text-decoration: inherit
+      color: $grey2
+      @include rem-fallback(font-size, (14 / $basefont))
+      @include rem-fallback(padding-right, 0.5)
+
+
