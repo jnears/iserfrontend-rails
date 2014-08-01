@@ -308,6 +308,8 @@ img.preview
       color: $white
     a:hover
       color: $hover
+    @include respond-to(handheld)
+      @include rem-fallback(bottom, 0)
     h1
       margin: 0 auto 0rem auto
       @include rem-fallback(font-size, (27 / $basefont))
@@ -315,6 +317,13 @@ img.preview
       @include rem-fallback(padding, 1, 4)
       width: 100%
       background-color: rgba(0, 0, 0, 0.6)
+      @include respond-to(tablet)
+        @include rem-fallback(font-size, (28 / $basefont))
+        @include rem-fallback(line-height, 2)
+      @include respond-to(handheld)
+        margin: 0 auto 1rem auto
+        @include rem-fallback(padding, 1)
+        @include rem-fallback(font-size, (16 / $basefont))
 
 .component
   background: $grey6
