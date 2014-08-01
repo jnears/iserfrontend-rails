@@ -28,6 +28,25 @@ dl
   dd
     @include rem-fallback(margin, 0, 0, 1.5, 0)
 
+ol.inline, ul.inline
+  margin-left: 0
+  padding-left: 0
+  overflow: auto
+  li
+    list-style-type: none
+    float: left
+
+ol.cloud
+  margin-left: 0
+  padding-left: 0
+  li
+    list-style-type: none
+    display: inline
+    @include rem-fallback(margin-right, 0.5)
+    a
+      @include btn
+
+
 ol.tag-list
   margin-left: 0
   padding-left: 0

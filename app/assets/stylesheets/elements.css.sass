@@ -75,6 +75,9 @@ audio
       a:link, a:visited
         color: $grey1
 
+    &.epic
+      @include rem-fallback(font-size, ((nth($heading_sizes, $i) * 0.75) / $basefont))
+
     &.c
       text-align: center
     &.inline
