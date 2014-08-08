@@ -89,12 +89,19 @@ ol#publications
 
 ol.tags
   padding-left: 0
+  @include rem-fallback(margin, 0, 0, 1.5, 0)
   li
     @include rem-fallback(font-size, (16 / $basefont))
-    display: inline
+    float: left
+    list-style-type: none
     font-style: italic
     position: relative
-    @include rem-fallback(padding, 0, 0.15)
+    &:not(:last-of-type):after
+      content: ",\00a0"
+    &:nth-last-of-type(2):before
+      content: none
+    &:nth-last-of-type(2):after
+      content: " and\00a0"
     &:first-of-type:before
       content: "\f02c"
       font-family: FontAwesome
@@ -103,6 +110,7 @@ ol.tags
       text-decoration: inherit
       color: $grey2
       @include rem-fallback(font-size, (14 / $basefont))
+      @include rem-fallback(line-height, ((16 * 1.5) / $basefont))
       @include rem-fallback(padding-right, 0.5)
 
 

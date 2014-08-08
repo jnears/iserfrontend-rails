@@ -340,7 +340,9 @@ aside.home
 
 .tag
   i.fa
-    @include rem-fallback(margin-left, 0.35)
+    @include rem-fallback(padding-right, 0.25)
+    @include rem-fallback(font-size, (14 / $basefont))
+    @include rem-fallback(line-height, ((16 * 1.5) / $basefont))
 
 .brochure
   .row
