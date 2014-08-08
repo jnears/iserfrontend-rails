@@ -18,20 +18,27 @@ footer[role=contentinfo]
       color: $white
 
   p.address
-    width: 50%
+    width: 80%
     @include respond-to(tablet)
       width: 100%
 
-  nav.utilities
+  nav.social
     position: absolute
     top: 0
     right: 0
-    width: 50%
+    width: 20%
     @include respond-to(tablet)
       position: relative
       width: 100%
       @include rem-fallback(margin-bottom, 1.5)
+
+  nav.utilities
+    width: 100%
+    clear: both
+    @include respond-to(tablet)
+      @include rem-fallback(margin-bottom, 1.5)
     
+  nav.utilities, nav.social
     ul
       @include rem-fallback(padding-left, 0)
       float: right
@@ -51,7 +58,8 @@ footer[role=contentinfo]
 
   a.esrc
     float: left
-    @include rem-fallback(margin-right, 2)
+    @include rem-fallback(margin-right, 1.5)
+    @include rem-fallback(margin-bottom, 1.5)
     display: block
     width: 97px
     height: 81px
@@ -61,6 +69,7 @@ footer[role=contentinfo]
 
   a.uoe
     float: left
+    @include rem-fallback(margin-bottom, 1.5)
     display: block
     width: 222px
     height: 81px
