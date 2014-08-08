@@ -123,17 +123,26 @@ form[role=search]
     margin: 0 auto
     width: 100%
     text-align: center
+    @include respond-to(handheld)
+      width: 96%
   input[type=search]
     position: relative
-    padding: 0 0.5em
+    padding: 0 1%
     width: 70%
     border: 1px solid $grey5
+    @include respond-to(handheld)
+      border: 0
+      outline: $grey5 solid 1px
   input[type=submit]
     -webkit-appearance: none
     position: relative
     vertical-align: top
     @include rem-fallback(padding, 0.3, 0.5)
     @include rem-fallback(min-height, 2)
+    @include respond-to(handheld)
+      @include rem-fallback(margin, 0)
+      margin-left: 1%
+      width: 25%
 
 
 ol.multi
