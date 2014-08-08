@@ -101,6 +101,10 @@ form
   select:invalid
     outline: 3px solid $red
 
+  input.search-query
+    @include respond-to(tablet)
+      @include rem-fallback(margin-bottom, 0.5)
+
   div.actions
     text-align: center
 
