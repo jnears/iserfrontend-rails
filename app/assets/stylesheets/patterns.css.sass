@@ -440,10 +440,25 @@ aside.home
 
 .page-navigation
   border-bottom: 1px solid $grey5
-  @include rem-fallback(margin-bottom, 1.5)
   ol
-    list-style: decimal
-    @include rem-fallback(margin-bottom, 0)
+    margin: 0
+    padding: 0
+    float: left
+    width: 50%
+    @include rem-fallback(margin-bottom, 1.5)
+    @include rem-fallback(margin-top, 1.5)
+    @include respond-to(tablet)
+      width: 100%
+      &:first-child
+        @include rem-fallback(margin-bottom, 0)
+      &:last-child
+        @include rem-fallback(margin-top, 0)
+    li
+      list-style: decimal
+      list-style-position: outside
+      @include rem-fallback(margin-right, 0.75)
+      @include rem-fallback(margin-left, 1.5)
+      clear: left
 
 .box
   background: $grey6
