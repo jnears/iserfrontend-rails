@@ -107,7 +107,6 @@ dynamic_add = () ->
     $(this).before($(this).data('fields').replace(regexp, time))
     $(this).prev().find($('div.collapse')).removeClass('collapse').addClass('in')
     $(this).prev().find($('*[data-collapse]')).text('hide')
-    $(".changed").fadeIn()
     event.preventDefault()
 
 dynamic_remove = () ->
