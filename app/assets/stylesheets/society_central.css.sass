@@ -83,7 +83,7 @@ html.sc
       position: absolute
       width: 70%
       top: 0
-      @include rem-fallback(padding-top, 4)
+      @include rem-fallback(padding-top, 3)
       background: $black
       height: 100%
       ol
@@ -117,6 +117,7 @@ html.sc
     background: $grey6
     position: relative
     @include respond-to(handheld)
+      @include rem-fallback(min-height, 6)
       @include rem-fallback(margin-bottom, 1)
 
     .site-branding
@@ -137,6 +138,8 @@ html.sc
         @include respond-to(tablet)
           display: inline
           z-index: 99999
+        @include respond-to(handheld)
+          @include rem-fallback(top, (25 / $basefont))
 
       #nav-search-btn
         position: absolute
@@ -144,6 +147,8 @@ html.sc
         @include rem-fallback(padding, (10 / $basefont))
         right: 0
         color: $grey2
+        @include respond-to(handheld)
+          @include rem-fallback(top, (25 / $basefont))
 
       .fa
         @include rem-fallback(font-size, (22 / $basefont))
@@ -178,7 +183,7 @@ html.sc
       margin: 0
       @include respond-to(handheld)
         @include rem-fallback(font-size, (18 / $basefont))
-        margin: 0
+        @include rem-fallback(margin, .25)
 
     div.social-links
       position: absolute
@@ -222,6 +227,8 @@ html.sc
 
   .paging-navigation
     @include rem-fallback(margin-bottom, 1.5)
+    overflow: auto
+    @include rem-fallback(padding, (3 / $basefont), 0)
     .nav-previous
       float: left
       @include rem-fallback(margin-left, (3 / $basefont))
@@ -504,7 +511,7 @@ html.sc
       padding: 0
       background: none
       &#site-overview
-        @include respond-to(handheld)
+        @include respond-to(tablet)
           display: none
         p.lead
           color: $grey2
