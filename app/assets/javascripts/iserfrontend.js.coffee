@@ -28,6 +28,7 @@ init_page = () ->
   embed()
   handheld_nav()
   reset_handheld_nav()
+  dropdown_menu()
 
 $(document).on 'page:restore', ->
   updateTwitterValues()
@@ -234,3 +235,12 @@ reset_handheld_nav = () ->
       $("#handheld-btn").addClass "closed"
       $("#page-wrap").animate({left:'0'}, 500)
     return
+
+dropdown_menu = () ->
+  $(".dropdown-menu-toggler").on 'click', (e) ->
+    $(e.target).children('.fa').toggleClass('fa-minus','fa-plus')
+    $(e.target).closest('.fa').toggleClass('fa-minus','fa-plus')
+    $(e.target).closest('.dropdown-menu-wrapper').find('.dropdown-menu-panel').slideToggle "fast"
+    e.preventDefault()
+
+
