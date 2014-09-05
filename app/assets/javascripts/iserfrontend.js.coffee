@@ -237,9 +237,10 @@ reset_handheld_nav = () ->
     return
 
 dropdown_menu = () ->
+  $(".dropdown-menu-wrapper").css(width: $(".dropdown-menu-wrapper").width())
   $(".dropdown-menu-toggler").on 'click', (e) ->
-    $(e.target).children('.fa').toggleClass('fa-minus','fa-plus')
-    $(e.target).closest('.fa').toggleClass('fa-minus','fa-plus')
+    $(e.target).children('.fa').toggleClass('fa-minus-circle','fa-plus-circle')
+    $(e.target).closest('.fa').toggleClass('fa-minus-circle','fa-plus-circle')
     $(e.target).closest('.dropdown-menu-wrapper').find('.dropdown-menu-panel').slideToggle "fast"
     e.preventDefault()
 
