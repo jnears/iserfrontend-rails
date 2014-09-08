@@ -237,7 +237,7 @@ reset_handheld_nav = () ->
     return
 
 dropdown_menu = () ->
-  $(".dropdown-menu-wrapper").css(width: $(".dropdown-menu-wrapper").width())
+  $( ".dropdown-menu-panel i.remove" ).remove();
   $(".dropdown-menu-toggler").on 'click', (e) ->
     $(e.target).children('.fa').toggleClass('fa-minus-circle','fa-plus-circle')
     $(e.target).closest('.fa').toggleClass('fa-minus-circle','fa-plus-circle')

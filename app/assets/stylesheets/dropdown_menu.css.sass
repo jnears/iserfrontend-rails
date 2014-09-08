@@ -1,0 +1,67 @@
+.bhpsdoc
+  h1
+    margin-right: 34%
+    @include respond-to(handheld)
+      margin-right: 0
+
+  div.dropdown-menu
+    position: absolute
+    right: 0
+    z-index: 999
+    width: 30%
+    @include respond-to(handheld)
+      position: relative
+      width: 100%
+      margin-left: -3px
+      @include rem-fallback(margin-bottom, 0.5)
+
+  .dropdown-menu-wrapper
+    cursor: pointer
+    word-wrap: break-word
+    padding: 0
+    background: $white
+    width: 100%
+    overflow: auto
+    padding: 3px
+
+    p
+      margin: 0
+      display: inline-block
+      padding: 0
+      width: 100%
+      float: left
+      text-align: left
+      @include rem-fallback(padding, 0.5)
+      .fa
+        @include rem-fallback(font-size, 0.75)
+        float: right
+        display: inline-block
+        @include rem-fallback(padding-top, 0.2)
+
+  .dropdown-menu-panel
+    display: none
+    overflow: auto
+    clear: both
+    border: 1px solid $grey3
+    border-top: 0
+    @include rem-fallback(padding, 0, 0.5, 0.5, 0.5)
+    ul
+      top: 100%
+      max-height: 300px
+      overflow-x: visible
+      margin-bottom: 0
+      li
+        list-style: none
+        padding-left: 0
+        @include rem-fallback(line-height, 2)
+        a:hover
+          background: $grey7
+        .fa
+          @include rem-fallback(line-height, 2)
+    ul:nth-child(1)
+      @include rem-fallback(padding-left, 0)
+    ul:nth-child(2)
+      @include rem-fallback(padding-left, 0)
+
+
+
