@@ -248,11 +248,11 @@ dropdown_menu = () ->
 advanced_search = () ->
   if $("#advanced-search-panel").hasClass("open")
     $("#advanced-search-panel").show()
-    $("#advanced-search-button").text("Hide advanced search").toggleClass "active"
-  $("#advanced-search-button").click ->
+    $("#advanced-search-button").text("search").toggleClass "active"
+
+  $("#advanced-search-button").on 'click', (e) ->
     $(this).toggleClass "active"
+    $(e.target).children('.fa').toggleClass('fa-angle-right fa-angle-down')
     $("#advanced-search-panel").toggle()
     if $(this).hasClass("active")
-      $(this).text("Hide advanced search")
-    else
-      $(this).text("Show advanced search")
+      $(e.target).next().find('form input[type=text]:first-of-type').focus()
