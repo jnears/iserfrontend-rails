@@ -29,6 +29,7 @@ init_page = () ->
   handheld_nav()
   reset_handheld_nav()
   dropdown_menu()
+  advanced_search()
 
 $(document).on 'page:restore', ->
   updateTwitterValues()
@@ -244,4 +245,14 @@ dropdown_menu = () ->
     $(e.target).closest('.dropdown-menu-wrapper').find('.dropdown-menu-panel').toggle()
     e.preventDefault()
 
-
+advanced_search = () ->
+  if $("#advanced-search-panel").hasClass("open")
+    $("#advanced-search-panel").show()
+    $("#advanced-search-button").text("Hide advanced search").toggleClass "active"
+  $("#advanced-search-button").click ->
+    $(this).toggleClass "active"
+    $("#advanced-search-panel").toggle()
+    if $(this).hasClass("active")
+      $(this).text("Hide advanced search")
+    else
+      $(this).text("Show advanced search")
