@@ -12,8 +12,12 @@
     @include respond-to(handheld)
       position: relative
       width: 100%
-      margin-left: -3px
       @include rem-fallback(margin-bottom, 0.5)
+
+    .dropdown-menu-toggler
+      @include btn
+      &:hover
+        outline: none
 
   .dropdown-menu-wrapper
     cursor: pointer

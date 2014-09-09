@@ -241,7 +241,7 @@ dropdown_menu = () ->
   $(".dropdown-menu-toggler").on 'click', (e) ->
     $(e.target).children('.fa').toggleClass('fa-minus-circle','fa-plus-circle')
     $(e.target).closest('.fa').toggleClass('fa-minus-circle','fa-plus-circle')
-    $(e.target).closest('.dropdown-menu-wrapper').find('.dropdown-menu-panel').slideToggle "fast"
+    $(e.target).closest('.dropdown-menu-wrapper').find('.dropdown-menu-panel').toggle()
     e.preventDefault()
 
 
