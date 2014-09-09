@@ -476,3 +476,18 @@ a[data-scrolldown]:link, a[data-scrolldown]:visited
   @include respond-to(tablet)
     @include rem-fallback(padding, 0.9,0.6,0.6,0.6)
     @include rem-fallback(font-size, (10 / $basefont))
+
+
+h6.tag
+  time
+    font-weight: normal
+    color: $grey2
+    font-family: $body_font
+    font-style: italic
+    @include rem-fallback(font-size, (16 / $basefont))
+
+.search-results
+  p
+    margin: 0
+  article
+    @include rem-fallback(padding, 0,0,1.5,0)
