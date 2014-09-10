@@ -256,3 +256,6 @@ advanced_search = () ->
     $("#advanced-search-panel").toggle()
     if $(this).hasClass("active")
       $(e.target).next().find('form input[type=text]:first-of-type').focus()
+      $(this).css( 'margin-bottom', 0)
+    else
+      $(this).css( 'margin-bottom', 27)

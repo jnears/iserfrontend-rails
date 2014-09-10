@@ -1,9 +1,21 @@
 #advanced-search-button
-  margin-bottom: 1.5rem
+  @include rem-fallback(margin-bottom, 1.5)
+  padding: 7px
+
 #advanced-search-panel
   display: none
+  border: 1px solid #e2e2e2
+  @include rem-fallback(margin-bottom, 1.5)
   form
-    margin-top: 0
     padding-bottom: 0
-    nav.facets
-      margin-top: 1.5rem
+    border: 0
+    @include rem-fallback(padding, 1)
+    margin: 0
+  nav.facets
+    ol
+      margin-bottom: 0
+      li:last-of-type
+        a
+          border-bottom: 0
+
+
