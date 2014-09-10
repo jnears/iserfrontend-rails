@@ -1,5 +1,5 @@
 module Iserfrontend
   module Rails
-    VERSION = "0.0.42"
+    VERSION = "0.0.43"
   end
 end
