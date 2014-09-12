@@ -143,6 +143,30 @@ form[role=search]
       @include rem-fallback(margin, 0)
       margin-left: 1%
       width: 25%
+  &.inbody
+    display: block
+    @include rem-fallback(padding, 0.75, 1)
+    @include rem-fallback(margin, 1, 0, 1.5, 0)
+    fieldset
+      text-align: left
+      input[type=search]
+        width: 60%
+        @include respond-to(large_desktop)
+          width: 80%
+        @include respond-to(tablet)
+          width: 50%
+      label
+        float: none
+        width: auto
+        padding: 0
+        display: inline
+        @include rem-fallback(font-size, (14 / $basefont))
+        color: $grey2
+      .controls
+        float: right
+        @include respond-to(handheld)
+          float: none
+
 
 
 ol.multi

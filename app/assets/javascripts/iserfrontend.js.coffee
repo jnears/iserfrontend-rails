@@ -256,4 +256,4 @@ advanced_search = () ->
     $(e.target).children('.fa').toggleClass('fa-angle-right fa-angle-down')
     $("#advanced-search-panel").toggle()
     if $(this).hasClass("active")
-      $(e.target).next().find('form input[type=text]:first-of-type').focus()
+      $(e.target).next().find('form input[type=search]:first-of-type').focus()
