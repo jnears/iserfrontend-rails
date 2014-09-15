@@ -247,7 +247,8 @@ dropdown_menu = () ->
     e.preventDefault()
 
 ie_fixes = () ->
-  svgeezy.init(false, 'png') #unless Modernizr.svg
+  if $('html').hasClass("lt-ie9")
+    svgeezy.init(false, 'png') #unless Modernizr.svg
 
 advanced_search = () ->
   if $("#advanced-search-panel").hasClass("open")
