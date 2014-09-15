@@ -247,7 +247,7 @@ dropdown_menu = () ->
     e.preventDefault()
 
 ie_fixes = () ->
-  svgeezy.init(false, 'png') unless Modernizr.svg
+  svgeezy.init(false, 'png') #unless Modernizr.svg
 
 advanced_search = () ->
   if $("#advanced-search-panel").hasClass("open")
