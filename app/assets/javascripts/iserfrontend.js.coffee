@@ -30,6 +30,7 @@ init_page = () ->
   reset_handheld_nav()
   dropdown_menu()
   advanced_search()
+  ie_fixes()
 
 $(document).on 'page:restore', ->
   updateTwitterValues()
@@ -244,6 +245,9 @@ dropdown_menu = () ->
     $(e.target).closest('.fa').toggleClass('fa-minus-circle','fa-plus-circle')
     $(e.target).closest('.dropdown-menu-wrapper').find('.dropdown-menu-panel').toggle()
     e.preventDefault()
+
+ie_fixes = () ->
+  svgeezy.init(false, 'png') unless Modernizr.svg
 
 advanced_search = () ->
   if $("#advanced-search-panel").hasClass("open")
