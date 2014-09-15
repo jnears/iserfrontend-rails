@@ -35,7 +35,7 @@ init_page = () ->
 $(document).on 'page:restore', ->
   updateTwitterValues()
 
-$(document).on 'page:change', ->
+$(document).on 'ready page:change', ->
   init_page()
   $('#loading').fadeOut("fast")
 
