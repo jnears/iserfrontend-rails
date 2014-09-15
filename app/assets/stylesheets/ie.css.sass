@@ -1,1 +1,12 @@
+.lt-ie9 #page-wrap
   min-width: 960px
+
+.lt-ie9
+  @for $i from 2 through $max_columns
+    .colgroup-#{$i}.components
+      @for $j from 1 through $i
+        & > .span#{$j}
+          width: auto
+          float: none
+          clear: left
+          @include rem-fallback(margin-bottom, 1.5)
