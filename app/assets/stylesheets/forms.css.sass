@@ -39,16 +39,17 @@ form
     font-weight: normal
     @include rem-fallback(line-height, 2.3)
     float: left
-    width: 25%
     padding-right: 1em
+    width: 25%
     text-align: right
-    @include respond-to(tablet)
+    @include respond-to(desktop)
       text-align: left
       width: 100%
 
+
   div.field
     // float: left
-    // clear: left
+    clear: left
     @include rem-fallback(min-height, ($baseline * 2) / $basefont)
     @include rem-fallback(margin-bottom, 1.5)
     &.large
@@ -76,13 +77,13 @@ form
     font-family: $sans_font
     background: $grey7
     overflow: visible
-    width: 75%
+    width: 100%
     -webkit-appearance: none
     border-radius: 0
     @include rem-fallback(padding, 0.5)
     @include rem-fallback(min-height, 2)
-    @include respond-to(tablet)
-      width: 100%
+    @include respond-to(large_desktop)
+      width: 75%
 
   input[type=submit]
     -webkit-appearance: none
