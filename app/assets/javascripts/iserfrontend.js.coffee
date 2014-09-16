@@ -35,7 +35,11 @@ init_page = () ->
 $(document).on 'page:restore', ->
   updateTwitterValues()
 
-$(document).on 'ready page:change', ->
+$(document).on 'ready', ->
+  if $('html').hasClass("lt-ie9")
+    init_page()
+
+$(document).on 'page:change', ->
   init_page()
   $('#loading').fadeOut("fast")
 
@@ -239,7 +243,7 @@ reset_handheld_nav = () ->
     return
 
 dropdown_menu = () ->
-  $( ".dropdown-menu-panel i.remove" ).remove();
+  $(".dropdown-menu-panel i.remove").remove();
   $(".dropdown-menu-toggler").on 'click', (e) ->
     $(e.target).children('.fa').toggleClass('fa-minus-circle','fa-plus-circle')
     $(e.target).closest('.fa').toggleClass('fa-minus-circle','fa-plus-circle')
