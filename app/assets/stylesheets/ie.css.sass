@@ -2,21 +2,24 @@
   display: block
   cursor: pointer
 
-.lt-ie9 #page-wrap
-  min-width: 960px
-
 .lt-ie9
+
+  #page-wrap
+    min-width: 960px
 
   header[role=banner] a.home-logo
     background: url(asset-path("iser.gif")) no-repeat
 
-  footer[role=contentinfo] 
+  footer[role=contentinfo]
     a.esrc
       background: url(asset-path("esrc.gif")) no-repeat
       border: 0
     a.uoe
       background: url(asset-path("university_of_essex.gif")) no-repeat
       border: 0
+
+  a:focus
+    outline: none
 
   @for $i from 2 through $max_columns
     .colgroup-#{$i}.components
@@ -26,3 +29,29 @@
           float: none
           clear: left
           @include rem-fallback(margin-bottom, 1.5)
+
+  .hero
+    display: none
+
+  nav.breadcrumb
+    ol
+      li
+        margin-right: 1em
+
+  form#filter
+    display: none
+
+  label
+    text-align: left
+
+  input[type=text],
+  input[type=number],
+  input[type=password],
+  input[type=search],
+  input[type=email],
+  input[type=url],
+  textarea,
+  select
+    margin-left: 5px
+    width: 98%
+
