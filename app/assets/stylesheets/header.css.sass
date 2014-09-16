@@ -50,5 +50,13 @@ header.plain
   background: $grey6
   @include rem-fallback(margin-bottom, 1.5)
   @include rem-fallback(margin-top, -2)
+  text-align: center
   &.white
     background: none
+  h1
+    @include rem-fallback(font-size, 1.3)
+    @include rem-fallback(margin-top, -2)
+    @include rem-fallback(padding-bottom, 1)
+    @include rem-fallback(padding, 0, 4, 1, 4)
+    color: $grey2
+
