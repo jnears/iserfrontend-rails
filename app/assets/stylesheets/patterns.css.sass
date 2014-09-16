@@ -384,17 +384,24 @@ aside.home
       @include rem-fallback(padding, 0, 0, 0, 1.5)
       @include respond-to(handheld)
         width: 100%
-        @include rem-fallback(padding, 0)
+        @include rem-fallback(padding, 1, 0)
     &:nth-child(even) .content
       @include rem-fallback(padding, 0, 1.5, 0, 0)
+      @include respond-to(handheld)
+        width: 100%
+        @include rem-fallback(padding, 1, 0)
   &.zebra
     .row
       &:first-child
         @include rem-fallback(padding-top, 1.5)
+        @include respond-to(handheld)
+          @include rem-fallback(padding, 0)
       @include respond-to(handheld)
         @include rem-fallback(padding-top, 0)
       &:nth-child(odd)
         background: $grey6
+        @include respond-to(handheld)
+          background: none
 
 .ico-link
   a:hover
