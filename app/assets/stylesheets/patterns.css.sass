@@ -1,3 +1,8 @@
+.tablet_hide
+  @include respond-to(tablet)
+    display: none
+
+
 p.lead
   @include rem-fallback(font-size, (22 / $basefont))
   @include rem-fallback(line-height, (1.5 * (ceil(22 / $baseline))))

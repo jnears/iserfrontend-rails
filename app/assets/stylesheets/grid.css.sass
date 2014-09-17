@@ -121,10 +121,14 @@ $column_widths: 100
               @include rem-fallback(margin-top, 1.5)
 
 // homepage cludge :/
-.colgroup-3
+.colgroup-3.home
   & > .span2
+    @include respond-to(tablet)
+      &:nth-child(n)
+        @include rem-fallback(margin-top, 0)
     & > .colgroup-2
       & > .span1
+        @include rem-fallback(margin-top, 0)
         width: 46%
         margin-left: 3%
         &:nth-child(even)
@@ -135,6 +139,8 @@ $column_widths: 100
           margin-left: 0%
           &:nth-child(even)
             margin-left: 0%
+
+
 
 body:after
   content: 'desktop'
