@@ -1,91 +1,35 @@
-<style>
-  /*#loading { display: none; }*/
-</style>
-
 <div id="top"></div>
 
-<!-- <header role="banner">
-<div class="container">
-
-<nav role="navigation">
-<ol>
-<li><a href="#">Research &amp; publications</a></li>
-<li><a href="#">People</a></li>
-<li><a href="#">Postgraduate study</a></li>
-<li><a href="#">Events</a></li>
-<li><a href="#">About ISER</a></li>
-<li><a href="#">Contact</a></li>
-<li><a class="search-toggle" href="/search"><i class="fa fa-search"></i></a></li>
-</ol>
-
-</nav>
-<a href="/" class="home-logo">Institute for Social &amp; Economic Research</a>
-</div>
-</header> -->
-
-
 
 <div class="container">
 
-<h1>Main page title which spans across somewhat here <span>this is subtitle</span></h1>
-<div class="colgroup-4">
+<main class="two-column">
 
-<div class="span1">
-<div class="meta">
-<p>by A N Other</p>
-<p> Published on 14/04/77</p>
-</div>
-</div>
+<div class="colgroup-3">
 
 <div class="span2">
-<main>
+  <section role="main" class="guide">
+<h1>HTML styling</h1>
 
 
 <p class="lead">This styleguide provides details and examples of the authoring and presentation of HTML for ISER.</p>
-
-<figure>
-<%= link_to image_tag('photo31.jpg'), '#image' %>
-<!-- <figcaption>lorem ipsoum sit ollars cheddr4e</figcaption> -->
-</figure>
 
 <p>It was originally developed in July 2013 by <a href="https://www.iser.essex.ac.uk/people/pmgroves">Paul Groves</a>, web manager at ISER.</p>
 
 <small>Textile markup hints are shown in the margin - for a complete guide to Textile see the <a href="http://redcloth.org/textile">Textile Reference Manual for RedCloth 4</a></small>
 
+<hr>
+
+<h1 class="section-heading">Typography</h2>
 
 
 
-
-
-<h2 class="section-heading">Paragraphs</h2>
-
-<h6 class="meta">Lead paragraph <code>p(lead).</code></h6>
-
-<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut <a href="#">labore et dolore</a> magna aliqua.</p>
-
-<p>Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-<h6 class="meta">Call to action <code>p(call-to-action).</code></h6>
-
-<p class="call-to-action">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut <a href="#">labore et dolore</a> magna aliqua.</p>
-
-
-
-<h2 class="section-heading">Fonts</h2>
+<h2>Body</h2>
 
 <p>ISER use <a href="http://www.fonts.com/font/itc/itc-officina-serif">Officina Serif</a> for headings and <a href="http://www.fonts.com/font/monotype/amasis-etext">Amasis</a> for body copy.</p>
 
-<p class="alert">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut <a href="#">labore et dolore</a> magna aliqua.</p>
 
 <h6 class="meta">Heading font</h6>
-
 
 
 <p class="heading">Normal Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -115,1194 +59,213 @@ tempor incididunt ut <a href="#">labore et dolore</a> magna aliqua.</p>
 tempor incididunt ut <a href="#">labore et dolore</a> magna aliqua.</p>
 
 
+<h2 >Headings</h2>
+
+<h6 class="meta">Heading 1 <code>h1.</code></h6>
+<h1>Heading 1</h1>
+
+<h6 class="meta">Heading 2 <code>h2.</code></h6>
+<h2>Heading 2</h2>
+
+<h6 class="meta">Heading 3 <code>h3.</code></h6>
+<h3>Heading 3</h3>
+
+<h6 class="meta">Heading 4 <code>h4.</code></h6>
+<h4>Heading 4</h4>
+
+<h6 class="meta">Heading 5 <code>h5.</code></h6>
+<h5>Heading 5</h5>
+
+<h6 class="meta">Heading 6 <code>h6.</code></h6>
+<h6>Heading 6</h6>
 
 
-<h2 class="section-heading" class="section-heading">Tables</h2>
+<h2>Paragraphs</h2>
 
-<h6 class="meta">Zebra stripping <code>table(zebra).</code></h6>
-
-
-    <table class="zebra bordered spaced">
-    <caption>The Very Best Eggnog</caption>
-    <colgroup>
-        <col style="width:15em;">
-        <col style="width:6em;">
-        <col style="width:6em;">
-    </colgroup>
-    <thead>
-        <tr>
-            <th scope="col">Ingredients</th>
-            <th scope="col">Serves 12</th>
-            <th scope="col">Serves 24</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Milk</td>
-            <td>1 quart</td>
-            <td>2 quart</td>
-        </tr>
-        <tr>
-            <td>Cinnamon Sticks</td>
-            <td>2</td>
-            <td>1</td>
-        </tr>
-        <tr>
-            <td>Cinnamon Sticks</td>
-            <td>2</td>
-            <td>1</td>
-        </tr>
-        <tr>
-            <td>Vanilla Bean, Split</td>
-            <td>1</td>
-            <td>2</td>
-        </tr>
-        <tr>
-            <td>Cloves</td>
-            <td>5</td>
-            <td>10</td>
-        </tr>
-        <tr>
-            <td>Mace</td>
-            <td>10 blades</td>
-            <td>20 blades</td>
-        </tr>
-        <tr>
-            <td>Egg Yolks</td>
-            <td>12</td>
-            <td>24</td>
-        </tr>
-        <tr>
-            <td>Cups Sugar</td>
-            <td>1 ½ cups</td>
-            <td>3 cups</td>
-        </tr>
-        <tr>
-            <td>Dark Rum</td>
-            <td>1 ½ cups</td>
-            <td>3 cups</td>
-        </tr>
-        <tr>
-            <td>Brandy</td>
-            <td>1 ½ cups</td>
-            <td>3 cups</td>
-        </tr>
-        <tr>
-            <td>Vanilla</td>
-            <td>1 tbsp</td>
-            <td>2 tbsp</td>
-        </tr>
-        <tr>
-            <td>Half-and-half or Light Cream</td>
-            <td>1 quart</td>
-            <td>2 quart</td>
-        </tr>
-        <tr>
-            <td>Freshly grated nutmeg to taste</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Freshly grated nutmeg to taste</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Freshly grated nutmeg to taste</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Freshly grated nutmeg to taste</td>
-            <td></td>
-            <td></td>
-        </tr>
-
-
-    </tbody>
-    <tfoot>
-        <tr>
-            <th scope="col">Ingredients</th>
-            <th scope="col">Serves 12</th>
-            <th scope="col">Serves 24</th>
-        </tr>
-    </tfoot>
-</table>
-
-</main>
-</div>
-
-
-
-<div class="span1">
-
-<nav>
-<ol>
-<li>Web development</li>
-<li>HTML(5)</li>
-<li>CSS(3)</li>
-<li>Accessibility</li>
-<li>Progressive enhancement</li>
-<li>Web design</li>
-<li>Typography</li>
-<li>Grids</li>
-</ol>
-</nav>
-</div>
-
-
-</div>
-
-
-
-
-
-
-  <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
-
-
-<!-- <h1 class="logo">
-Institute for Social &amp; Economic Research
-<span>World class socio-economic research and surveys</span>
-</h1> -->
-
-
-
-<!-- <h2 class="center">Institute for Social &amp; Economic Research<span>World class socio-economic research and surveys</span></h2> -->
-
-
-<!-- <hr/> -->
-
-<!-- <nav class="breadcrumb">
-<ol>
-<li><a href="#">Home</a></li>
-<li><a href="#">Research</a></li>
-<li><a href="#">People</a></li>
-</ol>
-</nav> -->
-
-<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
-
-
-<h1>Research</h1>
-
-<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
-
-
-<nav class="section">
-<ol>
-<li><a href="#">Research home</a></li>
-<li><a href="#">News</a></li>
-<li><a href="#" class="active">People
-<li><a href="#">Publications</a></li>
-<li><a href="#">Podcasts</a></li>
-<li><a href="#">Projects</a></li>
-</ol>
-</nav>
+<h6 class="meta">Lead paragraph <code>p(lead).</code></h6>
 
 <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat.
-</p>
+tempor incididunt ut <a href="#">labore et dolore</a> magna aliqua.</p>
 
-<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
+<p>Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
+<h6 class="meta">Call to action <code>p(call-to-action).</code></h6>
 
-<!-- <div class="colgroup-4 stories">
-  <div class="span1">
-  <figure>
-  <%= link_to image_tag('photo61.jpg'), '#image' %>
-  </figure>
-  <h6><a href="#">Lorem ipsum dolor sit amet</a></h6>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua.</p>
-  </div>
-  <div class="span2">
-  <figure>
-  <%= link_to image_tag('photo82.jpg'), '#image' %>
-  </figure>
-  <h6><a href="#">Lorem ipsum dolor sit amet</a></h6>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua.</p>
-  </div>
-  <div class="span1">
-  <figure>
-  <%= link_to image_tag('photo31.jpg'), '#image' %>
-  </figure>
-  <h6><a href="#">Lorem ipsum dolor sit amet</a></h6>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua.</p>
-  </div>
-</div> -->
+<p class="call-to-action">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut <a href="#">labore et dolore</a> magna aliqua.</p>
 
 
 
-<!-- <div class="colgroup-3 stories">
-  <div class="span1">
-  <figure>
-  <%= link_to image_tag('photo91.jpg'), '#image' %>
-  </figure>
-  <h6><a href="#">Lorem ipsum dolor sit amet</a></h6>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua.</p>
-  </div>
-  <div class="span1">
-  <figure>
-  <%= link_to image_tag('photo94.jpg'), '#image' %>
-  </figure>
-  <h6><a href="#">Lorem ipsum dolor sit amet</a></h6>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua.</p>
-  </div>
-  <div class="span1">
-  <figure>
-  <%= link_to image_tag('photo94.jpg'), '#image' %>
-  </figure>
-  <h6><a href="#">Lorem ipsum dolor sit amet</a></h6>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua.</p>
-  </div>
+
+
+<h2>Text-level Semantics</h2>
+
+<p>There are a number of inline <abbr title="HyperText Markup Language">HTML</abbr> elements you may use anywhere within other elements.</p>
+
+<h3>Links and anchors</h3>
+
+
+<p>The <code>a</code> element is used to hyperlink text, be that to another page, a named fragment on the current page or any other location on the web. Example:</p>
+
+<div class="example">
+<p><a href="/">Go to the home page</a> or <a href="#banner">return to the top of this page</a>.</p>
 </div>
 
-<hr> -->
+<h3>Stressed emphasis</h3>
 
-<div class="colgroup-4 stories">
-  <div class="span1">
-  <figure>
-  <%= link_to image_tag('photo61.jpg'), '#image' %>
-  </figure>
-  <h6><a href="#">Lorem ipsum dolor sit amet</a></h6>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua.</p>
-  </div>
-  <div class="span1">
-  <figure>
-  <%= link_to image_tag('photo82.jpg'), '#image' %>
-  </figure>
-  <h6><a href="#">Lorem ipsum dolor sit amet</a></h6>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua.</p>
-  </div>
-  <div class="span1">
-  <figure>
-  <%= link_to image_tag('photo31.jpg'), '#image' %>
-  </figure>
-  <h6><a href="#">Lorem ipsum dolor sit amet</a></h6>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua.</p>
-  </div>
-  <div class="span1">
-  <figure>
-  <%= link_to image_tag('photo58.jpg'), '#image' %>
-  </figure>
-  <h6><a href="#">Lorem ipsum dolor sit amet</a></h6>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua.</p>
-  </div>
+<p>The <code>em</code> element is used to denote text with stressed emphasis, i.e., something you&#8217;d pronounce differently. Where italicizing is required for stylistic differentiation, the <code>i</code> element may be preferable. Example:</p>
+
+<div class="example">
+<p>You simply <em>must</em> try the negitoro maki!</p>
 </div>
 
-<hr />
+<h3>Strong importance</h3>
 
-<div class="colgroup-6 stories">
-  <div class="span1">
-  <figure>
-  <%= link_to image_tag('photo91.jpg'), '#image' %>
-  </figure>
-  <h6><a href="#">Lorem ipsum dolor sit amet</a></h6>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua.</p>
-  </div>
-  <div class="span1">
-  <figure>
-  <%= link_to image_tag('photo94.jpg'), '#image' %>
-  </figure>
-  <h6><a href="#">Lorem ipsum dolor sit amet</a></h6>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua.</p>
-  </div>
-  <div class="span1">
-  <figure>
-  <%= link_to image_tag('photo100.jpg'), '#image' %>
-  </figure>
-  <h6><a href="#">Lorem ipsum dolor sit amet</a></h6>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua.</p>
-  </div>
-  <div class="span1">
-  <figure>
-  <%= link_to image_tag('photo20.jpg'), '#image' %>
-  </figure>
-  <h6><a href="#">Lorem ipsum dolor sit amet</a></h6>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua.</p>
-  </div>
-  <div class="span1">
-  <figure>
-  <%= link_to image_tag('photo29.jpg'), '#image' %>
-  </figure>
-  <h6><a href="#">Lorem ipsum dolor sit amet</a></h6>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua.</p>
-  </div>
-  <div class="span1">
-  <figure>
-  <%= link_to image_tag('photo46.jpg'), '#image' %>
-  </figure>
-  <h6><a href="#">Lorem ipsum dolor sit amet</a></h6>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua.</p>
-  </div>
+<p>The <code>strong</code> element is used to denote text with strong importance. Where bolding is used for stylistic differentiation, the <code>b</code> element may be preferable. Example:</p>
+
+<div class="example">
+<p><strong>Don&#8217;t</strong> stick nails in the electrical outlet.</p>
 </div>
 
-<hr />
+<h3>Small print</h3>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-</p>
+<p>The <small>small</small> element is used to represent disclaimers, caveats, legal restrictions, or copyrights (commonly referred to as &#8216;small print&#8217;). It can also be used for attributions or satisfying licensing requirements. Example:</p>
 
+<div class="example">
+<p><small>Copyright &#169; 1922-2011 Acme Corporation. All Rights Reserved.</small></p>
+</div>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-</p>
-<!-- <a class="home-logo" href="/" title="Institute for Social and Economic Research - homepage">Institute for Social and Economic Research</a> -->
+<h3>Strikethrough</h3>
 
-<section class="main">
-      <h2>HTML styling</h2>
+<p>The <code>s</code> element is used to represent content that is no longer accurate or relevant. When indicating document edits i.e., marking a span of text as having been removed from a document, use the <code>del</code> element instead. Example:</p>
 
+<div class="example">
+<p><s>Recommended retail price: &#163;3.99 per bottle</s><br/><strong>Now selling for just &#163;2.99 a bottle!</strong></p>
+</div>
 
-      <p class="lead">This styleguide provides details and examples of the authoring and presentation of HTML for ISER.</p>
+<h3>Citations</h3>
 
-      <p>It was originally developed in July 2013 by <a href="https://www.iser.essex.ac.uk/people/pmgroves">Paul Groves</a>, web manager at ISER.</p>
+<p>The <code>cite</code> element is used to represent the title of a work (e.g. a book, essay, poem, song, film, TV show, sculpture, painting, musical, exhibition, etc). This can be a work that is being quoted or referenced in detail (i.e. a citation), or it can just be a work that is mentioned in passing. Example:</p>
 
-      <small>Textile markup hints are shown in the margin - for a complete guide to Textile see the <a href="http://redcloth.org/textile">Textile Reference Manual for RedCloth 4</a></small>
+<div class="example">
+<p><cite>Universal Declaration of Human Rights</cite>, United Nations, December 1948. Adopted by General Assembly resolution 217 A (III).</p>
+</div>
 
+<h3>Definition</h3>
 
+<p>The <code>dfn</code> element is used to highlight the first use of a term. The <code>title</code> attribute can be used to describe the term. Example:</p>
 
+<div class="example">
+<p>Bob&#8217;s <dfn title="Dog">canine</dfn> mother and <dfn title="Horse">equine</dfn> father sat him down and carefully explained that he was an <dfn title="A mutation that combines two or more sets of chromosomes from different species">allopolyploid</dfn> organism.</p>
+</div>
 
+<h3>Abbreviation</h3>
 
+<p>The <code>abbr</code> element is used for any abbreviated text, whether it be acronym, initialism, or otherwise. Generally, it&#8217;s less work and useful (enough) to mark up only the first occurrence of any particular abbreviation on a page, and ignore the rest. Any text in the <code>title</code> attribute will appear when the user&#8217;s mouse hovers the abbreviation (although notably, this does not work in Internet Explorer for Windows). Example abbreviations:</p>
 
-      <h2 class="section-heading">Paragraphs</h2>
+<div class="example">
+<p><abbr title="British Broadcasting Corportation">BBC</abbr>, <abbr title="HyperText Markup Language">HTML</abbr>, and <abbr title="Staffordshire">Staffs.</abbr></p>
+</div>
 
-      <h6 class="meta">Lead paragraph <code>p(lead).</code></h6>
+<h3>Time</h3>
 
-      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut <a href="#">labore et dolore</a> magna aliqua.</p>
+<p>The <code>time</code> element is used to represent either a time on a 24 hour clock, or a precise date in the proleptic Gregorian calendar, optionally with a time and a time-zone offset. Example:</p>
 
-      <p>Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<div class="example">
+<p>Queen Elizabeth II was proclaimed sovereign of each of the Commonwealth realms on <time datetime="1952-02-6">6</time> and <time datetime="1952-02-7">7 February 1952</time>, after the death of her father, King George VI.</p>
+</div>
 
-      <h6 class="meta">Call to action <code>p(call-to-action).</code></h6>
+<h3>Code</h3>
 
-      <p class="call-to-action">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut <a href="#">labore et dolore</a> magna aliqua.</p>
+<p>The <code>code</code> element is used to represent fragments of computer code. Useful for technology-oriented sites, not so useful otherwise. Example:</p>
 
+<div class="example">
+<p>When you call the <code>activate()</code> method on the <code>robotSnowman</code> object, the eyes glow.</p>
+</div>
 
-
-      <h2 class="section-heading">Fonts</h2>
-
-      <p>ISER use <a href="http://www.fonts.com/font/itc/itc-officina-serif">Officina Serif</a> for headings and <a href="http://www.fonts.com/font/monotype/amasis-etext">Amasis</a> for body copy.</p>
-
-      <p class="alert">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut <a href="#">labore et dolore</a> magna aliqua.</p>
-
-      <h6 class="meta">Heading font</h6>
-
-      <figure>
-      <%= link_to image_tag('photo31.jpg'), '#image' %>
-      </figure>
-
-      <p class="heading">Normal Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut <a href="#">labore et dolore</a> magna aliqua.</p>
-
-      <p class="heading-italic">Italic Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut <a href="#">labore et dolore</a> magna aliqua.</p>
-
-      <p class="heading-bold">Bold Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut <a href="#">labore et dolore</a> magna aliqua.</p>
-
-      <p class="heading-bold-italic">Bold italic Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut <a href="#">labore et dolore</a> magna aliqua.</p>
-
-      <h6 class="meta">Body font</h6>
-
-      <p class="body">Normal Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut <a href="#">labore et dolore</a> magna aliqua.</p>
-
-      <p class="body-italic">Italic Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut <a href="#">labore et dolore</a> magna aliqua.</p>
-
-      <p class="body-bold">Bold Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut <a href="#">labore et dolore</a> magna aliqua.</p>
-
-      <p class="body-bold-italic">Bold italic Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut <a href="#">labore et dolore</a> magna aliqua.</p>
-
-
-
-
-      <h2 class="section-heading" class="section-heading">Tables</h2>
-
-      <h6 class="meta">Zebra stripping <code>table(zebra).</code></h6>
-
-
-          <table class="zebra bordered spaced">
-          <caption>The Very Best Eggnog</caption>
-          <colgroup>
-              <col style="width:15em;">
-              <col style="width:6em;">
-              <col style="width:6em;">
-          </colgroup>
-          <thead>
-              <tr>
-                  <th scope="col">Ingredients</th>
-                  <th scope="col">Serves 12</th>
-                  <th scope="col">Serves 24</th>
-              </tr>
-          </thead>
-          <tbody>
-              <tr>
-                  <td>Milk</td>
-                  <td>1 quart</td>
-                  <td>2 quart</td>
-              </tr>
-              <tr>
-                  <td>Cinnamon Sticks</td>
-                  <td>2</td>
-                  <td>1</td>
-              </tr>
-              <tr>
-                  <td>Cinnamon Sticks</td>
-                  <td>2</td>
-                  <td>1</td>
-              </tr>
-              <tr>
-                  <td>Vanilla Bean, Split</td>
-                  <td>1</td>
-                  <td>2</td>
-              </tr>
-              <tr>
-                  <td>Cloves</td>
-                  <td>5</td>
-                  <td>10</td>
-              </tr>
-              <tr>
-                  <td>Mace</td>
-                  <td>10 blades</td>
-                  <td>20 blades</td>
-              </tr>
-              <tr>
-                  <td>Egg Yolks</td>
-                  <td>12</td>
-                  <td>24</td>
-              </tr>
-              <tr>
-                  <td>Cups Sugar</td>
-                  <td>1 ½ cups</td>
-                  <td>3 cups</td>
-              </tr>
-              <tr>
-                  <td>Dark Rum</td>
-                  <td>1 ½ cups</td>
-                  <td>3 cups</td>
-              </tr>
-              <tr>
-                  <td>Brandy</td>
-                  <td>1 ½ cups</td>
-                  <td>3 cups</td>
-              </tr>
-              <tr>
-                  <td>Vanilla</td>
-                  <td>1 tbsp</td>
-                  <td>2 tbsp</td>
-              </tr>
-              <tr>
-                  <td>Half-and-half or Light Cream</td>
-                  <td>1 quart</td>
-                  <td>2 quart</td>
-              </tr>
-              <tr>
-                  <td>Freshly grated nutmeg to taste</td>
-                  <td></td>
-                  <td></td>
-              </tr>
-              <tr>
-                  <td>Freshly grated nutmeg to taste</td>
-                  <td></td>
-                  <td></td>
-              </tr>
-              <tr>
-                  <td>Freshly grated nutmeg to taste</td>
-                  <td></td>
-                  <td></td>
-              </tr>
-              <tr>
-                  <td>Freshly grated nutmeg to taste</td>
-                  <td></td>
-                  <td></td>
-              </tr>
-
-
-          </tbody>
-          <tfoot>
-              <tr>
-                  <th scope="col">Ingredients</th>
-                  <th scope="col">Serves 12</th>
-                  <th scope="col">Serves 24</th>
-              </tr>
-          </tfoot>
-      </table>
-
-
-
-      <table class="zebra bordered spaced">
-      <caption>The Very Best Eggnog</caption>
-      <colgroup>
-          <col style="width:15em;">
-          <col style="width:6em;">
-          <col style="width:6em;">
-      </colgroup>
-      <thead>
-          <tr>
-              <th scope="col">Ingredients</th>
-              <th scope="col">Serves 12</th>
-              <th scope="col">Serves 24</th>
-          </tr>
-      </thead>
-      <tbody>
-          <tr>
-              <td>Milk</td>
-              <td>1 quart</td>
-              <td>2 quart</td>
-          </tr>
-          <tr>
-              <td>Cinnamon Sticks</td>
-              <td>2</td>
-              <td>1</td>
-          </tr>
-          <tr>
-              <td>Cinnamon Sticks</td>
-              <td>2</td>
-              <td>1</td>
-          </tr>
-          <tr>
-              <td>Vanilla Bean, Split</td>
-              <td>1</td>
-              <td>2</td>
-          </tr>
-          <tr>
-              <td>Cloves</td>
-              <td>5</td>
-              <td>10</td>
-          </tr>
-          <tr>
-              <td>Mace</td>
-              <td>10 blades</td>
-              <td>20 blades</td>
-          </tr>
-          <tr>
-              <td>Egg Yolks</td>
-              <td>12</td>
-              <td>24</td>
-          </tr>
-          <tr>
-              <td>Cups Sugar</td>
-              <td>1 ½ cups</td>
-              <td>3 cups</td>
-          </tr>
-          <tr>
-              <td>Dark Rum</td>
-              <td>1 ½ cups</td>
-              <td>3 cups</td>
-          </tr>
-          <tr>
-              <td>Brandy</td>
-              <td>1 ½ cups</td>
-              <td>3 cups</td>
-          </tr>
-          <tr>
-              <td>Vanilla</td>
-              <td>1 tbsp</td>
-              <td>2 tbsp</td>
-          </tr>
-          <tr>
-              <td>Half-and-half or Light Cream</td>
-              <td>1 quart</td>
-              <td>2 quart</td>
-          </tr>
-          <tr>
-              <td>Freshly grated nutmeg to taste</td>
-              <td></td>
-              <td></td>
-          </tr>
-          <tr>
-              <td>Freshly grated nutmeg to taste</td>
-              <td></td>
-              <td></td>
-          </tr>
-          <tr>
-              <td>Freshly grated nutmeg to taste</td>
-              <td></td>
-              <td></td>
-          </tr>
-          <tr>
-              <td>Freshly grated nutmeg to taste</td>
-              <td></td>
-              <td></td>
-          </tr>
-
-
-      </tbody>
-      <tfoot>
-          <tr>
-              <th scope="col">Ingredients</th>
-              <th scope="col">Serves 12</th>
-              <th scope="col">Serves 24</th>
-          </tr>
-      </tfoot>
-  </table>
-
-
-
-  <h2 class="section-heading">Headings</h2>
-
-      <h6 class="meta">Heading 1 <code>h1.</code></h6>
-      <h1>Heading 1</h1>
-
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut <a href="#">labore et dolore</a> magna aliqua.</p>
-
-      <h6 class="meta">Heading 2 <code>h2.</code></h6>
-      <h2>Heading 2</h2>
-
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut <a href="#">labore et dolore</a> magna aliqua.</p>
-
-      <h6 class="meta">Heading 3 <code>h3.</code></h6>
-      <h3>Heading 3</h3>
-
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut <a href="#">labore et dolore</a> magna aliqua.</p>
-
-      <h6 class="meta">Heading 4 <code>h4.</code></h6>
-      <h4>Heading 4</h4>
-
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut <a href="#">labore et dolore</a> magna aliqua.</p>
-
-      <h6 class="meta">Heading 5 <code>h5.</code></h6>
-      <h5>Heading 5</h5>
-
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut <a href="#">labore et dolore</a> magna aliqua.</p>
-
-      <h6 class="meta">Heading 6 <code>h6.</code></h6>
-      <h6>Heading 6</h6>
-
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut <a href="#">labore et dolore</a> magna aliqua.</p>
-
-
-
-
-
-
-
-
-
-<h2 class="section-heading">Text-level Semantics</h2>
-
-                    <p>There are a number of inline <abbr title="HyperText Markup Language">HTML</abbr> elements you may use anywhere within other elements.</p>
-
-                    <h3>Links and anchors</h3>
-
-
-                    <p>The <code>a</code> element is used to hyperlink text, be that to another page, a named fragment on the current page or any other location on the web. Example:</p>
-
-                    <div class="example">
-                        <p><a href="/">Go to the home page</a> or <a href="#banner">return to the top of this page</a>.</p>
-                    </div>
-
-                    <h3>Stressed emphasis</h3>
-
-                    <p>The <code>em</code> element is used to denote text with stressed emphasis, i.e., something you&#8217;d pronounce differently. Where italicizing is required for stylistic differentiation, the <code>i</code> element may be preferable. Example:</p>
-
-                    <div class="example">
-                        <p>You simply <em>must</em> try the negitoro maki!</p>
-                    </div>
-
-                    <h3>Strong importance</h3>
-
-                    <p>The <code>strong</code> element is used to denote text with strong importance. Where bolding is used for stylistic differentiation, the <code>b</code> element may be preferable. Example:</p>
-
-                    <div class="example">
-                        <p><strong>Don&#8217;t</strong> stick nails in the electrical outlet.</p>
-                    </div>
-
-                    <h3>Small print</h3>
-
-                    <p>The <small>small</small> element is used to represent disclaimers, caveats, legal restrictions, or copyrights (commonly referred to as &#8216;small print&#8217;). It can also be used for attributions or satisfying licensing requirements. Example:</p>
-
-                    <div class="example">
-                        <p><small>Copyright &#169; 1922-2011 Acme Corporation. All Rights Reserved.</small></p>
-                    </div>
-
-                    <h3>Strikethrough</h3>
-
-                    <p>The <code>s</code> element is used to represent content that is no longer accurate or relevant. When indicating document edits i.e., marking a span of text as having been removed from a document, use the <code>del</code> element instead. Example:</p>
-
-                    <div class="example">
-                        <p><s>Recommended retail price: &#163;3.99 per bottle</s><br/><strong>Now selling for just &#163;2.99 a bottle!</strong></p>
-                    </div>
-
-                    <h3>Citations</h3>
-
-                    <p>The <code>cite</code> element is used to represent the title of a work (e.g. a book, essay, poem, song, film, TV show, sculpture, painting, musical, exhibition, etc). This can be a work that is being quoted or referenced in detail (i.e. a citation), or it can just be a work that is mentioned in passing. Example:</p>
-
-                    <div class="example">
-                        <p><cite>Universal Declaration of Human Rights</cite>, United Nations, December 1948. Adopted by General Assembly resolution 217 A (III).</p>
-                    </div>
-
-                    <h3>Definition</h3>
-
-                    <p>The <code>dfn</code> element is used to highlight the first use of a term. The <code>title</code> attribute can be used to describe the term. Example:</p>
-
-                    <div class="example">
-                        <p>Bob&#8217;s <dfn title="Dog">canine</dfn> mother and <dfn title="Horse">equine</dfn> father sat him down and carefully explained that he was an <dfn title="A mutation that combines two or more sets of chromosomes from different species">allopolyploid</dfn> organism.</p>
-                    </div>
-
-                    <h3>Abbreviation</h3>
-
-                    <p>The <code>abbr</code> element is used for any abbreviated text, whether it be acronym, initialism, or otherwise. Generally, it&#8217;s less work and useful (enough) to mark up only the first occurrence of any particular abbreviation on a page, and ignore the rest. Any text in the <code>title</code> attribute will appear when the user&#8217;s mouse hovers the abbreviation (although notably, this does not work in Internet Explorer for Windows). Example abbreviations:</p>
-
-                    <div class="example">
-                        <p><abbr title="British Broadcasting Corportation">BBC</abbr>, <abbr title="HyperText Markup Language">HTML</abbr>, and <abbr title="Staffordshire">Staffs.</abbr></p>
-                    </div>
-
-                    <h3>Time</h3>
-
-                    <p>The <code>time</code> element is used to represent either a time on a 24 hour clock, or a precise date in the proleptic Gregorian calendar, optionally with a time and a time-zone offset. Example:</p>
-
-                    <div class="example">
-                        <p>Queen Elizabeth II was proclaimed sovereign of each of the Commonwealth realms on <time datetime="1952-02-6">6</time> and <time datetime="1952-02-7">7 February 1952</time>, after the death of her father, King George VI.</p>
-                    </div>
-
-                    <h3>Code</h3>
-
-                    <p>The <code>code</code> element is used to represent fragments of computer code. Useful for technology-oriented sites, not so useful otherwise. Example:</p>
-
-                    <div class="example">
-                        <p>When you call the <code>activate()</code> method on the <code>robotSnowman</code> object, the eyes glow.</p>
-                    </div>
-
-                    <p>Used in conjunction with the <code>pre</code> element:</p>
+<p>Used in conjunction with the <code>pre</code> element:</p>
 
 
 <pre><code>def uppercase_postcode
-  pcode = self.postcode.upcase
-  ar = pcode.gsub(/ /,'').split(/(.*)(.{3})$/)
-  self.postcode = "#{ar[1]} #{ar[2]}"
+pcode = self.postcode.upcase
+ar = pcode.gsub(/ /,'').split(/(.*)(.{3})$/)
+self.postcode = "#{ar[1]} #{ar[2]}"
 end</code></pre>
 
 
 
 
-                    <h3>Variable</h3>
+<h3>Variable</h3>
 
-                    <p>The <code>var</code> element is used to denote a variable in a mathematical expression or programming context, but can also be used to indicate a placeholder where the contents should be replaced with your own value. Example:</p>
+<p>The <code>var</code> element is used to denote a variable in a mathematical expression or programming context, but can also be used to indicate a placeholder where the contents should be replaced with your own value. Example:</p>
 
-                    <div class="example">
-                        <p>If there are <var>n</var> pipes leading to the ice cream factory then I expect at <em>least</em> <var>n</var> flavours of ice cream to be available for purchase!</p>
-                    </div>
+<div class="example">
+<p>If there are <var>n</var> pipes leading to the ice cream factory then I expect at <em>least</em> <var>n</var> flavours of ice cream to be available for purchase!</p>
+</div>
 
-                    <h3>Sample output</h3>
+<h3>Sample output</h3>
 
-                    <p>The <code>samp</code> element is used to represent (sample) output from a program or computing system. Useful for technology-oriented sites, not so useful otherwise. Example:</p>
+<p>The <code>samp</code> element is used to represent (sample) output from a program or computing system. Useful for technology-oriented sites, not so useful otherwise. Example:</p>
 
-                    <div class="example">
-                        <p>The computer said <samp>Too much cheese in tray two</samp> but I didn&#8217;t know what that meant.</p>
-                    </div>
+<div class="example">
+<p>The computer said <samp>Too much cheese in tray two</samp> but I didn&#8217;t know what that meant.</p>
+</div>
 
-                    <h3>Keyboard entry</h3>
+<h3>Keyboard entry</h3>
 
-                    <p>The <code>kbd</code> element is used to denote user input (typically via a keyboard, although it may also be used to represent other input methods, such as voice commands). Example:</p>
-
-
-                    <kbd>f478b9aa89442d2922b915a23dd1ac4c</kbd>
+<p>The <code>kbd</code> element is used to denote user input (typically via a keyboard, although it may also be used to represent other input methods, such as voice commands). Example:</p>
 
 
-
-                    <h3>Superscript and subscript text</h3>
-                    <p>The <code>sup</code> element represents a superscript and the sub element represents a <code>sub</code>. These elements must be used only to mark up typographical conventions with specific meanings, not for typographical presentation. As a guide, only use these elements if their absence would change the meaning of the content. Example:</p>
-
-                    <div class="example">
-                        <p>The coordinate of the <var>i</var>th point is (<var>x<sub><var>i</var></sub></var>, <var>y<sub><var>i</var></sub></var>). For example, the 10th point has coordinate (<var>x<sub>10</sub></var>, <var>y<sub>10</sub></var>).</p>
-                        <p>f(<var>x</var>, <var>n</var>) = log<sub>4</sub><var>x</var><sup><var>n</var></sup></p>
-                    </div>
-
-                    <h3>Italicised</h3>
-
-                    <p>The <code>i</code> element is used for text in an alternate voice or mood, or otherwise offset from the normal prose. Examples include taxonomic designations, technical terms, idiomatic phrases from another language, the name of a ship or other spans of text whose typographic presentation is typically italicised. Example:</p>
-
-                    <div class="example">
-                        <p>There is a certain <i lang="fr">je ne sais quoi</i> in the air.</p>
-                    </div>
-
-                    <h3>Emboldened</h3>
-
-                    <p>The <code>b</code> element is used for text stylistically offset from normal prose without conveying extra importance, such as key words in a document abstract, product names in a review, or other spans of text whose typographic presentation is typically emboldened. Example:</p>
-
-                    <div class="example">
-                        <p>You enter a small room. Your <b>sword</b> glows brighter. A <b>rat</b> scurries past the corner wall.</p>
-                    </div>
-
-                    <h3>Marked or highlighted text</h3>
-
-                    <p>The <code>mark</code> element is used to represent a run of text marked or highlighted for reference purposes. When used in a quotation it indicates a highlight not originally present but added to bring the reader&#8217;s attention to that part of the text. When used in the main prose of a document, it indicates a part of the document that has been highlighted due to its relevance to the user&#8217;s current activity. Example:</p>
-
-                    <div class="example">
-                        <p>I also have some <mark>kitten</mark>s who are visiting me these days. They&#8217;re really cute. I think they like my garden! Maybe I should adopt a <mark>kitten</mark>.</p>
-                    </div>
-
-                    <h3 id="edits">Edits</h3>
-
-                    <p>The <code>del</code> element is used to represent deleted or retracted text which still must remain on the page for some reason. Meanwhile its counterpart, the <code>ins</code> element, is used to represent inserted text. Both <code>del</code> and <code>ins</code> have a <code>datetime</code> attribute which allows you to include a timestamp directly in the element. Example inserted text and usage:</p>
-
-                    <div class="example">
-                        <p>She bought <del datetime="2005-05-30T13:00:00">two</del> <ins datetime="2005-05-30T13:00:00">five</ins> pairs of shoes.</p>
-                    </div>
+<kbd>f478b9aa89442d2922b915a23dd1ac4c</kbd>
 
 
 
+<h3>Superscript and subscript text</h3>
+<p>The <code>sup</code> element represents a superscript and the sub element represents a <code>sub</code>. These elements must be used only to mark up typographical conventions with specific meanings, not for typographical presentation. As a guide, only use these elements if their absence would change the meaning of the content. Example:</p>
 
+<div class="example">
+<p>The coordinate of the <var>i</var>th point is (<var>x<sub><var>i</var></sub></var>, <var>y<sub><var>i</var></sub></var>). For example, the 10th point has coordinate (<var>x<sub>10</sub></var>, <var>y<sub>10</sub></var>).</p>
+<p>f(<var>x</var>, <var>n</var>) = log<sub>4</sub><var>x</var><sup><var>n</var></sup></p>
+</div>
 
+<h3>Italicised</h3>
 
+<p>The <code>i</code> element is used for text in an alternate voice or mood, or otherwise offset from the normal prose. Examples include taxonomic designations, technical terms, idiomatic phrases from another language, the name of a ship or other spans of text whose typographic presentation is typically italicised. Example:</p>
 
- <h2 class="section-heading">Horizontal rule</h2>
- <h6 class="meta"><code>&lt;hr /&gt;</code></h6>
- <hr />
+<div class="example">
+<p>There is a certain <i lang="fr">je ne sais quoi</i> in the air.</p>
+</div>
 
+<h3>Emboldened</h3>
 
-<h2 class="section-heading">Forms</h2>
+<p>The <code>b</code> element is used for text stylistically offset from normal prose without conveying extra importance, such as key words in a document abstract, product names in a review, or other spans of text whose typographic presentation is typically emboldened. Example:</p>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut <a href="#">labore et dolore</a> magna aliqua. Ut enim ad minim veniam</p>
+<div class="example">
+<p>You enter a small room. Your <b>sword</b> glows brighter. A <b>rat</b> scurries past the corner wall.</p>
+</div>
 
-      <form>
-        <fieldset>
-          <legend>Legend Name</legend>
+<h3>Marked or highlighted text</h3>
 
-          <div class="field">
-            <label for="name">Name</label>
-            <input type="text" name="name" placeholder="at least 3 characters" />
-          </div>
+<p>The <code>mark</code> element is used to represent a run of text marked or highlighted for reference purposes. When used in a quotation it indicates a highlight not originally present but added to bring the reader&#8217;s attention to that part of the text. When used in the main prose of a document, it indicates a part of the document that has been highlighted due to its relevance to the user&#8217;s current activity. Example:</p>
 
-          <div class="field">
-            <label for="age">Age</label>
-            <input type="text" name="age" />
-          </div>
+<div class="example">
+<p>I also have some <mark>kitten</mark>s who are visiting me these days. They&#8217;re really cute. I think they like my garden! Maybe I should adopt a <mark>kitten</mark>.</p>
+</div>
 
-          <div class="field">
-            <label for="shoe">Shoe size <abbr title="Required">*</abbr></label>
-            <input type="text" name="shoe" required />
-          </div>
+<h3 id="edits">Edits</h3>
 
-          <div class="field large">
-            <label for="comment">Comments</label>
-            <textarea rows="2"></textarea>
-          </div>
+<p>The <code>del</code> element is used to represent deleted or retracted text which still must remain on the page for some reason. Meanwhile its counterpart, the <code>ins</code> element, is used to represent inserted text. Both <code>del</code> and <code>ins</code> have a <code>datetime</code> attribute which allows you to include a timestamp directly in the element. Example inserted text and usage:</p>
 
-          <div class="field">
-            <label for="nights">Nights</label>
-            <input type="number" name="nights" value="1" min="1" max="30" required>
-          </div>
-
-          <div class="field">
-            <label for="country">Country</label>
-            <select name="country">
-              <option>1 England</option>
-              <option>2 Ireland</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
-          </div>
-
-          <fieldset class="options">
-          <legend>Checkbox <abbr title="Required">*</abbr></legend>
-          <ul>
-              <li><label for="checkbox1"><input id="checkbox1" name="checkbox" type="checkbox" checked="checked"> Choice A</label></li>
-              <li><label for="checkbox2"><input id="checkbox2" name="checkbox" type="checkbox"> Choice B</label></li>
-              <li><label for="checkbox3"><input id="checkbox3" name="checkbox" type="checkbox"> Choice C</label></li>
-          </ul>
-
-
-
-
-          <ol class="multi"><li><label>Vilma Agalioti-Sgompou<input id="thing_secondary_contributor_9" name="thing[secondary_contributor][]" type="checkbox" value="9"></label></li><li><label>Tarek Al Baghal<input id="thing_secondary_contributor_10" name="thing[secondary_contributor][]" type="checkbox" value="10"></label></li><li><label>Szilvia Altorjai<input id="thing_secondary_contributor_11" name="thing[secondary_contributor][]" type="checkbox" value="11"></label></li><li><label>Geoffrey Angel<input id="thing_secondary_contributor_12" name="thing[secondary_contributor][]" type="checkbox" value="12"></label></li><li><label>Silvia Avram<input id="thing_secondary_contributor_13" name="thing[secondary_contributor][]" type="checkbox" value="13"></label></li><li><label>Randy Banks<input id="thing_secondary_contributor_14" name="thing[secondary_contributor][]" type="checkbox" value="14"></label></li><li><label>Michaela Benzeval<input id="thing_secondary_contributor_15" name="thing[secondary_contributor][]" type="checkbox" value="15"></label></li><li><label>Sonia Bhalotra<input id="thing_secondary_contributor_16" name="thing[secondary_contributor][]" type="checkbox" value="16"></label></li><li><label>Andrea Catalina Blanco<input id="thing_secondary_contributor_17" name="thing[secondary_contributor][]" type="checkbox" value="17"></label></li><li><label>Kim Bones<input id="thing_secondary_contributor_18" name="thing[secondary_contributor][]" type="checkbox" value="18"></label></li><li><label>Cara Booker<input id="thing_secondary_contributor_19" name="thing[secondary_contributor][]" type="checkbox" value="19"></label></li><li><label>Monique Borsenberger<input id="thing_secondary_contributor_20" name="thing[secondary_contributor][]" type="checkbox" value="20"></label></li><li><label>Mike Brewer<input id="thing_secondary_contributor_21" name="thing[secondary_contributor][]" type="checkbox" value="21"></label></li><li><label>Mark Bryan<input id="thing_secondary_contributor_22" name="thing[secondary_contributor][]" type="checkbox" value="22"></label></li><li><label>Malcolm Brynin<input id="thing_secondary_contributor_23" name="thing[secondary_contributor][]" type="checkbox" value="23"></label></li><li><label>Feifei Bu<input id="thing_secondary_contributor_24" name="thing[secondary_contributor][]" type="checkbox" value="24"></label></li><li><label>Nick Buck<input id="thing_secondary_contributor_25" name="thing[secondary_contributor][]" type="checkbox" value="25"></label></li><li><label>Sarah Budd<input id="thing_secondary_contributor_26" name="thing[secondary_contributor][]" type="checkbox" value="26"></label></li><li><label>Jonathan Burton<input id="thing_secondary_contributor_27" name="thing[secondary_contributor][]" type="checkbox" value="27"></label></li><li><label>Tom Butler<input id="thing_secondary_contributor_28" name="thing[secondary_contributor][]" type="checkbox" value="28"></label></li><li><label>Caroline Carney<input id="thing_secondary_contributor_29" name="thing[secondary_contributor][]" type="checkbox" value="29"></label></li><li><label>Alexandru Cernat<input id="thing_secondary_contributor_30" name="thing[secondary_contributor][]" type="checkbox" value="30"></label></li><li><label>Paul Clarke<input id="thing_secondary_contributor_31" name="thing[secondary_contributor][]" type="checkbox" value="31"></label></li><li><label>Louise Clarke Cullen<input id="thing_secondary_contributor_32" name="thing[secondary_contributor][]" type="checkbox" value="32"></label></li><li><label>Natasha Crawford<input id="thing_secondary_contributor_33" name="thing[secondary_contributor][]" type="checkbox" value="33"></label></li><li><label>Lucill Curtis<input id="thing_secondary_contributor_34" name="thing[secondary_contributor][]" type="checkbox" value="34"></label></li><li><label>Francesco D'Amuri<input id="thing_secondary_contributor_35" name="thing[secondary_contributor][]" type="checkbox" value="35"></label></li><li><label>Paola De Agostini<input id="thing_secondary_contributor_36" name="thing[secondary_contributor][]" type="checkbox" value="36"></label></li><li><label>Emilia Del Bono<input id="thing_secondary_contributor_37" name="thing[secondary_contributor][]" type="checkbox" value="37"></label></li><li><label>Adeline Delavande<input id="thing_secondary_contributor_38" name="thing[secondary_contributor][]" type="checkbox" value="38"></label></li><li><label>Yadira Diaz<input id="thing_secondary_contributor_39" name="thing[secondary_contributor][]" type="checkbox" value="39"></label></li><li><label>Emily Dix<input id="thing_secondary_contributor_40" name="thing[secondary_contributor][]" type="checkbox" value="40"></label></li><li><label>Andrew Edmunds<input id="thing_secondary_contributor_41" name="thing[secondary_contributor][]" type="checkbox" value="41"></label></li><li><label>John Ermisch<input id="thing_secondary_contributor_42" name="thing[secondary_contributor][]" type="checkbox" value="42"></label></li><li><label>Harriet Farncombe<input id="thing_secondary_contributor_43" name="thing[secondary_contributor][]" type="checkbox" value="43"></label></li><li><label>Paul Fisher<input id="thing_secondary_contributor_44" name="thing[secondary_contributor][]" type="checkbox" value="44"></label></li><li><label>Janine Ford<input id="thing_secondary_contributor_45" name="thing[secondary_contributor][]" type="checkbox" value="45"></label></li><li><label>Laura Fumagalli<input id="thing_secondary_contributor_46" name="thing[secondary_contributor][]" type="checkbox" value="46"></label></li><li><label>Mario Galindo Castillo<input id="thing_secondary_contributor_47" name="thing[secondary_contributor][]" type="checkbox" value="47"></label></li><li><label>Andrea Geraci<input id="thing_secondary_contributor_48" name="thing[secondary_contributor][]" type="checkbox" value="48"></label></li><li><label>Emily Gilbert<input id="thing_secondary_contributor_49" name="thing[secondary_contributor][]" type="checkbox" value="49"></label></li><li><label>Paul Groves<input id="thing_secondary_contributor_50" name="thing[secondary_contributor][]" type="checkbox" value="50"></label></li><li><label>Karon Gush<input id="thing_secondary_contributor_51" name="thing[secondary_contributor][]" type="checkbox" value="51"></label></li><li><label>Cathie Hammond<input id="thing_secondary_contributor_52" name="thing[secondary_contributor][]" type="checkbox" value="52"></label></li><li><label>Debbie Hart<input id="thing_secondary_contributor_53" name="thing[secondary_contributor][]" type="checkbox" value="53"></label></li><li><label>Annika Hart<input id="thing_secondary_contributor_54" name="thing[secondary_contributor][]" type="checkbox" value="54"></label></li><li><label>Jay Hemker<input id="thing_secondary_contributor_55" name="thing[secondary_contributor][]" type="checkbox" value="55"></label></li><li><label>Farzaneh Hemmati Torabi<input id="thing_secondary_contributor_56" name="thing[secondary_contributor][]" type="checkbox" value="56"></label></li><li><label>Stefanie Hoherz<input id="thing_secondary_contributor_57" name="thing[secondary_contributor][]" type="checkbox" value="57"></label></li><li><label>Angus Holford<input id="thing_secondary_contributor_58" name="thing[secondary_contributor][]" type="checkbox" value="58"></label></li><li><label>Jane Ismail<input id="thing_secondary_contributor_59" name="thing[secondary_contributor][]" type="checkbox" value="59"></label></li><li><label>Holguer Xavier Jara Tamayo<input id="thing_secondary_contributor_60" name="thing[secondary_contributor][]" type="checkbox" value="60"></label></li><li><label>Stephen Jenkins<input id="thing_secondary_contributor_61" name="thing[secondary_contributor][]" type="checkbox" value="61"></label></li><li><label>Sandra Jones<input id="thing_secondary_contributor_62" name="thing[secondary_contributor][]" type="checkbox" value="62"></label></li><li><label>Annette Jäckle<input id="thing_secondary_contributor_63" name="thing[secondary_contributor][]" type="checkbox" value="63"></label></li><li><label>Olena Kaminska<input id="thing_secondary_contributor_64" name="thing[secondary_contributor][]" type="checkbox" value="64"></label></li><li><label>Gundi Knies<input id="thing_secondary_contributor_65" name="thing[secondary_contributor][]" type="checkbox" value="65"></label></li><li><label>Maria Komodromou<input id="thing_secondary_contributor_66" name="thing[secondary_contributor][]" type="checkbox" value="66"></label></li><li><label>Carlos Lagorio<input id="thing_secondary_contributor_67" name="thing[secondary_contributor][]" type="checkbox" value="67"></label></li><li><label>Heather Laurie<input id="thing_secondary_contributor_68" name="thing[secondary_contributor][]" type="checkbox" value="68"></label></li><li><label>Chrysa Leventi<input id="thing_secondary_contributor_69" name="thing[secondary_contributor][]" type="checkbox" value="69"></label></li><li><label>Colette Lo<input id="thing_secondary_contributor_70" name="thing[secondary_contributor][]" type="checkbox" value="70"></label></li><li><label>David Lockwood<input id="thing_secondary_contributor_71" name="thing[secondary_contributor][]" type="checkbox" value="71"></label></li><li><label>Simonetta Longhi<input id="thing_secondary_contributor_72" name="thing[secondary_contributor][]" type="checkbox" value="72"></label></li><li><label>Peter Lugtig<input id="thing_secondary_contributor_73" name="thing[secondary_contributor][]" type="checkbox" value="73"></label></li><li><label>Renee Luthra<input id="thing_secondary_contributor_74" name="thing[secondary_contributor][]" type="checkbox" value="74"></label></li><li><label>Peter Lynn<input id="thing_secondary_contributor_75" name="thing[secondary_contributor][]" type="checkbox" value="75"></label></li><li><label>Yvonni Markaki<input id="thing_secondary_contributor_76" name="thing[secondary_contributor][]" type="checkbox" value="76"></label></li><li><label>Stephanie McFall<input id="thing_secondary_contributor_77" name="thing[secondary_contributor][]" type="checkbox" value="77"></label></li><li><label>Cara McGenn<input id="thing_secondary_contributor_78" name="thing[secondary_contributor][]" type="checkbox" value="78"></label></li><li><label>Seetha Menon<input id="thing_secondary_contributor_79" name="thing[secondary_contributor][]" type="checkbox" value="79"></label></li><li><label>Oana Mihai<input id="thing_secondary_contributor_80" name="thing[secondary_contributor][]" type="checkbox" value="80"></label></li><li><label>Greta Morando<input id="thing_secondary_contributor_81" name="thing[secondary_contributor][]" type="checkbox" value="81"></label></li><li><label>Marcello Morciano<input id="thing_secondary_contributor_82" name="thing[secondary_contributor][]" type="checkbox" value="82"></label></li><li><label>Alita Nandi<input id="thing_secondary_contributor_83" name="thing[secondary_contributor][]" type="checkbox" value="83"></label></li><li><label>Yamil Nares Feria<input id="thing_secondary_contributor_84" name="thing[secondary_contributor][]" type="checkbox" value="84"></label></li><li><label>Jekaterina Navicke<input id="thing_secondary_contributor_85" name="thing[secondary_contributor][]" type="checkbox" value="85"></label></li><li><label>Jonathan Nears<input id="thing_secondary_contributor_86" name="thing[secondary_contributor][]" type="checkbox" value="86"></label></li><li><label>Angela Newsam<input id="thing_secondary_contributor_87" name="thing[secondary_contributor][]" type="checkbox" value="87"></label></li><li><label>Victoria Nolan<input id="thing_secondary_contributor_88" name="thing[secondary_contributor][]" type="checkbox" value="88"></label></li><li><label>Rosie O'Neill<input id="thing_secondary_contributor_89" name="thing[secondary_contributor][]" type="checkbox" value="89"></label></li><li><label>Duygu Ozdemir<input id="thing_secondary_contributor_90" name="thing[secondary_contributor][]" type="checkbox" value="90"></label></li><li><label>Lavinia Parisi<input id="thing_secondary_contributor_91" name="thing[secondary_contributor][]" type="checkbox" value="91"></label></li><li><label>Violetta Parutis<input id="thing_secondary_contributor_92" name="thing[secondary_contributor][]" type="checkbox" value="92"></label></li><li><label>Raj Patel<input id="thing_secondary_contributor_93" name="thing[secondary_contributor][]" type="checkbox" value="93"></label></li><li><label>Alari Paulus<input id="thing_secondary_contributor_94" name="thing[secondary_contributor][]" type="checkbox" value="94"></label></li><li><label>Victor Perez<input id="thing_secondary_contributor_95" name="thing[secondary_contributor][]" type="checkbox" value="95"></label></li><li><label>Jakob Petersen<input id="thing_secondary_contributor_96" name="thing[secondary_contributor][]" type="checkbox" value="96"></label></li><li><label>Elaine Prentice-Lane<input id="thing_secondary_contributor_97" name="thing[secondary_contributor][]" type="checkbox" value="97"></label></li><li><label>Sarah Prior<input id="thing_secondary_contributor_98" name="thing[secondary_contributor][]" type="checkbox" value="98"></label></li><li><label>Stephen Pudney<input id="thing_secondary_contributor_99" name="thing[secondary_contributor][]" type="checkbox" value="99"></label></li><li><label>Birgitta Rabe<input id="thing_secondary_contributor_100" name="thing[secondary_contributor][]" type="checkbox" value="100"></label></li><li><label>Tina Rampino<input id="thing_secondary_contributor_101" name="thing[secondary_contributor][]" type="checkbox" value="101"></label></li><li><label>Ericka Rascon<input id="thing_secondary_contributor_102" name="thing[secondary_contributor][]" type="checkbox" value="102"></label></li><li><label>Olga Rastrigina<input id="thing_secondary_contributor_103" name="thing[secondary_contributor][]" type="checkbox" value="103"></label></li><li><label>David Rose<input id="thing_secondary_contributor_104" name="thing[secondary_contributor][]" type="checkbox" value="104"></label></li><li><label>Husam Sadig<input id="thing_secondary_contributor_105" name="thing[secondary_contributor][]" type="checkbox" value="105"></label></li><li><label>Andrea Salvatori<input id="thing_secondary_contributor_106" name="thing[secondary_contributor][]" type="checkbox" value="106"></label></li><li><label>Lina Sanchez Cespedes<input id="thing_secondary_contributor_107" name="thing[secondary_contributor][]" type="checkbox" value="107"></label></li><li><label>Dorothee Schneider<input id="thing_secondary_contributor_108" name="thing[secondary_contributor][]" type="checkbox" value="108"></label></li><li><label>Elissa Sibley<input id="thing_secondary_contributor_109" name="thing[secondary_contributor][]" type="checkbox" value="109"></label></li><li><label>Paul Siddall<input id="thing_secondary_contributor_110" name="thing[secondary_contributor][]" type="checkbox" value="110"></label></li><li><label>Holly Sutherland<input id="thing_secondary_contributor_111" name="thing[secondary_contributor][]" type="checkbox" value="111"></label></li><li><label>Iva Valentinova Tasseva<input id="thing_secondary_contributor_112" name="thing[secondary_contributor][]" type="checkbox" value="112"></label></li><li><label>Alberto Tumino<input id="thing_secondary_contributor_113" name="thing[secondary_contributor][]" type="checkbox" value="113"></label></li><li><label>S.C. Noah Uhrig<input id="thing_secondary_contributor_114" name="thing[secondary_contributor][]" type="checkbox" value="114"></label></li><li><label>Jorre Vannieuwenhuyze<input id="thing_secondary_contributor_115" name="thing[secondary_contributor][]" type="checkbox" value="115"></label></li><li><label>Sergio Viademonte<input id="thing_secondary_contributor_116" name="thing[secondary_contributor][]" type="checkbox" value="116"></label></li><li><label>David Voas<input id="thing_secondary_contributor_117" name="thing[secondary_contributor][]" type="checkbox" value="117"></label></li><li><label>Janice Webb<input id="thing_secondary_contributor_118" name="thing[secondary_contributor][]" type="checkbox" value="118"></label></li><li><label>Deborah Wiltshire<input id="thing_secondary_contributor_119" name="thing[secondary_contributor][]" type="checkbox" value="119"></label></li><li><label>Catherine Yuen<input id="thing_secondary_contributor_120" name="thing[secondary_contributor][]" type="checkbox" value="120"></label></li><li><label>Federico Zilio<input id="thing_secondary_contributor_121" name="thing[secondary_contributor][]" type="checkbox" value="121"></label></li><li><label>Wouter Zwysen<input id="thing_secondary_contributor_122" name="thing[secondary_contributor][]" type="checkbox" value="122"></label></li><li><label>Will Farbrother<input id="thing_secondary_contributor_133" name="thing[secondary_contributor][]" type="checkbox" value="133"></label></li><li><label>Mark Taylor<input id="thing_secondary_contributor_134" name="thing[secondary_contributor][]" type="checkbox" value="134"></label></li><li><label>Maria Iacovou<input id="thing_secondary_contributor_135" name="thing[secondary_contributor][]" type="checkbox" value="135"></label></li><li><label>Paul Matthews<input id="thing_secondary_contributor_136" name="thing[secondary_contributor][]" type="checkbox" value="136"></label></li><li><label>Afshin Zilanawala<input id="thing_secondary_contributor_137" name="thing[secondary_contributor][]" type="checkbox" value="137"></label></li><li><label>Alexandra Skew<input id="thing_secondary_contributor_141" name="thing[secondary_contributor][]" type="checkbox" value="141"></label></li></ol>
-
-
-          </fieldset>
-
-          <fieldset class="options">
-          <legend>Radios <abbr title="Required">*</abbr></legend>
-          <ul>
-              <li><label for="radio1"><input id="radio1" name="radio" type="radio" checked="checked"> Choice A</label></li>
-              <li><label for="radio2"><input id="radio2" name="radio" type="radio"> Choice B</label></li>
-              <li><label for="radio3"><input id="radio3" name="radio" type="radio"> Choice C</label></li>
-          </ul>
-          </fieldset>
-
-
-          <div class="field control">
-            <input type="submit" value="Save" class="btn" /><a href="#">cancel</a>
-          </div>
-
-        </fieldset>
-      </form>
-
-<h2 class="section-heading">Widgets</h2>
-
-<p>Dropdown menu</p>
-
-
-<div class="dropdown-menu-wrapper">
-  <p class="dropdown-menu-toggler">Filter results <i class="fa fa-plus"></i></p>
-    <div class="dropdown-menu-panel">
-      <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-        <li>Item 4</li>
-        <li>Item 5</li>
-        <li>Item 6</li>
-        <li>Item 7</li>
-        <li>Item 8</li>
-        <li>Item 9</li>
-        <li>Item 10</li>
-      </ul>
-    </div>
+<div class="example">
+<p>She bought <del datetime="2005-05-30T13:00:00">two</del> <ins datetime="2005-05-30T13:00:00">five</ins> pairs of shoes.</p>
 </div>
 
 
-
-  <h6 class="meta"><code>&lt;hr /&gt;</code></h6>
-
-      <hr />
-
-      <h2 class="section-heading">Quotes</h2>
-
-      <h6 class="meta"><code>bq.</code></h6>
-
-      <blockquote>
-
-      <p>&ldquo;Lorem ipsum dolor sit amet,
-      consectetuer adipiscing elit. In accumsan diam
-      vitae velit. Aliquam vehicula, turpis sed egestas
-      porttitor, est ligula egestas leo, at interdum
-      leo ante ut risus.&rdquo;
-      <b>&mdash;Joe Bloggs</b></p>
-
-      </blockquote>
-
-      <h3>Inline quotes</h3>
-
-      <p>The <code>q</code> element is used for quoting text inline. Example showing nested quotations:</p>
-
-      <div class="example">
-          <p>John said, <q>I saw Lucy at lunch, she told me <q>Mary wants you to get some ice cream on your way home</q>. I think I will get some at Ben and Jerry&#8217;s, on Gloucester Road.</q></p>
-      </div>
-
-      <h3>Pull-quotes</h3>
-
-
-      <h6 class="meta"><code>bq(pull-quote).</code></h6>
-
-      <blockquote class="pull-quote">
-        <p>&ldquo;Lorem ipsum dolor sit amet,
-      consectetuer adipiscing elit. In accumsan diam
-      vitae velit. Aliquam vehicula, turpis sed egestas
-      porttitor, est ligula egestas leo, at interdum
-      leo ante ut risus.&rdquo;
-      <b>&mdash;Joe Bloggs</b></p>
-      </blockquote>
-
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-    </blockquote>
-
-
-
-      <h2 class="section-heading">Lists</h2>
-
-      <p class="lead">Lists are used to group related pieces of information together, so they are clearly associated with each other and easy to read - more on <a href="http://www.w3.org/wiki/HTML_lists">w3c wiki</a></p>
-
-      <h3>Unordered</h3>
-
-      <p>Unordered lists, or bulleted lists, are used when a set of items can be placed in any order. An example is a shopping list. These items are all part of one list, however, you could put the items in any order and the list would still make sense.</p>
-
-      <h6 class="meta"><code>*</code></h6>
-      <ul>
-      <li>
-      Web development
-      <ul>
-      <li>HTML(5)</li>
-      <li>CSS(3)</li>
-      <li>Accessibility</li>
-      <li>Progressive enhancement</li>
-      </ul>
-      </li>
-      <li>
-      Web design
-      <ul>
-      <li>Typography</li>
-      <li>Grids</li>
-      </ul>
-      </li>
-      </ul>
-
-      <h3>Ordered</h3>
-
-      <p>Ordered lists, or numbered lists, are used to display a list of items that need to be placed in a specific order. An example would be cooking instructions, which must be completed in order for the recipe to work. If the list items were moved around into a different order, the information would no longer make sense.</p>
-
-      <h6 class="meta"><code>#</code></h6>
-      <ol>
-      <li>
-      Web development
-      <ol>
-      <li>HTML(5)</li>
-      <li>CSS(3)</li>
-      <li>Accessibility</li>
-      <li>Progressive enhancement</li>
-      </ol>
-      </li>
-      <li>
-      Web design
-      <ol>
-      <li>Typography</li>
-      <li>Grids</li>
-      </ol>
-      </li>
-      </ol>
-
-      <h3>Definition</h3>
-
-      <p>Description lists associate specific names and their values within a list, for example items in an ingredient list and their descriptions, article metadata such as authors and categories and their values, or competition winners and the years in which they won.</p>
-
-      <h6 class="meta"><code>- dt := dd</code></h6>
-      <dl>
-      <dt>milk</dt>
-
-      <dd>A white, liquid dairy product.</dd>
-
-      <dt>bread</dt>
-
-      <dd>A baked food made of flour or meal.</dd>
-
-      <dt>butter</dt>
-
-      <dd>A yellow, solid dairy product.</dd>
-
-      <dt>coffee beans</dt>
-
-      <dd>The seeds of the fruit from certain coffee trees.</dd>
-      </dl>
-
-
-
-    <h2 class="section-heading">Patterns</h2>
-
-    <p class="lead">Design and mark-up patterns unique to this site.</p>
-
-    <h3>Post index</h3>
-
-    <section class="post-list">
-      <article>
-        <p class="meta"><a href="#">Anne Begg</a> <time datetime="2013-06-20T07:35:33+00:00">June 20, 2013</time></p>
-        <h1><a href="#">Can the Work Programme help the disadvantaged?</a></h1>
-        <p>The Work Programme was set up to help get the long-term unemployed back to work, but can it succeed it helping the most disadvantaged?</p>
-        <figure>
-        <%= link_to image_tag('thumb1.jpg'), '#' %>
-        </figure>
-      </article>
-
-      <article>
-        <p class="meta"><a href="#">Christine Garrington</a> <time datetime="2013-06-20T07:35:33+00:00">June 18, 2013</time></p>
-        <h1><a href="#">Fathers work the hardest, but less hard than they used to</a></h1>
-        <p>New research shows fathers are spending less time at work and more likely to be at home with their children and free to take a greater role in family life.</p>
-        <figure>
-          <%= link_to image_tag('thumb2.jpg'), '#' %>
-        </figure>
-      </article>
-
-      <article>
-        <p class="meta"><a href="#">Society Central</a> <time datetime="2013-06-20T07:35:33+00:00">June 13, 2013</time></p>
-        <h1><a href="#">Pupil wellbeing falls foul of testing ‘obsession’</a></h1>
-        <p>New book says Government pressure on schools to abandon programmes which promote wellbeing will have disastrous effect on vulnerable pupils</p>
-        <figure>
-          <%= link_to image_tag('thumb3.jpg'), '#' %>
-        </figure>
-      </article>
-
-      <article>
-        <p class="meta"><a href="#">Mike Davidson</a> <time datetime="2013-06-20T07:35:33+00:00">June 11, 2013</time></p>
-        <h1><a href="#">An independent Scotland – a Nordic future?</a></h1>
-        <p>Does a Scottish referendum provide the opportunity for a radical re-think about what an independent Scotland would look like and could Nordic countries help provide the vision? Professor Mike Danson thinks so.</p>
-        <figure>
-          <%= link_to image_tag('thumb4.jpg'), '#' %>
-        </figure>
-      </article>
-    </section>
-
-    <h3>Pagination</h3>
-
-    <p>Used to navigate between pages of search results.</p>
-
-    <h6 class="meta"><code>ol(pagination).</code></h6>
-
-
-
-    <div class="pagination">
-      <span class="previous_page disabled">← Previous</span>
-      <em class="current">1</em>
-      <a rel="next" href="/search?page=2&amp;q=%2A">2</a>
-      <a href="/search?page=3&amp;q=%2A">3</a>
-      <a href="/search?page=4&amp;q=%2A">4</a>
-      <a href="/search?page=5&amp;q=%2A">5</a>
-      <a class="next_page" rel="next" href="/search?page=2&amp;q=%2A">Next →</a>
-    </div>
-
-
-<!--     <ol role="navigation" class="pagination">
-        <li><a href="#" rel="prev">Previous</a></li>
-        <li><a href="#">1</a></li>
-        <li><span class="current">2</span></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#" rel="next">Next</a></li>
-    </ol> -->
-
-          <p>Description lists associate specific names and their values within a list, for example items in an ingredient list and their descriptions, article metadata such as authors and categories and their values, or competition winners and the years in which they won.</p>
-
-
-
-    <h2 class="section-heading">Colours</h2>
+<h1 class="section-heading">Colours</h1>
       <div class="row6">
       <div class="block red">ISER Red <code>#ce001f</code></div>
       </div>
@@ -1343,94 +306,566 @@ end</code></pre>
       </div>
 
 
-      <section class="post-list">
+<h1 class="section-heading">Lists</h1>
 
-      <article>
-        <p class="meta"><a href="#">Anne Begg</a> <time datetime="2013-06-20T07:35:33+00:00">June 20, 2013</time> <a href="#tag" class="tag analysis"><i class="fa fa-tag"></i> Analysis</a></p>
-        <h1><a href="#">Can the Work Programme help the disadvantaged?</a></h1>
-        <p>The Work Programme was set up to help get the long-term unemployed back to work, but can it succeed it helping the</p>
-        <figure>
-        <%= link_to image_tag('thumb1.jpg'), '#image' %>
-        </figure>
-      </article>
+<p class="lead">Lists are used to group related pieces of information together, so they are clearly associated with each other and easy to read - more on <a href="http://www.w3.org/wiki/HTML_lists">w3c wiki</a></p>
 
-        <article>
-          <p class="meta"><a href="#">Christine Garrington</a> <time datetime="2013-06-20T07:35:33+00:00">June 18, 2013</time> <a href="#" class="tag news"><i class="fa fa-tag"></i> News</a></p>
-          <h1><a href="#">Fathers work the hardest, but less hard than they used to</a></h1>
-          <p>New research shows fathers are spending less time at work and more likely to be at home with their children and free to take a greater role in family life.</p>
-          <figure>
-            <%= link_to image_tag('thumb2.jpg'), '#' %>
-          </figure>
-        </article>
+<h3>Unordered</h3>
 
-        <article>
-          <p class="meta"><a href="#">Society Central</a> <time datetime="2013-06-20T07:35:33+00:00">June 13, 2013</time> <a href="#" class="tag feature"><i class="fa fa-tag"></i> Feature</a></p>
-          <h1><a href="#">Pupil wellbeing falls foul of testing ‘obsession’</a></h1>
-          <p>New book says Government pressure on schools to abandon programmes which promote wellbeing will have disastrous effect on vulnerable pupils</p>
-          <figure>
-            <%= link_to image_tag('thumb3.jpg'), '#' %>
-          </figure>
-        </article>
+<p>Unordered lists, or bulleted lists, are used when a set of items can be placed in any order. An example is a shopping list. These items are all part of one list, however, you could put the items in any order and the list would still make sense.</p>
 
-        <article>
-          <p class="meta"><a href="#">Mike Davidson</a> <time datetime="2013-06-20T07:35:33+00:00">June 11, 2013</time> <a href="#" class="tag comment"><i class="fa fa-tag"></i> Comment</a></p>
-          <h1><a href="#">An independent Scotland – a Nordic future?</a></h1>
-          <p>Does a Scottish referendum provide the opportunity for a radical re-think about what an independent Scotland would look like and could Nordic countries help provide the vision? Professor Mike Danson thinks so.</p>
-          <figure>
-            <%= link_to image_tag('thumb4.jpg'), '#' %>
-          </figure>
-        </article>
-      </section>
+<h6 class="meta"><code>*</code></h6>
+<ul>
+<li>
+Web development
+<ul>
+<li>HTML(5)</li>
+<li>CSS(3)</li>
+<li>Accessibility</li>
+<li>Progressive enhancement</li>
+</ul>
+</li>
+<li>
+Web design
+<ul>
+<li>Typography</li>
+<li>Grids</li>
+</ul>
+</li>
+</ul>
 
+<h3>Ordered</h3>
+
+<p>Ordered lists, or numbered lists, are used to display a list of items that need to be placed in a specific order. An example would be cooking instructions, which must be completed in order for the recipe to work. If the list items were moved around into a different order, the information would no longer make sense.</p>
+
+<h6 class="meta"><code>#</code></h6>
+<ol>
+<li>
+Web development
+<ol>
+<li>HTML(5)</li>
+<li>CSS(3)</li>
+<li>Accessibility</li>
+<li>Progressive enhancement</li>
+</ol>
+</li>
+<li>
+Web design
+<ol>
+<li>Typography</li>
+<li>Grids</li>
+</ol>
+</li>
+</ol>
+
+<h4>Cloud</h4>
+<ol class="cloud">
+<li>
+<a href="/research/publications/working-papers/iser">ISER</a>
+</li>
+<li>
+<a href="/research/publications/working-papers/understanding-society">Undertanding Society</a>
+</li>
+<li>
+<a href="/research/publications/working-papers/euromod">EUROMOD</a>
+</li>
+</ol>
+
+
+<h4>Tag List</h4>
+<ol class="tag-list">
+<li>
+<a href="/research/publications/working-papers/iser">ISER</a>
+</li>
+<li>
+<a href="/research/publications/working-papers/understanding-society">Undertanding Society</a>
+</li>
+<li>
+<a href="/research/publications/working-papers/euromod">EUROMOD</a>
+</li>
+</ol>
+
+<h4>Tags</h4>
+<ol class="tags">
+<li>
+<a href="/research/publications/working-papers/iser">ISER</a>
+</li>
+<li>
+<a href="/research/publications/working-papers/understanding-society">Undertanding Society</a>
+</li>
+<li>
+<a href="/research/publications/working-papers/euromod">EUROMOD</a>
+</li>
+</ol>
+
+<h3>Definition</h3>
+
+<p>Description lists associate specific names and their values within a list, for example items in an ingredient list and their descriptions, article metadata such as authors and categories and their values, or competition winners and the years in which they won.</p>
+
+<h6 class="meta"><code>- dt := dd</code></h6>
+<dl>
+<dt>milk</dt>
+
+<dd>A white, liquid dairy product.</dd>
+
+<dt>bread</dt>
+
+<dd>A baked food made of flour or meal.</dd>
+
+<dt>butter</dt>
+
+<dd>A yellow, solid dairy product.</dd>
+
+<dt>coffee beans</dt>
+
+<dd>The seeds of the fruit from certain coffee trees.</dd>
+</dl>
+
+
+
+
+
+
+<h1 class="section-heading">Quotes</h1>
+
+<h6 class="meta"><code>bq.</code></h6>
+
+<blockquote>
+
+<p>&ldquo;Lorem ipsum dolor sit amet,
+consectetuer adipiscing elit. In accumsan diam
+vitae velit. Aliquam vehicula, turpis sed egestas
+porttitor, est ligula egestas leo, at interdum
+leo ante ut risus.&rdquo;
+<b>&mdash;Joe Bloggs</b></p>
+
+</blockquote>
+
+<h3>Inline quotes</h3>
+
+<p>The <code>q</code> element is used for quoting text inline. Example showing nested quotations:</p>
+
+<div class="example">
+<p>John said, <q>I saw Lucy at lunch, she told me <q>Mary wants you to get some ice cream on your way home</q>. I think I will get some at Ben and Jerry&#8217;s, on Gloucester Road.</q></p>
+</div>
+
+<h3>Pull-quotes</h3>
+
+
+<h6 class="meta"><code>bq(pull-quote).</code></h6>
+
+<blockquote class="pull-quote">
+<p>&ldquo;Lorem ipsum dolor sit amet,
+consectetuer adipiscing elit. In accumsan diam
+vitae velit. Aliquam vehicula, turpis sed egestas
+porttitor, est ligula egestas leo, at interdum
+leo ante ut risus.&rdquo;
+<b>&mdash;Joe Bloggs</b></p>
+</blockquote>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+</blockquote>
+
+<h1 class="section-heading">Tables</h1>
+
+<h6 class="meta">Zebra stripping <code>table(zebra).</code></h6>
+
+
+<table class="zebra bordered spaced">
+<caption>The Very Best Eggnog</caption>
+<colgroup>
+<col style="width:15em;">
+<col style="width:6em;">
+<col style="width:6em;">
+</colgroup>
+<thead>
+<tr>
+<th scope="col">Ingredients</th>
+<th scope="col">Serves 12</th>
+<th scope="col">Serves 24</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Milk</td>
+<td>1 quart</td>
+<td>2 quart</td>
+</tr>
+<tr>
+<td>Cinnamon Sticks</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Cinnamon Sticks</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Vanilla Bean, Split</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Cloves</td>
+<td>5</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Mace</td>
+<td>10 blades</td>
+<td>20 blades</td>
+</tr>
+<tr>
+<td>Egg Yolks</td>
+<td>12</td>
+<td>24</td>
+</tr>
+<tr>
+<td>Cups Sugar</td>
+<td>1 ½ cups</td>
+<td>3 cups</td>
+</tr>
+<tr>
+<td>Dark Rum</td>
+<td>1 ½ cups</td>
+<td>3 cups</td>
+</tr>
+<tr>
+<td>Brandy</td>
+<td>1 ½ cups</td>
+<td>3 cups</td>
+</tr>
+<tr>
+<td>Vanilla</td>
+<td>1 tbsp</td>
+<td>2 tbsp</td>
+</tr>
+<tr>
+<td>Half-and-half or Light Cream</td>
+<td>1 quart</td>
+<td>2 quart</td>
+</tr>
+<tr>
+<td>Freshly grated nutmeg to taste</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Freshly grated nutmeg to taste</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Freshly grated nutmeg to taste</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Freshly grated nutmeg to taste</td>
+<td></td>
+<td></td>
+</tr>
+
+
+</tbody>
+<tfoot>
+<tr>
+<th scope="col">Ingredients</th>
+<th scope="col">Serves 12</th>
+<th scope="col">Serves 24</th>
+</tr>
+</tfoot>
+</table>
+
+<h1 class="section-heading">Forms</h1>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut <a href="#">labore et dolore</a> magna aliqua. Ut enim ad minim veniam</p>
+
+<form>
+<fieldset>
+<legend>Legend Name</legend>
+
+<div class="field">
+<label for="name">Name</label>
+<input type="text" name="name" placeholder="at least 3 characters" />
+</div>
+
+<div class="field">
+<label for="age">Age</label>
+<input type="text" name="age" />
+</div>
+
+<div class="field">
+<label for="shoe">Shoe size <abbr title="Required">*</abbr></label>
+<input type="text" name="shoe" required />
+</div>
+
+<div class="field large">
+<label for="comment">Comments</label>
+<textarea rows="2"></textarea>
+</div>
+
+<div class="field">
+<label for="nights">Nights</label>
+<input type="number" name="nights" value="1" min="1" max="30" required>
+</div>
+
+<div class="field">
+<label for="country">Country</label>
+<select name="country">
+<option>1 England</option>
+<option>2 Ireland</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+</select>
+</div>
+
+<fieldset class="options">
+<legend>Checkbox <abbr title="Required">*</abbr></legend>
+<ul>
+<li><label for="checkbox1"><input id="checkbox1" name="checkbox" type="checkbox" checked="checked"> Choice A</label></li>
+<li><label for="checkbox2"><input id="checkbox2" name="checkbox" type="checkbox"> Choice B</label></li>
+<li><label for="checkbox3"><input id="checkbox3" name="checkbox" type="checkbox"> Choice C</label></li>
+</ul>
+
+
+
+
+<ol class="multi">
+<li><label>Vilma Agalioti-Sgompou<input id="thing_secondary_contributor_9" name="thing[secondary_contributor][]" type="checkbox" value="9"></label></li>
+<li><label>Tarek Al Baghal<input id="thing_secondary_contributor_10" name="thing[secondary_contributor][]" type="checkbox" value="10"></label></li>
+<li><label>Szilvia Altorjai<input id="thing_secondary_contributor_11" name="thing[secondary_contributor][]" type="checkbox" value="11"></label></li>
+<li><label>Geoffrey Angel<input id="thing_secondary_contributor_12" name="thing[secondary_contributor][]" type="checkbox" value="12"></label></li>
+<li><label>Silvia Avram<input id="thing_secondary_contributor_13" name="thing[secondary_contributor][]" type="checkbox" value="13"></label></li>
+<li><label>Randy Banks<input id="thing_secondary_contributor_14" name="thing[secondary_contributor][]" type="checkbox" value="14"></label></li>
+<li><label>Michaela Benzeval<input id="thing_secondary_contributor_15" name="thing[secondary_contributor][]" type="checkbox" value="15"></label></li>
+<li><label>Sonia Bhalotra<input id="thing_secondary_contributor_16" name="thing[secondary_contributor][]" type="checkbox" value="16"></label></li>
+<li><label>Andrea Catalina Blanco<input id="thing_secondary_contributor_17" name="thing[secondary_contributor][]" type="checkbox" value="17"></label></li>
+<li><label>Kim Bones<input id="thing_secondary_contributor_18" name="thing[secondary_contributor][]" type="checkbox" value="18"></label></li>
+<li><label>Cara Booker<input id="thing_secondary_contributor_19" name="thing[secondary_contributor][]" type="checkbox" value="19"></label></li>
+<li><label>Monique Borsenberger<input id="thing_secondary_contributor_20" name="thing[secondary_contributor][]" type="checkbox" value="20"></label></li>
+<li><label>Mike Brewer<input id="thing_secondary_contributor_21" name="thing[secondary_contributor][]" type="checkbox" value="21"></label></li>
+<li><label>Mark Bryan<input id="thing_secondary_contributor_22" name="thing[secondary_contributor][]" type="checkbox" value="22"></label></li>
+<li><label>Malcolm Brynin<input id="thing_secondary_contributor_23" name="thing[secondary_contributor][]" type="checkbox" value="23"></label></li>
+<li><label>Feifei Bu<input id="thing_secondary_contributor_24" name="thing[secondary_contributor][]" type="checkbox" value="24"></label></li>
+<li><label>Nick Buck<input id="thing_secondary_contributor_25" name="thing[secondary_contributor][]" type="checkbox" value="25"></label></li>
+<li><label>Sarah Budd<input id="thing_secondary_contributor_26" name="thing[secondary_contributor][]" type="checkbox" value="26"></label></li>
+<li><label>Jonathan Burton<input id="thing_secondary_contributor_27" name="thing[secondary_contributor][]" type="checkbox" value="27"></label></li>
+<li><label>Tom Butler<input id="thing_secondary_contributor_28" name="thing[secondary_contributor][]" type="checkbox" value="28"></label></li>
+<li><label>Caroline Carney<input id="thing_secondary_contributor_29" name="thing[secondary_contributor][]" type="checkbox" value="29"></label></li>
+<li><label>Alexandru Cernat<input id="thing_secondary_contributor_30" name="thing[secondary_contributor][]" type="checkbox" value="30"></label></li>
+<li><label>Paul Clarke<input id="thing_secondary_contributor_31" name="thing[secondary_contributor][]" type="checkbox" value="31"></label></li>
+<li><label>Louise Clarke Cullen<input id="thing_secondary_contributor_32" name="thing[secondary_contributor][]" type="checkbox" value="32"></label></li>
+<li><label>Natasha Crawford<input id="thing_secondary_contributor_33" name="thing[secondary_contributor][]" type="checkbox" value="33"></label></li><li><label>Lucill Curtis<input id="thing_secondary_contributor_34" name="thing[secondary_contributor][]" type="checkbox" value="34"></label></li>
+<li><label>Francesco D'Amuri<input id="thing_secondary_contributor_35" name="thing[secondary_contributor][]" type="checkbox" value="35"></label></li>
+<li><label>Paola De Agostini<input id="thing_secondary_contributor_36" name="thing[secondary_contributor][]" type="checkbox" value="36"></label></li>
+<li><label>Emilia Del Bono<input id="thing_secondary_contributor_37" name="thing[secondary_contributor][]" type="checkbox" value="37"></label></li>
+<li><label>Adeline Delavande<input id="thing_secondary_contributor_38" name="thing[secondary_contributor][]" type="checkbox" value="38"></label></li>
+<li><label>Yadira Diaz<input id="thing_secondary_contributor_39" name="thing[secondary_contributor][]" type="checkbox" value="39"></label></li>
+<li><label>Emily Dix<input id="thing_secondary_contributor_40" name="thing[secondary_contributor][]" type="checkbox" value="40"></label></li>
+<li><label>Andrew Edmunds<input id="thing_secondary_contributor_41" name="thing[secondary_contributor][]" type="checkbox" value="41"></label></li>
+<li><label>John Ermisch<input id="thing_secondary_contributor_42" name="thing[secondary_contributor][]" type="checkbox" value="42"></label></li>
+<li><label>Harriet Farncombe<input id="thing_secondary_contributor_43" name="thing[secondary_contributor][]" type="checkbox" value="43"></label></li>
+<li><label>Paul Fisher<input id="thing_secondary_contributor_44" name="thing[secondary_contributor][]" type="checkbox" value="44"></label></li>
+<li><label>Janine Ford<input id="thing_secondary_contributor_45" name="thing[secondary_contributor][]" type="checkbox" value="45"></label></li>
+<li><label>Laura Fumagalli<input id="thing_secondary_contributor_46" name="thing[secondary_contributor][]" type="checkbox" value="46"></label></li>
+<li><label>Mario Galindo Castillo<input id="thing_secondary_contributor_47" name="thing[secondary_contributor][]" type="checkbox" value="47"></label></li>
+<li><label>Andrea Geraci<input id="thing_secondary_contributor_48" name="thing[secondary_contributor][]" type="checkbox" value="48"></label></li>
+<li><label>Emily Gilbert<input id="thing_secondary_contributor_49" name="thing[secondary_contributor][]" type="checkbox" value="49"></label></li>
+<li><label>Paul Groves<input id="thing_secondary_contributor_50" name="thing[secondary_contributor][]" type="checkbox" value="50"></label></li>
+<li><label>Karon Gush<input id="thing_secondary_contributor_51" name="thing[secondary_contributor][]" type="checkbox" value="51"></label></li>
+<li><label>Cathie Hammond<input id="thing_secondary_contributor_52" name="thing[secondary_contributor][]" type="checkbox" value="52"></label></li>
+<li><label>Debbie Hart<input id="thing_secondary_contributor_53" name="thing[secondary_contributor][]" type="checkbox" value="53"></label></li>
+<li><label>Annika Hart<input id="thing_secondary_contributor_54" name="thing[secondary_contributor][]" type="checkbox" value="54"></label></li>
+<li><label>Jay Hemker<input id="thing_secondary_contributor_55" name="thing[secondary_contributor][]" type="checkbox" value="55"></label></li>
+<li><label>Farzaneh Hemmati Torabi<input id="thing_secondary_contributor_56" name="thing[secondary_contributor][]" type="checkbox" value="56"></label></li>
+<li><label>Stefanie Hoherz<input id="thing_secondary_contributor_57" name="thing[secondary_contributor][]" type="checkbox" value="57"></label></li>
+<li><label>Angus Holford<input id="thing_secondary_contributor_58" name="thing[secondary_contributor][]" type="checkbox" value="58"></label></li>
+<li><label>Jane Ismail<input id="thing_secondary_contributor_59" name="thing[secondary_contributor][]" type="checkbox" value="59"></label></li>
+<li><label>Holguer Xavier Jara Tamayo<input id="thing_secondary_contributor_60" name="thing[secondary_contributor][]" type="checkbox" value="60"></label></li>
+<li><label>Stephen Jenkins<input id="thing_secondary_contributor_61" name="thing[secondary_contributor][]" type="checkbox" value="61"></label></li>
+<li><label>Sandra Jones<input id="thing_secondary_contributor_62" name="thing[secondary_contributor][]" type="checkbox" value="62"></label></li>
+<li><label>Annette Jäckle<input id="thing_secondary_contributor_63" name="thing[secondary_contributor][]" type="checkbox" value="63"></label></li>
+<li><label>Olena Kaminska<input id="thing_secondary_contributor_64" name="thing[secondary_contributor][]" type="checkbox" value="64"></label></li>
+<li><label>Gundi Knies<input id="thing_secondary_contributor_65" name="thing[secondary_contributor][]" type="checkbox" value="65"></label></li>
+<li><label>Maria Komodromou<input id="thing_secondary_contributor_66" name="thing[secondary_contributor][]" type="checkbox" value="66"></label></li>
+<li><label>Carlos Lagorio<input id="thing_secondary_contributor_67" name="thing[secondary_contributor][]" type="checkbox" value="67"></label></li>
+<li><label>Heather Laurie<input id="thing_secondary_contributor_68" name="thing[secondary_contributor][]" type="checkbox" value="68"></label></li>
+<li><label>Chrysa Leventi<input id="thing_secondary_contributor_69" name="thing[secondary_contributor][]" type="checkbox" value="69"></label></li>
+<li><label>Colette Lo<input id="thing_secondary_contributor_70" name="thing[secondary_contributor][]" type="checkbox" value="70"></label></li>
+<li><label>David Lockwood<input id="thing_secondary_contributor_71" name="thing[secondary_contributor][]" type="checkbox" value="71"></label></li>
+<li><label>Simonetta Longhi<input id="thing_secondary_contributor_72" name="thing[secondary_contributor][]" type="checkbox" value="72"></label></li>
+<li><label>Peter Lugtig<input id="thing_secondary_contributor_73" name="thing[secondary_contributor][]" type="checkbox" value="73"></label></li>
+<li><label>Renee Luthra<input id="thing_secondary_contributor_74" name="thing[secondary_contributor][]" type="checkbox" value="74"></label></li>
+<li><label>Peter Lynn<input id="thing_secondary_contributor_75" name="thing[secondary_contributor][]" type="checkbox" value="75"></label></li>
+<li><label>Yvonni Markaki<input id="thing_secondary_contributor_76" name="thing[secondary_contributor][]" type="checkbox" value="76"></label></li>
+<li><label>Stephanie McFall<input id="thing_secondary_contributor_77" name="thing[secondary_contributor][]" type="checkbox" value="77"></label></li>
+<li><label>Cara McGenn<input id="thing_secondary_contributor_78" name="thing[secondary_contributor][]" type="checkbox" value="78"></label></li>
+<li><label>Seetha Menon<input id="thing_secondary_contributor_79" name="thing[secondary_contributor][]" type="checkbox" value="79"></label></li>
+<li><label>Oana Mihai<input id="thing_secondary_contributor_80" name="thing[secondary_contributor][]" type="checkbox" value="80"></label></li>
+<li><label>Greta Morando<input id="thing_secondary_contributor_81" name="thing[secondary_contributor][]" type="checkbox" value="81"></label></li>
+<li><label>Marcello Morciano<input id="thing_secondary_contributor_82" name="thing[secondary_contributor][]" type="checkbox" value="82"></label></li>
+<li><label>Alita Nandi<input id="thing_secondary_contributor_83" name="thing[secondary_contributor][]" type="checkbox" value="83"></label></li>
+<li><label>Yamil Nares Feria<input id="thing_secondary_contributor_84" name="thing[secondary_contributor][]" type="checkbox" value="84"></label></li>
+<li><label>Jekaterina Navicke<input id="thing_secondary_contributor_85" name="thing[secondary_contributor][]" type="checkbox" value="85"></label></li>
+<li><label>Jonathan Nears<input id="thing_secondary_contributor_86" name="thing[secondary_contributor][]" type="checkbox" value="86"></label></li>
+<li><label>Angela Newsam<input id="thing_secondary_contributor_87" name="thing[secondary_contributor][]" type="checkbox" value="87"></label></li>
+<li><label>Victoria Nolan<input id="thing_secondary_contributor_88" name="thing[secondary_contributor][]" type="checkbox" value="88"></label></li>
+<li><label>Rosie O'Neill<input id="thing_secondary_contributor_89" name="thing[secondary_contributor][]" type="checkbox" value="89"></label></li>
+<li><label>Duygu Ozdemir<input id="thing_secondary_contributor_90" name="thing[secondary_contributor][]" type="checkbox" value="90"></label></li>
+<li><label>Lavinia Parisi<input id="thing_secondary_contributor_91" name="thing[secondary_contributor][]" type="checkbox" value="91"></label></li>
+<li><label>Violetta Parutis<input id="thing_secondary_contributor_92" name="thing[secondary_contributor][]" type="checkbox" value="92"></label></li>
+<li><label>Raj Patel<input id="thing_secondary_contributor_93" name="thing[secondary_contributor][]" type="checkbox" value="93"></label></li>
+<li><label>Alari Paulus<input id="thing_secondary_contributor_94" name="thing[secondary_contributor][]" type="checkbox" value="94"></label></li>
+<li><label>Victor Perez<input id="thing_secondary_contributor_95" name="thing[secondary_contributor][]" type="checkbox" value="95"></label></li>
+<li><label>Jakob Petersen<input id="thing_secondary_contributor_96" name="thing[secondary_contributor][]" type="checkbox" value="96"></label></li>
+<li><label>Elaine Prentice-Lane<input id="thing_secondary_contributor_97" name="thing[secondary_contributor][]" type="checkbox" value="97"></label></li>
+<li><label>Sarah Prior<input id="thing_secondary_contributor_98" name="thing[secondary_contributor][]" type="checkbox" value="98"></label></li>
+<li><label>Stephen Pudney<input id="thing_secondary_contributor_99" name="thing[secondary_contributor][]" type="checkbox" value="99"></label></li>
+<li><label>Birgitta Rabe<input id="thing_secondary_contributor_100" name="thing[secondary_contributor][]" type="checkbox" value="100"></label></li>
+<li><label>Tina Rampino<input id="thing_secondary_contributor_101" name="thing[secondary_contributor][]" type="checkbox" value="101"></label></li>
+<li><label>Ericka Rascon<input id="thing_secondary_contributor_102" name="thing[secondary_contributor][]" type="checkbox" value="102"></label></li>
+<li><label>Olga Rastrigina<input id="thing_secondary_contributor_103" name="thing[secondary_contributor][]" type="checkbox" value="103"></label></li>
+<li><label>David Rose<input id="thing_secondary_contributor_104" name="thing[secondary_contributor][]" type="checkbox" value="104"></label></li>
+<li><label>Husam Sadig<input id="thing_secondary_contributor_105" name="thing[secondary_contributor][]" type="checkbox" value="105"></label></li>
+<li><label>Andrea Salvatori<input id="thing_secondary_contributor_106" name="thing[secondary_contributor][]" type="checkbox" value="106"></label></li>
+<li><label>Lina Sanchez Cespedes<input id="thing_secondary_contributor_107" name="thing[secondary_contributor][]" type="checkbox" value="107"></label></li>
+<li><label>Dorothee Schneider<input id="thing_secondary_contributor_108" name="thing[secondary_contributor][]" type="checkbox" value="108"></label></li>
+<li><label>Elissa Sibley<input id="thing_secondary_contributor_109" name="thing[secondary_contributor][]" type="checkbox" value="109"></label></li>
+<li><label>Paul Siddall<input id="thing_secondary_contributor_110" name="thing[secondary_contributor][]" type="checkbox" value="110"></label></li>
+<li><label>Holly Sutherland<input id="thing_secondary_contributor_111" name="thing[secondary_contributor][]" type="checkbox" value="111"></label></li>
+<li><label>Iva Valentinova Tasseva<input id="thing_secondary_contributor_112" name="thing[secondary_contributor][]" type="checkbox" value="112"></label></li>
+<li><label>Alberto Tumino<input id="thing_secondary_contributor_113" name="thing[secondary_contributor][]" type="checkbox" value="113"></label></li>
+<li><label>S.C. Noah Uhrig<input id="thing_secondary_contributor_114" name="thing[secondary_contributor][]" type="checkbox" value="114"></label></li>
+<li><label>Jorre Vannieuwenhuyze<input id="thing_secondary_contributor_115" name="thing[secondary_contributor][]" type="checkbox" value="115"></label></li>
+<li><label>Sergio Viademonte<input id="thing_secondary_contributor_116" name="thing[secondary_contributor][]" type="checkbox" value="116"></label></li>
+<li><label>David Voas<input id="thing_secondary_contributor_117" name="thing[secondary_contributor][]" type="checkbox" value="117"></label></li>
+<li><label>Janice Webb<input id="thing_secondary_contributor_118" name="thing[secondary_contributor][]" type="checkbox" value="118"></label></li>
+<li><label>Deborah Wiltshire<input id="thing_secondary_contributor_119" name="thing[secondary_contributor][]" type="checkbox" value="119"></label></li>
+<li><label>Catherine Yuen<input id="thing_secondary_contributor_120" name="thing[secondary_contributor][]" type="checkbox" value="120"></label></li>
+<li><label>Federico Zilio<input id="thing_secondary_contributor_121" name="thing[secondary_contributor][]" type="checkbox" value="121"></label></li>
+<li><label>Wouter Zwysen<input id="thing_secondary_contributor_122" name="thing[secondary_contributor][]" type="checkbox" value="122"></label></li>
+<li><label>Will Farbrother<input id="thing_secondary_contributor_133" name="thing[secondary_contributor][]" type="checkbox" value="133"></label></li>
+<li><label>Mark Taylor<input id="thing_secondary_contributor_134" name="thing[secondary_contributor][]" type="checkbox" value="134"></label></li>
+<li><label>Maria Iacovou<input id="thing_secondary_contributor_135" name="thing[secondary_contributor][]" type="checkbox" value="135"></label></li>
+<li><label>Paul Matthews<input id="thing_secondary_contributor_136" name="thing[secondary_contributor][]" type="checkbox" value="136"></label></li>
+<li><label>Afshin Zilanawala<input id="thing_secondary_contributor_137" name="thing[secondary_contributor][]" type="checkbox" value="137"></label></li>
+<li><label>Alexandra Skew<input id="thing_secondary_contributor_141" name="thing[secondary_contributor][]" type="checkbox" value="141"></label></li></ol>
+
+
+</fieldset>
+
+<fieldset class="options">
+<legend>Radios <abbr title="Required">*</abbr></legend>
+<ul>
+<li><label for="radio1"><input id="radio1" name="radio" type="radio" checked="checked"> Choice A</label></li>
+<li><label for="radio2"><input id="radio2" name="radio" type="radio"> Choice B</label></li>
+<li><label for="radio3"><input id="radio3" name="radio" type="radio"> Choice C</label></li>
+</ul>
+</fieldset>
+
+
+<div class="field control">
+<input type="submit" value="Save" class="btn" /><a href="#">cancel</a>
+</div>
+
+</fieldset>
+</form>
+
+
+<h1 class="section-heading">Buttons</h2>
+
+<button class="btn">Default</button>
+<button class="btn btn-large">Large</button>
+<button class="btn btn-small">Small</button>
+<button class="btn btn-danger">Danger</button>
+<button class="btn btn-inline">Inline</button>
+<button class="btn-link">Link button</button>
+<button class="btn btn-secondary">Secondary</button>
+
+
+<h1 class="section-heading">Images</h2>
+
+<div class="colgroup-2">
+
+
+<div class="span1">
+<p>Image with caption</p>
+<figure>
+<%= image_tag('placeholder.png') %>
+<figcaption>Lorem ipsum dolor sit amet</figcaption>
+</figure>
+</div>
+
+<div class="span1">
+<div class="avatar">
+<p>Avatar</p>
+<figure>
+<%= image_tag('placeholder.png', :class => "avatar") %>
+</figure>
+</div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+<h1 class="section-heading">Patterns</h2>
+
+    <p class="lead">Design and mark-up patterns unique to this site.</p>
+
+    
+
+    <h3>Pagination</h3>
+
+    <p>Used to navigate between pages of search results.</p>
+
+    <h6 class="meta"><code>ol(pagination).</code></h6>
+
+
+
+    <div class="pagination">
+      <span class="previous_page disabled">← Previous</span>
+      <em class="current">1</em>
+      <a rel="next" href="/search?page=2&amp;q=%2A">2</a>
+      <a href="/search?page=3&amp;q=%2A">3</a>
+      <a href="/search?page=4&amp;q=%2A">4</a>
+      <a href="/search?page=5&amp;q=%2A">5</a>
+      <a class="next_page" rel="next" href="/search?page=2&amp;q=%2A">Next →</a>
+    </div>
 </section>
+</div>
+<!-- end span2 -->
+
+<div class="span1">
+<aside role="aside">
+</aside>
+
+</div>
+<!-- end span1 -->
+
+
+
+</div>
+<!-- end colgroup-3 -->
 </main>
 
-<aside role="aside">
-
-<!-- <h5 class="info">Topics</h5>
-<nav class="tags">
-  <menu>
-    <li><a href="#">Recession Britain</a></li>
-    <li><a href="#">Big Society</a></li>
-    <li><a href="#">Diversity</a></li>
-    <li><a href="#">Tax justice</a></li>
-    <li><a href="#">Social mobility</a></li>
-    <li><a href="#">Ageing society</a></li>
-    <li><a href="#">Troubled families</a></li>
-    <li><a href="#">Healthy lives</a></li>
-    <li><a href="#">Welfare and work</a></li>
-    <li><a href="#">Crime and justice</a></li>
-  </menu>
-</nav> -->
-
-</aside>
 </div>
-
-<!-- <footer role="contentinfo">
-<div class="container">
-<nav class="utilities">
-<ul>
-<li><a href="https://twitter.com/iseressex"><i class="fa fa-twitter"></i> Twitter</a></li>
-<li><a href="http://www.facebook.com/pages/Institute-for-Social-and-Economic-Research/281454348297"><i class="fa fa-facebook"></i> Facebook</a></li>
-<li><a href="#">Privacy and cookies</a></li>
-<li><a href="#">Information security</a></li>
-<li><a href="#">Help</a></li>
-</ul>
-</nav>
-<p>&copy; Copyright 2013 Institute for Social &amp; Economic Research,<br />
-<a href="https://www.google.co.uk/maps/place/University+of+Essex+Colchester+Campus/@51.8773668,0.9490621,16z/data=!4m2!3m1!1s0x0:0x5cc71b77d30f6be4" class="mask">University of Essex, Wivenhoe Park, Colchester, Essex, CO4 3SQ UK</a><br />
-+44 (0)1206 872957</p>
-<a href="http://esrc.ac.uk/" class="esrc">ESRC</a>
-<a href="http://essex.ac.uk/" class="uoe">University of Essex</a>
+<!-- end container -->
 
 
-</div>
-
-<div class="social-links"><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-rss"></i></a></div>
-
-<div class="util-links"><a class="search-toggle" href="/search"><i class="fa fa-bars"></i></a><a class="search-toggle" href="/search"><i class="fa fa-search"></i></a></div>
-
-
-</footer> -->
-<div id="loading"></div>
-<a href="#" id="show-grid" class="btn">Toggle grid</a>
+<%= link_to "G", "#", id: 'show-grid' if dev? %>

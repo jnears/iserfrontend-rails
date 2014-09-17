@@ -1,4 +1,4 @@
-nav
+placeholdernav
   ol
     @include rem-fallback(padding-left, 0)
     li:first-of-type
@@ -71,11 +71,9 @@ nav.guide
       a:link, a:visited
         display: block
         text-decoration: none
-        border-bottom: 1px solid $grey6
-        @include rem-fallback(padding, 0, 0.5)
+        @include rem-fallback(padding, 0)
+        margin-left: 5%
         @include rem-fallback(line-height, ((36 - 1) / $basefont))
-      a:hover
-        background: $grey7
 
 .prime-action
   position: absolute

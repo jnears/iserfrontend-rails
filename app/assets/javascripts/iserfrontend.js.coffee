@@ -147,14 +147,11 @@ activate_datetime_pickers = () ->
 build_in_page_menu = () ->
   if $('nav.guide').length == 0
     guide_nav = $("<nav />").attr("class","nav guide scrollable")
-    guide_nav.append("<h5 class=\"info\">On this page</h5>")
     guide_nav.append("<li><a href=\"#top\">Top ^</a>")
     $('.section-heading').each (i, e) =>
       $(e).attr('id',$(e).text().replace(/[^A-Za-z0-9]+/g, '-').toLowerCase())
       guide_nav.append('<li><a href="#' + $(e).attr('id') + '">' + $(e).html() + '</a></li>')
     guide_nav.find("li").wrapAll("<ol />")
-    guide_nav.append("<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua.")
     $('aside[role=aside]').append(guide_nav)
 
 prevent_widows = () ->
