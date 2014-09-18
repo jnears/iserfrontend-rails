@@ -8,7 +8,7 @@ filter = (selector, query) ->
   return
 
 init_page = () ->
-  Turbolinks.enableTransitionCache()
+  # Turbolinks.enableTransitionCache()
   $("html").removeClass("no-js")
   prevent_widows()
   toggle_grid()
@@ -34,6 +34,10 @@ init_page = () ->
 
 $(document).on 'page:restore', ->
   updateTwitterValues()
+
+# $(document).on 'page:load', ->
+#   unless window.location.hash
+#     window.scrollTo 0, 0
 
 $(document).on 'ready', ->
   if $('html').hasClass("lt-ie9")
