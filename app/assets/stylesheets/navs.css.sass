@@ -176,15 +176,18 @@ nav.local
     font-family: $heading_font
   ul ul
     display: none
-    @include rem-fallback(padding-left, 1.2)
     &.open
       display: block
+      margin-left: 0
+  li.indent
+    margin-left: 17px
   i.fa
     @include rem-fallback(font-size, (14 / $basefont))
     @include rem-fallback(line-height, (1.5 * (27 / $baseline)))
     color: $link
     float: left
-    @include rem-fallback(padding-right, 0.5)
+    @include rem-fallback(padding-right, 0.4)
+    margin-left: -17px
     cursor: pointer
 
 a#handheld-btn
