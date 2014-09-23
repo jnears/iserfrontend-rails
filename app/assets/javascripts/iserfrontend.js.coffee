@@ -204,8 +204,9 @@ $(document).keydown (e) ->
   if $(window).scrollTop() < $(window).height()
     if e.which is 32
       if $('a[data-scrolldown]').length > 0
-        event.preventDefault()
-        $('html, body').animate({scrollTop: $('#content').offset().top - 27}, 400)
+        unless $('input#sq').is(":focus")
+          event.preventDefault()
+          $('html, body').animate({scrollTop: $('#content').offset().top - 27}, 400)
 
 jQuery.fn.justtext = ->
   $(this).clone().children().remove().end().text()
