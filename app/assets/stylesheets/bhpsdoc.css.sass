@@ -6,8 +6,13 @@
     th,
     td
       @include rem-fallback(padding, 0.4, 0.6)
+      border-top: 1px solid $grey3
       &:last-of-type
         text-align: left
+
+      &.c
+        text-align: center
+
   pre
     margin: 0
     background: none
