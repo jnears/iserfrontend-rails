@@ -47,23 +47,8 @@ main.podcast
       right: 0
       @include respond-to(handheld)
         position: relative
-
-  a.itunes
-    float: left
-    padding-top: 2px
-    margin-top: -2px
-    width: 62px
-    height: 22px
-    margin-right: 9px
-    background: url("/assets/itunes.png") no-repeat 46px 6px
-
-  a[href$='.rss']
-    padding-top: 2px
-    margin-top: -2px
-    width: 44px
-    float: left
-    background: url(asset-path("rss.png")) no-repeat 32px 8px
-
+      a
+        @include rem-fallback(margin-left, 0.5)
 
   article.latest
     position: relative
