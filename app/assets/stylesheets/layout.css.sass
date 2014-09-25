@@ -27,11 +27,14 @@ body.app
   @include rem-fallback(margin-top, 4)
   main
     float: none
-    width: 95%
+    width: 98%
     min-width: 820px
     max-width: none
     margin-left: auto
     margin-right: auto
+    position: relative
+  fieldset
+    @include rem-fallback(margin-bottom, 1.5)
 
 a#show-grid
   position: fixed

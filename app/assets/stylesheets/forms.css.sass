@@ -46,6 +46,8 @@ form
       text-align: left
       width: 100%
       font-weight: bold
+    &.inline
+      width: auto
 
 
   div.field
@@ -72,8 +74,7 @@ form
   input[type=search],
   input[type=email],
   input[type=url],
-  textarea,
-  select
+  textarea
     border: 1px solid $grey4
     font-family: $sans_font
     background: $grey7
@@ -108,6 +109,7 @@ form
       @include rem-fallback(margin-bottom, 0.5)
 
   div.actions
+    @include rem-fallback(margin, 1.5, 0, 0, 0)
     text-align: center
 
 form[role=search]
