@@ -9,9 +9,25 @@
       border-top: 1px solid $grey3
       &:last-of-type
         text-align: left
-
+      &:first-child
+        width: 30%
       &.c
         text-align: center
+
+  table.data
+    border: 0
+    font-family: monospace, serif
+    margin-bottom: 0
+
+    width: 80%
+    th,
+    td
+      border: 0
+      @include rem-fallback(padding, 0.2, 0.4)
+      text-align: right
+      &:first-child
+        text-align: left
+        width: 35%
 
   pre
     margin: 0
@@ -26,6 +42,7 @@
   code 
     b
       font-family: monospace, serif
+
 
 
 
