@@ -28,6 +28,14 @@
   -moz-border-radius: $radius
   -webkit-border-radius: $radius
 
+
+@mixin ease-in-out
+  -webkit-transition: all 0.3s ease-in-out
+  -moz-transition: all 0.3s ease-in-out
+  -o-transition: all 0.3s ease-in-out
+  -ms-transition: all 0.3s ease-in-out
+  transition: all 0.3s ease-in-out
+
 @mixin boxout($bg:$grey6)
   @include rem-fallback(margin, 0, -1.5, 1.5, -1.5)
   @include respond-to(handheld)

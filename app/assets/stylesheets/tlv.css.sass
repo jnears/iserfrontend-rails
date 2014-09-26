@@ -1,0 +1,19 @@
+.span1.overlay
+  position: relative
+  
+  .text
+    position: absolute
+    text-align: center
+    @include rem-fallback(padding, 0.8, 0)
+    margin-left: 15%
+    margin-right: 15%
+    width: 70%
+    top: 30%
+    background: rgba(0, 0, 0, 0)
+    color: rgba(0, 0, 0, 0)
+    @include ease-in-out
+
+
+  &:hover .text
+    background: rgba(0, 0, 0, 0.75)
+    color: $white
