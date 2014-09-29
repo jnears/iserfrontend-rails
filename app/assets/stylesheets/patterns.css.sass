@@ -235,7 +235,6 @@ fieldset.property
   border: 1px solid $grey4
 
 img.preview
-  display: block
   max-width: 200px
 
 .meta
@@ -374,17 +373,21 @@ aside.home
         width: 96%
     figure
       float: left
-      width: 50%
+      width: 100%
       margin: 0
       line-height: 0
       a
         line-height: 0
+      &.alternating
+        width: 50%
+        @include respond-to(handheld)
+          width: 100%
 
       @include respond-to(handheld)
         width: 100%
       img
         width: 100%
-    &:nth-child(even) figure
+    &:nth-child(even) figure.alternating
       float: right
 
     .content
@@ -513,18 +516,3 @@ h6.tag
   font-style: normal !important
   font-size: 1.5em
   direction: rtl
-
-.true-icon
-  padding-left: 0.25em
-  color: $green
-
-.false-icon
-  padding-left: 0.25em
-  color: $red
-
-i.tag
-  @include rem-fallback(font-size, (16 / $basefont))
-  color: $grey4
-
-p.people-list
-  margin-bottom: 0
