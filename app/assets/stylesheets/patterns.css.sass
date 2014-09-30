@@ -96,6 +96,16 @@ h6.meta
       background: $red + 60
       padding: 0.1em 0.25em
 
+.theme-pagination
+  @include rem-fallback(padding, 0.5, (3 / $basefont))
+  @include rem-fallback(margin-right, -(3 / $basefont))
+  z-index: 100
+  position: absolute
+  top: 0
+  right: 0
+  cursor: default
+  overflow: auto
+
 
 .block
   @include rounded
@@ -366,6 +376,10 @@ aside.home
     &:last-child
       border-bottom: 0
       @include rem-fallback(margin-bottom, 1.5)
+    &.theme
+      @include rem-fallback(min-height, 30)
+    &.theme-large
+      @include rem-fallback(min-height, 36)
     .container
       width: 85%
       margin: 0 auto
