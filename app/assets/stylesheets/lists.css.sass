@@ -62,6 +62,11 @@ ol.tag-list
     &:nth-last-of-type(2):after
       content: " and\00a0"
 
+time
+  color: $grey2
+  @include rem-fallback(font-size, (16 / $basefont))
+  font-style: italic
+
 ol#publications, ol.publications
   padding-left: 0
   p
@@ -70,10 +75,6 @@ ol#publications, ol.publications
     list-style-type: none
     @include rem-fallback(padding, 0.25, 0)
     @include rem-fallback(margin-bottom, 1.5)
-  time
-    color: $grey2
-    @include rem-fallback(font-size, (16 / $basefont))
-    font-style: italic
   i
     color: $grey4
   cite
