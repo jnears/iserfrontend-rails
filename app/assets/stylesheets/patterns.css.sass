@@ -353,6 +353,12 @@ aside.home
 
 .home-banner
   @include rem-fallback(margin-top, -1)
+  margin-left: auto
+  margin-right: auto
+  width: 85%
+  max-width: 100rem
+  @include respond-to(handheld)
+    width: 96%
 
 .compact
   margin-bottom: 0
