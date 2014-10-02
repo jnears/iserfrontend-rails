@@ -90,14 +90,16 @@ audio
         font-family: $heading_font
         font-weight: normal
         font-style: normal
-        &.inline
-          display: inline
         @include rem-fallback(font-size, ((nth($heading_sizes, $i) * 0.75) / $basefont))
         @include rem-fallback(line-height, (1.5 * (ceil((nth($heading_sizes, $i) * 0.75) / $baseline))))
         @include respond-to(tablet)
           @include rem-fallback(font-size, ((nth($heading_sizes, $i) * 0.5) / $basefont))
         @include respond-to(handheld)
           @include rem-fallback(font-size, ((nth($heading_sizes, $i) * 0.5) / $basefont))
+        &.inline
+          display: inline
+
+
 h1
   span
     display: block
