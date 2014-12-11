@@ -272,6 +272,6 @@ advanced_search = () ->
       $(e.target).next().find('form input[type=search]:first-of-type').focus()
 
 ga_track_audio = () ->
-  $("audio").on "play,ended", (e) ->
+  $("audio").bind "play,ended", (e) ->
     ga "send", "event", "Audio", e.type, $(this).attr("src")
     return
