@@ -273,5 +273,7 @@ advanced_search = () ->
 
 ga_track_audio = () ->
   $("audio").on "play", (e) ->
-    ga "send", "event", "Podcast", e.type, $(this).find("h1").text()
+    $title = $("h1").text()
+    $title = $title.replace("ISER Podcast Series", " - ISER Podcast Series")
+    ga "send", "event", "Podcast", e.type, $title
     return
