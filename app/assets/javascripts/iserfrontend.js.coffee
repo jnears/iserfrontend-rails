@@ -31,6 +31,7 @@ init_page = () ->
   dropdown_menu()
   advanced_search()
   ie_fixes()
+  ga_track_audio()
 
 $(document).on 'page:restore', ->
   updateTwitterValues()
@@ -269,3 +270,8 @@ advanced_search = () ->
     $("#advanced-search-panel").toggle()
     if $(this).hasClass("active")
       $(e.target).next().find('form input[type=search]:first-of-type').focus()
+
+ga_track_audio = () ->
+  $("audio").on "play,ended", (e) ->
+    ga "send", "event", "Audio", e.type, $(this).attr("src")
+    return
