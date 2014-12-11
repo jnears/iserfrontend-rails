@@ -273,5 +273,5 @@ advanced_search = () ->
 
 ga_track_audio = () ->
   $("audio").on "play", (e) ->
-    ga "send", "event", "Audio", e.type, $(this).attr("src")
+    ga "send", "event", "Podcast", e.type, $(this).closest('h1').text()
     return
