@@ -17,6 +17,7 @@ init_page = () ->
   dimissable()
   focus_first()
   toggle_dropdown()
+  toggle()
   activate_datetime_pickers()
   shrink_to_fit()
   dynamic_add()
@@ -80,6 +81,13 @@ local_nav_toggler = () ->
   $('nav.local .active').parents().children('ul').removeClass('open').addClass('open')
   $('nav.local ul.open').prev().removeClass('fa-minus fa-plus-circle')
   $('nav.local ul.open').prev().addClass('fa-minus-circle')
+
+toggle = () ->
+  $(".toggle").unbind('click')
+  $('.toggle').on 'click', (e) ->
+    $( this ).toggleClass('active')
+    $(e.target).next('.toggle-panel').slideToggle(500)
+    event.preventDefault()
 
 updateTwitterValues = () ->
   if $('article.tweet').length > 0
