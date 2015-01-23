@@ -31,3 +31,29 @@ section.img.full
 
 section.image
   margin-bottom: 1.5rem
+
+
+.banner-esrc
+  @include rem-fallback(margin-bottom, 1.5)
+  padding-right: 100px !important
+  min-height: 120px
+  background: #005ea5 url('banner-esrc.png') no-repeat right bottom !important
+  color: $white
+  p
+    @include rem-fallback(margin-bottom, 0)
+  // links
+  a:link, a:visited, a:hover
+    color: $white
+  
+    
+.banner-misoc
+  @include rem-fallback(margin-bottom, 1.5)
+  padding-right: 100px !important
+  min-height: 120px
+  background: #649554 url('banner-misoc.png') no-repeat right bottom !important
+  color: $white
+  p
+    @include rem-fallback(margin-bottom, 0)
+  // links
+  a:link, a:visited, a:hover
+    color: $white
