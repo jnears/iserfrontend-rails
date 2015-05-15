@@ -1,0 +1,50 @@
+
+ul.tab-nav
+  border-bottom: 1px solid $grey4
+  overflow: visible
+  padding-left: 0px
+  li
+ 
+    display: inline-block
+    list-style-type: none
+    @include rem-fallback(margin-right, 0.5)
+    a
+   
+      display: block
+      border: 1px solid $grey4
+      background: $grey6
+      position: relative
+      top: 1px
+      z-index: 2
+      outline: none
+      text-decoration: none
+      @include rounded-top
+      @include rem-fallback(padding, 0.5, 1.5)
+      span
+     
+        @include rem-fallback(font-size, 0.75)
+        font-style: italic
+      
+      &:active
+     
+        outline: none
+      
+      &.active
+     
+        background: $white
+        border-bottom: 1px solid $white
+        color: $black
+      
+    
+  
+
+
+html.lt-ie8 ul.tab-nav
+  li
+ 
+    a
+   
+      background: none
+    
+  
+

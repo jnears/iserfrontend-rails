@@ -1,0 +1,133 @@
+body.euromod
+
+  #page-wrap > .container
+
+    a:link, a:visited
+      color: #083380
+
+    a:link.mask, a:visited.mask
+      color: #2c2c2c
+
+  header[role=banner]
+    background: $blue_euromod
+    border-bottom: 0
+    nav
+      ol
+        li
+          color: $white
+          a:link, a:visited
+            color: $white
+            background: $blue_euromod
+            &.active
+              background: $blue_hover_euromod
+          a:hover
+            background: $blue_hover_euromod
+    a.home-logo
+      background: url(asset-path("euromod/euromod-logo.png")) no-repeat
+      width: 250px
+      height: 110px
+      padding: 0
+    a#handheld-btn
+      color: $white
+      &.active, &:hover
+        background: $blue_hover_euromod
+
+
+
+  .home-banner 
+    background: $grey6
+    min-height: 300px
+    @include rem-fallback(padding, 2, 0, 0.25, 0)
+    @include rem-fallback(margin-top, -2.5)
+    @include rem-fallback(margin-bottom, 1.5)
+    max-width: 100%
+    width: 100%
+
+    h1
+      @include rem-fallback(font-size, (30 / $basefont))
+      text-align: center
+      color: $grey2
+    h2
+      @include rem-fallback(font-size, (24 / $basefont))
+      text-align: center
+    ul
+      text-align: center
+      padding-left: 0
+      li
+        list-style-type: none
+        @include rem-fallback(font-size, (20 / $basefont))
+
+
+
+  .form-simple
+    border: 0
+    padding: 0
+    margin: 0
+
+  .btn
+    @include btn
+    &.plain
+      font-weight: normal
+      border-radius: 5px
+      margin-bottom: 1.5rem
+      background: $white
+      border: 1px solid $grey4
+    
+    &.default
+      background: $grey2
+    &.wide
+      width: 100%
+    &.padded
+      padding: 0.75rem
+    &:hover
+      outline: none
+      border: 1px solid $hover
+      background: $hover
+      a:link, a:visited, a:visited.mask
+        color: $white !important
+      .arrowlink:after
+        color: $white
+
+
+  .arrowlink:after
+    content: "\f105"
+    font-family: FontAwesome
+    @include rem-fallback(padding-left, 0.35)
+    color: red
+
+  .icons
+    h4 
+      @include rem-fallback(margin-bottom, 1.5)
+    .span1
+      i
+        text-align: center
+        width: 100%
+        color: $grey4
+        &:hover
+          color: $grey2
+      .fa
+        @include rem-fallback(margin-bottom, 1.5)
+
+      p
+        min-height: 80px
+        @include respond-to(tablet)
+          min-height: 80px
+        @include respond-to(large_desktop)
+          min-height: 70px
+        @include respond-to(handheld)
+          min-height: 0px
+
+
+
+  .fa-6x 
+    font-size: 6em
+  .fa-8x 
+    font-size: 8em
+  .fa-stack-6x 
+    font-size: 6em
+  .fa-10x 
+    font-size: 10em
+  .fa-stack-10x 
+    font-size: 10em
+
+
