@@ -27,6 +27,12 @@ body.euromod
       width: 250px
       height: 110px
       padding: 0
+      @include respond-to(handheld)
+        background: url(asset-path("euromod/euromod-logo-mobile.png")) no-repeat
+        width: 170px
+        height: 63px
+
+
     a#handheld-btn
       color: $white
       &.active, &:hover
@@ -64,7 +70,12 @@ body.euromod
     padding: 0
     margin: 0
 
-  .btn
+  a:link.btn-e, a:visited.btn-e
+    color: $black
+    &:hover
+      color: $white !important
+
+  .btn-e
     @include btn
     &.plain
       font-weight: normal
@@ -72,28 +83,27 @@ body.euromod
       margin-bottom: 1.5rem
       background: $white
       border: 1px solid $grey4
-    
+      width: 100%
     &.default
       background: $grey2
-    &.wide
-      width: 100%
     &.padded
       padding: 0.75rem
+    &.large
+      @include rem-fallback(font-size, (24 / $basefont))
+    &:after
+      content: "\f105"
+      font-family: FontAwesome
+      @include rem-fallback(padding-left, 0.35)
+      color: red
     &:hover
       outline: none
       border: 1px solid $hover
       background: $hover
       a:link, a:visited, a:visited.mask
         color: $white !important
-      .arrowlink:after
+      &:after
         color: $white
 
-
-  .arrowlink:after
-    content: "\f105"
-    font-family: FontAwesome
-    @include rem-fallback(padding-left, 0.35)
-    color: red
 
   .icons
     h4 
