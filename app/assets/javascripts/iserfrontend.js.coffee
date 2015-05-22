@@ -77,10 +77,11 @@ match_component_heights = () ->
   return
 
 local_nav_toggler = () ->
-  $('nav.local .active').closest('ul').removeClass('open').addClass('open')
-  $('nav.local .active').parents().children('ul').removeClass('open').addClass('open')
-  $('nav.local ul.open').prev().removeClass('fa-minus fa-plus-circle')
-  $('nav.local ul.open').prev().addClass('fa-minus-circle')
+    $('nav.local .active').closest('ul').removeClass('open').addClass('open')
+    $('nav.local .active').parents().children('ul').removeClass('open').addClass('open')
+  if !$('body').hasClass('euromod')
+    $('nav.local ul.open').prev().removeClass('fa-minus fa-plus-circle')
+    $('nav.local ul.open').prev().addClass('fa-minus-circle')
 
 toggle = () ->
   $(".toggle").unbind('click')
