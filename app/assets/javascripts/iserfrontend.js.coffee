@@ -33,6 +33,7 @@ init_page = () ->
   advanced_search()
   ie_fixes()
   ga_track_audio()
+  ga_track_downloads()
 
 $(document).on 'page:restore', ->
   updateTwitterValues()
@@ -285,4 +286,14 @@ ga_track_audio = () ->
     $title = $("h1").text()
     $title = $title.replace("ISER Podcast Series", " - ISER Podcast Series")
     ga "send", "event", "Podcast", e.type, $title
+    return
+
+ga_track_downloads = () ->
+  $title = $("h1").text()
+  $('*[data-ga-tracking="download"] a').each ->
+    $(this).click (e) ->
+      $linkText = $(this).text()
+      $href = $(this).attr('href')
+      ga "send", "event", $title, $linkText, $href
+      return
     return
