@@ -293,7 +293,8 @@ ga_track_downloads = () ->
   $('*[data-ga-tracking="download"] a').each ->
     $(this).click (e) ->
       $linkText = $(this).text()
+      $title = $title + " - " + $linkText
       $href = $(this).attr('href')
-      ga "send", "event", $title, $linkText, $href
+      ga "send", "event", $title, "Download", $href
       return
     return
