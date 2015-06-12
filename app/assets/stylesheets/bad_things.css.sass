@@ -45,6 +45,19 @@ section.image
     @include rem-fallback(margin-bottom, 0)
 
 
+.banner-poverty
+  @include rem-fallback(margin-bottom, 1.5)
+  padding-right: 100px !important
+  min-height: 120px
+  background: #3a2521 url(#{asset_path('banner-poverty.png')}) no-repeat right bottom !important
+  color: $white
+  p
+    @include rem-fallback(margin-bottom, 0)
+  // links
+  a:link, a:visited, a:hover
+    color: $white
+
+
 .banner-esrc
   @include rem-fallback(margin-bottom, 1.5)
   padding-right: 100px !important
