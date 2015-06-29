@@ -253,6 +253,26 @@ img.preview
   @include rem-fallback(line-height, 0.8)
 
 
+.blog
+  .meta
+    @include rem-fallback(min-height, 3)
+    @include rem-fallback(margin-bottom, 1.5)
+    @include rem-fallback(line-height, 1.5)
+    @include rem-fallback(font-size, 1)
+    padding-left: 60px
+    position: relative
+
+    figure
+      position: absolute
+      @include rem-fallback(margin, 0)
+      left: 0
+    .avatar
+      border-radius: 100%
+
+
+    
+
+
 .badge
   display: inline-block
   min-width: 10px
