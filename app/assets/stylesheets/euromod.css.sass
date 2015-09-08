@@ -19,9 +19,9 @@ body.euromod
             color: $white
             background: $blue_euromod
             &.active
-              background: $blue_hover_euromod
+              background: #5276B8
           a:hover
-            background: $blue_hover_euromod
+            background: #5276B8
     a.home-logo
       background: url(asset-path("euromod/euromod-logo.png")) no-repeat
       width: 250px
@@ -52,7 +52,7 @@ body.euromod
     h1
       @include rem-fallback(font-size, (30 / $basefont))
       text-align: center
-      color: $grey2
+      color: $blue_euromod
     h2
       @include rem-fallback(font-size, (24 / $basefont))
       text-align: center
@@ -89,7 +89,7 @@ body.euromod
     &.padded
       padding: 0.75rem
     &.large
-      @include rem-fallback(font-size, (24 / $basefont))
+      @include rem-fallback(font-size, (21 / $basefont))
     &:after
       content: "\f105"
       font-family: FontAwesome
@@ -114,7 +114,7 @@ body.euromod
         width: 100%
         color: $grey4
         &:hover
-          color: $grey2
+          color: $blue_euromod
       .fa
         @include rem-fallback(margin-bottom, 1.5)
 
@@ -129,8 +129,12 @@ body.euromod
 
 
 
+  .fa-5x 
+    font-size: 5em
   .fa-6x 
     font-size: 6em
+  .fa-7x 
+    font-size: 7em
   .fa-8x 
     font-size: 8em
   .fa-stack-6x 
