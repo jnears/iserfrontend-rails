@@ -13,8 +13,10 @@
 
   article.blog
     @include rem-fallback(padding, (($baseline - 1) / $basefont), 0, 1.5, 8.5)
+    @include rem-fallback(min-height, 10.5)
     @include respond-to(tablet)
       @include rem-fallback(padding, (($baseline - 1) / $basefont), 0, 1.5, 5.5)
+      @include rem-fallback(min-height, 6)
 
     .person
       @include rem-fallback(line-height, 3)
