@@ -11,6 +11,14 @@
       p
         margin-bottom: 0
 
+  article.blog
+    @include rem-fallback(padding, (($baseline - 1) / $basefont), 0, 1.5, 8.5)
+    @include respond-to(tablet)
+      @include rem-fallback(padding, (($baseline - 1) / $basefont), 0, 1.5, 5.5)
+
+    .person
+      @include rem-fallback(line-height, 3)
+
   time
     @include rem-fallback(top, 1.5)
     display: block
@@ -27,6 +35,15 @@
 
   figure
     @include rem-fallback(margin, 1, 0)
+    
+  figure.thumb
+    position: absolute
+    @include rem-fallback(top, 1.75)
+    left: 0
+    margin: 0
+    @include rem-fallback(width, 7.5)
+    @include respond-to(tablet)
+      @include rem-fallback(width, 4.75)
 
 .twitter-tweet
   visibility: hidden
