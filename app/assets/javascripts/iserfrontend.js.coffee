@@ -34,6 +34,7 @@ init_page = () ->
   ie_fixes()
   ga_track_audio()
   ga_track_downloads()
+  hide_facets()
 
 $(document).on 'page:restore', ->
   updateTwitterValues()
@@ -298,3 +299,16 @@ ga_track_downloads = () ->
       ga "send", "event", $title, "Download", $href
       return
     return
+
+hide_facets = () ->
+  $('nav.facets ol').each ->
+    $(this).find('li:gt(9)').hide()
+    if $(this).children('li').length <= 10
+      $(this).parent('nav.facets').parent('aside').children('.expand').hide()
+    return
+  $('.expand').unbind('click')
+  $('.expand').click (e) ->
+    $(this).parent('aside').find('nav.facets ol li:gt(9)').slideToggle()
+    if $(this).text() == '+ Show more' then $(this).text('- Show less') else $(this).text('+ Show more')
+    e.preventDefault()
+    false
