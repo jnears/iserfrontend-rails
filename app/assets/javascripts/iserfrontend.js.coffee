@@ -35,6 +35,7 @@ init_page = () ->
   ga_track_audio()
   ga_track_downloads()
   hide_facets()
+  show_authors()
 
 $(document).on 'page:restore', ->
   updateTwitterValues()
@@ -310,5 +311,21 @@ hide_facets = () ->
   $('.expand').click (e) ->
     $(this).parent('aside').find('nav.facets ol li:gt(9)').slideToggle()
     if $(this).text() == '+ Show more' then $(this).text('- Show less') else $(this).text('+ Show more')
+    e.preventDefault()
+    false
+
+
+show_authors = () ->
+  $('div.authors ol').each ->
+    if $(this).children('li').length >= 8
+      $(this).find('li:gt(3)').hide()
+      $(this).parent('div').append '<a class="show-hide" href="">(more)</a>'
+  $('.show-hide').unbind ('click')
+  $('.show-hide').click (e) ->
+    $('div.authors ol').find('li:gt(3)').toggle()
+    if $(this).text() == '(more)'
+      $(this).text '(less)'
+    else
+      $(this).text '(more)'
     e.preventDefault()
     false
