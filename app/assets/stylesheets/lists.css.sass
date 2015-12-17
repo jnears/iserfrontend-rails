@@ -62,6 +62,23 @@ ol.tag-list
     &:nth-last-of-type(2):after
       content: " and\00a0"
 
+div.authors
+  @include rem-fallback(margin-bottom, 1.5)
+
+ol.comma-list
+  list-style: none
+  display: inline
+
+  padding: 0
+  li
+    display: inline
+    &:after
+      content: ", "
+    &:nth-last-child(2):after
+      content: " and"
+    &:last-child:after
+      content: ""
+
 time
   color: $grey2
   @include rem-fallback(font-size, (16 / $basefont))
