@@ -36,6 +36,8 @@ init_page = () ->
   ga_track_downloads()
   hide_facets()
   show_authors()
+  if $('.tab-nav').length > 0
+    tabs()
 
 $(document).on 'page:restore', ->
   updateTwitterValues()
@@ -329,3 +331,13 @@ show_authors = () ->
       $(this).text '(more)'
     e.preventDefault()
     false
+
+
+tabs = () ->
+  $('.tab-nav').on 'click', (e) =>
+    target = $(e.target)
+    target.parent().parent().next().children(".tab-panel").hide()
+    target.parent().parent().find("li a").removeClass("active")
+    target.addClass("active")
+    $("#"+ target.attr('href').split('#')[1]).show()
+    return false
