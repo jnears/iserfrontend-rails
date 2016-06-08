@@ -44,6 +44,27 @@ section.image
   p
     @include rem-fallback(margin-bottom, 0)
 
+.banner-usoc-associate
+  position: relative
+  @include rem-fallback(margin-bottom, 1.5)
+  padding-right: 120px !important
+  min-height: 140px
+  background: $white url(#{asset_path('banner-usoc-associate.png')}) no-repeat right bottom !important
+  border: 1px solid $grey5
+  color: $black
+
+  p
+    @include rem-fallback(margin-bottom, 0)
+  .label
+    position: absolute
+    background: $grey6
+    top: 0
+    right: 0
+    color: $black
+    @include rem-fallback(padding, 0.15, 0.25)
+    @include rem-fallback(font-size, (14 / $basefont))
+
+
 
 .banner-poverty
   @include rem-fallback(margin-bottom, 1.5)
