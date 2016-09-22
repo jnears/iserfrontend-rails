@@ -23,6 +23,8 @@ main
         float: none
         @include rem-fallback(padding, 1)
         width: 100%
+  &.wide
+    @include rem-fallback(max-width, 45)
 
 body.app
   @include rem-fallback(margin-top, 4)
