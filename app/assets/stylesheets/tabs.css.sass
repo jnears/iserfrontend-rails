@@ -10,7 +10,9 @@ ul.tab-nav
  
     display: inline-block
     list-style-type: none
-    @include rem-fallback(margin-right, 0.5)
+    @include rem-fallback(margin-right, 0.2)
+    @include respond-to(tablet)
+      @include rem-fallback(margin-right, 0.2)
     @include respond-to(handheld)
       display: block
       @include rem-fallback(margin-right, 0)
@@ -25,21 +27,20 @@ ul.tab-nav
       z-index: 2
       outline: none
       text-decoration: none
-      @include rem-fallback(padding, 0.5, 1.5)
+      @include rem-fallback(padding, 0.5, 0.5)
+      @include respond-to(tablet)
+        @include rem-fallback(padding, 0.5, 0.5)
       span
      
         @include rem-fallback(font-size, 0.75)
-        font-style: italic
-      
-      &:active
-     
-        outline: none
+        font-style: italic      
       
       &.active
-     
+        outline: none
         background: $white
         border-bottom: 1px solid $white
         color: $black
+        font-weight: normal
         @include respond-to(handheld)
           border-bottom: 1px solid $grey4
       
