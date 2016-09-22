@@ -333,6 +333,7 @@ img.preview
 .half-hero, .third-hero
   header
     position: absolute
+    min-height: 300px
     color: $white
     width: 100%
     text-align: center
@@ -360,6 +361,20 @@ img.preview
         margin: 0 auto 1rem auto
         @include rem-fallback(padding, 1)
         @include rem-fallback(font-size, (16 / $basefont))
+
+.main-banner
+  header
+    position: absolute
+    color: $white
+    width: 100%
+    text-align: center
+    z-index: 1
+    img.logo
+      width: 400px
+      @include rem-fallback(padding, 0)
+      @include respond-to(handheld)
+        width: 80%
+    @include rem-fallback(bottom, 1)
 
 .component
   background: $grey6
