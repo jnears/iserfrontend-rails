@@ -336,6 +336,7 @@ show_authors = () ->
 
 
 tabs = () ->
+  $('ul.tab-nav li:first a').addClass('active');
   $('.tab-nav li').on 'click', (e) =>
     target = $(e.target)
     target.parent().parent().next().children(".tab-panel").hide()
