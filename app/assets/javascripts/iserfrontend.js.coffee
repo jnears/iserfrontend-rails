@@ -349,5 +349,6 @@ tabs = () ->
 selectable = () ->
   $('#selector').change ->
     $('.selectable').hide()
+    $('.selected').hide()
     $('#' + $(this).val()).show()
     return
