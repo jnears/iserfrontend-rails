@@ -20,6 +20,7 @@ init_page = () ->
   toggle()
   activate_datetime_pickers()
   shrink_to_fit()
+  selectable()
   dynamic_add()
   dynamic_remove()
   prevent_inline_form_submission()
@@ -344,3 +345,9 @@ tabs = () ->
     target.addClass("active")
     $("#"+ target.attr('href').split('#')[1]).show()
     return false
+
+selectable = () ->
+  $('#selector').change ->
+    $('.selectable').hide()
+    $('#' + $(this).val()).show()
+    return
