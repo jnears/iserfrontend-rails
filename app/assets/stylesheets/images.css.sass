@@ -7,11 +7,19 @@ img
 
 img.logo
   display: block
-  width: 40%
+  width: 90%
   margin: 0 auto
   @include rem-fallback(padding, 2, 0)
   @include respond-to(tablet)
     width: 80%
+
+img.logo-blog
+  display: block
+  width: 400px
+  margin: 0 auto
+  @include rem-fallback(padding, 2, 0)
+  @include respond-to(tablet)
+    width: 60%
 
 figure.drop
   background-color: rgba(255, 255, 255, 0.6)
