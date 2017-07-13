@@ -238,6 +238,20 @@ article.result
   a:hover
     background: $grey5
 
+
+div.feed
+  article.image
+    border-bottom: 0
+    @include rem-fallback(min-height, 6)
+    @include rem-fallback(padding-top, 0)
+    @include respond-to(tablet)
+      @include rem-fallback(padding-left, 6)
+    figure.thumb 
+      width: 90px
+      @include rem-fallback(top, 0.25)
+    &:first-of-type  
+      padding-top: 0
+
 fieldset.property
   background: $grey5
   @include rem-fallback(padding, 1.5)

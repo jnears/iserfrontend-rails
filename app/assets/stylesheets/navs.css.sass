@@ -197,6 +197,82 @@ nav.local
     margin-left: -17px
     cursor: pointer
 
+nav.local.horizontal
+  @include rem-fallback(margin-top, 1)
+  ol
+    list-style-type: none
+    padding: 0em
+    overflow: auto
+    background: $grey5
+    li
+      @include rem-fallback(font-size, (16 / $basefont))
+      float: left
+      @include rem-fallback(margin, 0, 0, 0, 1)
+      @include respond-to(handheld)
+        @include rem-fallback(margin, 0)
+        width: 50%
+      line-height: 2.2rem
+      a:link, a:visited
+        font-family: $heading_font
+        -webkit-font-smoothing: subpixel-antialiased
+        font-weight: bold
+        padding: 0.35em 1em
+        display: block
+        color: $grey1
+        text-decoration: none
+        &.active
+          background: $grey4
+      a:hover
+        background: $grey4
+
+
+nav.misoc.horizontal
+  @include rem-fallback(margin-top, 1)
+  ol
+    list-style-type: none
+    padding: 0em
+    overflow: auto
+    background: transparent
+    @include respond-to(tablet)
+      background: $grey6
+    li
+      @include rem-fallback(font-size, (16 / $basefont))
+      float: left
+      @include rem-fallback(margin, 0, 2, 0, 0)
+
+      @include respond-to(tablet)
+        @include rem-fallback(margin, 0)
+        width: 50%
+
+        a::after
+          display: block
+          content: ''
+          width: 100%
+          height: 4px
+          background: transparent
+      line-height: 1.75rem
+      a:link, a:visited
+        &::after
+          display: block
+          content: ''
+          width: 100%
+          height: 4px
+          background: transparent
+        font-family: $heading_font
+        -webkit-font-smoothing: subpixel-antialiased
+        font-weight: bold
+        padding: 0.35em 0em
+        display: block
+        @include respond-to(tablet)
+          padding: 0.35em 1em
+          display: inline-block
+        color: $grey1
+        text-decoration: none
+        &.active::after
+          background: $red
+      a:hover::after
+        background: $grey2
+
 a#handheld-btn
   margin-left: 0
   display: none
