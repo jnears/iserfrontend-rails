@@ -31,6 +31,11 @@ header[role=banner]
         a:hover
           background: $grey4
 
+  
+  div.logo-wrapper
+    @include respond-to(tablet)
+      text-align: center
+
 
   a.home-logo
     width: 80px
@@ -39,10 +44,28 @@ header[role=banner]
     background: url(asset-path("iser.svg")) no-repeat 50% 50%
     text-indent: -3000em
     overflow: hidden
-    display: block
-    @include respond-to(tablet)
-      margin-left: auto
-      margin-right: auto
+    display: inline-block
+    @include rem-fallback(margin-right, 0.25)
+    @include respond-to(handheld)
+      width: 66px
+      @include rem-fallback(height, 3)
+      @include rem-fallback(margin-top, 0.5)
+
+
+  a.home-logo-essex
+    width: 170px
+    @include rem-fallback(height, 4)
+    @include rem-fallback(padding, 1)
+    background: url(asset-path("university-essex-logo-bw.svg")) no-repeat 50% 50%
+    text-indent: -3000em
+    overflow: hidden
+    display: inline-block
+    @include rem-fallback(margin-left, 0.25)
+    @include respond-to(handheld)
+      width: 147px
+      @include rem-fallback(height, 3)
+      @include rem-fallback(margin-top, 0.5)
+
 
 header.plain
   display: block

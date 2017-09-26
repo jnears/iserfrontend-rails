@@ -15,12 +15,16 @@ header[role=banner]
         @include rem-fallback(font-size, (16 / $basefont))
         float: left
         @include rem-fallback(margin, 0, 0, 0, 1)
+        @include respond-to(desktop)
+          @include rem-fallback(margin, 0, 0, 0, 0.8)
         line-height: 2.2rem
         a:link, a:visited
           font-family: $heading_font
           -webkit-font-smoothing: subpixel-antialiased
           font-weight: bold
           padding: 0 1em
+          @include respond-to(desktop)
+            padding: 0 0.7em
           display: block
           color: $grey1
           background: $white
@@ -57,6 +61,11 @@ header[role=banner]
             li
               float: none
               display: block
+      li:first-of-type
+        margin-left: 0
+      li:last-of-type
+        @include respond-to(tablet)
+          margin-left: 0
 
 
 .active
