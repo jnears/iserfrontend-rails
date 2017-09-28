@@ -56,11 +56,16 @@ header[role=banner]
     width: 170px
     @include rem-fallback(height, 4)
     @include rem-fallback(padding, 1)
+    position: absolute
+    right: 0
+    top: 0
     background: url(asset-path("university-essex-logo-bw.svg")) no-repeat 50% 50%
     text-indent: -3000em
     overflow: hidden
     display: inline-block
     @include rem-fallback(margin-left, 0.25)
+    @include respond-to(tablet)
+      position: initial
     @include respond-to(handheld)
       width: 147px
       @include rem-fallback(height, 3)

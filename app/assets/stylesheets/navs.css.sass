@@ -8,6 +8,9 @@ header[role=banner]
   nav
     float: right
     @include rem-fallback(margin-top, 1)
+    @include rem-fallback(margin-right, 10.75)
+    @include respond-to(tablet)
+      @include rem-fallback(margin-right, 0)
     ol
       list-style-type: none
       padding: 0em
@@ -24,7 +27,7 @@ header[role=banner]
           font-weight: bold
           padding: 0 1em
           @include respond-to(desktop)
-            padding: 0 0.7em
+            padding: 0 0.675em
           display: block
           color: $grey1
           background: $white
