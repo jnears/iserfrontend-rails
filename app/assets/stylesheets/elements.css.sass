@@ -167,6 +167,8 @@ hr
   border-bottom: 1px solid $grey5
   @include rem-fallback(margin, (($baseline - 1) / $basefont), 0, 1.5, 0)
   @include rem-fallback(line-height, 1.5)
+  &.no-top-margin
+    margin-top: 0
   &.hidden
     border-bottom: 1px solid transparent
 
