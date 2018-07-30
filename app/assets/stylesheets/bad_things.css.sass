@@ -32,6 +32,18 @@ section.img.full
 section.image
   margin-bottom: 1.5rem
 
+.banner-research-visits
+  @include rem-fallback(margin-bottom, 1.5)
+  @include rem-fallback(padding, 1)
+  padding-right: 120px !important
+  min-height: 140px
+  background: $white url(#{asset_path('banner-rv.png')}) no-repeat right bottom !important
+  border: 1px solid $grey5
+  color: $black
+  p
+    @include rem-fallback(margin-bottom, 0)
+
+
 .banner-sc
   @include rem-fallback(margin-bottom, 1.5)
   padding-right: 120px !important
