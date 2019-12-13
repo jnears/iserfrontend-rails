@@ -401,6 +401,9 @@ aside.home
     ol
       padding-left: 0
 
+aside.bordered
+  border: 1px solid $grey5
+
 .home-banner
   @include rem-fallback(margin-top, -1)      
   margin-bottom: 0
@@ -626,3 +629,41 @@ p.people-list
 .toggle-panel 
   display: none
   @include rem-fallback(margin-bottom, 1.5)
+
+a.qaa-logo
+  width: 160px
+  height: 200px
+  padding: 18px
+  padding: 1rem
+  padding-bottom: 0
+  margin-top: 6px
+  background: url(asset-path("queens-anniversary-award-logo.svg")) no-repeat 50% 50%
+  text-indent: -3000em
+  overflow: hidden
+  display: inline-block
+  font-size: 1rem
+
+
+a.uoty-logo
+  width: 200px
+  height: 200px
+  padding: 18px
+  padding: 1rem
+  padding-bottom: 0
+  margin-top: 6px
+  background: url(asset-path("UoTY.jpg")) no-repeat 50% 50%
+  text-indent: -3000em
+  overflow: hidden
+  display: inline-block
+  font-size: 1rem
+
+.course-meta
+  position: absolute
+  top: 0
+  left: 0
+  width: 30.3333%
+  margin-left: 3%
+  @include respond-to(tablet)
+    position: relative
+    margin-left: 0
+    @include rem-fallback(margin-bottom, 1.5)

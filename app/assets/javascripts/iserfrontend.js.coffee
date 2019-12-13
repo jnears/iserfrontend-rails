@@ -157,6 +157,8 @@ shrink_to_fit = () ->
     $('.third-hero').css('height', $(window).height() / 3 )
   if $('.main-banner').length > 0
     $('header[role=banner]').css('border-bottom', 'none')
+  if $('.course-banner').length > 0
+    $('header[role=banner]').css('border-bottom', 'none')
 
 activate_datetime_pickers = () ->
   if $('.datepicker').length > 0
