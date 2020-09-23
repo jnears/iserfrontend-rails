@@ -31,12 +31,18 @@ footer[role=contentinfo]
       position: relative
       width: 100%
       @include rem-fallback(margin-bottom, 1.5)
+    ul
+      li
+        @include rem-fallback(font-size, (20 / $basefont))
 
   nav.utilities
     width: 100%
     clear: both
     @include respond-to(tablet)
       @include rem-fallback(margin-bottom, 1.5)
+    ul
+      li
+        @include rem-fallback(font-size, (14 / $basefont))
 
   nav.utilities, nav.social
     ul
@@ -46,11 +52,12 @@ footer[role=contentinfo]
         float: left
         width: 100%
       li
-        @include rem-fallback(font-size, (14 / $basefont))
         list-style-type: none
         float: left
         @include rem-fallback(margin-left, 0.75)
         vertical-align: middle
+        a
+          color: $white
         @include respond-to(tablet)
           float: left
           @include rem-fallback(margin-right, 0.75)
@@ -66,6 +73,7 @@ footer[role=contentinfo]
     overflow: hidden
     text-indent: -3000em
     background: url(asset-path("esrc.svg")) no-repeat 50% 50%
+    color: $white
 
   a.uoe
     float: left
@@ -76,6 +84,7 @@ footer[role=contentinfo]
     overflow: hidden
     text-indent: -3000em
     background: url(asset-path("university_of_essex.svg")) no-repeat 50% 50%
+    color: $white
 
   a.ec
     float: left
