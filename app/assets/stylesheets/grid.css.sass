@@ -74,6 +74,11 @@ $column_widths: 100
   max-width: 100rem
   @include respond-to(handheld)
     width: 96%
+  &.condensed
+    width: 50%
+    @include respond-to(handheld)
+      width: 96%
+  
 
 .pad
   padding: 1rem

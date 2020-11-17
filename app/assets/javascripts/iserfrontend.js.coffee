@@ -7,6 +7,10 @@ filter = (selector, query) ->
     return
   return
 
+rotate = ->
+  $('#next').click()
+  return
+
 init_page = () ->
   # Turbolinks.enableTransitionCache()
   $("html").removeClass("no-js")
@@ -37,6 +41,7 @@ init_page = () ->
   ga_track_downloads()
   hide_facets()
   show_authors()
+  text_carousel()
   if $('.tab-nav').length > 0
     tabs()
 
@@ -347,6 +352,58 @@ tabs = () ->
     target.addClass("active")
     $("#"+ target.attr('href').split('#')[1]).show()
     return false
+
+
+text_carousel = () ->
+  #rotation speed and timer
+  speed = 5000
+  run = setInterval(rotate, speed)
+  slides = $('.slide')
+  container = $('#slides ul')
+  elm = container.find(':first-child').prop('tagName')
+  item_width = container.width()
+  previous = 'prev'
+  #id of previous button
+  next = 'next'
+  #id of next button
+
+  resetSlides = ->
+    #and adjust the container so current is in the frame
+    container.css 'left': -1 * item_width
+    return
+
+  slides.width item_width
+  #set the slides to the correct pixel width
+  container.parent().width item_width
+  container.width slides.length * item_width
+  #set the slides container to the correct total width
+  container.find(elm + ':first').before container.find(elm + ':last')
+  resetSlides()
+  #if user clicked on prev button
+  $('#buttons a').click (e) ->
+    #slide the item
+    if container.is(':animated')
+      return false
+    if e.target.id == previous
+      container.stop().animate { 'left': 0 }, 1500, ->
+        container.find(elm + ':first').before container.find(elm + ':last')
+        resetSlides()
+        return
+    if e.target.id == next
+      container.stop().animate { 'left': item_width * -2 }, 1500, ->
+        container.find(elm + ':last').after container.find(elm + ':first')
+        resetSlides()
+        return
+    #cancel the link behavior            
+    false
+  #if mouse hover, pause the auto rotation, otherwise rotate it    
+  container.parent().mouseenter(->
+    clearInterval run
+    return
+  ).mouseleave ->
+    run = setInterval(rotate, speed)
+    return
+  return
 
 selectable = () ->
   $('#selector').change ->

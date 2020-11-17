@@ -137,6 +137,20 @@ blockquote b
   display: block
   text-indent: 0
 
+blockquote.bigquote 
+  margin: 0
+  margin-bottom: 30px
+  quotes: "“" "”"
+  border-left: 10px solid #e11d39
+  padding: 20px
+  p:first-of-type:before
+    color: #e11d39
+    content: open-quote
+    font-size: 4em
+    line-height: .1em
+    margin-right: .15em
+    vertical-align: -.4em
+
 q
   font-family: $body_font
   font-style: italic

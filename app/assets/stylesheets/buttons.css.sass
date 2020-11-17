@@ -20,7 +20,7 @@
   vertical-align: middle
   cursor: pointer
   border: none
-  *border: 0 // Remove the border to prevent IE7's black border on input:focus
+  border: 1px solid transparent
   background: $link
   color: $white
   &:hover,
@@ -53,7 +53,14 @@
     // transition is only when going to hover/focus, otherwise the background
     // behind the gradient (there for IE<=9 fallback) gets mismatched
 
-
+.btn-outline 
+  background: transparent
+  outline: 1px solid $link
+  color: $link
+  &-light
+    background: transparent
+    outline: 1px solid $white
+    color: $white
 
 
 
@@ -95,6 +102,9 @@ input[type="button"]
 
 .btn-inline
   display: inline
+
+.btn-block
+  display: block
 
 
 // Cross-browser Jank

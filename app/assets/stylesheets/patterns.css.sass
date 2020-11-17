@@ -19,6 +19,8 @@ p.call-to-action, div.call-to-action
   border-left: 10px solid $green
   *:last-child
     margin: 0
+  &.red
+    border-left: 10px solid $red
 
 
 h2.section-heading
@@ -667,3 +669,79 @@ a.uoty-logo
     position: relative
     margin-left: 0
     @include rem-fallback(margin-bottom, 1.5)
+
+section.bg-dark
+  color: $grey6
+  a:link, a:visited, time
+    color: $grey6
+
+
+
+#carousel
+  position: relative
+  width: 100%
+  margin: 0 auto
+
+  #slides
+    overflow: hidden
+    position: relative
+    width: 100%
+
+  #slides ul
+    list-style: none
+    width: 100%
+    margin: 0
+    padding: 0
+    position: relative
+
+  #slides li
+    width: 100%
+    float: left
+    text-align: center
+    position: relative
+
+
+  .btn-ba
+    max-width: 346px
+    margin: 0 auto
+    display: block
+    position: relative
+    top: 40px
+    width: 100%
+
+  .button
+    padding: 0 0 5px 0
+    float: right
+
+  a.button 
+    text-align: center
+    display: block
+    font-size: 50px
+    outline: 0
+    color: $red
+    text-decoration: none
+    display: block
+    padding: 9px
+
+  a#prev:hover, a#next:hover
+    color: $white
+    background: $red
+
+  .quote-phrase
+    font-weight: 300
+    display: table-cell
+    vertical-align: middle
+    padding: 5px 20px
+
+
+
+
+
+
+
+
+
+
+
+
+
