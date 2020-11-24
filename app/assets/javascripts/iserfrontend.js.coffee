@@ -374,10 +374,10 @@ text_carousel = () ->
 
   slides.width item_width
   #set the slides to the correct pixel width
-  container.parent().width item_width
+  container.parent().width item_width - 120
   container.width slides.length * item_width
   #set the slides container to the correct total width
-  container.find(elm + ':first').before container.find(elm + ':last')
+  container.find(elm + ':first').before container.find(elm + ':last') - 120
   resetSlides()
   #if user clicked on prev button
   $('#buttons a').click (e) ->
