@@ -22,6 +22,11 @@ footer[role=contentinfo]
     @include respond-to(tablet)
       width: 100%
 
+  p.cookies
+    width: 100%
+    clear: both
+    @include rem-fallback(font-size, (14 / $basefont))
+
   nav.social
     position: absolute
     top: 0

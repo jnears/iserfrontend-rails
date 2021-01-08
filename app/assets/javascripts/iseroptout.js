@@ -80,20 +80,23 @@ var ready = function() {
           //generate the div at the bottom near the closing body tag for modal black background
           var div = document.createElement('div');
           var modal = document.getElementById('privacyModal');
-          var enable_ga = document.getElementById('enable-ga');
-          var disable_ga = document.getElementById('disable-ga');
+
 
 
           // div.setAttribute('class', 'modal-backdrop fade show');
           // body.append(div);
 
 
-          enable_ga.onclick = function() {
+          $('#enable-ga').click(function (event) {
               setCookie('true');
-          }
-          disable_ga.onclick = function() {
+              event.preventDefault(); // Prevent link from following its href
+          });
+
+          $('#disable-ga').click(function (event) {
               setCookie('false');
-          }
+              event.preventDefault(); // Prevent link from following its href
+          });
+
 
 
 
@@ -130,15 +133,15 @@ var ready = function() {
           privacyModal.classList.add("in");
         }
       }
-       
 
 
 
+      $('#clear-cookies').click(function (event) {
+        clearCookie()
+        event.preventDefault(); // Prevent link from following its href
+      });
 
 
-
-   
-    
     function setCookie(cookieValue) {
         var cookieValue = cookieValue;
         var now = new Date();
