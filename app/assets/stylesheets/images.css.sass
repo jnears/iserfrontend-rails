@@ -7,9 +7,11 @@ img
 
 img.logo
   display: block
-  width: 40%
+  width: 46%
   margin: 0 auto
   @include rem-fallback(padding, 2, 0)
+  @include respond-to(large_desktop)
+    width: 30%
   @include respond-to(tablet)
     width: 80%
 
